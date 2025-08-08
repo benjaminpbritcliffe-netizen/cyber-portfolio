@@ -69,6 +69,3 @@ Use automated frameworks and exploits to gain access.
 
 ---
 
-📌 **Tip**: Practice these tools in virtual labs like TryHackMe, Hack The Box, or a local Kali VM. Take notes in Markdown to build your own playbook.
-
-Happy hacking, and stay ethical! 🛡️
