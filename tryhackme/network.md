@@ -122,3 +122,38 @@ This layer acts as a translator for data to and from the application layer (laye
 The application layer of the OSI model is the layer that you will be most familiar with. This familiarity is because the application layer is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received.
 
 - Data Interaction
+
+
+A packet is a piece of data from Layer 3 (Network Layer) of the OSI model, containing information such as an IP header and payload. A frame, however, is used at Layer 2 (Data Link) of the OSI model, which, encapsulates the packet and adds additional information such as MAC addresses.
+
+Some notable headers include:
+
+Header	Description
+Time to Live	This field sets an expiry timer for the packet to not clog up your network if it never manages to reach a host or escape!
+Checksum	This field provides integrity checking for protocols such as TCP/IP. If any data is changed, this value will be different from what was expected and therefore corrupt.
+Source Address	The IP address of the device that the packet is being sent from so that data knows where to return to.
+Destination Address	The device's IP address the packet is being sent to so that data knows where to travel next.
+
+Packet = Does Have IP Address information
+Frame = Does Not Have IP Address information
+
+The TCP/IP protocol consists of four layers and is arguably just a summarised version of the OSI model. These layers are:
+
+Application
+Transport
+Internet
+Network Interface
+
+
+One defining feature of TCP is that it is connection-based, which means that TCP must establish a connection between both a client and a device acting as a server before data is sent.
+
+Step	Message	Description
+1	SYN	A SYN message is the initial packet sent by a client during the handshake. This packet is used to initiate a connection and synchronise the two devices together (we'll explain this further later on).
+2	SYN/ACK	This packet is sent by the receiving device (server) to acknowledge the synchronisation attempt from the client.
+3	ACK	The acknowledgement packet can be used by either the client or server to acknowledge that a series of messages/packets have been successfully received.
+4	DATA	Once a connection has been established, data (such as bytes of a file) is sent via the "DATA" message.
+5	FIN	This packet is used to cleanly (properly) close the connection after it has been complete.
+6   RST	This packet abruptly ends all communication. This is the last resort and indicates there was some problem during the process. For example, if the service or application is not working correctly, or the system has faults such as low resources. 
+
+
+ UDP is a stateless protocol that doesn't require a constant connection between the two devices for data to be sent. For example, the Three-way handshake does not occur, nor is there any synchronisation between the two devices.
