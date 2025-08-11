@@ -117,7 +117,7 @@ This layer acts as a translator for data to and from the application layer (laye
 
 - Translator
 
-#Application
+# Application
 
 The application layer of the OSI model is the layer that you will be most familiar with. This familiarity is because the application layer is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received.
 
