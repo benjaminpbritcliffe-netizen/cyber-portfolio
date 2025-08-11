@@ -124,6 +124,8 @@ The application layer of the OSI model is the layer that you will be most famili
 - Data Interaction
 
 
+# Headers and Messages
+
 A packet is a piece of data from Layer 3 (Network Layer) of the OSI model, containing information such as an IP header and payload. A frame, however, is used at Layer 2 (Data Link) of the OSI model, which, encapsulates the packet and adds additional information such as MAC addresses.
 
 Some notable headers include:
