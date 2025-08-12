@@ -36,7 +36,7 @@ Crack WEP/WPA Passwords:
 aircrack-ng -a 2 -b [TARGET_BSSID] -w [WORDLIST] [CAPTURE_FILE]
 ```
 
-This command uses a wordlist to try and crack the Wi-Fi password.
+This command uses a [wordlist](wordlists.md) to try and crack the Wi-Fi password.
 
 ## Use Case
 - Capturing WPA handshakes
