@@ -159,3 +159,72 @@ Step	Message	Description
 
 
  UDP is a stateless protocol that doesn't require a constant connection between the two devices for data to be sent. For example, the Three-way handshake does not occur, nor is there any synchronisation between the two devices.
+
+
+# Port Forwarding
+
+If the administrator wanted the website to be accessible to the public (using the Internet), they would have to implement port forwarding.
+
+t port forwarding opens specific ports (recall how packets work). In comparison, firewalls determine if traffic can travel across these ports (even if these ports are open by port forwarding).
+
+Port forwarding is configured at the router of a network.
+
+# Firewall
+
+A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit. 
+
+- Where the traffic is coming from? (has the firewall been told to accept/deny traffic from a specific network?)
+
+- Where is the traffic going to? (has the firewall been told to accept/deny traffic destined for a specific network?)
+What port is the traffic for? (has the firewall been told to accept/deny traffic destined for port 80 only?)
+
+- What protocol is the traffic using? (has the firewall been told to accept/deny traffic that is UDP, TCP or both?)
+
+Firewalls perform packet inspection to determine the answers to these questions.
+
+
+
+## Stateful	
+This type of firewall uses the entire information from a connection; rather than inspecting an individual packet, this firewall determines the behaviour of a device based upon the entire connection.
+
+This firewall type consumes many resources in comparison to stateless firewalls as the decision making is dynamic. For example, a firewall could allow the first parts of a TCP handshake that would later fail.
+
+If a connection from a host is bad, it will block the entire device.
+
+## Stateless	
+This firewall type uses a static set of rules to determine whether or not individual packets are acceptable or not. For example, a device sending a bad packet will not necessarily mean that the entire device is then blocked.
+
+Whilst these firewalls use much fewer resources than alternatives, they are much dumber. For example, these firewalls are only effective as the rules that are defined within them. If a rule is not exactly matched, it is effectively useless.
+
+However, these firewalls are great when receiving large amounts of traffic from a set of hosts (such as a Distributed Denial-of-Service attack)
+
+# VPN
+
+A Virtual Private Network (or VPN for short) is a technology that allows devices on separate networks to communicate securely by creating a dedicated path between each other over the Internet (known as a tunnel). Devices connected within this tunnel form their own private network.
+
+
+
+For example, only devices within the same network (such as within a business) can directly communicate. However, a VPN allows two offices to be connected. 
+
+VPN Technology	Description
+
+PPP	
+This technology is used by PPTP (explained below) to allow for authentication and provide encryption of data. VPNs work by using a private key and public certificate (similar to SSH). A private key & certificate must match for you to connect.
+
+This technology is not capable of leaving a network by itself (non-routable).
+
+PPTP	
+The Point-to-Point Tunneling Protocol (PPTP) is the technology that allows the data from PPP to travel and leave a network. 
+
+PPTP is very easy to set up and is supported by most devices. It is, however, weakly encrypted in comparison to alternatives.
+
+IPSec	
+Internet Protocol Security (IPsec) encrypts data using the existing Internet Protocol (IP) framework.
+
+IPSec is difficult to set up in comparison to alternatives; however, if successful, it boasts strong encryption and is also supported on many devices.
+
+# Router
+
+It's a router's job to connect networks and pass data between them. It does this by using routing (hence the name router!).
+ 
+Routing is the label given to the process of data travelling across networks. 
