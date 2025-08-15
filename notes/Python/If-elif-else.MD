@@ -1,18 +1,5 @@
 # If-elif-else
 
-[Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
-
-# Template
-
-Welcome to the `Template` page! 
-
-Click the “+ New” button in the left menu to automatically create a new documentation page with this template. 
-
-To edit this page, go to the left menu, find the blue “New” button and click the arrow pointing down. Then, find the “Template” page, click the three dots, and hit “Edit”.
-
-> 📘 This is a callout you can use to highlight important notes.
-> 
-
 ## Code Sample
 
 ```python
