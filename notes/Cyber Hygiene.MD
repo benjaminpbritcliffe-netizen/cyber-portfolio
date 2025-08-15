@@ -1,8 +1,5 @@
 # Cyber Hygiene
 
-Date: 11 January 2025
-Tags: Definition
-
 What are some examples of cyber hygiene practices?
 
 Use strong passwords: Use unique passwords for each account and system, and change them regularly.
