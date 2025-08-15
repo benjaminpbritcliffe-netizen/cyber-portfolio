@@ -1,8 +1,5 @@
 # 3 Pillars of Cyber Security
 
-Part of Speech: Saying
-Meaning/Definition: 3 Pillars of Cyber Security (3%20Pillars%20of%20Cyber%20Security%2017b3d034d9f780a1a052ce0f033884ec.md)
-
 What are the Three Pillars of Cyber Security
 Today Cyber-attacks are at an all-time high, and security solutions are not proving to be enough to secure databases. As attackers are getting sophisticated and cyber threats are becoming complex, companies need to create an environment that focuses only on security. Here the role of the Three Pillars of Cybersecurity is vital. Following paragraphs present and discusses these three pillars.
 
