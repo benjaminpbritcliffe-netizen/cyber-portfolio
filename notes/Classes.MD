@@ -1,9 +1,5 @@
 # Classes
 
-Created: 16 April 2025 20:58
-Class: Additional Research
-Is Completed: Yes
-
 What is a class? My favorite analogy is a cookie cutter.
 
 Think of Python's built-in data types (integers, strings) as pre-made cookie cutters. When you create a class, you're making your own custom data type.
