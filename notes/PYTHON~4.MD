@@ -1,4 +1,6 @@
-# Python
+# Python 🐍
+
+Status: To read
 
 Python
 
@@ -9,6 +11,8 @@ Python
 # Recommended Tools:
 
 [https://youtu.be/rfscVS0vtbw](https://youtu.be/rfscVS0vtbw)
+
+https://www.youtube.com/watch?v=fWjsdhR3z3c&ab_channel=Indently
 
 Python 3 (python.org)
 
@@ -138,8 +142,6 @@ print('he liked the name ' + character_name + '.')
 
 print('he did not like being ' + character_age + '.')
 
-# 
-
 ## ## Functions ##
 
 def my_func():
@@ -157,8 +159,6 @@ def my_func(name):
 print('hello ' + name)
 
 my_func('Jose')
-
-7
 
 ### #Using return function.
 
@@ -269,8 +269,6 @@ tw = "Hello #Sports"
 tw.split('#')
 
 ['Hello ', 'Sports']
-
-# 
 
 # ## User Input Commands ##
 
@@ -476,8 +474,6 @@ print(friends.index("Kevin"))
 
 #Result = 0
 
-## 
-
 ## #Count how many times the word defined occurs in list.
 
 lucky_numbers = [4,8,15,16,23,42]
@@ -487,8 +483,6 @@ friends = ["Kevin","Karen","Jim","Jim","Oscar","Teddy","Charlie"]
 print(friends.count("Jim"))
 
 #Result = 2
-
-## 
 
 ## #Sort List in ascending order.
 
@@ -541,8 +535,6 @@ print(names)
 coordinates = (4,5)
 
 print(coordinates[1])
-
-## 
 
 # ## Using Functions ##
 
@@ -794,8 +786,6 @@ print(monthConversions.get("Dec","Not A Valid Key"))
 
 *#all elements are unique, and unordered.*
 
-# 
-
 # ## While Loops ##
 
 *# Allows us to loop through a block of code multiple times while the conditions are met.*
@@ -908,8 +898,6 @@ for index in range(len(friends)):
 
 print(friends[index])
 
-## 
-
 ## Manipulate the range.
 
 for index in range(5):
@@ -921,8 +909,6 @@ print("1st Iteration")
 else:
 
 print(index)
-
-## 
 
 ## For loop print out list values
 
@@ -1152,8 +1138,6 @@ employee_file.close()
 
 # ##Writing and Appending To File ##
 
-## 
-
 ## #Appending
 
 *#Modes = r is read, w is write, a is append, r+ is read and write.*
@@ -1270,8 +1254,6 @@ self.is_on_probation = is_on_probation
 
 *#Student.py*
 
-## 
-
 ## #Created a class
 
 class Student:
@@ -1317,8 +1299,6 @@ student1 = Student("Jim","Business",3.1,False)
 print(student1.name)
 
 # ## Multiple Choice Quiz ##
-
-## 
 
 ## #Using Classes, If Statements and Loops.
 
