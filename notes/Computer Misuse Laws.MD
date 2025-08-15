@@ -1,6 +1,4 @@
-# Computer Misues Laws
-
-Status: In progress
+# Computer Misuse Laws
 
 Laws prohibit unauthorised or umapproved access or use of a computing device.
 
