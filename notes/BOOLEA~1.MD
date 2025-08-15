@@ -1,4 +1,4 @@
-# If-elif-else
+# Boolean
 
 [Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
 
@@ -16,58 +16,40 @@ To edit this page, go to the left menu, find the blue “New” button and click
 ## Code Sample
 
 ```python
-temperature = 25
-
-if temperature <= 15:
-print('Cold')
-elif temperature >= 25:
-print('Hot')
-else:
-print('Moderate')
-```
-
-```python
-user_number = 35
-
-if user_number < 10:
-    print('Less than 10')
-elif user_number > 30:
-    print('Greater than 30')
-else:
-    print('Between 10 and 30')
-```
-
-```python
-user_number = 29
-
-if user_number < 10:
-    print('Less than 10')
-elif user_number > 30 and user_number <= 35:
-    print('Greater than 30 but less than 35')
-elif user_number >= 35:
-    print('Greater than 35')
-else:
-    print('Between 10 and 30')
-```
-
-```python
+while True:
+    try:
+        name = input('Enter your name')
+        break
+    except ValueError:
+        print('Incorrect value')
 
 while True:
     try:
-        bananas_kg = int(input('Enter Kg of bananas required'))
-        price_of_bananas = float(3.00)
-        subtotal = round(bananas_kg * price_of_bananas,2)
-        print(subtotal)
-        if subtotal > float(50.00):
-            total = round(subtotal + float(1.50),2)
-            print(total)
-        else:
-            total = round(subtotal + float(4.99),2)
-            print(total)
-    except:
-        print('enter a number')
+        age = int(input('Enter your age'))
+        break
+    except ValueError:
+        print('Not a number')
+    
+banned = False
+
+if name == 'Ben':
+          banned = True
+else:
+    banned = False
+
+if age >= 18 and banned == False:
+          print('Ok')
+elif age < 18:
+    print('Underage')
+elif banned == True:
+    print('Banned')
+    
+    
+    
 
 ```
+
+Refer to the template page to see more examples.
 
 ## Parameters
 

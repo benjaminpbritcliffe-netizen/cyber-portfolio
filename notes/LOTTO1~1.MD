@@ -1,4 +1,4 @@
-# If-elif-else
+# Lotto
 
 [Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
 
@@ -16,58 +16,58 @@ To edit this page, go to the left menu, find the blue “New” button and click
 ## Code Sample
 
 ```python
-temperature = 25
+import random
+import operator as op
 
-if temperature <= 15:
-print('Cold')
-elif temperature >= 25:
-print('Hot')
-else:
-print('Moderate')
-```
+numbers = []
 
-```python
-user_number = 35
+while len(numbers) < 6:
+    while True:
+        try:
+            number = int(input("Enter a number between 1 and 59"))
 
-if user_number < 10:
-    print('Less than 10')
-elif user_number > 30:
-    print('Greater than 30')
-else:
-    print('Between 10 and 30')
-```
+            
 
-```python
-user_number = 29
+            if number in numbers:
+                print('Already selected')
+            else:
+                numbers.append(number)
+                break
 
-if user_number < 10:
-    print('Less than 10')
-elif user_number > 30 and user_number <= 35:
-    print('Greater than 30 but less than 35')
-elif user_number >= 35:
-    print('Greater than 35')
-else:
-    print('Between 10 and 30')
-```
+        except ValueError:
+                    print('Not a number')
+        
+print('your numbers are:' + str(numbers))
 
-```python
+selected_numbers = []
 
-while True:
-    try:
-        bananas_kg = int(input('Enter Kg of bananas required'))
-        price_of_bananas = float(3.00)
-        subtotal = round(bananas_kg * price_of_bananas,2)
-        print(subtotal)
-        if subtotal > float(50.00):
-            total = round(subtotal + float(1.50),2)
-            print(total)
-        else:
-            total = round(subtotal + float(4.99),2)
-            print(total)
-    except:
-        print('enter a number')
+while len(selected_numbers) < 6:
+    selected_number = random.randrange(1,59)
+    if selected_number in selected_numbers:
+        pass
+    else:
+        selected_numbers.append(selected_number)
+
+print('winning numbers are:' + str(selected_numbers))
+
+bonus_ball = []
+if len(selected_numbers) == 6:
+    bonus_ball_value = random.randrange(1,59)
+    if bonus_ball_value in selected_numbers:
+        pass
+    else:
+        bonus_ball.append(bonus_ball_value)
+print('the bonus ball is:' + str(bonus_ball))
+
+matched = [x for x in numbers if x in selected_numbers]
+bball_matched = [x for x in numbers if x in bonus_ball]
+
+print(matched)
+print(bball_matched)
 
 ```
+
+Refer to the template page to see more examples.
 
 ## Parameters
 

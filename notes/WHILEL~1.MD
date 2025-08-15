@@ -1,88 +1,104 @@
 # While Loop
 
-Created: 17 March 2025 14:38
-Class: 1
-Is Completed: Yes
+[Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
 
-# The while Loop
+# Template
 
-With the while loop we can execute a set of statements as long as a condition is true.
+Welcome to the `Template` page! 
 
-If using a Count Control loop, make sure you update the value inside the loop when using one of these types of loops.
+Click the “+ New” button in the left menu to automatically create a new documentation page with this template. 
 
-# Example
+To edit this page, go to the left menu, find the blue “New” button and click the arrow pointing down. Then, find the “Template” page, click the three dots, and hit “Edit”.
 
-Print i as long as i is less than 6:
+> 📘 This is a callout you can use to highlight important notes.
+> 
 
-i = 1
+## Code Sample
 
-while i < 6:  print(i)  i += 1
-
-**The break Statement**
-
-With the break statement we can stop the loop even if the while condition is true:
-
-# Example
-
-Exit the loop when i is 3:
-
-i = 1
-
-while i < 6:  print(i)  if i == 3:    break  i += 1
-
-# The continue Statement
-
-With the continue statement we can stop the current iteration, and continue with the next:
-
-# Example
-
-Continue to the next iteration if i is 3:
-
-i = 0while i < 6:  i += 1  if i == 3:    continue  print(i)
-
-# The else Statement
-
-With the else statement we can run a block of code once when the condition no longer is true:
-
-i = 1
-
-while i < 6:
-
-print(i)
-
-i += 1
-
-else:
-
-print("i is no longer less than 6")
-
-# While True Loop:
-
-Using while True in Python is a common way to create an infinite loop, which continues to execute until it is explicitly broken out of. Here are a few reasons why you might use while True:
-
-Continuous Operation: When you need a program to keep running indefinitely, such as a server listening for incoming connections or a game loop that keeps updating the game state.
-
+```python
+numbers = []
 while True:
-# Server code to handle connections
-handle_connections()
-Waiting for a Condition: When you need to wait for a specific condition to be met before breaking out of the loop. This is often used in scenarios where the condition is not predictable.
+    while len(numbers) < 10:
+        try:
+            nums_input = int(input('Enter Numbers between 1 and 10'))
+            if nums_input in numbers:
+                print('error')
+            else:
+                numbers.append(nums_input)
+        except ValueError:
+            print('Not a number')
+    break
+print('Hoozah!')
+```
 
-while True:
-user_input = input("Enter 'exit' to quit: ")
-if user_input.lower() == 'exit':
-break
-Polling: When you need to repeatedly check for a condition or poll a resource at regular intervals.
+Refer to the template page to see more examples.
 
-import time
+## Parameters
 
-while True:
-check_status()
-time.sleep(5)  # Wait for 5 seconds before checking again
-Remember to always include a mechanism to break out of the loop, such as a break statement, to avoid creating an unintentional infinite loop that could cause your program to hang or crash.
+| Property | Type | Description |
+| --- | --- | --- |
+| `name` | `string` | If the name already exists, returns `false`. Otherwise, `true`. |
+| `level` | `int` | The character level. Must be between `0` and `100`. |
+| `inventory` | `list` | Coins are included using an `int` in the list. |
 
-while True:
-try:
-num = int(input('Enter A Number'))
-print(num)
-except:
-print('Not a number!')
+## Quick Copies
+
+- **Variable types**
+    - `None`
+    - `string`
+    - `int`
+    - `signed`
+    - `unsigned`
+    - `float`
+    - `boolean`
+    - `true`
+    - `false`
+    - `list`
+    - `array`
+    - `tuple`
+    - `range`
+    - `dict`
+    - `complex`
+    - `bytes`
+    - `set`
+- **Pie chart**
+    
+    ```mermaid
+    %%{init: {'theme': 'default'} }%%
+    pie title Common Error Codes
+    	"301" : 30
+    	"404" : 40
+    	"503" : 30
+    ```
+    
+- **Flow chart**
+    
+    ```mermaid
+    flowchart LR
+    	I[(Idea)] ---> C(Code)
+    	C ---> R(Review)
+    	R --> I
+    ```
+    
+- **Mathematical Equations**
+    
+    *Inline Equation:* $F=G\frac{m_1m_2}{d^2}$
+    
+    *Block equation:*
+    
+    $$
+    \frac{df}{dt}=\lim_{h\to 0} \frac{f(t+h)-f(t)}{h}
+    $$
+    
+
+## Capabilities
+
+| Model | Feature X | Feature Y | Feature Z |
+| --- | --- | --- | --- |
+| A | ✅ | ✅ | ❌ |
+| B | ❌ | ✅ | ✅ |
+| C | ✅ | ❌ | ✅ |
+
+Table of Contents
+
+---
