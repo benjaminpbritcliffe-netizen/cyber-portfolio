@@ -1,33 +1,85 @@
 # Trojan Horses
 
-Created: 2 June 2025 10:00
-Is Completed: Yes
+For university-level cybersecurity studies, **safe examples of Trojan horses** are typically **simulated or educational tools** that demonstrate how Trojans work without causing harm. These are either:
 
-- If you wanted to deliberately cause a denial of service attack, by consuming as much CPU time as possible, what sort of operating system design features would make this easier?
-- If your malicious program was designed to gain access to sensitive data, how might it attempt to use the OS to assist with this goal? (state any assumptions you need to make about the OS design in order to make your attempt feasible).
+- **Code samples** designed for learning.
+- **Sandboxed virtual machines or environments** preloaded with malware for analysis.
+- **Simulated Trojans** created specifically for labs.
 
-A Trojan Horse is software that appears harmless and performs useful functions while secretly causing damage in the background. For example, it could be a text editor that copies text to a hidden file, or a modified Unix command that alters permissions while performing its normal function.
+Below are safe and ethical examples you can explore:
 
-Regarding denial of service attacks and CPU consumption, there are several protection approaches:
+---
 
-- A Trusted Computer Base (TCB) can be implemented that includes:
-    - A Reference Monitor to enforce access control policies
-    - Access routines for sensitive operations
-    - A verified Trojan-free environment
+### 🧪 1. **Custom Educational Trojan (Written in Python or C#)**
 
-For accessing sensitive data, malicious programs often exploit Discretionary Access Control (DAC) weaknesses because:
+A simple, non-destructive script that mimics Trojan behavior. For example:
 
-- DAC allows Trojans to operate with all the privileges of their host process
-DAC assumes all system components are legitimate and doesn't verify intentions before granting access
+```python
+python
+CopyEdit
+# Fake Trojan that appears to do something malicious, but only logs data locally
+import os
 
-To protect against these threats, a hybrid system can be implemented that:
+def fake_trojan():
+    user = os.getlogin()
+    with open("log.txt", "a") as f:
+        f.write(f"Fake Trojan run by {user}\n")
 
-- Uses DAC as the primary access control policy
-Incorporates Mandatory Access Control (MAC) elements to handle untrusted software
-Requires all access requests to go through the TCB's reference monitor
+fake_trojan()
 
-MAC offers stronger protection than DAC because:
+```
 
-- It groups subjects and objects into security classes
-Prevents rogue processes from altering permissions directly
-Requires changes to go through a formal, controlled approval process
+- Purpose: Demonstrates basic Trojan behavior (e.g., logging info).
+- Safe: Doesn’t send data externally or damage systems.
+
+---
+
+### 🖥️ 2. **FlareVM (Windows Malware Analysis VM)**
+
+FlareVM is a virtual machine environment pre-configured with tools for malware analysis.
+
+- Use cases: Analyze real malware samples in a safe, sandboxed way.
+- Download: [https://github.com/mandiant/flare-vm](https://github.com/mandiant/flare-vm)
+
+---
+
+### 🧰 3. **REMnux (Linux-based Malware Analysis VM)**
+
+A reverse engineering and malware analysis Linux distro.
+
+- Use cases: Great for analyzing samples or simulating Trojan behavior in Linux.
+- Website: [https://remnux.org/](https://remnux.org/)
+
+---
+
+### 🔍 4. **Metasploit Trojan Generator**
+
+Metasploit can simulate Trojans for learning (e.g., generating a reverse shell payload):
+
+```bash
+bash
+CopyEdit
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f exe > shell.exe
+
+```
+
+⚠️ *Only run in a controlled lab environment or virtual machine.*
+
+---
+
+### 🧪 5. **TryHackMe or Hack The Box Labs**
+
+These platforms have **safe, legal environments** for interacting with Trojan-like behavior.
+
+- Rooms to try:
+    - **TryHackMe**: *“Malware Analysis Intro”*, *“Windows Privilege Escalation”*
+    - **Hack The Box Academy**: *“Intro to Malware”*
+
+---
+
+### 🔒 Safety Tips
+
+- **Always use virtual machines** (VirtualBox, VMware, Hyper-V).
+- **Disable internet access** in the VM when testing simulated malware.
+- **Document all activity** to show your work is for research/education.
+- **Never test real malware on your host machine**.
