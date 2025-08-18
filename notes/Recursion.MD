@@ -4,6 +4,9 @@ Created: 2 April 2025 19:33
 Class: Additional Research
 Is Completed: Yes
 
+
+# Recursion
+
 Both approaches accomplish the same thing, but the second approach is clearer to me. Recursion is used when it makes the solution clearer. There’s no performance benefit to using recursion; in fact, loops are sometimes better for performance. I like this quote by Leigh Caldwell on Stack Overflow: “Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!” ([http://stackoverflow.com/a/72694/139117](http://stackoverflow.com/a/72694/139117)).
 
 ## **Recap**
