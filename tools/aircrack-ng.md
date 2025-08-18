@@ -1,6 +1,7 @@
 # 📡 Aircrack-ng
 
 ## Description
+
 Aircrack-ng is a suite of tools for auditing wireless networks.
 
 ## Basic Usage
@@ -12,6 +13,7 @@ Check Wireless Network Interfaces:
 ```bash
 airmon-ng
 ```
+
 The network interfaces that are available are listed by this command.
 
 Enable Monitor Mode:
@@ -39,6 +41,6 @@ aircrack-ng -a 2 -b [TARGET_BSSID] -w [WORDLIST] [CAPTURE_FILE]
 This command uses a [wordlist](wordlists.md) to try and crack the Wi-Fi password.
 
 ## Use Case
+
 - Capturing WPA handshakes
 - Cracking Wi-Fi passwords
-
