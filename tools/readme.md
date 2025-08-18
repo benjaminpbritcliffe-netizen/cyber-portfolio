@@ -5,7 +5,6 @@ This roadmap lists essential penetration testing and Kali Linux tools in the **o
 ---
 
 ## 🧱 Phase 1: Foundations & Reconnaissance
-
 Start with core networking and scanning tools.
 
 - [Nmap](nmap.md) – Network mapping and port scanning
@@ -19,7 +18,6 @@ Start with core networking and scanning tools.
 ---
 
 ## 🔐 Phase 2: Enumeration & Brute Force
-
 Dig deeper into services, users, and brute-force attacks.
 
 - [Gobuster](gobuster.md) – Directory and DNS brute-forcing
@@ -29,7 +27,6 @@ Dig deeper into services, users, and brute-force attacks.
 ---
 
 ## 💥 Phase 3: Exploitation
-
 Use automated frameworks and exploits to gain access.
 
 - [Metasploit Framework](metasploit.md) – Exploitation and payload delivery
@@ -69,3 +66,6 @@ Use automated frameworks and exploits to gain access.
 ## ✅ Wrapping Up
 
 - [Wrapping Up](wrapping-up.md) – Summary and guidance for next steps
+
+---
+
