@@ -6,10 +6,6 @@ Is Completed: Yes
 
 How pointers work with different data types
 
-# Pointers
-
-## 
-
 How pointers work differently with different data types.
 
 Let's start with a variable called num1. We'll set it equal to an integer 11, and then create a second variable called num2, setting it equal to num1 = 11.
@@ -155,6 +151,5 @@ Based on the context, here are the key differences between how pointers work wit
 
 - When multiple variables point to the same dictionary, they share the same memory address
 - Modifying a dictionary through any variable that points to it will change the value for all variables pointing to that dictionary
-- When a dictionary loses all references pointing to it, Python's garbage collection removes it from memory
-
----
+- When a dictionary loses all references pointing to it, Python's garbage collection removes it from memory.
+  
