@@ -6,7 +6,7 @@ Is Completed: Yes
 
 Task:
 
-**Read the following sections**
+## Read the following sections
 
 [Data Structures and Algorithms in Python, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser, sections 4.1.3, 5.2, 5.3-5.3.1](https://eu.alma.exlibrisgroup.com/leganto/public/44YORK_INST/citation/56797030580001381?auth=SAML):
 
@@ -35,7 +35,7 @@ Static arrays have key limitations: They require a fixed size when created and c
 
 Python lists use dynamic arrays, allowing automatic resizing through a growth mechanism.
 
-**Growth Mechanism of Python Lists**
+## Growth Mechanism of Python Lists
 
 1. **Preallocation**: Python lists reserve extra memory beyond what's immediately needed for future elements.
 2. **Doubling Strategy** (Amortized Growth): When the allocated space fills up and a new element is added, Python:

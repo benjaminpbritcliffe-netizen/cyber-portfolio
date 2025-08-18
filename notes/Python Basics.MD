@@ -1,8 +1,3 @@
-# Week 2 Overview
-
-[Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
-
-# 
 
 # 🚗 Python Basics for Car Sales Scenario
 
@@ -109,7 +104,3 @@ inventory.remove("Ford Fiesta")
 print("Updated inventory:", inventory)
 
 ```
-
-Table of Contents
-
----

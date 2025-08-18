@@ -8,7 +8,7 @@ A stack frame is a data structure that stores information about the function cal
 
 Destroyed when the function returned
 
-Last-In-First Out > 
+Last-In-First Out >
 
 That means the most recent stack frame is on
 

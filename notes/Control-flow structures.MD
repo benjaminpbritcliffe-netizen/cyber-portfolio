@@ -1,8 +1,8 @@
-# Week 2 -Control-flow structures
+# Control-flow structures
 
 [Code Docs](../Code%20Docs%201b33d034d9f7811784a3f2b49b598b30.csv)
 
-# ALGORITHMS & DATA STRUCTURES
+## ALGORITHMS & DATA STRUCTURES
 
 Write a program that asks the user to guess a number between 1 and 10. The program should
 

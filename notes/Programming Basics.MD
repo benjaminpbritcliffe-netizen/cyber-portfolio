@@ -1,8 +1,4 @@
-# Week 2 Summary
-
-Created: 17 March 2025 14:58
-Class: 2
-Is Completed: Yes
+# Programming Basics
 
 - **Boolean and Boolean expressions** form the foundation of decision-making in programming. Booleans represent truth values (**True** or **False**), which are used to evaluate conditions in a program. Boolean expressions, created using comparison operators like ==, <, and >, and logical operators such as **and**, **or**, and **not**, allow programmers to control the flow of their programs. These tools are critical for enabling dynamic behaviour, such as deciding whether to execute a specific block of code.
 - **If-elif-else statements** provide a structured way to make decisions in a program. An if statement evaluates a condition, executing its block if the condition is True. The elif clause offers additional conditional checks, while the else clause specifies a default action if none of the conditions are met. Together, these statements allow developers to create programs that respond intelligently to various scenarios, such as user inputs or data states.

@@ -178,12 +178,12 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 
 ## 🧠 Final Analysis: Choosing the Right Setup
 
-### 🎯 For Redundancy (e.g., critical financial data):
+### 🎯 For Redundancy (e.g., critical financial data)
 
 - **RAID 1 or 6 (HDDs)** – safer against disk failure.
 - **RAID 10 (SSDs)** – combines speed + redundancy + lower wear.
 
-### 🚀 For Performance (e.g., real-time data pipelines):
+### 🚀 For Performance (e.g., real-time data pipelines)
 
 - **RAID 0 or RAID 10 (SSDs)** – SSDs already reduce latency; striping boosts throughput.
 - Avoid RAID 5/6 with SSDs unless wear-leveling and TRIM are explicitly supported.
@@ -198,7 +198,7 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 
 ## 🔹 Section 6.4 — **Optical Memory (CDs, DVDs, Blu-ray)**
 
-### 📚 Key Terms & Definitions:
+### 📚 Key Terms & Definitions
 
 | Term | Meaning (in your own words) |
 | --- | --- |
@@ -208,7 +208,7 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 | **Write Once, Read Many (WORM)** | Optical media types that can be written to once (e.g., CD-R), but read repeatedly. |
 | **Phase Change Technology** | Used in rewritable discs (e.g., CD-RW, DVD-RW), which change state between crystalline and amorphous to store data. |
 
-### 💡 Characteristics of Optical Memory:
+### 💡 Characteristics of Optical Memory
 
 - **Cheap and portable** — good for media distribution and archival.
 - **Relatively slow** — poor random access speed compared to SSDs/HDDs.
@@ -220,7 +220,7 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 
 ## 🔹 Section 6.5 — **Magnetic Tape**
 
-### 📚 Key Terms & Definitions:
+### Terms & Definitions
 
 | Term | Meaning |
 | --- | --- |
@@ -230,7 +230,7 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 | **Tape Library** | Automated system with robotic arms to retrieve and load tapes. Often used for archival data. |
 | **LTO (Linear Tape-Open)** | A modern magnetic tape storage standard used in enterprises. |
 
-### 💡 Magnetic Tape Advantages:
+### 💡 Magnetic Tape Advantages
 
 - Extremely **high capacity** (now into hundreds of TBs per cartridge).
 - **Inexpensive** per gigabyte — great for **archival and backup**.
