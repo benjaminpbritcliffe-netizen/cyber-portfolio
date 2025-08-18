@@ -392,3 +392,30 @@ Cache-Control: How long to store the content of the response in the browser's ca
 Content-Type: This tells the client what type of data is being returned, i.e., HTML, CSS, JavaScript, Images, PDF, Video, etc. Using the content-type header the browser then knows how to process the data.
 
 Content-Encoding: What method has been used to compress the data to make it smaller when sending it over the internet.
+
+## Website Components
+
+There are two major components that make up a website:
+
+Front End (Client-Side) - the way your browser renders a website.
+Back End (Server-Side) - a server that processes your request and returns a response.
+
+Websites are primarily created using:
+
+HTML, to build websites and define their structure
+CSS, to make websites look pretty by adding styling options
+JavaScript, implement complex features on pages using interactivity.
+
+JavaScript (JS) is one of the most popular coding languages in the world and allows pages to become interactive. HTML is used to create the website structure and content, while JavaScript is used to control the functionality of web pages
+
+Sensitive Data Exposure occurs when a website doesn't properly protect (or remove) sensitive clear-text information to the end-user; usually found in a site's frontend source code.
+
+We now know that websites are built using many HTML elements (tags), all of which we can see simply by "viewing the page source".
+
+HTML Injection is a vulnerability that occurs when unfiltered user input is displayed on the page. If a website fails to sanitise user input (filter any "malicious" text that a user inputs into a website), and that input is used on the page, an attacker can inject HTML code into a vulnerable website.
+
+When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
+
+### Learning Objectives
+
+- Learn about HTML Injection more.
