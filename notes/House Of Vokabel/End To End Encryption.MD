@@ -3,11 +3,11 @@
 Part of Speech: Acronym
 Meaning/Definition:  🔒 End To End Encryption
 
-🔒 End To End Encryption 
+🔒 End To End Encryption
 
 End-to-End Encryption (E2EE) primarily ensures confidentiality because it protects the data from being accessed or read by unauthorized parties during transmission.
 
-Helps in the [CIA Triad](CIA%20Triad%2017b3d034d9f780c782f9f781573a24dd.md) 
+Helps in the [CIA Triad](CIA%20Triad%2017b3d034d9f780c782f9f781573a24dd.md)
 
 Confidentiality: E2EE ensures that only the intended sender and recipient can access the content, keeping the information private.
 

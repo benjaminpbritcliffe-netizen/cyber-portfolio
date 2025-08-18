@@ -4,7 +4,7 @@ Created: 4 April 2025 08:40
 Class: 4
 Is Completed: Yes
 
-https://www.youtube.com/watch?v=NwjSP1_WEfE
+[YouTube Video: Dunder Methods](https://www.youtube.com/watch?v=NwjSP1_WEfE)
 
 Double Underscore Methods
 

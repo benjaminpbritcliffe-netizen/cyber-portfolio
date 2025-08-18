@@ -12,9 +12,4 @@ In cybersecurity, risk appetite refers to an organization’s willingness to acc
 
 Conversely, organizations with a low risk appetite are more cautious in their approach to cybersecurity. They might prioritize stability and reliability over competitive advantage, focusing more on protective measures such as firewalls, encryption, and regular system updates.
 
-<aside>
-📢
-
-Note that neither approach is better. An organization’s level of risk appetite should align with its overall strategic goals and resources. 
-
-</aside>
+Note that neither approach is better. An organization’s level of risk appetite should align with its overall strategic goals and resources.

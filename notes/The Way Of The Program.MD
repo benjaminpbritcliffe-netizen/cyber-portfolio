@@ -29,17 +29,17 @@ programs written in a high-level language have to be processed before they can r
 
 Python is considered an interpreted language because Python programs are executed by an interpreter. There are two ways to use the interpreter: **interactive mode** and **script mode**.
 
-### **Syntax errors**
+## **Syntax errors**
 
 Python can only execute a program if the syntax is correct; otherwise, the interpreter displays an error message. **Syntax** refers to the structure of a program and the rules about that structure. For example, parentheses have to come in matching pairs, so `(1 + 2)` is legal, but `1 + 2)` is a **syntax error**.
 
 In plain English, readers can tolerate most syntax errors, however Python is not so forgiving. If there is a single syntax error anywhere in your program, Python will display an error message and quit, and you will not be able to run your program. During the first few weeks of your programming career, you will probably spend a lot of time tracking down syntax errors. As you gain experience, you will make fewer errors and find them faster.
 
-### **Runtime errors**
+## **Runtime errors**
 
 The second type of error is a runtime error, so called because the error does not appear until after the program has started running. These errors are also called **exceptions** because they usually indicate that something exceptional (and bad) has happened. Runtime errors are rare in the simple programs you will see in the first few chapters, so it might be a while before you encounter one.
 
-### **Semantic errors**
+## **Semantic errors**
 
 The third type of error is the **semantic error**. If there is a semantic error in your program, it will run successfully in the sense that the computer will not generate any error messages, but it will not do the right thing. It will do something else. Specifically, it will do what you told it to do. The problem is that the program you wrote is not the program you wanted to write. The meaning of the program (its semantics) is wrong. Identifying semantic errors can be tricky because it requires you to work backward by looking at the output of the program and trying to figure out what it is doing.
 
@@ -57,7 +57,7 @@ For decades the recommended style was to break after binary operators. But this 
 
 Copy
 
-```
+``` python
 # No: operators sit far away from their operands
 income = (gross_wages +
           taxable_interest +
@@ -70,9 +70,7 @@ To solve this readability problem, mathematicians and their publishers follow th
 
 Following the tradition from mathematics usually results in more readable code:
 
-Copy
-
-```
+``` python
 # Yes: easy to match operators with operands
 income = (gross_wages
           + taxable_interest
@@ -89,7 +87,7 @@ In Python code, it is permissible to break before or after a binary operator, as
 
 Copy
 
-```
+``` python
 #Yes:
 x = 1
 y = 2
@@ -107,7 +105,7 @@ long_variable = 3
 
 Copy
 
-```
+``` python
 #Yes:
 i = i + 1
 submitted += 1
@@ -123,7 +121,7 @@ hypot2 = x * x + y * y
 c = (a + b) * (a - b)
 ```
 
-### Module 1:
+### Module 1
 
 The common ways to represent algorithms include:
 
@@ -145,31 +143,31 @@ Insertion sort works by **picking one element at a time** from the unsorted port
 
 Types and Variables in Python
 
-[Python 🐍](../Research%20Paper%20Planner%201763d034d9f780cb993bf4554600d5e7/Reading%20List%201763d034d9f781f7bbbfddf4a9dfb052/Python%20%F0%9F%90%8D%2018f3d034d9f7800d8e24c046970152d9.md) 
+[Python 🐍](../Research%20Paper%20Planner%201763d034d9f780cb993bf4554600d5e7/Reading%20List%201763d034d9f781f7bbbfddf4a9dfb052/Python%20%F0%9F%90%8D%2018f3d034d9f7800d8e24c046970152d9.md)
 
-## #Comment
+' ## #Comment
 
-# = Comment
+' # = Comment
 
-## #Block Comment
+' ## #Block Comment
 
 '''
 
 Comment goes here
 
-'''
+''' python
 
 ## #String
 
 character_name = "Ben"
 
-**Strings are immutable**
+Strings are immutable
 
 A string is a **sequence** of characters. You can access the characters one at a time with the bracket operator:
 
 Copy
 
-```
+``` python
 >>> fruit = 'banana'
 >>> letter = fruit[1]
 >>>
@@ -177,33 +175,31 @@ Copy
 
 The second statement selects character number 1 from `fruit` and assigns it to `letter`. The expression in brackets is called an **index**. The index indicates which character in the sequence you want (hence the name). But be careful with indices, you might not get what you expect:
 
-Copy
-
-```
+``` python
 >>> print(letter)
  a
 >>>
 ```
 
-## #Integer
+### Integer
 
 character_age = 50
 
-## #Boolean
+### Boolean
 
-#0 = false
+ 0 = false
 
-#1 = true
+1 = true
 
 is_male = True
 
-## #Comparison Figures
+### Comparison Figures
 
 == for equal to
 
->= for greater than and equal to
+' >= for greater than and equal to
 
-> for greater than
+' > for greater than
 
 < for less than
 
@@ -217,13 +213,7 @@ Or operator
 
 (1 == 2) or ('a' == 'a')
 
-**Operator**
-
-**Description**
-
-- *
-
-Exponentiation (raise to the power)
+### Operator
 
 +, -
 
@@ -331,15 +321,15 @@ A tuple is a sequence of values. The values can be any type, and they are indexe
     - This is **valid** in Python and is an example of **chained assignment**, where both `y` and `z` get assigned the value `20`.
 4. **`a, b = 5, 6`** ✅ **(Valid)**
     - This is **valid** and is an example of **tuple unpacking (multiple assignment)**, where `a` is assigned `5` and `b` is assigned `6`.
-    - 
+    -
 
-# ## Working With Lists and Indexing ##
+### Working With Lists and Indexing
 
 Unlike strings, lists are **mutable**. When the bracket operator appears on the left side of an assignment, it identifies the element of the list that will be assigned.
 
 Copy
 
-```
+``` python
 >>> numbers = [17, 123]
 >>>> numbers[1] = 5
 >>> print(numbers)
@@ -357,43 +347,40 @@ friends = ["Kevin","Karen","Jim"]
 
 print(friends[0])
 
-*# = Kevin*
+' *# = Kevin*
 
 print(friends[1])
 
-*# = Karen*
+' *# = Karen*
 
 print(friends[2])
 
-*# = Jim*
+' *# = Jim*
 
 Print(friends)
 
-*# = All the list*
+' *# = All the list*
 
 print(friends[0:2])
-
-*# Will print 0,1*
+' *# Will print 0,1*
 
 friends = ["Kevin","Karen","Jim"]
 
 print(friends[-0])
 
-# = Jim
+' = Jim
 
 friends[1] = "Mike"
 
 print(friends)
 
-#Replaces Value in position 1, "Kevin","Mike","Jim"
+Replaces Value in position 1, "Kevin","Mike","Jim"
 
 Nested List:
 
 mylist = [1,2,[100,200]]
 
-Print(mylist[2][1])
-
-#result would be 200.
+result would be 200.
 
 Showing this in paper form:
 
@@ -403,7 +390,7 @@ Swapping values using a temp value:
 
 ![image.png](The%20Way%20Of%20The%20Program%201b23d034d9f780abaef4db63207f3bb4/image%201.png)
 
-# **Glossary**
+## Glossary
 
 **Problem solving:** The process of formulating a problem, finding a solution, and expressing the solution.
 

@@ -3,7 +3,7 @@
 Created: 24 July 2025 14:31
 Is Completed: No
 
-### 🔑 Key Concepts & Terminology
+## 🔑 Key Concepts & Terminology
 
 ### **Thread**
 
@@ -41,7 +41,7 @@ A thread that has finished execution but hasn't had its status collected (via `p
 
 ## 🤔 Why Use Joinable Threads?
 
-### ✅ Benefits of Joinable Threads:
+### ✅ Benefits of Joinable Threads
 
 1. **Control and Synchronization:** You can explicitly wait for a thread to finish before moving on, ensuring operations happen in the right order.
 2. **Retrieve Return Values:** You can access the thread's return status, which may be critical for program logic.
@@ -56,7 +56,7 @@ A thread that has finished execution but hasn't had its status collected (via `p
 
 ## 🧹 Understanding Thread Types & Resource Management
 
-### 🔄 Joinable vs. Detached – How It Helps:
+### 🔄 Joinable vs. Detached – How It Helps
 
 | Issue | Joinable Threads | Detached Threads |
 | --- | --- | --- |
@@ -90,13 +90,13 @@ Understanding the thread type helps prevent:
 
 ## 🔍 Article 1: *“Hyperthreading is dead in Intel's new Core Ultra PC chips”* (PC World, 2024)
 
-### 📌 Summary:
+### 📌 Summary
 
 - Intel has announced its **Core Ultra series** will **eliminate hyper-threading**, a technology that allowed a single physical core to handle **two threads**.
 - The shift is driven by **security concerns** (e.g., side-channel attacks like Spectre and Meltdown) and **power/performance trade-offs**.
 - Intel is focusing instead on **Efficient cores (E-cores)** and **Performance cores (P-cores)**, each with specific roles for multithreaded tasks.
 
-### 📘 Key Takeaways:
+### 📘 Key Takeaways
 
 - **Hyperthreading ≠ always better performance** – it depends on the workload.
 - **Security** is now a major factor in architecture decisions.
@@ -106,13 +106,13 @@ Understanding the thread type helps prevent:
 
 ## 🔍 Article 2: *“Intel Dumping Hyper-Threading in Its Next-Gen Chips?”* (PC Mag, 2024)
 
-### 📌 Summary:
+### 📌 Intel Dumping Summary
 
 - This article digs deeper into **why** Intel may be dropping hyper-threading.
 - Emphasizes **context-switching overhead**, **thermal limitations**, and **complexity in scheduling** threads efficiently.
 - Also mentions how **modern workloads** (e.g., AI, gaming, data streaming) benefit more from **real cores** than from logical threads.
 
-### 📘 Key Takeaways:
+### 📘 Intel Dumping Key Takeaways
 
 - There are **real-world downsides to threading**, like contention for shared resources.
 - **Deterministic performance** (i.e., predictable results) can be better without hyper-threading.

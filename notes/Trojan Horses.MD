@@ -10,7 +10,7 @@ Below are safe and ethical examples you can explore:
 
 ---
 
-### 🧪 1. **Custom Educational Trojan (Written in Python or C#)**
+## 🧪 1. **Custom Educational Trojan (Written in Python or C#)**
 
 A simple, non-destructive script that mimics Trojan behavior. For example:
 
@@ -72,8 +72,8 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f exe > 
 These platforms have **safe, legal environments** for interacting with Trojan-like behavior.
 
 - Rooms to try:
-    - **TryHackMe**: *“Malware Analysis Intro”*, *“Windows Privilege Escalation”*
-    - **Hack The Box Academy**: *“Intro to Malware”*
+  - **TryHackMe**: *“Malware Analysis Intro”*, *“Windows Privilege Escalation”*
+  - **Hack The Box Academy**: *“Intro to Malware”*
 
 ---
 

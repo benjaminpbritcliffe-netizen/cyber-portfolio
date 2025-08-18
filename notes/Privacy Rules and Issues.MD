@@ -2,7 +2,7 @@
 
 Status: In progress
 
-[CIA Triad](../../House%20of%20Vokabel%2017b3d034d9f780f28d12fa401ae23c58/CIA%20Triad%2017b3d034d9f780c782f9f781573a24dd.md) 
+[CIA Triad](../../House%20of%20Vokabel%2017b3d034d9f780f28d12fa401ae23c58/CIA%20Triad%2017b3d034d9f780c782f9f781573a24dd.md)
 
 A privacy breach can be classed as technically not giving the user the right for privacy, such as: If you don’t accept or enable location sharing or certain sections of the T&cs, then you can not use their product. Privacy is all about having the right to share (or not share) certain aspects to either the company or other users.
 

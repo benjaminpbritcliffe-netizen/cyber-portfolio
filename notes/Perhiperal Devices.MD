@@ -3,7 +3,7 @@
 Created: 15 July 2025 13:21
 Is Completed: No
 
-### ✳️ **Key Concepts and Terminology**
+## ✳️ **Key Concepts and Terminology**
 
 | Term | Definition (in your own words) |
 | --- | --- |
@@ -59,25 +59,25 @@ Is Completed: No
 ### 🎯 **Design Considerations**
 
 - Use **wired connections** for:
-    - Servers, real-time processing, or applications requiring large data transfers.
+  - Servers, real-time processing, or applications requiring large data transfers.
 - Use **wireless** for:
-    - Flexibility, mobile devices, or when physical cabling is impractical.
+  - Flexibility, mobile devices, or when physical cabling is impractical.
 - Design systems to **balance overhead and convenience** depending on the use case.
 
 ---
 
 ## 💬 Summary: Big Picture Thinking
 
-### ✅ How emerging interfaces improve computing:
+### ✅ How emerging interfaces improve computing
 
 - Shift towards **user-centered design**.
 - **Accessibility** becomes an integrated part of UI/UX strategy.
 - More inclusive technology = wider reach and better user satisfaction.
 
-### ✅ How network protocol overhead affects system performance:
+### ✅ How network protocol overhead affects system performance
 
 - High overhead = **better reliability**, but slower speeds.
 - Protocols and infrastructure must be tailored to the application:
-    - **High-speed media streaming?** → UDP
-    - **Banking transactions?** → TCP
-    - **IoT sensors?** → Lightweight protocols like MQTT over Wi-Fi/Bluetooth
+  - **High-speed media streaming?** → UDP
+  - **Banking transactions?** → TCP
+  - **IoT sensors?** → Lightweight protocols like MQTT over Wi-Fi/Bluetooth

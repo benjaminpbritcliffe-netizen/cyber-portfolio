@@ -3,7 +3,7 @@
 Created: 18 July 2025 15:09
 Is Completed: No
 
-### ✅ **Key Concepts and Terminology**
+## ✅ **Key Concepts and Terminology**
 
 | **Term** | **Definition in Your Own Words** |
 | --- | --- |
@@ -52,9 +52,9 @@ Abstraction is **central to the design of an OS**:
 
 - **Definition:** Software that bridges hardware and user/program interaction.
 - **Main Roles:**
-    - Managing hardware resources
-    - Providing user interfaces
-    - Enabling application execution
+  - Managing hardware resources
+  - Providing user interfaces
+  - Enabling application execution
 - **Example OSs:** Windows, macOS, Linux, Android
 
 ---
@@ -64,9 +64,9 @@ Abstraction is **central to the design of an OS**:
 - **Definition:** Hiding complex hardware operations behind simpler interfaces
 - **Purpose:** Simplifies software development and hardware interaction
 - **Examples:**
-    - Files instead of disk sectors
-    - Memory space instead of physical RAM blocks
-    - Printer service instead of direct hardware control
+  - Files instead of disk sectors
+  - Memory space instead of physical RAM blocks
+  - Printer service instead of direct hardware control
 
 **💡 Why It Matters:**
 
@@ -83,9 +83,9 @@ Abstraction is **central to the design of an OS**:
 - **Definition:** Core of the OS that manages CPU, memory, and devices
 - **Runs in:** Privileged mode (with direct hardware access)
 - **Responsibilities:**
-    - Process scheduling
-    - Memory management
-    - Device I/O control
+  - Process scheduling
+  - Memory management
+  - Device I/O control
 
 ### 🔹 b) Processes & Threads
 
@@ -96,9 +96,9 @@ Abstraction is **central to the design of an OS**:
 
 - **Goal:** Allocate and reclaim memory for applications
 - **Techniques:**
-    - Paging: Fixed-size memory blocks
-    - Segmentation: Logical divisions like code/data/stack
-    - Virtual Memory: Creating the illusion of more memory than physically available
+  - Paging: Fixed-size memory blocks
+  - Segmentation: Logical divisions like code/data/stack
+  - Virtual Memory: Creating the illusion of more memory than physically available
 
 ### 🔹 d) File Systems
 
@@ -133,12 +133,12 @@ Abstraction is **central to the design of an OS**:
 
 - **Definition:** Creating virtual versions of hardware or resources
 - **Examples:**
-    - Virtual machines (VMs)
-    - Virtual memory
+  - Virtual machines (VMs)
+  - Virtual memory
 - **Benefits:**
-    - Resource isolation
-    - Enhanced system utilization
-    - Testing environments
+  - Resource isolation
+  - Enhanced system utilization
+  - Testing environments
 
 ---
 

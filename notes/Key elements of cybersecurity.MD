@@ -18,12 +18,7 @@ The first pillar of cybersecurity is people. This includes everyone from IT staf
 
 Education and awareness are effective ways to improve cybersecurity
 
-<aside>
-📢
-
 Think of holding training sessions, raise awareness of cybersecurity challenges. Build a human firewall for when technology misses.
-
-</aside>
 
 - Process
 
@@ -31,25 +26,18 @@ The second pillar is processes. These are the policies, procedures, and protocol
 
 Having streamlined processes can help with cybersecurity .
 
-<aside>
 📢
 
 implement a process on what do when a cyber attack of any kind occurs or how to ensure you keep an area secure.
 
-Processes include everything from access control policies to incident response plans. 
-
-</aside>
+Processes include everything from access control policies to incident response plans.
 
 When creating non-security processes, keep cybersecurity in mind.
 
-<aside>
 📢
 
 A lengthy process can hinder the amount of people reporting an issue or using the process.
 
-</aside>
-
-<aside>
 📢
 
 A good process with be clear and as easy as possible, what to do at every stage. The process stages should be obvious, avoid ambiguity.
@@ -57,8 +45,6 @@ A good process with be clear and as easy as possible, what to do at every stage.
 Make sure the processes are accessible and well known.
 
 Make sure the processes are consistent and do not contradict. if  a process has alot of deviations and contradictions, this can cause confusion and cyberattackers will exploit inconsistency.
-
-</aside>
 
 - Technology
 
@@ -70,12 +56,9 @@ While technology is essential, it must be used in conjunction with the other two
 
 Good uses of technology will solve problems without creating new ones for users.
 
-<aside>
 📢
 
 Good technical security is device management software, if implemented correctly then the security would be passive and not hinder the user. If implemented poorly, users may try to disable the software entirely creating a risk to the system.
-
-</aside>
 
 Organisations need to educate their users on the reasons for introducing certain technology to ensure it is used effectively.
 

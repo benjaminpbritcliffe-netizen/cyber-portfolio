@@ -2,7 +2,7 @@
 
 Tags: Note
 
-### 1. **Immutability (Safety & Integrity)**
+## 1. **Immutability (Safety & Integrity)**
 
 - **Tuples are immutable**, meaning their contents cannot be changed after creation.
 - This makes them **safer** to use when working with **constants** or **data that shouldn’t change**.

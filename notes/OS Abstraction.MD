@@ -5,12 +5,12 @@ Is Completed: No
 
 **Abstraction** in operating systems hides complex, low-level hardware details and provides simplified, consistent interfaces for users and programmers. Here's how this benefits everyone:
 
-### ✅ For Users:
+## ✅ For Users
 
 - **Simplicity**: Users don't need to understand *how* files are stored on a disk or *how* memory is managed—they simply interact with files, folders and applications.
 - **Consistency**: Whether using an SSD, HDD, or network drive, the OS presents everything as a unified "file system."
 
-### ✅ For Programmers:
+## ✅ For Programmers
 
 - **Portable Code**: Applications can run on different hardware without modification because the OS provides standardised APIs (e.g., POSIX, Windows API).
 - **Focus on Logic**: Developers can concentrate on application logic rather than dealing with hardware interrupts, memory registers or device protocols.
@@ -43,14 +43,14 @@ Different **design goals** and **constraints** lead to distinct OS architectures
 | **Security** | Supports user accounts, sandboxing, etc. | Often simpler security models, but critical |
 | **Update/Upgrade** | Frequently updated | Rarely updated once deployed |
 
-### Example Use Cases:
+### Example Use Cases
 
 - **General-purpose**: Browsing, gaming, office apps, development, etc.
 - **Embedded**: Automotive systems, medical devices, industrial controllers, IoT sensors.
 
 ---
 
-### 🛠️ Summary:
+### 🛠️ Summary
 
 - **Abstraction** is the OS's superpower—it simplifies, unifies and protects.
 - **Design priorities** vary by domain: desktop systems prioritise versatility, while embedded systems focus on precision and reliability.

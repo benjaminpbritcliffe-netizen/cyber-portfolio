@@ -8,7 +8,7 @@ Asymptotic Notations:
 
 Analyse the algorithms efficiency,   Time vs Input Size
 
-https://www.youtube.com/watch?v=bxgTDN9c6rg&ab_channel=Codearchery
+[YouTube: Codearchery - Time Complexity](https://www.youtube.com/watch?v=bxgTDN9c6rg&ab_channel=Codearchery)
 
 Worst Case > Big O Notation 😲 > Upper Bound
 

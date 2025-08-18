@@ -16,23 +16,33 @@ Is Completed: No
 4. **System Call**
     - A controlled request from a user application to the kernel to perform privileged operations, like file access or I/O.
 5. **Monolithic Kernel**
+
 - A design where most OS services run inside a single kernel space—for speed, but at the cost of complexity.
+
 1. **Microkernel**
+
 - Minimal kernel design that runs most services in user space, communicating via message passing. Improves security and modularity, but may reduce performance [cs.hunter.cuny.edu+2cs.fsu.edu+2mebrahimii.github.io+2](https://www.cs.fsu.edu/~lacher/courses/COP4610/lectures_8e/ch02.pdf?utm_source=chatgpt.com)
 
 .
 
 1. **Layered Structure**
+
 - An OS design organized into layers where higher layers depend only on lower ones—enabling modularity and easier maintenance [mebrahimii.github.io+5cs.fsu.edu+5cc.ee.ntu.edu.tw+5](https://www.cs.fsu.edu/~lacher/courses/COP4610/lectures_8e/ch02.pdf?utm_source=chatgpt.com).
+
 1. **Virtual Machine (VM)**
+
 - A complete OS environment emulated by another OS, making software believe it's running on real hardware [cps-cse.media.uconn.edu+3en.wikipedia.org+3en.wikipedia.org+3](https://en.wikipedia.org/wiki/Instruction_set_architecture?utm_source=chatgpt.com).
+
 1. **Instruction Set Architecture (ISA)**
+
 - Defines the CPU's supported instructions, registers, memory model, and control flow—serving as the interface between hardware and software [en.wikipedia.org+1en.wikipedia.org+1](https://en.wikipedia.org/wiki/Instruction_set_architecture?utm_source=chatgpt.com).
+
 1. **RISC and CISC**
     - **RISC**: Simplified, fixed-length instructions optimized for speed and pipelining.
     - **CISC**: Richer, complex instructions that pack more work in each operation [en.wikipedia.org+1en.wikipedia.org+1](https://en.wikipedia.org/wiki/Reduced_instruction_set_computer?utm_source=chatgpt.com).
-    
+  
 2. **Protection Ring**
+
 - Hardware-enforced privilege levels (e.g., Ring 0 vs Ring 3) to isolate untrusted code from the kernel [eng.auburn.edu+11en.wikipedia.org+11en.wikipedia.org+11](https://en.wikipedia.org/wiki/Protection_ring?utm_source=chatgpt.com).
 
 ### 1. Von Neumann Model Influence & Its Limitations

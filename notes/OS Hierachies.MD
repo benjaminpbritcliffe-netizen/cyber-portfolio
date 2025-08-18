@@ -30,9 +30,9 @@ Is Completed: No
 - **macOS**: Unix-based graphical OS with a hybrid kernel (XNU). Emphasizes usability and tight hardware integration.
 - **Graphical OS**: Includes a GUI (e.g., Windows, macOS, GNOME on Linux). Enables user interaction through visual elements.
 - **Specialized OS:**
-    - **RTOS (Real-Time OS)**: Provides deterministic responses to events, used in embedded systems (e.g., FreeRTOS, VxWorks).
-    - **Embedded OS**: Small-footprint OS tailored for specific hardware (e.g., IoT devices).
-    - **Mobile OS**: Android, iOS, optimized for touchscreen, power efficiency, and app sandboxing.
+  - **RTOS (Real-Time OS)**: Provides deterministic responses to events, used in embedded systems (e.g., FreeRTOS, VxWorks).
+  - **Embedded OS**: Small-footprint OS tailored for specific hardware (e.g., IoT devices).
+  - **Mobile OS**: Android, iOS, optimized for touchscreen, power efficiency, and app sandboxing.
 
 ---
 
@@ -45,7 +45,7 @@ Is Completed: No
 - **Multitasking**: Running multiple processes concurrently.
 - **Multithreading**: Single process with multiple threads sharing resources. More efficient than multiple processes.
 - **Scheduling**: Determines which process/thread gets CPU time.
-    - Types: Round Robin, Priority Scheduling, Multilevel Queue, Real-Time Scheduling.
+  - Types: Round Robin, Priority Scheduling, Multilevel Queue, Real-Time Scheduling.
 - **Priority**: Higher-priority processes get preference. System prevents starvation via aging or priority inheritance.
 
 **Measurement Characteristics:**
@@ -62,8 +62,8 @@ Is Completed: No
 - **Virtualization**: Running multiple OS instances on a single host using a hypervisor (e.g., VMware, KVM).
 - **Multiprocessor Systems**: Systems with multiple CPUs/cores. Require thread synchronization and load balancing.
 - **Performance Issues:**
-    - **Disk Swapping**: Moving data between RAM and disk when memory is full. Can cause performance bottlenecks.
-    - **Thrashing**: Excessive swapping that severely degrades system performance.
+  - **Disk Swapping**: Moving data between RAM and disk when memory is full. Can cause performance bottlenecks.
+  - **Thrashing**: Excessive swapping that severely degrades system performance.
 
 ---
 

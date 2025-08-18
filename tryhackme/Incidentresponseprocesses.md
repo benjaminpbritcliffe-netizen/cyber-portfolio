@@ -1,3 +1,6 @@
+
+# Incident Response Process
+
 The four major phases of the incident response process are:
 
 - Preparation: This requires a team trained and ready to handle incidents. Ideally, various measures are put in place to prevent incidents from happening in the first place.
@@ -8,8 +11,7 @@ The four major phases of the incident response process are:
 
 - Post-Incident Activity: After a successful recovery, a report is produced, and the lesson learned is shared to prevent similar future incidents.
 
-# Digital Forensics and Incident Response (DFIR)
-
+## Digital Forensics and Incident Response (DFIR)
 
 - Security Operations Center (SOC)
 
@@ -23,6 +25,5 @@ Network intrusions: No matter how good your security is, there is always a chanc
 Security operations cover various tasks to ensure protection; one such task is threat intelligence.
 
 - Security Information and Event Management (SIEM) tool, which gathers security-related information and events from various sources and presents them in one dashboard. If the SIEM finds something suspicious, an alert will be generated.
- 
-  - There are many open-source databases out there, like AbuseIPDB, and Cisco Talos Intelligence, where you can perform a reputation and location check for the IP address. Most security analysts use these tools to aid them with alert investigations. You can also make the Internet safer by reporting the malicious IPs, for example, on AbuseIPDB.​
 
+  - There are many open-source databases out there, like AbuseIPDB, and Cisco Talos Intelligence, where you can perform a reputation and location check for the IP address. Most security analysts use these tools to aid them with alert investigations. You can also make the Internet safer by reporting the malicious IPs, for example, on AbuseIPDB.​

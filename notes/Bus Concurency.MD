@@ -9,7 +9,7 @@ Is Completed: No
 
 A **bus** is a shared communication pathway that transfers data between different parts of a computer system — typically **CPU, memory**, and **I/O devices**.
 
-### ✅ **Key Components of a Bus**:
+### ✅ **Key Components of a Bus**
 
 1. **Data Bus** – Transfers data (e.g. between memory and CPU).
 2. **Address Bus** – Carries the location of data.
@@ -25,9 +25,9 @@ A **bus** is a shared communication pathway that transfers data between differen
 
 - CPUs, RAM, and devices like disks or GPUs often **compete** for bus access.
 - Poor concurrency handling leads to:
-    - **Bus contention**
-    - **Delays in memory access**
-    - **Reduced system performance**
+  - **Bus contention**
+  - **Delays in memory access**
+  - **Reduced system performance**
 
 ---
 
@@ -47,8 +47,8 @@ A **bus** is a shared communication pathway that transfers data between differen
 
 - Each **core** may have its own **L1 cache**, but share a common system bus and memory.
 - High concurrency leads to:
-    - Need for **cache coherency protocols** (like MESI).
-    - Sophisticated **bus interconnects** (e.g., ring buses, crossbars).
+  - Need for **cache coherency protocols** (like MESI).
+  - Sophisticated **bus interconnects** (e.g., ring buses, crossbars).
 
 ---
 

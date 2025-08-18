@@ -5,11 +5,10 @@ Status: Done
 In cybersecurity, likelihood is hard to measure directly because of the constant evolution of technology and the involvement of outside attackers. Generally, the likelihood of an organization experiencing an attack depends partly on three attributes:
 
 > **Likelihood** = Attacker capability × Attacker motivation × Vulnerability severity
-> 
 
 Consequence is the impact and associated damages  (x) Likelihood is how often the risk impact occurs.
 
-**Attacker capability** includes the attacker’s resources, technology access, and expertise. High adversary capability indicates that the attacker has the tools, means, and proficiency to exploit vulnerabilities, 
+**Attacker capability** includes the attacker’s resources, technology access, and expertise. High adversary capability indicates that the attacker has the tools, means, and proficiency to exploit vulnerabilities,
 
 **Adversary motivation** is the incentive or reason that drives an attacker to attempt a cyberattack.
 

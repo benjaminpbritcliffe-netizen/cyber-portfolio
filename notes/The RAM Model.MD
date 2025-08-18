@@ -37,17 +37,17 @@ RAM model, a simplified framework that helps you count the basic operations of a
 | `O(n!)` | Factorial time | **"Total chaos"** – try *every* possible order | Solving permutations (e.g. traveling salesman) |
 | --- | --- | --- | --- |
 
-### 🔁 Quick Order to Remember (from Fastest → Slowest):
+## 🔁 Quick Order to Remember (from Fastest → Slowest)
 
 > O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(n³) < O(2ⁿ) < O(n!)
-> 
+>
 
 ---
 
-### 🧠 Mnemonic (Optional Fun One):
+## 🧠 Mnemonic (Optional Fun One)
 
 > "One Lazy Nerd Sorts Squares, Cubes, and Explodes Fast!"
-> 
-> 
+>
+>
 > (1, log n, n, n log n, n², n³, 2ⁿ, n!)
 >

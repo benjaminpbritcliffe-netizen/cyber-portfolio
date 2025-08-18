@@ -40,7 +40,7 @@ Make sure that your virtualized Kali has installed Guest Additions and your Virt
 
 My testing VM configuration has the following port options (VM -> Settings > Ports).
 
-![](https://1354665097-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MYLPTPmXutfLTHzDEhx%2F-MZJocZSrvGyL3kYoi8C%2F-MZJpo7JqgYVX1JcviHx%2Fimage.png?alt=media\&token=020f8e5e-c087-4222-968c-ebec069bdfc4)
+![VirtualBox USB port settings screenshot](https://1354665097-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MYLPTPmXutfLTHzDEhx%2F-MZJocZSrvGyL3kYoi8C%2F-MZJpo7JqgYVX1JcviHx%2Fimage.png?alt=media\&token=020f8e5e-c087-4222-968c-ebec069bdfc4)
 
 ## Kali - Install Driver (realtek-rtl88xxau-dkms)
 
@@ -73,7 +73,7 @@ apt remove realtek-rtl88xxau-dkms
 Let's try a manual driver compilation with a specific driver we have found using lsusb command. \
 Follow Debian Linux installation path in this article.
 
-{% embed url="https://miloserdov.org/?p=5493" %}
+{% embed url="<https://miloserdov.org/?p=5493>" %}
 
 ### Compile
 

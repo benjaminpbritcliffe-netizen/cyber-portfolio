@@ -3,7 +3,7 @@
 Created: 15 July 2025 13:13
 Is Completed: No
 
-### 🔧 **Key Concepts and Definitions**
+## 🔧 **Key Concepts and Definitions**
 
 ### 1. **Bus**
 
@@ -15,16 +15,16 @@ Is Completed: No
 - The main highway for data in general-purpose systems.
 - Connects the CPU, memory, and I/O devices using a shared pathway.
 - **Implications**:
-    - **Performance**: Can be a bottleneck if multiple components compete for access.
-    - **Scalability**: Limited—adding more devices can degrade performance due to shared access.
+  - **Performance**: Can be a bottleneck if multiple components compete for access.
+  - **Scalability**: Limited—adding more devices can degrade performance due to shared access.
 
 ### 3. **Dedicated Bus**
 
 - A communication line reserved for specific components or subsystems.
 - Common in **embedded** and **real-time** systems.
 - **Implications**:
-    - **Performance**: Faster and more predictable (no contention).
-    - **Scalability**: Better for fixed-purpose systems; harder to expand or generalize.
+  - **Performance**: Faster and more predictable (no contention).
+  - **Scalability**: Better for fixed-purpose systems; harder to expand or generalize.
 
 ### 4. **Bus Arbitration**
 

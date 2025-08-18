@@ -7,7 +7,7 @@ Is Completed: No
 
 A **compiler** is a program that **translates entire source code files** (e.g. in C, C++, or Java) into machine code or an intermediate representation, **before** execution begins [britannica.com+15en.wikipedia.org+15mrs-th.medium.com+15](https://en.wikipedia.org/wiki/Compiler?utm_source=chatgpt.com)[ionos.com](https://www.ionos.com/digitalguide/websites/web-development/compilers-vs-interpreters/?utm_source=chatgpt.com).
 
-### Key Phases:
+### Key Phases
 
 1. **Lexical analysis** – scans raw text into tokens
 2. **Parsing** – builds a syntax tree
@@ -16,7 +16,7 @@ A **compiler** is a program that **translates entire source code files** (e.g. i
 5. **Optimization** – refines IR or code
 6. **Code generation** – produces machine or assembly code
 
-### Pros & Cons:
+### Pros & Cons
 
 - ✅ **Fast execution**: optimized machine code
 - ✅ **Once-per-build**: translation occurs once
@@ -29,13 +29,13 @@ A **compiler** is a program that **translates entire source code files** (e.g. i
 
 An **interpreter (computing)** reads and **executes source code line by line**, at runtime, without producing a standalone executable [sciencedirect.com+9en.wikipedia.org+9ionos.com+9](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com).
 
-### Operation Styles:
+### Operation Styles
 
 1. **Direct execution of source** – classic BASIC/Lisp [shiksha.com+8reddit.com+8mrs-th.medium.com+8](https://www.reddit.com/r/learnprogramming/comments/jokwec/not_understanding_the_distinction_between/?utm_source=chatgpt.com)
 2. **Source → bytecode** – then execute using a virtual machine (Python, JavaScript)
 3. **Bytecode-only interpreters** – e.g., UCSD Pascal [en.wikipedia.org](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)
 
-### Pros & Cons:
+## Pros & Cons Of Interpeter
 
 - ✅ **Fast to test/debug**: immediate execution without build step
 - ✅ **Platform independence**: distributes readable source or bytecode requiring only the interpreter [lifewire.com+15en.wikipedia.org+15geeksforgeeks.org+15](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)

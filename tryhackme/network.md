@@ -1,9 +1,11 @@
 
 # Topologies
+
 Star Topology
 The main premise of a star topology is that devices are individually connected via a central networking device such as a switch or hub. This topology is the most commonly found today because of its reliability and scalability - despite the cost.
 
 ## Bus Topology
+
 This type of connection relies upon a single connection which is known as a backbone cable. This type of topology is similar to the leaf off of a tree in the sense that devices (leaves) stem from where the branches are on this cable.
 
 Because all data destined for each device travels along the same cable, it is very quickly prone to becoming slow and bottlenecked if devices within the topology are simultaneously requesting data. This bottleneck also results in very difficult troubleshooting because it quickly becomes difficult to identify which device is experiencing issues with data all travelling along the same route.
@@ -11,13 +13,14 @@ Because all data destined for each device travels along the same cable, it is ve
 However, with this said, bus topologies are one of the easier and more cost-efficient topologies to set up because of their expenses, such as cabling or dedicated networking equipment used to connect these devices.
 
 ## Ring Topology
+
 The ring topology (also known as token topology) boasts some similarities. Devices such as computers are connected directly to each other to form a loop, meaning that there is little cabling required and less dependence on dedicated hardware such as within a star topology.
 
 A ring topology works by sending data across the loop until it reaches the destined device, using other devices along the loop to forward the data. Interestingly, a device will only send received data from another device in this topology if it does not have any to send itself. If the device happens to have data to send, it will send its own data first before sending data from another device.
 
 Because there is only one direction for data to travel across this topology, it is fairly easy to troubleshoot any faults that arise. However, this is a double-edged sword because it isn't an efficient way of data travelling across a network, as it may have to visit many multiple devices first before reaching the intended device.
 
-# Subnet
+## Subnet
 
 Subnetting is the term given to splitting up a network into smaller, miniature networks within itself.
 
@@ -62,19 +65,19 @@ IP addresses can be assigned either manually, by entering them physically into a
 
 The OSI model (or Open Systems Interconnection Model) is an essential model used in networking.  This critical model provides a framework dictating how all networked devices will send, receive and interpret data.
 
-# Physical
+## Physical
 
 The physical components of hardware used for networking
 
 - Ethernet Cable
 
-# Data Link
+## Data Link
 
  focuses on the physical addressing of the transmission. It receives a packet from the network layer (including the IP address for the remote computer) and adds in the physical MAC (Media Access Control) address of the receiving endpoint. Inside every network-enabled computer is a Network Interface Card (NIC) which comes with a unique MAC address to identify it.
 
 - Network Interface Card
 
-# Network
+## Network
 
  where the magic of routing & re-assembly of data takes place (from these small chunks to the larger chunk). Firstly, routing simply determines the most optimal path in which these chunks of data should be sent.
 
@@ -84,7 +87,7 @@ Whilst some protocols at this layer determine exactly what is the "optimal" path
 
 - IP Addresses
 
-# Transport
+## Transport
 
 When data is sent between devices, it follows one of two different protocols that are decided based upon several factors:
 
@@ -94,7 +97,7 @@ UDP
 - TCP
 - UDP
 
-# Session
+## Session
 
  the session layer (layer 5) will begin to create and maintain the connection to other computer for which the data is destined. When a connection is established, a session is created. Whilst this connection is active, so is the session.
 
@@ -102,7 +105,7 @@ The session layer is also responsible for closing the connection if it hasn't be
 
 - Connection Checking
 
-# Presentation
+## Presentation
 
 Layer 6 of the OSI model is the layer in which standardisation starts to take place. Because software developers can develop any software such as an email client differently, the data still needs to be handled in the same way — no matter how the software works.
 
@@ -110,13 +113,13 @@ This layer acts as a translator for data to and from the application layer (laye
 
 - Translator
 
-# Application
+## Application
 
 The application layer of the OSI model is the layer that you will be most familiar with. This familiarity is because the application layer is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received.
 
 - Data Interaction
 
-# Headers and Messages
+## Headers and Messages
 
 A packet is a piece of data from Layer 3 (Network Layer) of the OSI model, containing information such as an IP header and payload. A frame, however, is used at Layer 2 (Data Link) of the OSI model, which, encapsulates the packet and adds additional information such as MAC addresses.
 
@@ -150,7 +153,7 @@ Step Message Description
 
  UDP is a stateless protocol that doesn't require a constant connection between the two devices for data to be sent. For example, the Three-way handshake does not occur, nor is there any synchronisation between the two devices.
 
-# Port Forwarding
+## Port Forwarding
 
 If the administrator wanted the website to be accessible to the public (using the Internet), they would have to implement port forwarding.
 
@@ -158,7 +161,7 @@ t port forwarding opens specific ports (recall how packets work). In comparison,
 
 Port forwarding is configured at the router of a network.
 
-# Firewall
+## Firewall
 
 A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit.
 
@@ -187,7 +190,7 @@ Whilst these firewalls use much fewer resources than alternatives, they are much
 
 However, these firewalls are great when receiving large amounts of traffic from a set of hosts (such as a Distributed Denial-of-Service attack)
 
-# VPN
+## VPN
 
 A Virtual Private Network (or VPN for short) is a technology that allows devices on separate networks to communicate securely by creating a dedicated path between each other over the Internet (known as a tunnel). Devices connected within this tunnel form their own private network.
 
@@ -210,73 +213,73 @@ Internet Protocol Security (IPsec) encrypts data using the existing Internet Pro
 
 IPSec is difficult to set up in comparison to alternatives; however, if successful, it boasts strong encryption and is also supported on many devices.
 
-# Router
+## Router
 
 It's a router's job to connect networks and pass data between them. It does this by using routing (hence the name router!).
 
 Routing is the label given to the process of data travelling across networks.
 
-# DNS
+## DNS
 
 Domain Name System
 
-# TLD (Top Level Domain)
+## TLD (Top Level Domain)
 
 A TLD is the most righthand part of a domain name. So, for example, the tryhackme.com TLD is .com.
 
 There are two types of TLD, gTLD (Generic Top Level) and ccTLD (Country Code Top Level Domain).
 
-# Second-Level Domain
+## Second-Level Domain
 
 Taking tryhackme.com as an example, the .com part is the TLD, and tryhackme is the Second Level Domain. When registering a domain name, the second-level domain is limited to 63 characters + the TLD and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens).
 
-# Subdomains
+## Subdomains
 
 A subdomain sits on the left-hand side of the Second-Level Domain using a period to separate it; for example, in the name admin.tryhackme.com the admin part is the subdomain. A subdomain name has the same creation restrictions as a Second-Level Domain, being limited to 63 characters and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens). You can use multiple subdomains split with periods to create longer names, such as jupiter.servers.tryhackme.com. But the length must be kept to 253 characters or less. There is no limit to the number of subdomains you can create for your domain name.
 
-# DNS Types
+## DNS Types
 
-## A Record
+### A Record
 
 These records resolve to IPv4 addresses, for example 104.26.10.229
 
-## AAAA Record
+### AAAA Record
 
 These records resolve to IPv6 addresses, for example 2606:4700:20::681a:be5
 
-## CNAME Record
+### CNAME Record
 
 These records resolve to another domain name, for example, TryHackMe's online shop has the subdomain name store.tryhackme.com which returns a CNAME record shops.shopify.com. Another DNS request would then be made to shops.shopify.com to work out the IP address.
 
-## MX Record
+### MX Record
 
 These records resolve to the address of the servers that handle the email for the domain you are querying, for example an MX record response for tryhackme.com would look something like alt1.aspmx.l.google.com. These records also come with a priority flag. This tells the client in which order to try the servers, this is perfect for if the main server goes down and email needs to be sent to a backup server.
 
-## TXT Record
+### TXT Record
 
 TXT records are free text fields where any text-based data can be stored. TXT records have multiple uses, but some common ones can be to list servers that have the authority to send an email on behalf of the domain (this can help in the battle against spam and spoofed email). They can also be used to verify ownership of the domain name when signing up for third party services.
 
-## TTL
+### TTL
 
 Time To Live specifies how long a DNS record should be cached for.
 
-# Recursive DNS Server
+## Recursive DNS Server
 
 A Recursive DNS Server is usually provided by your ISP, but you can also choose your own. This server also has a local cache of recently looked up domain names. If a result is found locally, this is sent back to your computer
 
-# Authoritative Server
+## Authoritative Server
 
 An authoritative DNS server is the server that is responsible for storing the DNS records for a particular domain name and where any updates to your domain name DNS records would be made.
 
-# HTTP
+## HTTP
 
 HTTP is what's used whenever you view a website, developed by Tim Berners-Lee and his team between 1989-1991. HTTP is the set of rules used for communicating with web servers for the transmitting of webpage data, whether that is HTML, Images, Videos, etc.
 
-# HTTPS
+## HTTPS
 
 HTTP is what's used whenever you view a website, developed by Tim Berners-Lee and his team between 1989-1991. HTTP is the set of rules used for communicating with web servers for the transmitting of webpage data, whether that is HTML, Images, Videos, etc.
 
-# URL Schema
+## URL Schema
 
 What is a URL? (Uniform Resource Locator)
 
@@ -344,7 +347,7 @@ DELETE Request
 
 This is used for deleting information/records from a web server.
 
-# Status Codes
+## Status Codes
 
 100-199 - Information Response These are sent to tell the client the first part of their request has been accepted and they should continue sending the rest of their request. These codes are no longer very common.
 200-299 - Success This range of status codes is used to tell the client their request was successful.
@@ -365,9 +368,9 @@ This is used for deleting information/records from a web server.
 503 - Service Unavailable
 This server cannot handle your request as it's either overloaded or down for maintenance.
 
-# Headers
+## Client Headers
 
-hese are headers that are sent from the client (usually your browser) to the server.
+These are headers that are sent from the client (usually your browser) to the server.
 
 Host: Some web servers host multiple websites so by providing the host headers you can tell it which one you require, otherwise you'll just receive the default website for the server.
 

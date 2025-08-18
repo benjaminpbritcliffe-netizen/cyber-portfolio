@@ -26,9 +26,7 @@ Where:
 ### 1. **Serial Bottlenecks**
 
 - Even a small non-parallelizable portion (e.g., 5%) **caps performance gains**.
-    
-    → If P = 0.95 and you add 1000 cores, your speedup is still limited to ~20×.
-    
+If P = 0.95 and you add 1000 cores, your speedup is still limited to ~20×.
 
 ### 2. **Communication Overhead**
 
@@ -38,16 +36,16 @@ Where:
 ### 3. **Diminishing Returns**
 
 - Adding more cores doesn't help if:
-    - The workload isn't highly parallel (e.g., UI rendering, database indexing).
-    - You're memory-bound, not compute-bound.
-    - There's a lot of thread contention.
+  - The workload isn't highly parallel (e.g., UI rendering, database indexing).
+  - You're memory-bound, not compute-bound.
+  - There's a lot of thread contention.
 
 ### 4. **Software Complexity**
 
 - Writing truly parallel programs is hard:
-    - You must manage race conditions, deadlocks, and load balancing.
-    - Most legacy applications are not designed for parallelism.
-    - Debugging multithreaded code is more error-prone.
+  - You must manage race conditions, deadlocks, and load balancing.
+  - Most legacy applications are not designed for parallelism.
+  - Debugging multithreaded code is more error-prone.
 
 ### 5. **Power and Thermal Constraints**
 
@@ -61,13 +59,13 @@ Where:
 ### ✅ 1. **Heterogeneous Computing**
 
 - Combining different types of cores (e.g., high-power + low-power) to optimize for workload type.
-    - ARM’s **big.LITTLE** and Intel’s **P-core/E-core** designs are current examples.
+  - ARM’s **big.LITTLE** and Intel’s **P-core/E-core** designs are current examples.
 
 ### ✅ 2. **Specialized Accelerators**
 
 - Offloading specific workloads (AI, graphics, encryption) to **dedicated hardware**:
-    - GPUs, TPUs, NPUs, FPGAs.
-    - Improves efficiency **without relying solely on general-purpose parallelism**.
+  - GPUs, TPUs, NPUs, FPGAs.
+  - Improves efficiency **without relying solely on general-purpose parallelism**.
 
 ### ✅ 3. **Smarter Parallel Software Models**
 
@@ -77,12 +75,12 @@ Where:
 ### ✅ 4. **Domain-Specific Architectures (DSA)**
 
 - Chips designed for specific tasks—faster and more efficient than general-purpose CPUs.
-    - Example: Google’s Tensor Processing Units (TPUs) for machine learning.
+  - Example: Google’s Tensor Processing Units (TPUs) for machine learning.
 
 ### ✅ 5. **Chiplet & 3D Stacking**
 
 - Instead of scaling out one giant monolithic core, manufacturers use **multiple small chips (chiplets)** connected on-package or even stacked in 3D (e.g., AMD Infinity Fabric, Intel Foveros).
-    - Reduces power/heat and boosts bandwidth across cores.
+  - Reduces power/heat and boosts bandwidth across cores.
 
 ---
 

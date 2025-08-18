@@ -4,7 +4,7 @@ Created: 17 March 2025 11:56
 Class: 1
 Is Completed: Yes
 
-### **Binary Search Algorithm**
+## **Binary Search Algorithm**
 
 1. **Initialize Pointers**:
     - Set `low = 0` (start of the array).
@@ -18,7 +18,7 @@ Is Completed: Yes
 4. **Repeat Until Found or `low > high`**:
     - The process continues until the search space is exhausted.
 
-Linear Search on an unsorted array > Each element is checked one by one. 
+Linear Search on an unsorted array > Each element is checked one by one.
 
 Sorted Array > Diving the search in half, to reduce the number of checks, making searching data faster.
 
@@ -43,9 +43,7 @@ Sorted Array > Diving the search in half, to reduce the number of checks, making
 | **Very large sorted dataset?** | ❌ No, use Binary Search |
 | --- | --- |
 
-
-
-# Sequence and Collections
+## Sequence and Collections
 
 Created: 6 April 2025 19:33
 Class: Additional Research

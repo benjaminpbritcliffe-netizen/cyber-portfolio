@@ -6,8 +6,7 @@ Big O Notation describes the upper bound of an algorithm's growth rate. In other
 
 It abstracts away constants and less significant terms, focusing on the most impactful part of the growth rate.
 
-
-https://www.youtube.com/watch?v=aWKEBEg55ps&ab_channel=GregHogg
+<https://www.youtube.com/watch?v=aWKEBEg55ps&ab_channel=GregHogg>
 
 ## Binary Search
 
@@ -26,7 +25,7 @@ Big O notation is a way to measure how well a program will run as it handles mor
 
 ![image.png](Big%20O%20Notation%20Recap%201c83d034d9f780c99fdcfe0ba323aeb7/image.png)
 
-# How Different Programs Perform
+## How Different Programs Perform
 
 | **Speed Rating** | **Name** | **What It Means** | **Common Uses** | **How Well It Works** |
 | --- | --- | --- | --- | --- |

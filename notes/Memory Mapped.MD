@@ -3,7 +3,7 @@
 Created: 15 July 2025 13:15
 Is Completed: No
 
-### 🔧 **Key Terminology & Concepts**
+## 🔧 **Key Terminology & Concepts**
 
 ### 🧠 1. **Memory-Mapped I/O (MMIO)**
 
@@ -36,9 +36,9 @@ Is Completed: No
 
 - The **data highway** that connects the CPU, memory, and I/O controllers.
 - Includes three types of lines:
-    - **Address Bus** – identifies memory/I/O locations.
-    - **Data Bus** – transfers actual data.
-    - **Control Bus** – sends commands like read/write.
+  - **Address Bus** – identifies memory/I/O locations.
+  - **Data Bus** – transfers actual data.
+  - **Control Bus** – sends commands like read/write.
 
 ---
 
@@ -46,9 +46,9 @@ Is Completed: No
 
 - **Programmed I/O**: CPU manually reads/writes to MMIO addresses (inefficient for large data transfers).
 - **DMA (Direct Memory Access)**:
-    - Offloads data transfer to the controller.
-    - Frees CPU for other tasks.
-    - Essential for high-throughput devices like graphics cards or USB storage.
+  - Offloads data transfer to the controller.
+  - Frees CPU for other tasks.
+  - Essential for high-throughput devices like graphics cards or USB storage.
 
 ---
 

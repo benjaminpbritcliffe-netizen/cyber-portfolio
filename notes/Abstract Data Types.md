@@ -12,13 +12,13 @@ __ = private
 
 ADT:  
 
- Abstract Data Types (ADTs), such as stacks, queues, and linked lists, can be implemented using classes 
+ Abstract Data Types (ADTs), such as stacks, queues, and linked lists, can be implemented using classes
 
-Encapsulation: 
+Encapsulation:
 
 Group things by each essential features of something. Eg. a Class
 
-Defines boundaries around things.   (Instance Variables, Private etc.) 
+Defines boundaries around things.   (Instance Variables, Private etc.)
 
 Information Hiding:
 
@@ -68,31 +68,31 @@ Classes -
 
 [Classes and Objects | Introduction to programming with Python](https://drlilianblot.gitbook.io/introduction-to-programming-with-python/classes/classes-and-objects)
 
-# ##Classes & Objects
+## Classes & Objects
 
-*#Classes and objects can be used to create own data types*
+Classes and objects can be used to create own data types
 
-*#Class is used to define your own data types.*
+Class is used to define your own data types.
 
-## # Creating a Class (Modelling)
+## Creating a Class (Modelling)
 
-*#Class used to define something*
+Class used to define something
 
-*#New File*
+New File
 
-*#Student.py*
+Student.py
 
-*#Created a class*
+Created a class
 
 class Student:
 
-*#Anything indented is defined in the class*
+Anything indented is defined in the class
 
-*#Use attributes to map out the data types/data required.*
+Use attributes to map out the data types/data required.
 
-#Map out the attributes required..
+## Map out the attributes required
 
-*# Create the template.*
+## Create the template
 
 def __init__(self, name,course,grade,is_on_probation):
 
@@ -104,33 +104,33 @@ self.grade = grade
 
 self.is_on_probation = is_on_probation
 
-## #Using the class to create an object
+## Using the class to create an object
 
-*#Is the item that has been defined using the class. What information is placed into the class*
+Is the item that has been defined using the class. What information is placed into the class
 
-*#Class used to define something*
+Class used to define something
 
-*#New File*
+New File
 
-*#Student.py*
+Student.py
 
 ## #Created a class
 
 class Student:
 
-*#Anything indented is defined in the class*
+- Anything indented is defined in the class
 
-*#Use attributes to map out the data types/data required.*
+- Use attributes to map out the data types/data required
 
-*#Map out the attributes required..*
+- Map out the attributes required
 
-*# Create the template.*
+- Create the template
 
-*#The object values get passed (stored) to the init function.*
+- The object values get passed (stored) to the init function
 
-*#Defining the attributes that need to be assigned. Under the def __Init__ definition.*
+- Defining the attributes that need to be assigned. Under the def __Init__ definition
 
-*#Example the name of the student needs to be stored against the self.name container.*
+- Example the name of the student needs to be stored against the self.name container
 
 def __init__(self, name,course,grade,is_on_probation):
 
@@ -142,18 +142,18 @@ self.grade = grade
 
 self.is_on_probation = is_on_probation
 
-## # Created a Object using the class above.
+## Created a Object using the class above
 
-*#1st student instance = File*
+- 1st student instance = File
 
-*#2nd Student instance = the class*
+- 2nd Student instance = the class
 
 from student import Student
 
-*#Using the class named "Student"*
+- Using the class named "Student"
 
 student1 = Student("Jim","Business",3.1,False)
 
-*#Print a specific part from the Student Data Type*
+## Print a specific part from the Student Data Type
 
 print(student1.name)

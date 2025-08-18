@@ -17,7 +17,7 @@ i.e. - we lack **trust.**
 
 Establishing trust deserves its own detailed study as it extends beyond token issuance. For now, we'll focus on trust within Identification and Authentication.
 
-### Simple trust concepts
+## Simple trust concepts
 
 As children, we begin with implicit trust in everything around us. We soon learn this isn't always wise and start seeking external validation of what's "safe." This typically comes from parents or guardians who've proven their trustworthiness. At school, these authority figures (our "principals") assure us that teachers are trustworthy. Teachers then become delegated authorities whose trust judgments we accept.
 
@@ -84,7 +84,7 @@ These two MAC implementations share basic security level concepts but serve diff
 
 To properly manage security, we need a way to track who can do what with different resources in our system. We can do this using Access Control Lists (ACLs). This system has three main parts:
 
-**(S, O, A)**
+(S, O, A)
 
 These parts are:
 
@@ -94,7 +94,7 @@ These parts are:
 
 The system also includes 'P', which is simply a list of all possible actions that subjects can perform on objects (like read, write, or delete).
 
-### Consider the following ACLs:File-1: ((Cathy,r), (Eve, orw))File-2: ((Alice, r), (Bob, orw), (Cathy,r), (Dan, r))File-3: ((Alice, orw), (Bob, r), (Cathy, r))File-4: ((Alice, r), (Cathy, r), (Dan, orw))File-5: ((Bob, r), (Cathy, orw), (Dan, r))If you have any questions about this activity, please post them in the [Week 2 Activity Forum Q&A](https://onlinestudy.york.ac.uk/courses/1532/modules/12488).
+### Consider the following ACLs:File-1: ((Cathy,r), (Eve, orw))File-2: ((Alice, r), (Bob, orw), (Cathy,r), (Dan, r))File-3: ((Alice, orw), (Bob, r), (Cathy, r))File-4: ((Alice, r), (Cathy, r), (Dan, orw))File-5: ((Bob, r), (Cathy, orw), (Dan, r))If you have any questions about this activity, please post them in the [Week 2 Activity Forum Q&A](https://onlinestudy.york.ac.uk/courses/1532/modules/12488)
 
 - File-1: ((Cathy,r), (Eve, orw))
 - File-2: ((Alice, r), (Bob, orw), (Cathy,r), (Dan, r))

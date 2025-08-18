@@ -3,7 +3,7 @@
 Created: 4 April 2025 21:50
 Class: Additional Research
 Is Completed: Yes
-URL: https://youtu.be/rMgwTWn0BLA?si=kMs2oLzY0G6l8LcU
+URL: [https://youtu.be/rMgwTWn0BLA?si=kMs2oLzY0G6l8LcU](https://youtu.be/rMgwTWn0BLA?si=kMs2oLzY0G6l8LcU)
 
 ```python
 

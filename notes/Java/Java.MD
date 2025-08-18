@@ -32,17 +32,17 @@ Why use methods? To reuse code: define the code once, and use it many times.
 Keeping attributes private is a fundamental aspect of encapsulation in object-oriented programming (OOP). Here’s why it’s so important:
 
 - **Data Protection:**
-    
+
     When attributes are private, they can’t be directly accessed or modified from outside the class. This prevents unintended changes and protects the internal state of an object.
-    
+
 - **Controlled Access:**
-    
+
     By using public getter and setter methods, you have full control over how the attributes are read or updated. This allows you to enforce rules or validation checks whenever the data is accessed or changed.
-    
+
 - **Modularity and Maintenance:**
-    
+
     Hiding the internal implementation details means you can change them later without affecting other parts of your code. This separation between the internal state and the external interface makes your code more flexible and easier to maintain.
-    
+
 - **Encapsulation:**
-    
+
     Encapsulation helps bundle the data (attributes) and methods (behaviors) into a single unit (class), ensuring that the object’s internal workings are hidden from the outside world. This leads to more robust, secure, and reliable code.

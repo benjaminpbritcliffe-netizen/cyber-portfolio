@@ -3,7 +3,7 @@
 Created: 22 July 2025 09:54
 Is Completed: No
 
-### 🔷 Overview: Exceptional Control Flow (ECF)
+## 🔷 Overview: Exceptional Control Flow (ECF)
 
 **Definition:**
 
@@ -11,14 +11,14 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 ---
 
-### 🔷 Section 8.0: Introduction to ECF
+## 🔷 Section 8.0: Introduction to ECF
 
-### 🔹 **Exceptional Control Flow (ECF)**
+## 🔹 **Exceptional Control Flow (ECF)**
 
 - A fundamental mechanism in system-level programming that allows computers to react to **unpredictable events**.
 - Not "exceptions" in the high-level language sense (like try/catch) — ECF encompasses **interrupts**, **faults**, **traps**, and **aborts**.
 
-### 🔹 Types of ECF:
+## 🔹 Types of ECF
 
 1. **Hardware interrupts** – e.g., keyboard input, network packet arrival.
 2. **Software exceptions** – e.g., divide by zero, invalid memory access.
@@ -65,7 +65,7 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 - Typically triggered via a **trap instruction** (e.g., `int $0x80` in x86 or `syscall` in x86-64).
 - Kernel executes the request, returns the result to the user program, and resumes execution.
 
-### 🔹 Why System Calls Are Important:
+### 🔹 Why System Calls Are Important
 
 - Ensure **security and isolation**: User programs can't directly manipulate hardware.
 - Provide **abstraction**: User code doesn't need to know hardware details.
@@ -122,17 +122,17 @@ Exceptional Control Flow refers to **changes in a program's normal execution seq
 
 ## 🔽 1. **Hardware Level**
 
-### 📌 How it works:
+### 📌 How it works
 
 At the hardware level, devices like timers, keyboards, disks, and network cards generate **interrupts** or **exceptions** to alert the CPU that an event has occurred.
 
-### 🔹 Examples:
+### 🔹 Hardware-Level Examples
 
 - **Interrupts**: A timer generates an interrupt to pause a running process and switch to another.
 - **Faults**: Division by zero or invalid memory access triggers a **fault** for the OS to handle.
 - **Aborts**: Signal fatal hardware errors (e.g., memory corruption) that cannot be recovered from.
 
-### 🎯 Role in ECF:
+### 🎯 Role in ECF
 
 - These events cause the CPU to **pause the current control flow**, save context, and transfer control to an **interrupt or exception handler**.
 - Enables **asynchronous handling** of events (e.g., responding to user input or hardware failures).
@@ -141,17 +141,17 @@ At the hardware level, devices like timers, keyboards, disks, and network cards 
 
 ## 🔽 2. **Operating System (Kernel) Level**
 
-### 📌 How it works:
+## 📌 How the OS Handles ECF
 
 The OS responds to hardware exceptions and provides mechanisms to **manage processes**, **handle errors**, and **schedule resources**.
 
-### 🔹 Examples:
+## 🔹 OS-Level Examples
 
 - **System Calls (Traps)**: A user process requests a system function (e.g., file read) via a trap to enter kernel mode.
 - **Context Switches**: The OS saves one process's state and loads another's, switching execution.
 - **Fault Handling**: OS recovers from a page fault by loading the needed page from disk into memory.
 
-### 🎯 Role in ECF:
+## 🎯 Roles in ECF
 
 - Ensures **controlled transitions** between user mode and kernel mode.
 - Manages **concurrency** by switching between tasks.
@@ -161,17 +161,17 @@ The OS responds to hardware exceptions and provides mechanisms to **manage proce
 
 ## 🔽 3. **Application Level**
 
-### 📌 How it works:
+## 📌 How it works (Application Level)
 
 Applications handle ECF using programming constructs and OS mechanisms like **signals**, **exceptions**, and **event callbacks**.
 
-### 🔹 Examples:
+### 🔹 Application-Level Examples
 
 - **Signals**: A process receives a `SIGINT` (e.g., Ctrl+C), triggering a signal handler function.
 - **Thread Scheduling**: Multithreaded applications rely on the OS to switch threads when needed.
 - **Exceptions in Programming Languages**: In Java, Python, or C++, `try/catch` constructs manage software-level ECF for expected errors.
 
-### 🎯 Role in ECF:
+### ECF Roles
 
 - Allows apps to respond to asynchronous events (I/O completion, user interrupt).
 - Promotes **fault tolerance** through recovery code.
@@ -181,7 +181,7 @@ Applications handle ECF using programming constructs and OS mechanisms like **si
 
 ## 💡 Why ECF Is So Important
 
-### ✅ Enables:
+### ✅ Enables
 
 - **Multitasking**: Switching between processes and threads efficiently.
 - **Fault Recovery**: Gracefully handling runtime errors and hardware issues.
@@ -191,13 +191,14 @@ Applications handle ECF using programming constructs and OS mechanisms like **si
 
 ---
 
-## 🧩 Visual Summary:
+## 🧩 Visual Summary
 
 | Level | Trigger/Event | Control Transfer To | Example |
 | --- | --- | --- | --- |
 | **Hardware** | Timer interrupt, page fault, I/O ready | Kernel-level exception handler | Keyboard input triggers IRQ |
 | **Operating System** | Process ends, I/O completes, system call | Kernel scheduler or syscall handler | Context switch to another process |
 | **Application** | Signal received, exception raised | Signal handler or catch block | Division by zero raises exception |
+
 - **OS as Interface:** The lesson explains how operating systems serve as an essential layer managing the relationship between hardware and software to enable user interaction and resource management.
 - **OS vs. Bare-metal:** It differentiates operating systems from bare-metal systems, where software runs directly on hardware without the use of abstraction layers, such as BIOS and the kernel.
 - **Kernel Role:** The kernel is highlighted as the core control component responsible for managing processes, memory, and devices, acting as the system’s taskmaster.

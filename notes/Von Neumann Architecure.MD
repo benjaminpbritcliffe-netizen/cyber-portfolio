@@ -3,7 +3,7 @@
 Created: 3 July 2025 11:41
 Is Completed: No
 
-### 🧠 Von Neumann Architecture – In Detail:
+## 🧠 Von Neumann Architecture – In Detail
 
 1. **Core Idea**: One memory holds both instructions (code) and data.
 2. **Key Components**:
@@ -17,18 +17,18 @@ Is Completed: No
 4. **Legacy Impact**:
     - Nearly all mainstream CPUs (x86, ARM, etc.) are *based* on this model—even modern ones with adaptations.
 
-### ⚠ Limitations Expanded:
+### ⚠ Limitations Expanded
 
 - **Von Neumann Bottleneck**:
-    - Because instructions and data share the same path, the CPU may sit idle waiting for memory.
-    - Affects throughput and speed for instruction-heavy or memory-intensive applications.
+  - Because instructions and data share the same path, the CPU may sit idle waiting for memory.
+  - Affects throughput and speed for instruction-heavy or memory-intensive applications.
 - **No Built-in Parallelism**:
-    - Von Neumann systems execute one instruction at a time.
-    - Modern demand (e.g., AI, simulations) outpaces this.
+  - Von Neumann systems execute one instruction at a time.
+  - Modern demand (e.g., AI, simulations) outpaces this.
 - **No Intrinsic Security**:
-    - Original model didn’t account for multitasking, memory protection, or user/kernel privilege separation.
+  - Original model didn’t account for multitasking, memory protection, or user/kernel privilege separation.
 
-### 🛠 Modern Workarounds:
+### 🛠 Modern Workarounds
 
 | Limitation | Modern Solution |
 | --- | --- |
@@ -44,19 +44,19 @@ Is Completed: No
 
 - **Examples**: Linux, early Unix
 - **Pros**:
-    - All services run in kernel space → fast, fewer context switches.
+  - All services run in kernel space → fast, fewer context switches.
 - **Cons**:
-    - A bug in one module can crash the system.
-    - Harder to debug or modularize.
+  - A bug in one module can crash the system.
+  - Harder to debug or modularize.
 
 ### 🔒 Complexity-Focused Design: Microkernels
 
 - **Examples**: QNX, MINIX, seL4
 - **Pros**:
-    - Better isolation, security.
-    - Easier to verify formally (e.g., seL4 has mathematical proof of correctness).
+  - Better isolation, security.
+  - Easier to verify formally (e.g., seL4 has mathematical proof of correctness).
 - **Cons**:
-    - Performance hit from messaging between kernel and services.
+  - Performance hit from messaging between kernel and services.
 
 ---
 
@@ -68,6 +68,7 @@ Is Completed: No
 | Instruction Count | More per task | Fewer, but more complex |
 | Pipelinability | High (simple stages) | Lower (decoding bottlenecks) |
 | Hardware Complexity | Simpler | More complex |
+
 - **Modern CPUs often blend both**: Intel x86 internally translates CISC instructions into RISC-like micro-ops for efficiency.
 
 ---

@@ -1,4 +1,4 @@
-\# OS Design
+# OS Design
 
 Created: 24 July 2025 10:57
 Is Completed: No
@@ -40,22 +40,22 @@ System calls act as a **controlled gateway** between a user program and the OS k
 
 When a program makes a system call (e.g., `read()` or `write()` in C), the CPU performs a **trap**, switching the processor from **user mode to kernel mode**. The OS then safely executes the requested operation on the program’s behalf and returns the result.
 
-### 🔑 Why It's Important:
+## 🔑 Why It's Important
 
 - Prevents bugs or malicious code from corrupting the system.
 - Enforces privilege separation: programs can’t overwrite memory or kill other processes without permission.
 - Provides a **consistent API** across hardware platforms.
 
 > Example: When you open a file in C using open(), you’re not talking directly to the hard drive — you’re calling the OS to do it safely for you.
-> 
+>
 
 ### 🔷 **Hardware-Generated Exceptions (e.g., Interrupts & Faults):**
 
 - Occur at the **CPU level** due to hardware events.
 - Examples:
-    - Timer interrupt
-    - Keyboard input
-    - Page fault (accessing non-resident memory)
+  - Timer interrupt
+  - Keyboard input
+  - Page fault (accessing non-resident memory)
 - Handled by the OS through predefined interrupt/trap handlers.
 - Often used for resource management, multitasking, and error handling at the system level.
 
@@ -63,9 +63,9 @@ When a program makes a system call (e.g., `read()` or `write()` in C), the CPU p
 
 - Triggered **by code logic**, not the CPU.
 - Examples:
-    - Division by zero
-    - Null pointer access
-    - File not found
+  - Division by zero
+  - Null pointer access
+  - File not found
 - Caught using constructs like `try...catch` or `try...except`.
 - Handled within the application logic, **not by the OS kernel**.
 
@@ -76,10 +76,10 @@ When a program makes a system call (e.g., `read()` or `write()` in C), the CPU p
 - **Control**: Programmers write code to handle software exceptions, but rely on the OS to manage hardware exceptions.
 
 > Analogy:
-> 
-> 
+>
+>
 > Think of hardware exceptions like a fire alarm (must be handled by firefighters — the OS), while software exceptions are like spelling errors in a document (you can fix those yourself — the program handles them).
-> 
+>
 
 - **OS as Interface:** The lesson explains how operating systems serve as an essential layer managing the relationship between hardware and software to enable user interaction and resource management.
 - **OS vs. Bare-metal:** It differentiates operating systems from bare-metal systems, where software runs directly on hardware without the use of abstraction layers, such as BIOS and the kernel.
@@ -120,6 +120,7 @@ When a program makes a system call (e.g., `read()` or `write()` in C), the CPU p
 
 | **Real-Time Operating System (RTOS)** | An OS designed to handle tasks within strict timing constraints, often used in embedded systems. |  |
 | --- | --- | --- |
+
 - **Process and Thread Management:** The operating system uses Process IDs (PIDs) and maintains essential data structures to manage and distinguish between concurrently running tasks (processes).
 - **Scheduling and Prioritisation:** Tasks are scheduled using algorithms such as preemptive scheduling and multiple priority queues to ensure performance, fairness, and responsiveness.
 - **Thread Models and Execution:** Threads are managed as lightweight execution units within processes using different threading models, enabling parallelism and resource sharing.
@@ -136,46 +137,46 @@ When a program makes a system call (e.g., `read()` or `write()` in C), the CPU p
 | **Multiprocessor System** | A system with more than one processor (or core) working together to handle tasks concurrently. |
 | **Load Balancing** | Distributing work evenly across CPUs or cores to maximize resource use and minimize idle time. |
 
-### 🔷 Traditional Uniprocessor Systems:
+### 🔷 Traditional Uniprocessor Systems
 
 - Can run only **one task at a time**.
 - Frequent **context switches** are needed to simulate multitasking.
 - Each switch involves saving/restoring CPU state — an **expensive operation** in terms of time and performance.
 
-### 🔷 How Multicore Systems Help:
+### 🔷 How Multicore Systems Help
 
 - Multiple cores can run **multiple tasks simultaneously**, reducing the need to switch between tasks as often.
 - **True parallelism**: One core handles user input, another processes data, etc.
 - Reduces overhead of **task switching**, since fewer switches are required overall.
 
-### 🔷 How Hyperthreading Helps:
+### 🔷 How Hyperthreading Helps
 
 - Allows a single core to process **two threads concurrently** by sharing execution units.
 - If one thread stalls (e.g., waiting on memory), the other can continue using the core.
 - Increases **utilization of idle CPU resources** and smooths out performance.
 
 > Bottom Line: Both multicore and hyperthreading reduce idle time and context-switching costs, improving system responsiveness and throughput.
-> 
+>
 
-### 🔷 OS Design for Uniprocessor:
+### 🔷 OS Design for Uniprocessor
 
 - Simpler scheduling — only one CPU to manage.
 - No need for load balancing or thread migration.
 - Less concern about concurrency and shared resource conflicts.
 - Easier debugging, but limited performance scalability.
 
-### 🔷 OS Design for Multiprocessor:
+### 🔷 OS Design for Multiprocessor
 
 - Requires **advanced scheduling** to assign tasks across CPUs efficiently.
 - Needs **synchronization mechanisms** to prevent race conditions (e.g., mutexes, semaphores).
 - Includes **load balancing algorithms** to ensure all CPUs are utilized fairly.
 - May implement **processor affinity** to minimize cache misses and memory latency.
 
-### 🔷 Performance Implications:
+### 🔷 Performance Implications
 
 - **Multiprocessor systems** can offer major performance gains, especially for multithreaded or parallel workloads.
 - However, performance depends on how well the OS handles:
-    - Thread scheduling across cores
-    - Synchronization
-    - Memory access patterns (NUMA-aware systems)
+  - Thread scheduling across cores
+  - Synchronization
+  - Memory access patterns (NUMA-aware systems)
 - Poor design can lead to **CPU contention**, **idle cores**, or **cache thrashing**.

@@ -1,8 +1,8 @@
 # 📱 Apktool
 
 ## Description
-Apktool is used for reverse engineering Android apps.
 
+Apktool is used for reverse engineering Android apps.
 
 ## Installation
 
@@ -14,6 +14,7 @@ Make sure both files are executable. (chmod +x)
 Try running apktool via CLI.
 
 ## Basic Usage
+
 ```bash
 apktool d app.apk
 ```
@@ -48,5 +49,6 @@ For smali/baksmali info, see: https://github.com/JesusFreke/smali
 ```
 
 ## Use Case
+
 - Decompile APKs
 - Inspect app structure

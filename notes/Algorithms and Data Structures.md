@@ -664,7 +664,7 @@ the fast computation of y = x”, where n is a non-negative integer.
 
 y:=1.0;i:=n;
 
-WHILE i> 0 DO (* xo” = x’* y*)
+WHILE i> 0 DO (*xo” = x’* y*)
 IF ODD(G) THEN y := y*x END ;
 X :=x*x;i:=iDIV2
 
@@ -851,7 +851,7 @@ M: ARRAY 10 OF Row
 
 is an array consisting of ten components (rows), each constisting of four components of type REAL, and is
 called a 10 x 4 matrix with real components. Selectors may be concatenated accordingly, such that Mj and
-M[i][j] denote the j th component of row M,, which is the i th component of M. This is usually abbreviated
+denote the j th component of row M,, which is the i th component of M. This is usually abbreviated
 as M[i, j] and in the same spirit the declaration
 
 M: ARRAY 10 OF ARRAY 4 OF REAL
@@ -877,7 +877,7 @@ END.
 In a further example, assume that a fraction f is represented in its decimal form with k-1 digits, i.e., by an
 array d such that
 
-f = Si:0<i<k:d,* 107 or
+f = Si:0<i<k:d,*107 or
 f = dot 10*d, + 100%d, +… +d,,*10”!
 
 Now assume that we wish to divide f by 2. This is done by repeating the familiar division operation for all
@@ -944,7 +944,7 @@ preference to the term Cartesian product. In general, a record type T with compo
 …, [nis defined as follows:
 
 TYPET= RECORD s1:T1;s2:T2; … sn: Tn END
-card(T) = card(T1) * card(T2) * … * card(Tn)
+card(T) = card(T1) *card(T2)* … * card(Tn)
 
 Examples
 TYPE Complex = RECORD re, im: REAL END
@@ -1195,7 +1195,7 @@ primary reason is that the storage management strategy is sufficiently simple fo
 other advanced structures), if we enforce a certain discipline in the use of sequences. In fact, under this
 proviso the handling of storage can safely be delegated to a machanism that can be guaranteed to be
 reasonably effective. The secondary reason is that sequences are indeed ubiquitous in all computer
-applications. This structure is prevalent in all cases where different kinds of storage media are involved, i.e. 
+applications. This structure is prevalent in all cases where different kinds of storage media are involved, i.e.
 where data are to be moved from one medium to another, such as from disk or tape to primary store or
 vice-versa.
 
@@ -1355,7 +1355,7 @@ TYPE File = POINTER TO RECORD
 len: INTEGER;
 a: ARRAY MaxLength OF CHAR
 END ;
-Rider = RECORD (* 0 <= pos <= s.len <= Max Length *)
+Rider = RECORD (*0 <= pos <= s.len <= Max Length*)
 f: File; pos: INTEGER; eof: BOOLEAN
 END ;
 PROCEDURE New(name: ARRAY OF CHAR): File;
@@ -1904,7 +1904,7 @@ and let order on strings x and y be defined as follows:
 (x<y) = Ei:0 <i<N: (Aj: 0 <j <i: xj=y) & (Ki< yj)
 
 In order to establish a match, we evidently must find all characters of the comparands to be equal. Such a
-comparison of structured operands therefore turns out to be a search for an unequal pair of comparands, i.e. 
+comparison of structured operands therefore turns out to be a search for an unequal pair of comparands, i.e.
 a search for inequality. If no unequal pair exists, equality is established. Assuming that the length of the
 words be quite small, say less than 30, we shall use a linear search in the following solution.
 
@@ -1960,7 +1960,7 @@ END ;
 IFR < N THEN i:=0;
 WHILE (T[R,i] = x[i]) & (x[i] # OX) DO i :=1+1 END
 END
-(* (R < N) & (T[R,i] = x[i]) establish a match*)
+(*(R < N) & (T[R,i] = x[i]) establish a match*)
 
 1.9.4. Straight String Search
 
@@ -1992,7 +1992,7 @@ Q(i) = Ak: 0 <k <i: ~P(k, M)
 The posed problem immediately suggests to formulate the search as an iteration of comparisons, and we
 proposed the following approach:
 i:=-l;
-REPEAT INC(i); (* Q(i) *)
+REPEAT INC(i); (*Q(i)*)
 found := P(i, M)
 UNTIL found OR (i = N-M)
 The computation of P again results naturally in an iteration of individual character comparisons. When we
@@ -2004,9 +2004,9 @@ Pa,j) = (Ak: 05k <j: siun=p) = (~EK:0<k <j: sik # py)
 The result of the next refinement is a repetition within a repetition. The predicates P and Q are inserted at
 appropriate places in the program as comments. They act as invariants of the iteration loops.
 i:=-l;
-REPEAT INC(i); j := 0; (* Q(@) *)
+REPEAT INC(i); j := 0; (*Q(@) *)
 WHILE (j < M) & (s[i+j] = p[j]) DO (* PG, j+1) *) INCG) END
-(* Q@ & PG, j) & (G = M) OR (slitj] # phi) *)
+(* Q@ & PG, j) & (G = M) OR (slitj] # phi)*)
 
 37
 
@@ -2054,7 +2054,7 @@ Using the predicates P and Q, the KMP-algorithm is the following:
 1:=0;) :=0;
 
 WHILE (j < M) & (i< N) DO
-(* QG-j) & PG-j, j) *)
+(*QG-j) & PG-j, j)*)
 WHILE (j >= 0) & (s[i] # p[j]) DO j := D END ;
 INC); INCG)
 
@@ -2243,10 +2243,10 @@ conditions.
 i:=M;j:=M;
 WHILE g > 0) & (@ <=N) DO
 
-(* Q@-M) *) j= Mik i;
+(*Q@-M)*) j= Mik i;
 
 WHILE (j > 0) & (s[k-1] = p[j-1]) DO
-(* P(k5j, j) & (k-j = i-M) *)
+(*P(k5j, j) & (k-j = i-M)*)
 DEC(k); DECG)
 
 END ;
@@ -2404,7 +2404,7 @@ References
 1-1.O0-.J. Dahl, E.W. Dijkstra, and C.A.R. Hoare. Structured Programming. (New York: Academic Press,
 1972), pp. 155-65.
 
-1-2.C.A.R. Hoare. Notes on data structuring; in Structured Programming. Dahl, Dijkstra, and Hoare, pp. 
+1-2.C.A.R. Hoare. Notes on data structuring; in Structured Programming. Dahl, Dijkstra, and Hoare, pp.
 83-174.
 
 1-3. K. Jensen and N. Wirth. Pascal User Manual and Report. (Berlin: Springer-Verlag, 1974).
@@ -2414,7 +2414,7 @@ References
 
 1-6. —— , On the composition of well-structured programs. Computing Surveys, 6, No. 4, (1974) 247-59.
 
-1-7.C.A.R. Hoare. The Monitor: An operating systems structuring concept. Comm. ACM 17, 10 (Oct. 
+1-7.C.A.R. Hoare. The Monitor: An operating systems structuring concept. Comm. ACM 17, 10 (Oct.
 1974), 549-557.
 
 1-8. D.E.Knuth, J.H. Morris, and V.R. Pratt. Fast pattern matching in strings. SIAM J. Comput., 6, 2, (June
@@ -2663,6 +2663,7 @@ performed upon single items and over longer distances. This idea leads to sortin
 
 2.2.2 Sorting by Straight Selection
 This method is based on the following principle:
+
 1. Select the item with the least key.
 
 Exchange it with the first item ap.
@@ -2968,7 +2969,7 @@ organizing this information efficiently.
 
 ~*~
 i
- 
+
 A
 
 55 12 42 94 18 67
@@ -3284,7 +3285,7 @@ Assuming that we are very lucky and always happen to select the median as the bo
 process splits the array in two halves, and the number of necessary passes to sort is log n. The resulting total
 number of comparisons is then n*log n, and the total number of exchanges is n*  log(n)/6.
 
-Of course, one cannot expect to hit the median all the time. In fact, the chance of doing so is only I/n. 
+Of course, one cannot expect to hit the median all the time. In fact, the chance of doing so is only I/n.
 Surprisingly, however, the average performance of Quicksort is inferior to the optimal case by a factor of
 only 2*In(2), if the bound is chosen at random.
 
@@ -6005,7 +6006,7 @@ We note that the consideration of each object (called candidates in previous exa
 outcomes, namely, either the inclusion of the investigated object in the current selection or its exclusion.
 This makes the use of a repeat or for statement inappropriate; instead, the two cases may as well be
 
-explicitly written out. This is shown, assuming that the objects are numbered 1, 2, … ,n. 
+explicitly written out. This is shown, assuming that the objects are numbered 1, 2, … ,n.
 PROCEDURE Try(i: INTEGER);
 BEGIN
 
@@ -6128,11 +6129,11 @@ Value 18 20 17 #19 25 21 27 230 «©2524
 50 84
 60 ee 99
 70 be 115
-80 5 * 130
+80 5 *130
 90 = = 139
-100 * = * 157
-110 * e bl . 172
-120 * bg * sg 183
+100* = *157
+110* e bl . 172
+120 *bg* sg 183
 
 Table 3.5 Sample Output from Optimal Selection Program.
 
@@ -6145,10 +6146,11 @@ Exercises
 on the rods, thereby forming towers. Let the n disks initially be placed on rod A in the order of
 decreasing size, as shown in Fig. 3.10 for n = 3. The task is to move the n disks from rod A to rod C
 such that they are ordered in the original way. This has to be achieved under the constraints that
-1. In each step exactly one disk is moved from one rod to another rod.
 
-1. A disk may never be placed on top of a smaller disk.
-2. Rod B may be used as an auxiliary store.
+- In each step exactly one disk is moved from one rod to another rod.
+
+- A disk may never be placed on top of a smaller disk.
+- Rod B may be used as an auxiliary store.
 
 Find an algorithm that performs this task. Note that a tower may conveniently be considered as
 consisting of the single disk at the top, and the tower consisting of the remaining disks. Describe the
@@ -6649,7 +6651,7 @@ PROCEDURE search(x: INTEGER; VAR root: Word);
 VAR w: Word;
 BEGIN w := root;
 WHILE (w # NIL) & (w.key # x) DO w := w.next END ;
-(* (w= NIL) OR (w.key = x) *)
+(*(w= NIL) OR (w.key = x)*)
 IF w= NIL THEN (*new entry*)
 W := root;
 NEW (root); root.key := x; root.count := 1; root.next := w
@@ -6732,7 +6734,7 @@ w2 := root; wl := w2.next;
 WHILE (w1 # NIL) & (wl.key < x) DO
 w2 :=wl; wl := w2.next
 END ;
-(* (wl = NIL) OR (wl.key >= x) *)
+(*(wl = NIL) OR (wl.key >= x)*)
 IF (wl = NIL) OR (wl.key > x) THEN (*new entry*)
 NEW(w3); w2.next := w3;
 w3.key := x; w3.count := 1; w3 next := wl
@@ -7112,7 +7114,7 @@ the root.
 
 127
 
-1. 
+1.
 2. A
 B
 D
@@ -7129,7 +7131,7 @@ M
 N
 H
 Cc) P
-3. 
+3.
 
 Fig. 4.17. Representation of tree structure by (a) nested sets,
 (b) nested parentheses, (c) indented text, and (d) graph
@@ -7200,7 +7202,7 @@ descendants (!), the history of a tennis tournament with each game being a node 
 the two previous games of the combatants as its descendants, or an arithmetic expression with dyadic
 operators, with each operator denoting a branch node with its operands as subtrees (see Fig. 4.20).
 
-Fig. 4.20. Tree representation of expression (a + b/c) * (d—- e*f)
+Fig. 4.20. Tree representation of expression (a + b/c) *(d—- e*f)
 
 We now turn to the problem of representation of trees. It is plain that the illustration of such recursive
 structures in terms of branching structures immediately suggests the use of our pointer facility. There is
@@ -7688,7 +7690,7 @@ END delete
 
 The auxiliary, recursive procedure del is activated in case 3 only. It descends along the rightmost branch
 of the left subtree of the element q’ to be deleted, and then it replaces the relevant information (key and
-count) in q* by the corresponding values of the rightmost component r’ of that left subtree, whereafter t*
+count) in q*by the corresponding values of the rightmost component r’ of that left subtree, whereafter t*
 may be disposed.
 
 We note that we do not mention a procedure that would be the inverse of NEW, indicating that storage is
@@ -7746,23 +7748,23 @@ In the tree in Fig. 4.29 we divide the nodes into three classes:
 
 Hence, the equation above can be expressed as a sum of two terms 1) and 3)
 
-an” = ((i-1) * ayy + (n-i) * ans) /n
+an” = ((i-1) *ayy + (n-i)* ans) /n
 The desired quantity an is the average of an? over alli = 1… n, ie., over all trees with the key 1,2,..,n
 at the root.
 
 a, = (Si: 1 <i<m: (-1) aj; + (n-i) an.) / n°
 
-2* (Si: 1 <i<n: (i-1) a.))/n°
+2*(Si: 1 <i<n: (i-1) a.))/n°
 =2* (Si: 1 <i<mi*a)/n?
 
 This equation is a recurrence relation of the form a, = f,(aj, a, … , y.1). From this we derive a simpler
 recurrence relation of the form a, = f,(a,.;). We derive directly (1) by splitting off the last term, and (2)
 by substituting n-1 for n:
 
-1. a, =2*(n-1l* a,;/n? + 2* (Si: 1 <i<mi*a)/
-2. any = 2* (Si 1 <i <n-1:i* a)/(n-1)*
+1. a, =2*(n-1l* a,;/n? + 2*(Si: 1 <i<mi*a)/
+2. any = 2*(Si 1 <i <n-1:i* a)/(n-1)*
 Multiplying (2) by (n-1)’/n’ yields
-3. 2* (Si: 1 <i<n-l:i* a) /n? = a,, 62 * (n-1)°/n*
+3. 2*(Si: 1 <i<n-l:i* a) /n? = a,, 62 *(n-1)°/n*
 and substituting the right part of (3) in (1), we find
 an = 2*(n-1)* a.) /n° + a) *(n-1)?/m = a,*  (n-1)*/n?
 It turns out that a, can be expressed in non-recursive, closed form in terms of the harmonic sum
@@ -7777,11 +7779,11 @@ From Euler’s formula (using Euler’s constant g = 0.577…)
 
 H, = g+inn+1/12n’ +…
 we derive, for large n, the approximate value
-a, = 2* (Inn+g- 1)
+a, = 2*(Inn+g- 1)
 Since the average path length in the perfectly balanced tree is approximately
 a,’ = logn - 1
 we obtain, neglecting the constant terms which become insignificant for large n,
-lim (a,/a,’) = 2 * In(n)/log(n) = 2 In(2) = 1.386…
+lim (a,/a,’) = 2* In(n)/log(n) = 2 In(2) = 1.386…
 
 What does this result teach us? It tells us that by taking the pains of always constructing a perfectly
 balanced tree instead of the random tree, we could – always provided that all keys are looked up with
@@ -8833,7 +8835,7 @@ insert new item with key x. If an entry is to be passed up,
 assign it to v. h := “tree has become higher”*)
 VAR i, L, R: INTEGER;
 b: Page; u: Entry;
-BEGIN (* ~h *)
+BEGIN (*~h *)
 IF a= NIL THEN v key := x; v.p := NIL; h := TRUE
 ELSE L :=0;R :=a.m; (*binary search*)
 WHILE L <R DO
@@ -9400,8 +9402,6 @@ identified by a given key. Do this once assuming the existence of a header, once
 |S Cl CEG
 CA |_|
 
-#¥#zM A Ld
-
 Fig. 4.55. Circular list
 
 4.6. A bidirectional list is a list of elements that are linked in both ways. (See Fig. 4.56) Both links are
@@ -9533,7 +9533,7 @@ translation in Soviet Math, 3, 1259-63.
 4-2.R. Bayer and E.M. McCreight. Organization and Maintenance of Large Ordered Indexes. Acta
 Informatica, 1, No. 3 (1972), 173-89.
 
-4-3, —– , Binary B-trees for Virtual memory. Proc. 1971 ACM SIGFIDET Workshop, San Diego, Nov. 
+4-3, —– , Binary B-trees for Virtual memory. Proc. 1971 ACM SIGFIDET Workshop, San Diego, Nov.
 1971, pp. 219-35.
 
 4-4, —– , Symmetric Binary B-trees: Data Structure and Maintenance Algorithms. Acta Informatica, 1,
@@ -9543,7 +9543,7 @@ No. 4 (1972), 290-306.
 4-6.D.E. Knuth. Optimum Binary Search Trees. Acta Informatica, 1, No. 1 (1971), 14-25.
 
 4-7.W.A. Walker and C.C. Gotlieb. A Top-down Algorithm for Constructing Nearly Optimal
-Lexicographic Trees. in Graph Theory and Computing (New York: Academic Press, 1972), pp. 
+Lexicographic Trees. in Graph Theory and Computing (New York: Academic Press, 1972), pp.
 303-23.
 
 4-8.D. Comer. The ubiquitous B-Tree. ACM Comp. Surveys, 11,2 (June 1979), 121-137.
@@ -9790,7 +9790,7 @@ even very small.
 
 Let us once again assume that all possible keys are equally likely and that the hash function H distributes
 them uniformly over the range of table indices. Assume, then, that a key has to be inserted in a table of size
-n which already contains k items. The probability of hitting a free location the first time is then (n-k)/n. 
+n which already contains k items. The probability of hitting a free location the first time is then (n-k)/n.
 This is also the probability p1 that a single comparison only is needed. The probability that excatly one
 second probe is needed is equal to the probability of a collision in the first try times the probability of
 hitting a free location the next time. In general, we obtain the probability pi of an insertion requiring

@@ -3,16 +3,16 @@
 Tags: Idea
 Language: Java
 
-# Basic Java Program Structure: Step-by-Step
+## Basic Java Program Structure: Step-by-Step
 
 ## 1. Decide on Your Blueprint (Class)
 
 - **Concept:**
-    
+
     Create a class that acts as a blueprint for your objects.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     // This class acts as a blueprint for creating Person objects.
@@ -21,20 +21,19 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 2. Identify the Attributes
 
 - **Concept:**
-    
+
     Determine the key data you want each object to have.
-    
+
     For example, attributes like `name` and `age` (keep them private for encapsulation).
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Person {
@@ -44,20 +43,19 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 3. Set Up Your Constructor
 
 - **Concept:**
-    
+
     Write a constructor that initializes the attributes.
-    
+
     Use the `this` keyword to differentiate between class variables and constructor parameters.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Person {
@@ -72,18 +70,17 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 4. Create Accessor and Mutator Methods (Getters and Setters)
 
 - **Concept:**
-    
+
     Keep attributes private and provide public methods to access (get) and modify (set) them.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Person {
@@ -117,18 +114,17 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 5. Add Additional Methods
 
 - **Concept:**
-    
+
     Include methods to perform actions on the object, such as printing its state.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Person {
@@ -147,18 +143,17 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 6. Create a Collection (ArrayList) to Manage Your Objects
 
 - **Concept:**
-    
+
     In your main method, initialize an `ArrayList` to store multiple `Person` objects dynamically.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     import java.util.ArrayList;
@@ -173,18 +168,17 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 7. Instantiate Your Objects and Add Them to the ArrayList
 
 - **Concept:**
-    
+
     Create new instances of the `Person` class and add them to your collection.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Main {
@@ -202,18 +196,17 @@ Language: Java
     }
     
     ```
-    
 
 ---
 
 ## 8. Access and Manipulate Your Objects
 
 - **Concept:**
-    
+
     Iterate over the ArrayList to access and use methods like `printInfo()` for each object.
-    
+
 - **Code Example:**
-    
+
     ```java
     
     public class Main {

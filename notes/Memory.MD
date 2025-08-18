@@ -46,7 +46,7 @@ Throughput increases as fewer cycles are needed for multiple data transfers.
 💡 Final Takeaway:
 These techniques dramatically improve memory bandwidth and reduce average latency, leading to faster data access and enhanced overall system performance — especially in modern CPUs and memory-intensive applications.
 
-### 📚 **Memory Systems: Key Concepts**
+## 📚 **Memory Systems: Key Concepts**
 
 ---
 
@@ -61,9 +61,9 @@ These techniques dramatically improve memory bandwidth and reduce average latenc
 ### ⚡ **2. Volatile vs. Non-Volatile Memory**
 
 - **Volatile**: Requires power to retain data.
-    - Examples: **SRAM** (used in CPU caches), **DRAM** (used in main memory).
+  - Examples: **SRAM** (used in CPU caches), **DRAM** (used in main memory).
 - **Non-Volatile**: Retains data even when powered off.
-    - Examples: **Flash memory**, **SSDs**, **ROM**.
+  - Examples: **Flash memory**, **SSDs**, **ROM**.
 
 ---
 
@@ -98,11 +98,11 @@ These techniques dramatically improve memory bandwidth and reduce average latenc
 ### 🌐 **6. Future Outlook**
 
 - **Trends**:
-    - Growth in **non-volatile RAM (e.g., MRAM, ReRAM)**.
-    - **Stacked memory architectures** (e.g., HBM).
-    - Integration of memory and logic (processing-in-memory).
+  - Growth in **non-volatile RAM (e.g., MRAM, ReRAM)**.
+  - **Stacked memory architectures** (e.g., HBM).
+  - Integration of memory and logic (processing-in-memory).
 - **Impact**:
-    - Supports **AI**, **big data**, and **real-time analytics** by handling larger datasets faster.
+  - Supports **AI**, **big data**, and **real-time analytics** by handling larger datasets faster.
 
 ## 🔁 **Understanding Cache Memory: Key Concepts for Performance**
 
@@ -146,14 +146,14 @@ These techniques dramatically improve memory bandwidth and reduce average latenc
 ### 🧱 **5. Multi-Level Cache (L1, L2, L3)**
 
 - **L1 Cache**:
-    - Closest to the CPU (on-chip), very fast, small (~32–128 KB).
+  - Closest to the CPU (on-chip), very fast, small (~32–128 KB).
 - **L2 Cache**:
-    - Larger, slightly slower, also on-chip or near CPU (~256 KB–1 MB).
+  - Larger, slightly slower, also on-chip or near CPU (~256 KB–1 MB).
 - **L3 Cache**:
-    - Shared across CPU cores, bigger (~4–50 MB), slower than L2.
+  - Shared across CPU cores, bigger (~4–50 MB), slower than L2.
 
 > 🧩 Hierarchy Benefit: Each level catches more misses from the previous one, greatly reducing access time to RAM.
-> 
+>
 
 ---
 
@@ -181,121 +181,119 @@ These techniques dramatically improve memory bandwidth and reduce average latenc
 ### ⚠️ 1. **Memory Errors and Protection**
 
 - **Why errors occur**:
-    - **Electrical noise**, cosmic rays, or manufacturing defects can flip bits.
-    - Most common in **DRAM**, which needs constant refreshing.
+  - **Electrical noise**, cosmic rays, or manufacturing defects can flip bits.
+  - Most common in **DRAM**, which needs constant refreshing.
 - **Detection & Correction Techniques**:
-    - **Parity Bits**: Simple 1-bit check for error detection.
-    - **ECC (Error-Correcting Code)**:
-        - Can detect and **correct single-bit errors**, detect some multi-bit errors.
-        - Widely used in **servers and mission-critical systems**.
+  - **Parity Bits**: Simple 1-bit check for error detection.
+  - **ECC (Error-Correcting Code)**:
+    - Can detect and **correct single-bit errors**, detect some multi-bit errors.
+    - Widely used in **servers and mission-critical systems**.
 
 ---
 
 ### 🗺️ 2. **Memory Maps**
 
 - A **memory map** shows **how the address space** of a computer is **allocated** to:
-    - ROM (for firmware/boot code)
-    - DRAM (main memory)
-    - Cache memory
-    - I/O devices (e.g., keyboard, GPU, disk controller)
+  - ROM (for firmware/boot code)
+  - DRAM (main memory)
+  - Cache memory
+  - I/O devices (e.g., keyboard, GPU, disk controller)
 - **Usefulness**:
-    - Helps **programmers and engineers** understand where to read/write data.
-    - Critical for **embedded systems** and low-level software development.
+  - Helps **programmers and engineers** understand where to read/write data.
+  - Critical for **embedded systems** and low-level software development.
 - **Memory-mapped I/O**:
-    - I/O devices are treated as memory locations.
-    - CPU reads/writes to them using regular load/store instructions.
+  - I/O devices are treated as memory locations.
+  - CPU reads/writes to them using regular load/store instructions.
 
 ---
 
 ### 🔄 3. **Cache Coherency**
 
 - **What is it?**
-    - A problem where multiple caches hold **inconsistent copies** of the same memory.
+  - A problem where multiple caches hold **inconsistent copies** of the same memory.
 - **When it matters**:
-    - **Multicore CPUs** sharing memory.
-    - **DMA/I/O devices** that access memory directly.
+  - **Multicore CPUs** sharing memory.
+  - **DMA/I/O devices** that access memory directly.
 - **Potential problems**:
-    - CPU sees **stale data** or overwrites **new data**.
+  - CPU sees **stale data** or overwrites **new data**.
 - **Solutions**:
-    - **Write-through caches** to ensure updates go to RAM immediately.
-    - **Cache invalidation protocols** (e.g., MESI) in multiprocessor systems.
-    - Use of **memory barriers/fences** in code to enforce sync points.
+  - **Write-through caches** to ensure updates go to RAM immediately.
+  - **Cache invalidation protocols** (e.g., MESI) in multiprocessor systems.
+  - Use of **memory barriers/fences** in code to enforce sync points.
 
 ---
 
-### 🧠 Final Takeaway:
+### 🧠 Final Takeaway
 
 Modern memory systems are a **careful balance between speed, reliability, and correctness**. While caches and memory mapping optimize performance, error correction and coherency protocols ensure systems remain **stable, accurate, and efficient**—especially under concurrency and I/O load.
 
 ### 📌 **1. Memory-Mapped I/O Devices**
 
 - **Concept**:
-    
+
     I/O devices (like keyboards, sensors, or network cards) are assigned **specific memory addresses**. The CPU communicates with them using standard **load/store instructions**, just like accessing RAM.
-    
+
 - **Benefit**:
-    
+
     Simplifies hardware interaction—no need for special I/O instructions.
-    
+
 - **Example**:
-    
+
     Writing `0x01` to address `0xFF00` might activate a device's control line.
-    
 
 ---
 
 ### ⚠️ **2. Ensuring Data Integrity**
 
 - **Challenge**:
-    
+
     Devices can change memory content **asynchronously** (independent of the CPU).
-    
+
 - **Best Practices**:
-    - Use **volatile** keyword (in C/C++) to prevent compiler optimization from skipping necessary reads/writes.
-    - Enforce **memory ordering** with **memory barriers** or **fences** to ensure operations happen in the intended sequence.
+  - Use **volatile** keyword (in C/C++) to prevent compiler optimization from skipping necessary reads/writes.
+  - Enforce **memory ordering** with **memory barriers** or **fences** to ensure operations happen in the intended sequence.
 
 ---
 
 ### 🔁 **3. Synchronization and Timing**
 
 - **Problem**:
-    
+
     If a CPU reads from a device-mapped location before the device is ready, it may receive invalid or partial data.
-    
+
 - **Solution**:
-    - Poll device **status registers** to confirm readiness.
-    - Use **interrupts** for more efficient notification.
+  - Poll device **status registers** to confirm readiness.
+  - Use **interrupts** for more efficient notification.
 
 ---
 
 ### 🧩 **4. Address Space Management**
 
 - **Design Tip**:
-    - Map I/O devices to address ranges that don’t conflict with RAM.
-    - Use **address decoding logic** in hardware or system firmware to manage this cleanly.
+  - Map I/O devices to address ranges that don’t conflict with RAM.
+  - Use **address decoding logic** in hardware or system firmware to manage this cleanly.
 
 ---
 
 ### 🔄 **5. Cache Coherency Risks with Memory-Mapped I/O**
 
 - **Issue**:
-    
+
     Cached reads may return **stale data** from I/O-mapped regions.
-    
+
 - **Solution**:
-    - Mark I/O regions as **uncacheable** in system memory maps or via **page table flags**.
-    - Or use **special memory types** (e.g., `MMIO`) that bypass the cache.
+  - Mark I/O regions as **uncacheable** in system memory maps or via **page table flags**.
+  - Or use **special memory types** (e.g., `MMIO`) that bypass the cache.
 
 ---
 
 ### 🔐 **6. Protection and Isolation**
 
 - **Modern OS design**:
-    - Memory protection mechanisms (like page tables and privilege levels) help prevent user-space code from accessing sensitive I/O regions directly.
+  - Memory protection mechanisms (like page tables and privilege levels) help prevent user-space code from accessing sensitive I/O regions directly.
 - **Importance**:
-    
+
     Prevents accidental or malicious memory corruption and ensures **system stability**.
-    
 
 A **memory map** is a schematic or layout that defines how different parts of the system—**RAM, ROM, cache, and I/O devices**—are assigned **specific address ranges** in the computer’s address space. It tells the processor where to find each component.
 
@@ -305,11 +303,11 @@ A **memory map** is a schematic or layout that defines how different parts of th
 
 - In the Von Neumann model, **instructions and data share the same memory and bus**.
 - This means:
-    - CPU fetches both data and instructions from a **unified memory space**.
-    - Access to I/O and memory often occurs through the same addressing mechanism.
+  - CPU fetches both data and instructions from a **unified memory space**.
+  - Access to I/O and memory often occurs through the same addressing mechanism.
 
 > 🧩 This architecture laid the groundwork for memory-mapped I/O and system integration.
-> 
+>
 
 ---
 
@@ -338,12 +336,12 @@ A **memory map** is a schematic or layout that defines how different parts of th
 Instead of using separate I/O instructions, memory-mapped I/O allows devices to be read/written using **standard load/store instructions**.
 
 - Example:
-    
+
     Writing to `0x90000010` might turn on an LED.
-    
+
 - Benefits:
-    - Simplified programming model.
-    - Easier integration with CPU and OS.
+  - Simplified programming model.
+  - Easier integration with CPU and OS.
 
 **cache coherency**—a critical issue in modern computer systems where cached data can become outdated or "stale," leading to incorrect behaviour. Through real-world examples, such as a gas sensor and alarm system, we’ll see how the introduction of cache can disrupt data accuracy and system safety.
 
@@ -367,8 +365,8 @@ ECC Memory
 
 - ECC adds **extra bits** to memory words to store **parity or checksum info**.
 - Can **detect and correct**:
-    - **Single-bit errors** (common)
-    - **Double-bit errors** (detectable, not always correctable)
+  - **Single-bit errors** (common)
+  - **Double-bit errors** (detectable, not always correctable)
 
 ---
 
@@ -383,7 +381,7 @@ ECC Memory
 ### 🚀 **Future Memory Technologies**
 
 - New trends aim to enhance:
-    - **Speed** (e.g., MRAM, ReRAM)
-    - **Capacity** (stacked/3D memory)
-    - **Durability** (e.g., improved Flash, phase-change memory)
+  - **Speed** (e.g., MRAM, ReRAM)
+  - **Capacity** (stacked/3D memory)
+  - **Durability** (e.g., improved Flash, phase-change memory)
 - These aim to **reduce power usage** while improving **bandwidth and lifespan**.

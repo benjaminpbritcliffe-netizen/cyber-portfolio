@@ -2,7 +2,7 @@
 
 Status: Done
 
-cybersecurity professionals must consider non-technological or non-digital components of attacks. Cybersecurity can have one or more of the following three components: digital, human, or physical. Let’s explore how cybersecurity addresses each one. 
+cybersecurity professionals must consider non-technological or non-digital components of attacks. Cybersecurity can have one or more of the following three components: digital, human, or physical. Let’s explore how cybersecurity addresses each one.
 
 - **Digital security**
 
@@ -16,9 +16,4 @@ cybersecurity professionals must consider non-technological or non-digital compo
 
 **Physical security** involves protecting tangible assets against threats. These physical assets support digital infrastructure, such as workstations, server rooms, and data centers. And the threats to these assets can be intentional or unintentional, such as theft, tampering, or natural disasters. Some examples of physical security measures include surveillance systems, access control measures, and disaster recovery plans.
 
-<aside>
-💡
-
 Cybersecurity includes both the protection of data/assets as well as the recovery of data/assets.
-
-</aside>

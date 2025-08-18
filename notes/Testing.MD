@@ -11,10 +11,13 @@ Test-Driven Development (TDD): Write tests before writing the actual code. Code 
 Python's Assert Statement:
 
 1. Checks if a given condition is true and raises an error if false. It verifies that variables or preconditions are satisfied.
+
 - Assert statements can include an error message as a second argument.
 - Limitations: Can only check simple conditions and stops execution when an assertion fails.
 - Python's Unittest:
+
 1. Offers more features and flexibility than assert statements. Provides a test runner that can execute all tests in one package and report outcomes.
+
 - **Testing your code is essential to ensure its reliability and functionality**. Writing tests helps you catch bugs early, verify that changes don't introduce new issues, and maintain confidence in your code as it evolves.
 - **Good tests strike a balance between thoroughness and efficiency**. While comprehensive testing can improve reliability, overly exhaustive tests may slow down development. Focus on testing critical paths and edge cases to achieve effective coverage.
 - **Documentation serves as a guide** for others and your future self. Writing clear and detailed documentation explains the purpose, functionality, and usage of your code, making it easier to reuse, maintain, extend, or debug.
@@ -30,10 +33,13 @@ Test-Driven Development (TDD) is a simple approach: write tests first, then writ
 Basic Testing in Python:
 
 1. Assert Statements:
+
 - These are simple checks that make sure something is true
 - If the check fails, Python tells you there's an error
 - They're basic but helpful for quick tests
+
 1. Unittest:
+
 - This is Python's more powerful testing tool
 - It can run many tests at once and tell you what worked and what didn't
 - **Testing is important**. It helps you find mistakes early and makes sure your code keeps working when you make changes.
