@@ -4,19 +4,18 @@ Created: 26 March 2025 18:44
 Class: 3
 Is Completed: Yes
 
-Testing Individual Units of Code:
+## Testing Individual Units of Code
 
 Test-Driven Development (TDD): Write tests before writing the actual code. Code is then written to meet these tests and refined when necessary.
 
-Python's Assert Statement:
+## Python's Assert Statement
 
-1. Checks if a given condition is true and raises an error if false. It verifies that variables or preconditions are satisfied.
+- Checks if a given condition is true and raises an error if false. It verifies that variables or preconditions are satisfied.
 
 - Assert statements can include an error message as a second argument.
 - Limitations: Can only check simple conditions and stops execution when an assertion fails.
-- Python's Unittest:
-
-1. Offers more features and flexibility than assert statements. Provides a test runner that can execute all tests in one package and report outcomes.
+- Python's Unittest
+- Offers more features and flexibility than assert statements. Provides a test runner that can execute all tests in one package and report outcomes.
 
 - **Testing your code is essential to ensure its reliability and functionality**. Writing tests helps you catch bugs early, verify that changes don't introduce new issues, and maintain confidence in your code as it evolves.
 - **Good tests strike a balance between thoroughness and efficiency**. While comprehensive testing can improve reliability, overly exhaustive tests may slow down development. Focus on testing critical paths and edge cases to achieve effective coverage.
