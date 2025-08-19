@@ -7,13 +7,13 @@ Here’s where to find them and how to use them effectively.
 
 ## 1. 🗂 Pre-installed in Kali Linux
 
-**Location:**
+### Location:**
 
 ```bash
 /usr/share/wordlists/
 ```
 
-**Common Lists:**
+### Common Lists
 
 - `rockyou.txt` – famous password cracking list (zipped by default)
 
@@ -28,18 +28,18 @@ Here’s where to find them and how to use them effectively.
 
 ---
 
-## 2. 🌐 SecLists (Hacker’s Goldmine)
+### 2. 🌐 SecLists (Hacker’s Goldmine)
 
 GitHub: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
-**Contains:**
+#### Contains
 
 - Password lists
 - Username lists
 - Web fuzzing lists
 - Sensitive files & API key lists
 
-**Install on Kali:**
+Install on Kali:
 
 ```bash
 sudo apt install seclists
@@ -70,13 +70,13 @@ Path:
 
 ## 5. 🛠 Make Your Own Wordlists
 
-**CeWL** – Crawl a website for keywords:
+### CeWL – Crawl a website for keywords
 
 ```bash
 cewl http://target.com -w wordlist.txt
 ```
 
-**Crunch** – Create custom patterns:
+### Crunch – Create custom patterns
 
 ```bash
 crunch 8 8 abcdef1234 -o wordlist.txt
