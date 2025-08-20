@@ -482,4 +482,4 @@ flowchart TD
 
 - Learn about HTML Injection more.
 
-![OSI Model](./Images/OSI-Model1.png)
+![OSI Model](/Images/OSI-Model1.png)
