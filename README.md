@@ -5,10 +5,10 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 
 🎯 Goals
 
--✔️ Build a cybersecurity knowledge base
--✔️ Develop hands-on skills through scripts & labs
--✔️ Document laws, ethics, and real-world cases
--✔️ Create a portfolio for career transition into cybersecurity
+✔️ Build a cybersecurity knowledge base.
+✔️ Develop hands-on skills through scripts & labs.
+✔️ Document laws, ethics, and real-world cases.
+✔️ Create a portfolio for career transition into cybersecurity.
 
 
 ---
