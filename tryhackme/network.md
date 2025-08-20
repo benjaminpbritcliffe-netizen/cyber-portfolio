@@ -464,6 +464,19 @@ flowchart TD
     K -- Close --> L[Connection Close<br/>FIN/ACK]
 ```
 
-### Learning Objectives
+## References
+
+[Web Requests Explained (Medium)](https://medium.com/@arpit_4999/web-requests-explained-what-happens-when-you-visit-a-website-ff35624bac9b)
+
+[Demystifying the Journey of a Web Request (Medium)](https://medium.com/@rukhsarkhan4198/demystifying-the-journey-of-a-web-request-from-browser-to-server-and-beyond-f8a706a847c5)
+
+[Step-by-step Journey of a Network Request (dev.to)](https://dev.to/ashevelyov/the-step-by-step-journey-of-a-network-request-1d10)
+
+[HTTP Request Lifecycle (furkanbaytekin.dev)](https://www.furkanbaytekin.dev/blogs/software/the-http-request-lifecycle-what-happens-from-browser-to-server)
+
+[How Does Browser Work in 2019 (cabulous.medium.com)](https://cabulous.medium.com/how-does-browser-work-in-2019-part-ii-navigation-342b27e56d7b)
+
+
+## Learning Objectives
 
 - Learn about HTML Injection more.
