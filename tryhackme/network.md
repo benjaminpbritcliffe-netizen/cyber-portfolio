@@ -65,6 +65,8 @@ IP addresses can be assigned either manually, by entering them physically into a
 
 The OSI model (or Open Systems Interconnection Model) is an essential model used in networking.  This critical model provides a framework dictating how all networked devices will send, receive and interpret data.
 
+![OSI Model](/Images/OSI-Model1.png)
+
 ## Physical
 
 The physical components of hardware used for networking
@@ -86,6 +88,26 @@ Whilst some protocols at this layer determine exactly what is the "optimal" path
 - Routing
 
 - IP Addresses
+
+### Public IP Addresses
+
+In a computer network, a Public IP address is defined as a unique numerical value that is assigned to the particular device connected in the network that makes use of internet protocol for communication and transmission.
+
+Public IP Address basically offers a globally recognizable address that enables user devices to actually transmit and receive the data or packets across a wide range of networks. Public IP addresses are actually routable on the Internet which means that they can be accessed and communicated through any device, from any part or from any region of the world.
+
+[Public IP Addresses](https://www.geeksforgeeks.org/computer-networks/what-is-public-ip-address)
+
+### Private IP Addresses
+
+According to standards set forth in Internet Engineering Task Force (IETF) document RFC-1918, the following IPv4 address ranges are reserved by the IANA for private internets, and are not publicly routable on the global internet:
+
+10.0.0.0/8 IP addresses: 10.0.0.0 – 10.255.255.255
+172.16.0.0/12 IP addresses: 172.16.0.0 – 172.31.255.255
+192.168.0.0/16 IP addresses: 192.168.0.0 – 192.168.255.255
+
+Private IP Addresses are those addresses that work within the local network. These addresses are non-routable on the Internet. The address is assigned by the network router to your particular device. The unique private IP address is provided to every device which is on the same network. In this way, devices communicate with one another on the same network without connecting to the entire Internet. Private IP addresses can provide more security within a particular network. These addresses cannot be seen on the Internet, unlike the public IP address. Only devices within the local network can see the address of one another.
+
+[Private IP Addresses](https://www.geeksforgeeks.org/computer-networks/private-ip-addresses-in-networking/)
 
 ## Transport
 
@@ -477,9 +499,6 @@ flowchart TD
 
 [How Does Browser Work in 2019 (cabulous.medium.com)](https://cabulous.medium.com/how-does-browser-work-in-2019-part-ii-navigation-342b27e56d7b)
 
-
 ## Learning Objectives
 
 - Learn about HTML Injection more.
-
-![OSI Model](/Images/OSI-Model1.png)
