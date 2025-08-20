@@ -3,19 +3,19 @@
 Created: 1 August 2025 15:24
 Is Completed: No
 
-### 1. **Exceptional Control Flow (ECF)**
+## 1. **Exceptional Control Flow (ECF)**
 
 > Definition: Any control flow change not caused by a regular jump, call, or return. It's triggered by events like hardware interrupts, system calls, or errors.
-> 
+>
 
 ECF is essential for handling unexpected or asynchronous events, such as I/O operations or program faults.
 
 ---
 
-### 2. **System Call**
+## 2. **System Call**
 
 > Definition: A mechanism allowing user programs to request services from the operating system's kernel in a safe, controlled manner.
-> 
+>
 
 🛡️ **How System Calls Help:**
 
@@ -27,10 +27,10 @@ Examples: `read()`, `write()`, `open()`, `exit()`.
 
 ---
 
-### 3. **Exception**
+## 3. **Exception**
 
 > Definition: An event that alters program flow, typically due to an error or special condition, handled by a specific routine.
-> 
+>
 
 Types include:
 
@@ -39,49 +39,49 @@ Types include:
 
 ---
 
-### 4. **Interrupt**
+## 4. **Interrupt**
 
 > Definition: A hardware-generated signal that pauses the CPU's current execution to handle a device-related event (e.g., keyboard input, timer).
-> 
+>
 
 📍 **Key Point:** Unlike software exceptions (like `try/catch`), **interrupts are low-level and often invisible to high-level code**. They enable multitasking and real-time response.
 
 ---
 
-### 5. **Trap**
+## 5. **Trap**
 
 > Definition: A type of synchronous exception, typically triggered by a system call, that intentionally transfers control to the kernel.
-> 
+>
 - Used when a program **requests** something from the OS (e.g., via `int 0x80` or `syscall` instruction on x86).
 
 ---
 
-### 6. **Fault**
+## 6. **Fault**
 
 > Definition: An error condition that can potentially be recovered from. For example, a page fault occurs when data isn't in memory but can be loaded.
-> 
+>
 
 ---
 
-### 7. **Abort**
+## 7. **Abort**
 
 > Definition: A fatal error indicating an issue that cannot be recovered from, such as hardware failure or corrupted memory.
-> 
+>
 
 ---
 
-### 8. **Context Switch**
+## 8. **Context Switch**
 
 > Definition: The process of saving a running process's state so the CPU can switch to executing another process.
-> 
+>
 
 🧠 Essential for multitasking — the OS uses this to share the CPU across multiple processes or handle interrupts.
 
 ---
 
-### 📌 **Answering the Guiding Questions**
+## 📌 **Answering the Guiding Questions**
 
-### 💬 **Q1: How do system calls enable programs to safely and effectively communicate with the OS kernel?**
+## 💬 **Q1: How do system calls enable programs to safely and effectively communicate with the OS kernel?**
 
 System calls act as *secure gates* through which user-level programs access kernel-level services. The hardware enforces a **mode switch** from user mode to kernel mode, ensuring:
 
@@ -93,7 +93,7 @@ Without system calls, programs would either be severely limited or dangerously p
 
 ---
 
-### 💬 **Q2: How do hardware-generated exceptions like interrupts differ from software exceptions in high-level languages? Why is this distinction important?**
+## 💬 **Q2: How do hardware-generated exceptions like interrupts differ from software exceptions in high-level languages? Why is this distinction important?**
 
 | Feature | **Hardware Interrupts/Exceptions** | **Software Exceptions (e.g., in Java/C++)** |
 | --- | --- | --- |
@@ -111,6 +111,6 @@ Without system calls, programs would either be severely limited or dangerously p
 
 ---
 
-### 🚀 Final Takeaway:
+## 🚀 Final Takeaway
 
 These concepts form the *foundation of how real-world systems react, adapt, and stay secure* in the face of unexpected events. Mastering ECF is a gateway to understanding everything from process scheduling and signals to system vulnerabilities and debugging.
