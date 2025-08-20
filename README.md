@@ -3,7 +3,7 @@
 Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, tools, and projects that reflect my journey through **cybersecurity, programming, and ethical hacking**.  
 
 
-🎯 Goals
+## 🎯 Goals
 
 ✔️ Build a cybersecurity knowledge base <br>
 ✔️ Develop hands-on skills through scripts & labs <br>
@@ -30,7 +30,7 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 ```
 
 
-🧭 Directory Guide
+## 🧭 Directory Guide
 
 📘 Computer Fundamentals → Notes on hardware, OS, and basic IT concepts.
 
