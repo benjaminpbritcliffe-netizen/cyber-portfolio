@@ -115,11 +115,72 @@ Private IP Addresses are those addresses that work within the local network. The
 
 When data is sent between devices, it follows one of two different protocols that are decided based upon several factors:
 
-TCP
-UDP
+## TCP
 
-- TCP
-- UDP
+### Features of TCP
+
+- TCP keeps track of the segments being transmitted or received by assigning numbers to every single one of them.
+- Flow control limits the rate at which a sender transfers data. This is done to ensure reliable delivery.
+- TCP implements an error control mechanism for reliable data transfer.
+- TCP takes into account the level of congestion in the network.
+
+### Applications of TCP
+
+- World Wide Web (WWW) : When you browse websites, TCP ensures reliable data transfer between your browser and web servers.
+- Email : TCP is used for sending and receiving emails. Protocols like SMTP (Simple Mail Transfer Protocol) handle email delivery across servers.
+- File Transfer Protocol (FTP) : FTP relies on TCP to transfer large files securely. Whether you’re uploading or downloading files, TCP ensures data integrity.
+- Secure Shell (SSH) : SSH sessions, commonly used for remote administration, rely on TCP for encrypted communication between client and server.
+- Streaming Media : Services like Netflix, YouTube, and Spotify use TCP to stream videos and music. It ensures smooth playback by managing data segments and retransmissions.
+
+### Advantages of TCP
+
+- It is reliable for maintaining a connection between Sender and Receiver.
+- It is responsible for sending data in a particular sequence.
+- Its operations are not dependent on Operating System .
+- It allows and supports many routing protocols.
+- It can reduce the speed of data based on the speed of the receiver.
+
+### Disadvantages of TCP
+
+- It is slower than UDP and it takes more bandwidth.
+- Slower upon starting of transfer of a file.
+- Not suitable for LAN and PAN Networks.
+- It does not have a multicast or broadcast category.
+- It does not load the whole page if a single data of the page is missing.
+
+## UDP
+
+### Features of UDP
+
+- Used for simple request-response communication when the size of data is less and hence there is lesser concern about flow and error control.
+- It is a suitable protocol for multicasting as UDP supports packet switching .
+- UDP is used for some routing update protocols like RIP(Routing Information Protocol) .
+- Normally used for real-time applications which can not tolerate uneven delays between sections of a received message.
+
+### Application of UDP
+
+- Real-Time Multimedia Streaming : UDP is ideal for streaming audio and video content. Its low-latency nature ensures smooth playback, even if occasional data loss - occurs.
+- Online Gaming : Many online games rely on UDP for fast communication between players.
+- DNS (Domain Name System) Queries : When your device looks up domain names (like converting “www.example.com” to an IP address), UDP handles these requests efficiently .
+- Network Monitoring : Tools that monitor network performance often use UDP for lightweight, rapid data exchange.
+- Multicasting : UDP supports packet switching, making it suitable for multicasting scenarios where data needs to be sent to multiple recipients simultaneously.
+- Routing Update Protocols : Some routing protocols, like RIP (Routing Information Protocol), utilize UDP for exchanging routing information among routers.
+
+### Advantages of UDP
+
+- It does not require any connection for sending or receiving data.
+- Broadcast and Multicast are available in UDP.
+- UDP can operate on a large range of networks.
+- UDP has live and real-time data.
+- UDP can deliver data if all the components of the data are not complete.
+
+### Disadvantages of UDP
+
+- We can not have any way to acknowledge the successful transfer of data.
+- UDP cannot have the mechanism to track the sequence of data.
+- UDP is connectionless, and due to this, it is unreliable to transfer data.
+- In case of a Collision, UDP packets are dropped by Routers in comparison to TCP.
+- UDP can drop packets in case of detection of errors.
 
 ## Session
 
