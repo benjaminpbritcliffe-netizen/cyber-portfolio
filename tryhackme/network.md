@@ -450,19 +450,19 @@ Understanding this flow helps you debug APIs, read network logs, harden security
 
 ```mermaid
 flowchart TD
-    A[User/Client Action<br/>Enter URL / API Call] --> B[DNS Resolution<br/>Domain → IP]
-    B --> C[TCP 3-Way Handshake<br/>SYN / SYN-ACK / ACK]
+    A[User/Client Action: Enter URL / API Call] --> B[DNS Resolution: Domain → IP]
+    B --> C[TCP 3-Way Handshake: SYN / SYN-ACK / ACK]
     C --> D{HTTPS?}
-    D -- Yes --> E[TLS Handshake<br/>Cert validation + keys]
+    D -- Yes --> E[TLS Handshake: Cert validation + keys]
     D -- No --> F[HTTP Request]
-    E --> F[HTTP Request<br/>Method, Path, Headers, Body]
-    F --> G[Server Processing<br/>App, Cache, DB, Files]
-    G --> H[HTTP Response<br/>Status, Headers, Body]
-    H --> I[Client Handling<br/>Render HTML / parse JSON]
+    E --> F[HTTP Request: Method, Path, Headers, Body]
+    F --> G[Server Processing: App, Cache, DB, Files]
+    G --> H[HTTP Response: Status, Headers, Body]
+    H --> I[Client Handling: Render HTML / parse JSON]
     I --> J{Keep-Alive?}
-    J -- No -- > K
+    J -- No --> K[Connection Close: FIN/ACK]
     J -- Reuse --> F
-    K -- Close --> L[Connection Close<br/>FIN/ACK]
+
 ```
 
 ## References
