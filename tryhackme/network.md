@@ -416,6 +416,54 @@ HTML Injection is a vulnerability that occurs when unfiltered user input is disp
 
 When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
 
+## HTTP Lifecycle
+
+### The Lifecycle of an HTTP Network Request
+
+> **Mnemonic:** “**Find the place, knock on the door, show your ID, place your order, chef cooks, meal served, you eat, then leave.**”  
+> DNS → TCP → TLS → Request → Server → Response → Render → Close
+
+---
+
+## 📌 Why it matters
+
+Understanding this flow helps you debug APIs, read network logs, harden security, and optimize performance.
+
+---
+
+## 🧠 Quick Map (Restaurant Analogy)
+
+| Step | Network Action | Analogy |
+|---|---|---|
+| 1 | DNS Resolution | Find the place |
+| 2 | TCP Handshake | Knock on the door |
+| 3 | TLS/SSL Handshake (HTTPS) | Show your ID |
+| 4 | HTTP Request | Place your order |
+| 5 | Server Processing | Chef cooks |
+| 6 | HTTP Response | Meal served |
+| 7 | Client Rendering/Handling | You eat |
+| 8 | Connection Reuse/Close | Then leave |
+
+---
+
+## 🗺️ Flow Diagram (Mermaid)
+
+```mermaid
+flowchart TD
+    A[User/Client Action<br/>Enter URL / API Call] --> B[DNS Resolution<br/>Domain → IP]
+    B --> C[TCP 3-Way Handshake<br/>SYN / SYN-ACK / ACK]
+    C --> D{HTTPS?}
+    D -- Yes --> E[TLS Handshake<br/>Cert validation + keys]
+    D -- No --> F[HTTP Request]
+    E --> F[HTTP Request<br/>Method, Path, Headers, Body]
+    F --> G[Server Processing<br/>App, Cache, DB, Files]
+    G --> H[HTTP Response<br/>Status, Headers, Body]
+    H --> I[Client Handling<br/>Render HTML / parse JSON]
+    I --> J{Keep-Alive?}
+    J -- Reuse --> F
+    K -- Close --> L[Connection Close<br/>FIN/ACK]
+```
+
 ### Learning Objectives
 
 - Learn about HTML Injection more.
