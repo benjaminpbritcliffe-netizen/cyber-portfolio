@@ -2,12 +2,11 @@
 
 Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, tools, and projects that reflect my journey through **cybersecurity, programming, and ethical hacking**.  
 
-
 ## 🎯 Goals
 
-✔️ Build a cybersecurity knowledge base <br>
-✔️ Develop hands-on skills through scripts & labs <br>
-✔️ Document laws, ethics, and real-world cases <br>
+✔️ Build a cybersecurity knowledge base  
+✔️ Develop hands-on skills through scripts & labs  
+✔️ Document laws, ethics, and real-world cases  
 ✔️ Create a portfolio for career transition into cybersecurity
 
 ---
@@ -28,7 +27,6 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 ├───Tools
 └───Tryhackme
 ```
-
 
 ## 🧭 Directory Guide
 
@@ -55,4 +53,3 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 🛠️ Tools → Custom-built or documented security tools.
 
 🕵️ TryHackMe → Notes, write-ups, and progress from practical labs.
-
