@@ -460,6 +460,7 @@ flowchart TD
     G --> H[HTTP Response<br/>Status, Headers, Body]
     H --> I[Client Handling<br/>Render HTML / parse JSON]
     I --> J{Keep-Alive?}
+    J -- No -- > K
     J -- Reuse --> F
     K -- Close --> L[Connection Close<br/>FIN/ACK]
 ```
