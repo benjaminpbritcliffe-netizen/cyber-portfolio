@@ -1,7 +1,5 @@
 # The 10 Stages Of  Cybersecurity
 
-Status: To read
-
 1. Cybersecurity is the practice of protecting and recovering data, networks, devices, and programs from digital threats.
 2. Cybersecurity encompasses three main components: digital, human, and physical security measures.
 3. Effective cybersecurity achieves the CIA triad's objectives: confidentiality, integrity, and availability.
