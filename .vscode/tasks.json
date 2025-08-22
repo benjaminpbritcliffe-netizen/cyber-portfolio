@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docs: Check (all Markdown)",
+      "type": "shell",
+      "command": "npx --yes markdownlint-cli@latest \"**/*.md\" && npx --yes remark-cli@latest . --quiet",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": {
+        "owner": "markdownlint",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": [
+          {
+            "regexp": "^(.*?):(\\d+)(?::(\\d+))?\\s+(MD\\d+(?:/[^\\s]+)?)\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "code": 4,
+            "message": 5
+          }
+        ]
+      }
+    },
+    {
+      "label": "Docs: Fix (format all Markdown)",
+      "type": "shell",
+      "command": "npx --yes prettier@3 --write \"**/*.md\"",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Fix ALL (lint + format)",
+      "type": "shell",
+      "command": "npx --yes markdownlint-cli@latest \"**/*.md\" --fix && npx --yes prettier@3 --write \"**/*.md\" && npx --yes remark-cli@latest . --quiet --output",
+      "group": { "kind": "build" },
+      "problemMatcher": []
+    }
+  ]
+}

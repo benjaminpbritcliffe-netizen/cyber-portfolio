@@ -66,17 +66,17 @@ Sequential logic as the name suggests follows a serial or sequential flow in whi
 Selection Logic simply involves a number of conditions or parameters which decides one out of several written modules. The structures which use these type of logic are known as **Conditional Structures**. These structures can be of three types:
 
 - **Single Alternative** This structure has the form:
-    
+
     ```
     If (condition) then:
          [Module A]
     [End of If structure]
     ```
-    
+
     **Implementation:**
-    
+
 - **Double Alternative** This structure has the form:
-    
+
     ```
     If (Condition), then:
          [Module A]
@@ -85,11 +85,11 @@ Selection Logic simply involves a number of conditions or parameters which decid
     [End if structure]
     
     ```
-    
+
     **Implementation:**
-    
+
 - **Multiple Alternatives** This structure has the form:
-    
+
     ```
     If (condition A), then:
          [Module A]
@@ -101,7 +101,6 @@ Selection Logic simply involves a number of conditions or parameters which decid
          [Module N]
     [End If structure]
     ```
-    
 
 ## **Iteration Logic (Repetitive Flow)**
 

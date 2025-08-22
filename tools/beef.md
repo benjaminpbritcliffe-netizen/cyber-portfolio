@@ -2,7 +2,8 @@
 
 ## Description
 
-BeEF (Browser Exploitation Framework) focuses on exploiting browser vulnerabilities.
+BeEF (Browser Exploitation Framework) focuses on exploiting browser
+vulnerabilities.
 
 ## Use Case
 

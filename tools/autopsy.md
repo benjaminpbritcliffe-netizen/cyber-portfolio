@@ -2,7 +2,8 @@
 
 ## Description
 
-Autopsy is a digital forensics platform and graphical interface to The Sleuth Kit.
+Autopsy is a digital forensics platform and graphical interface to The Sleuth
+Kit.
 
 ## Use Case
 

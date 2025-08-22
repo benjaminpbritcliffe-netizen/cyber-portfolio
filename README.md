@@ -1,6 +1,8 @@
-# 🛡️ Cyber Portfolio  
+# 🛡️ Cyber Portfolio
 
-Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, tools, and projects that reflect my journey through **cybersecurity, programming, and ethical hacking**.  
+Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts,
+tools, and projects that reflect my journey through **cybersecurity,
+programming, and ethical hacking**.
 
 ## 🎯 Goals
 
@@ -11,7 +13,7 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 
 ---
 
-## 📂 Repository Structure  
+## 📂 Repository Structure
 
 ```plaintext
 ├───Computer Fundamentals
@@ -34,7 +36,8 @@ Welcome to my **Cyber Portfolio** – a growing collection of notes, scripts, to
 
 📜 Cyber Events Archive → Timeline & analysis of major cyber incidents.
 
-⚖️ Cyber Laws & Ethics → Research and references on legal & ethical aspects of cybersecurity.
+⚖️ Cyber Laws & Ethics → Research and references on legal & ethical aspects of
+cybersecurity.
 
 🔐 Cyber Security → Notes, projects, and learning resources in security.
 

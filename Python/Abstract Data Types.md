@@ -1,24 +1,26 @@
 # Abstract Data Types
 
-Data Structure: A way of organising data to make it easier accessible, update-able etc.
+Data Structure: A way of organising data to make it easier accessible,
+update-able etc.
 
 Makes code cleaner
 
 Instance Variabke
 
-_ = Protected
+\_ = Protected
 
-__ = private
+\_\_ = private
 
-ADT:  
+ADT:
 
- Abstract Data Types (ADTs), such as stacks, queues, and linked lists, can be implemented using classes
+Abstract Data Types (ADTs), such as stacks, queues, and linked lists, can be
+implemented using classes
 
 Encapsulation:
 
 Group things by each essential features of something. Eg. a Class
 
-Defines boundaries around things.   (Instance Variables, Private etc.)
+Defines boundaries around things. (Instance Variables, Private etc.)
 
 Information Hiding:
 
@@ -58,11 +60,11 @@ print(account.__balance)  # Will raise an AttributeError
 
 ```
 
-| Modifier | Syntax | Accessible Outside Class | Accessible in Subclass | Enforced by Python? |
-| --- | --- | --- | --- | --- |
-| Public | `name` | ✅ Yes | ✅ Yes | ❌ No |
-| Protected | `_name` | ⚠️ Yes (but discouraged) | ✅ Yes | ❌ No (convention only) |
-| Private | `__name` | ❌ No (mangled) | ❌ No (unless hacked) | ✅ Name mangling |
+| Modifier  | Syntax   | Accessible Outside Class | Accessible in Subclass | Enforced by Python?     |
+| --------- | -------- | ------------------------ | ---------------------- | ----------------------- |
+| Public    | `name`   | ✅ Yes                   | ✅ Yes                 | ❌ No                   |
+| Protected | `_name`  | ⚠️ Yes (but discouraged) | ✅ Yes                 | ❌ No (convention only) |
+| Private   | `__name` | ❌ No (mangled)          | ❌ No (unless hacked)  | ✅ Name mangling        |
 
 Classes -
 
@@ -94,7 +96,7 @@ Use attributes to map out the data types/data required.
 
 ## Create the template
 
-def __init__(self, name,course,grade,is_on_probation):
+def **init**(self, name,course,grade,is_on_probation):
 
 self.name = name
 
@@ -106,7 +108,8 @@ self.is_on_probation = is_on_probation
 
 ## Using the class to create an object
 
-Is the item that has been defined using the class. What information is placed into the class
+Is the item that has been defined using the class. What information is placed
+into the class
 
 Class used to define something
 
@@ -128,11 +131,13 @@ class Student:
 
 - The object values get passed (stored) to the init function
 
-- Defining the attributes that need to be assigned. Under the def __Init__ definition
+- Defining the attributes that need to be assigned. Under the def **Init**
+  definition
 
-- Example the name of the student needs to be stored against the self.name container
+- Example the name of the student needs to be stored against the self.name
+  container
 
-def __init__(self, name,course,grade,is_on_probation):
+def **init**(self, name,course,grade,is_on_probation):
 
 self.name = name
 

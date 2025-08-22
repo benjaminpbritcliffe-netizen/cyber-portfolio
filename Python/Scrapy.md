@@ -1,4 +1,3 @@
-
 # Scrapy Tutorial
 
 ## Installation
@@ -9,12 +8,12 @@ Open Pycharm
 
 file New Project >> "Name Of Project"
 
-* Make sure venv is selected.
-* inherit global packages.
+- Make sure venv is selected.
+- inherit global packages.
 
 File > Settings > Project Interpreter > Search for "Scrapy" and install package.
 
-* Wait a few minutes for installation successful.
+- Wait a few minutes for installation successful.
 
 Also install win32 (pywin32)
 
@@ -30,16 +29,17 @@ CD back to the folder BEFORE venv.
 
 Write scrapy startproject [Project Name]
 
-Once installed open up terminal then enter > scrapy startproject {Project Name} wait until "You can start your first spider with:
-    cd quotetutorial
-    scrapy genspider example example.com"  is shown.
+Once installed open up terminal then enter > scrapy startproject {Project Name}
+wait until "You can start your first spider with: cd quotetutorial scrapy
+genspider example example.com" is shown.
 
 OR right click on spider and New > Python File
 
 ##############################################################################################
 Make sure you cd into the folder where the scrapy.cfg file lies..
 
-Your running python code needs to go into "spiders"/ The project files need to go in the Spiders folder.
+Your running python code needs to go into "spiders"/ The project files need to
+go in the Spiders folder.
 
 Setting,py = Self Explanatory, Change the settings for srcaping
 
@@ -49,18 +49,19 @@ Pipelines.py = Ensures where the web scraped data goes to the right place.
 
 Middleware.py = Proxies implementation adding additional data etc.
 
-Settings = Settings for the scraper.  For larger websites:  Set Concurrent Requests to 1. May also want to add a user-agent here.
+Settings = Settings for the scraper. For larger websites: Set Concurrent
+Requests to 1. May also want to add a user-agent here.
 
 Scraped Data > Item Containers > Pipieline > SQL DB
 
 Scraped Data > Item Containers > JSON/CSV
 
-scrapy shell "URL"  = is used to see what is possible to be scraped, use the response option.
+scrapy shell "URL" = is used to see what is possible to be scraped, use the
+response option.
 
->> = the shell
+> > = the shell
 
-Id use the "#" sign
-for a class use a "." sign
+Id use the "#" sign for a class use a "." sign
 
 example:
 
@@ -72,29 +73,30 @@ for a link using the "a" tag:
 
 response.css('a.product-item-link::attr(href)').get()
 
-for a title tag:
- response.css('a[title=Next]::attr(href)').get()
+for a title tag: response.css('a[title=Next]::attr(href)').get()
 
 Nested value in a class (Example, the class of next contains the href for next):
 
- The "A" tag is situated in the li class called "Next".
-response.css('li.next a::attr(href)').get()
+The "A" tag is situated in the li class called "Next". response.css('li.next
+a::attr(href)').get()
 
 A response code of "200" suggests that the scraping action is available.
 
 Make sure to change the USER_AGENT in Settings.py to:
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
+like Gecko) Chrome/34.0.1847.131 Safari/537.36"
 
 ######## MyFirst Quotes Tutorial Python File Coding #########
 
-Running using the terminal, scrapy crawl {Name variable below},Make sure you are in the folder just before "spiders" Right Click > Open in termninal.
-Importing Scrapy
-Creating a class and inheriting the scrapy.Spider inheritance. Alway use (scrapy.Spider):
-Defining a parse file, Self (refer to) = the url,  response = the page source.
-Tutorial #9 <https://www.youtube.com/watch?v=FQv-whbCfKs&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t&index=9>
+Running using the terminal, scrapy crawl {Name variable below},Make sure you are
+in the folder just before "spiders" Right Click > Open in termninal. Importing
+Scrapy Creating a class and inheriting the scrapy.Spider inheritance. Alway use
+(scrapy.Spider): Defining a parse file, Self (refer to) = the url, response =
+the page source. Tutorial #9
+<https://www.youtube.com/watch?v=FQv-whbCfKs&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t&index=9>
 
-````python
+```python
 import scrapy
 
 class QuoteSpider(scrapy.Spider):
@@ -115,17 +117,18 @@ class QuoteSpider(scrapy.Spider):
         #Yield = Return Keyword. the value, defining what we want to extract.
         title = response.css('title::text').extract()
         yield {'titletext' : title}
-````
+```
 
 ## Web Scraping using classes in python code
 
-Running using the terminal, scrapy crawl {Name variable below},Make sure you are in the folder just before "spiders" Right Click > Open in termninal.
-Importing Scrapy
-Creating a class and inheriting the scrapy.Spider inheritance
-Defining a parse file, Self (refer to) = the url,  response = the page source.
-Tutorial #11 - <https://www.youtube.com/watch?v=cC9aFbViT_c&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t&index=11>
+Running using the terminal, scrapy crawl {Name variable below},Make sure you are
+in the folder just before "spiders" Right Click > Open in termninal. Importing
+Scrapy Creating a class and inheriting the scrapy.Spider inheritance Defining a
+parse file, Self (refer to) = the url, response = the page source. Tutorial
+#11 -
+<https://www.youtube.com/watch?v=cC9aFbViT_c&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t&index=11>
 
-```` python
+```python
 import scrapy
 
 class QuoteSpider(scrapy.Spider):
@@ -159,17 +162,17 @@ class QuoteSpider(scrapy.Spider):
                 'author' : author,
                 'tag' : tag
             }
-````
+```
 
 ## Amazon Product Scraping
 
-Running using the terminal, scrapy crawl {Name variable below},Make sure you are in the folder just before "spiders" Right Click > Open in termninal.
-Importing Scrapy
-Creating a class and inheriting the scrapy.Spider inheritance
-Defining a parse file, Self (refer to) = the url,  response = the page source.
-Last modified 02/07/2021
+Running using the terminal, scrapy crawl {Name variable below},Make sure you are
+in the folder just before "spiders" Right Click > Open in termninal. Importing
+Scrapy Creating a class and inheriting the scrapy.Spider inheritance Defining a
+parse file, Self (refer to) = the url, response = the page source. Last modified
+02/07/2021
 
-```` python
+```python
 import scrapy
 
 class QuoteSpider(scrapy.Spider):
@@ -194,26 +197,27 @@ class QuoteSpider(scrapy.Spider):
         #Specify the classes inside the main class above.
 
             productname = information.css('.a-color-base.a-text-normal::text').extract()
-      
+
 
             yield {
                 'Product Name' : productname,
-           
+
             }
 
-````
+```
 
 ## Storing scraped data into Item containers
 
 Open up items.py
 
-define the links in the pre-created class, and import ..items in the main python file.
+define the links in the pre-created class, and import ..items in the main python
+file.
 
 Define here the models for your scraped items
 
 See documentation in <https://docs.scrapy.org/en/latest/topics/items.html>
 
-```` python
+```python
 import scrapy
 
 class QuotestutorialItem(scrapy.Item):
@@ -274,7 +278,7 @@ class QuoteSpider(scrapy.Spider):
             items['tag'] = tag
 
             yield items
-````
+```
 
 ## Amazon Scrapy using items.py
 
@@ -284,7 +288,7 @@ Define here the models for your scraped items
 
 See documentation in <https://docs.scrapy.org/en/latest/topics/items.html>
 
-```` python
+```python
 import scrapy
 
 class AmazoncrawlerItem(scrapy.Item):
@@ -577,17 +581,16 @@ class AllrugsSpider(scrapy.Spider):
 
 ##### End Of Intermediate Project. #####
 
-````
+```
 
 ## Using MYSQL Workbench
 
-Create a connection using "MYSQL Connections" in Workbench
-Do not need to change any information, just create a connection name.
-Double Click MySql Connection option and enter password from installation.
+Create a connection using "MYSQL Connections" in Workbench Do not need to change
+any information, just create a connection name. Double Click MySql Connection
+option and enter password from installation.
 
-Open the schemas > Right Click > Create Schema
-Apply x2 and Finish
-View Schema should show new Database added.
+Open the schemas > Right Click > Create Schema Apply x2 and Finish View Schema
+should show new Database added.
 
 ### PyCharm Settings
 
@@ -601,7 +604,7 @@ See: <https://docs.scrapy.org/en/latest/topics/item-pipeline.html>
 
 useful for handling different item types with a single interface
 
-```` python
+```python
 
 # import SQLite3 to store in a db
 
@@ -674,4 +677,4 @@ class QuotestutorialPipeline:
             yield response.follow(next_page, callback=self.parse)
 
 ####
-````
+```

@@ -2,7 +2,8 @@
 
 ## Description
 
-Nikto is a web server scanner which performs comprehensive tests against web servers.
+Nikto is a web server scanner which performs comprehensive tests against web
+servers.
 
 ## Basic Usage
 

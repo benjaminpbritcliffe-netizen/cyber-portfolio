@@ -6,12 +6,10 @@ Apktool is used for reverse engineering Android apps.
 
 ## Installation
 
-Download the Linux wrapper script. (Right click, Save Link As apktool)
-Download the latest version of Apktool.
-Rename the downloaded jar to apktool.jar.
-Move both apktool.jar and apktool to /usr/local/bin. (root needed)
-Make sure both files are executable. (chmod +x)
-Try running apktool via CLI.
+Download the Linux wrapper script. (Right click, Save Link As apktool) Download
+the latest version of Apktool. Rename the downloaded jar to apktool.jar. Move
+both apktool.jar and apktool to /usr/local/bin. (root needed) Make sure both
+files are executable. (chmod +x) Try running apktool via CLI.
 
 ## Basic Usage
 
@@ -44,7 +42,7 @@ usage: apktool b[uild] [options] <app_path>
  -o,--output <dir>       The name of apk that gets written. Default is dist/name.apk
  -p,--frame-path <dir>   Uses framework files located in <dir>.
 
-For additional info, see: https://ibotpeaches.github.io/Apktool/ 
+For additional info, see: https://ibotpeaches.github.io/Apktool/
 For smali/baksmali info, see: https://github.com/JesusFreke/smali
 ```
 

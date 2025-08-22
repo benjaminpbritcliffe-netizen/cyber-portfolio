@@ -45,7 +45,7 @@ myfunc()
 
 ### #Argument required function
 
-#requires one argument to meet the name requirement.
+# requires one argument to meet the name requirement
 
 def my_func(name):
 
@@ -53,9 +53,9 @@ print('hello ' + name)
 
 my_func('Jose')
 
-### #Using return function.
+### #Using return function
 
-#Return is saved.
+# Return is saved
 
 def square(x):
 
@@ -67,7 +67,7 @@ print(result)
 
 ### #Default Value function
 
-#No Name is the default value.
+# No Name is the default value
 
 def my_func(name='No Name'):
 
@@ -126,7 +126,6 @@ Car1.GetModel()
 Car1.MileageStatus()
 
 ```
-
 
 # Functions
 

@@ -1,13 +1,14 @@
 # 📂 Wordlists for Penetration Testing & Kali Linux
 
-Wordlists are used for brute-forcing, password cracking, and directory enumeration.  
+Wordlists are used for brute-forcing, password cracking, and directory
+enumeration.  
 Here’s where to find them and how to use them effectively.
 
 ---
 
 ## 1. 🗂 Pre-installed in Kali Linux
 
-### Location:**
+### Location:\*\*
 
 ```bash
 /usr/share/wordlists/
@@ -23,14 +24,15 @@ Here’s where to find them and how to use them effectively.
 
 - `dirb` lists – for directory brute-forcing  
   Path: `/usr/share/wordlists/dirb/`
-- `seclists` – massive collection of lists *(if installed)*  
+- `seclists` – massive collection of lists _(if installed)_  
   Path: `/usr/share/seclists/`
 
 ---
 
 ### 2. 🌐 SecLists (Hacker’s Goldmine)
 
-GitHub: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
+GitHub:
+[https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
 #### Contains
 
@@ -55,8 +57,10 @@ Path:
 
 ## 3. 📦 Other GitHub Repositories
 
-- **Assetnote Wordlists** – [https://github.com/assetnote/wordlists](https://github.com/assetnote/wordlists)
-- **PayloadAllTheThings** – [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- **Assetnote Wordlists** –
+  [https://github.com/assetnote/wordlists](https://github.com/assetnote/wordlists)
+- **PayloadAllTheThings** –
+  [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
 ---
 
@@ -87,5 +91,6 @@ crunch 8 8 abcdef1234 -o wordlist.txt
 ## ✅ Pro Tips
 
 - Use `rockyou.txt` for Hydra, John, and Hashcat.
-- For directory brute-forcing (Gobuster, Dirb), try SecLists’ `common.txt` and `big.txt`.
+- For directory brute-forcing (Gobuster, Dirb), try SecLists’ `common.txt` and
+  `big.txt`.
 - Tailor lists to your target’s environment for better success.

@@ -16,7 +16,7 @@ NumPy
 - *Learn basic NumPy operations*
 - *Test NumPy skills with exercise and questions*
 
-### 
+###
 
 ### *What is NumPy*
 
@@ -40,35 +40,35 @@ myarr = np.array(mylist)
 
 type(myarr)
 
-#Non NumPy version
+# Non NumPy version
 
 my_matrix = [[1,2,3],[4,5,6],[7,8,9]]
 
-#Result =
+# Result =
 
-#[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-#NumPy Version
+# NumPy Version
 
 np.array(my_matrix)
 
-#Result =
+# Result =
 
-#array([[1, 2, 3],
+# array([[1, 2, 3]
 
-# [4, 5, 6],
+# [4, 5, 6]
 
 # [7, 8, 9]])
 
 ## NumPy Range Function =
 
-#Creates a range of values from 0 to 9
+# Creates a range of values from 0 to 9
 
 np.arange(0,10)
 
 array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-#Include a step size, to go up in 2 instead.
+# Include a step size, to go up in 2 instead
 
 np.arange(0,10,2)
 
@@ -104,7 +104,7 @@ array([[0., 0., 0., 0., 0.],
 
 [0., 0., 0., 0., 0.]])
 
-#first digit is rows, second digit is columns
+# first digit is rows, second digit is columns
 
 np.ones((4,4))
 
@@ -116,25 +116,25 @@ array([[1., 1., 1., 1.],
 
 [1., 1., 1., 1.]])
 
-## 
+##
 
 ## #Linspace
 
-#Returns evenly spaced numbers over a specific interval, different syntax to arange
+# Returns evenly spaced numbers over a specific interval, different syntax to arange
 
-#Start Point, Stop Point, How many numbers inbetween the start and stop evenly spaced.)
+# Start Point, Stop Point, How many numbers inbetween the start and stop evenly spaced.)
 
 np.linspace(0,10,3)
 
 array([ 0., 5., 10.])
 
-#5 figures over 6 points.
+# 5 figures over 6 points
 
 np.linspace(0,5,6)
 
 array([0., 1., 2., 3., 4., 5.])
 
-#Includes the stopping point
+# Includes the stopping point
 
 1
 
@@ -160,39 +160,39 @@ np.random.rand(1)
 
 np.random.rand(5,3)
 
-## #Random Standard Normal Distribution.
+## #Random Standard Normal Distribution
 
-#Values closer to 0 are more likely to appear than negatives and further away numbers.
+# Values closer to 0 are more likely to appear than negatives and further away numbers
 
 np.random.randn(3,2)
 
-## #Random Integers,
+## #Random Integers
 
-#Numbers between two figures, all whole numbers, does not include the last number.#
+# Numbers between two figures, all whole numbers, does not include the last number #
 
-#The below will give us 5 numbers between 0 and 100.
+# The below will give us 5 numbers between 0 and 100
 
-#From,To and then how many
+# From,To and then how many
 
 np.random.randint(0,101,5)
 
-#From and to in the first brackets, and then tuple creation in the additional brackets.
+# From and to in the first brackets, and then tuple creation in the additional brackets
 
-#From,To and then how many
+# From,To and then how many
 
 np.random.randint(0,101,(4,5))
 
-## # Setting a seed, get a particular set.
+## # Setting a seed, get a particular set
 
-#Seed is to select a particular set of random numbers.
+# Seed is to select a particular set of random numbers
 
-#Based on the seed you will always get the same "set" of numbers.
+# Based on the seed you will always get the same "set" of numbers
 
 np.random.seed(42)
 
 np.random.rand(4)
 
-#Eg. The above will always give you:
+# Eg. The above will always give you
 
 array([0.37454012, 0.95071431, 0.73199394, 0.59865848])
 
@@ -202,9 +202,9 @@ np.arange(0,25)
 
 arr.reshape(5,5)
 
-#The reshape will take the original array and set it into a 5x5 range.
+# The reshape will take the original array and set it into a 5x5 range
 
-## 
+##
 
 ## Min and Max
 
@@ -218,21 +218,21 @@ ranarr.argmax()
 
 ranarr.argmin()
 
-## Finding type of array:
+## Finding type of array
 
 ranarr.dtype
 
-## Find the shape:
+## Find the shape
 
 arr.shape
 
-## TASK: Create a numpy array of 101 evenly linearly spaced points between 0 and 10. Assign this array to a variable called myarray. Please note, in order for the exercise to evaluate correctly, you must use the variable name myarray.
+## TASK: Create a numpy array of 101 evenly linearly spaced points between 0 and 10. Assign this array to a variable called myarray. Please note, in order for the exercise to evaluate correctly, you must use the variable name myarray
 
-## 
+##
 
 import numpy as np
 
-#From number, to figure (inclusive), how many numbers to split it over.
+# From number, to figure (inclusive), how many numbers to split it over
 
 myarray = np.linspace(0,10,101)
 
@@ -256,11 +256,11 @@ array([ 0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ,
 
 9.9, 10. ])
 
-#The above has given you 0 to 10 in 101 evenly split parts
+# The above has given you 0 to 10 in 101 evenly split parts
 
 len(myarray)
 
-#Indexing and Selection
+# Indexing and Selection
 
 - Grabbing single element
 - Slice of elements
@@ -268,9 +268,9 @@ len(myarray)
 - Indexing and seletion in 2-dimensions
 - Conditional selection
 
-#Grabbing a single element:
+# Grabbing a single element
 
-#arange goes from and to (but not including the last value)
+# arange goes from and to (but not including the last value)
 
 arr = np.arange(0,11)
 
@@ -278,7 +278,7 @@ arr
 
 arr[8]
 
-#Grabs the value at position 8, starts at 0. Result is 8 in this case!
+# Grabs the value at position 8, starts at 0. Result is 8 in this case
 
 Grabbing a selection of numbers:
 
@@ -286,7 +286,7 @@ arr[1:5] #From number and to, but not including the 5th element.
 
 Result is Array([1,2,3,4)
 
-#Remember these start at 0 (0 is technically the 1st element)
+# Remember these start at 0 (0 is technically the 1st element)
 
 From 0 (1st element) to to the 5th element
 
@@ -296,9 +296,9 @@ Beginning from the the element to the end:
 
 arr[5:]
 
-#Broadcast
+# Broadcast
 
-#Changing values in a list
+# Changing values in a list
 
 arr
 
@@ -312,7 +312,7 @@ arr
 
 array([100, 100, 100, 100, 100, 5, 6, 7, 8, 9, 10])
 
-#Slicing
+# Slicing
 
 slice_of_arr = arr[0:5]
 
@@ -320,23 +320,23 @@ slice_of_arr
 
 slice_of_arr[:] = 99
 
-#This will change the original array too!
+# This will change the original array too
 
-#To not change the original array, need to take a copy of the original array!
+# To not change the original array, need to take a copy of the original array
 
-#Copying the array
+# Copying the array
 
 arr_copy = arr.copy()
 
 arr_copy[:] = 100
 
-#Array copied.
+# Array copied
 
 arr_copy
 
 array([100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100])
 
-#Original Array
+# Original Array
 
 arr
 
@@ -354,7 +354,7 @@ arr_2d[1,1] #At row 1, column 1 grab element, starts both at 0.
 
 arr_2d[0,2] #Grab at row 0, element 2.
 
-#Slicing a 2d shape
+# Slicing a 2d shape
 
 arr_2d[:2] #up to not including
 
@@ -368,11 +368,11 @@ Arr
 
 ## #Broadcast
 
-#Greater than 4?
+# Greater than 4?
 
 arr > 4
 
-#Result shows true or false in position where it matches the answer above.
+# Result shows true or false in position where it matches the answer above
 
 bool_arr = arr>4 #Setting a new variable to the broadcast above.
 
@@ -380,9 +380,9 @@ bool_arr
 
 arr[bool_arr] #Will now give the array values where it shows True.
 
-#Result:
+# Result
 
-#array([ 5, 6, 7, 8, 9, 10])
+# array([ 5, 6, 7, 8, 9, 10])
 
 Simplified:
 
@@ -390,7 +390,7 @@ arr = np.arange(1,11)
 
 arr[arr>4]
 
-#result array([ 5, 6, 7, 8, 9, 10])
+# result array([ 5, 6, 7, 8, 9, 10])
 
 Full conditional arange:
 
@@ -408,7 +408,7 @@ arr[arr>35]
 
 array([36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50])
 
-#How many times a number larger than 2 occurred, using a selection array.
+# How many times a number larger than 2 occurred, using a selection array
 
 importnumpyasnp
 

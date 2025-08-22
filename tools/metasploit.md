@@ -2,7 +2,8 @@
 
 ## Description
 
-Metasploit is a powerful exploitation framework used for developing and executing exploits.
+Metasploit is a powerful exploitation framework used for developing and
+executing exploits.
 
 ## Basic Usage
 

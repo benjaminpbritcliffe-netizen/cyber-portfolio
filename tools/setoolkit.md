@@ -2,7 +2,8 @@
 
 ## Description
 
-SET is an open-source Python-based tool for performing social engineering attacks.
+SET is an open-source Python-based tool for performing social engineering
+attacks.
 
 ## Use Case
 

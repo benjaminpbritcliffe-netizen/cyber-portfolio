@@ -2,7 +2,8 @@
 
 ## Description
 
-Netcat is a networking utility for reading/writing to network connections using TCP/UDP.
+Netcat is a networking utility for reading/writing to network connections using
+TCP/UDP.
 
 ## Basic Usage
 

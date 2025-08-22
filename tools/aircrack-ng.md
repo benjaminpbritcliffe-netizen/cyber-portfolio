@@ -6,7 +6,8 @@ Aircrack-ng is a suite of tools for auditing wireless networks.
 
 ## Basic Usage
 
-Aircrack-ng can be used for Wi-Fi security testing after it has been installed.  These are a few typical commands:
+Aircrack-ng can be used for Wi-Fi security testing after it has been installed.
+These are a few typical commands:
 
 Check Wireless Network Interfaces:
 
@@ -38,7 +39,8 @@ Crack WEP/WPA Passwords:
 aircrack-ng -a 2 -b [TARGET_BSSID] -w [WORDLIST] [CAPTURE_FILE]
 ```
 
-This command uses a [wordlist](wordlists.md) to try and crack the Wi-Fi password.
+This command uses a [wordlist](wordlists.md) to try and crack the Wi-Fi
+password.
 
 ## Use Case
 
