@@ -1,9 +1,8 @@
 # OOP In Python
 
-Created: 22 April 2025 16:23
-Is Completed: Yes
+Created: 22 April 2025 16:23 Is Completed: Yes
 
-# 🐍 Object-Oriented Programming in Python
+## 🐍 Object-Oriented Programming in Python
 
 ## 🧱 1. Classes
 
@@ -19,7 +18,8 @@ class Animal:
 
 **Explanation:**
 
-The `Animal` class defines a constructor (`__init__`) and a method `speak()` which can be shared by all animal types.
+The `Animal` class defines a constructor (`__init__`) and a method `speak()`
+which can be shared by all animal types.
 
 ```python
 class Animal:
@@ -61,13 +61,15 @@ class Dog(Animal):
 
 **Explanation:**
 
-`Dog` and `Cat` inherit from `Animal`. They override the `speak()` method to provide specialized behavior.
+`Dog` and `Cat` inherit from `Animal`. They override the `speak()` method to
+provide specialized behavior.
 
 ---
 
 ## 🔄 3. Polymorphism
 
-Different classes can be treated the same if they share the same interface (method names).
+Different classes can be treated the same if they share the same interface
+(method names).
 
 ```python
 def animal_sound(animal):
@@ -79,13 +81,15 @@ animal_sound(dog)     # Rex barks.animal_sound(cat)     # Whiskers meows.
 
 **Explanation:**
 
-The `animal_sound()` function works on any object that implements `speak()`. This is polymorphism—same interface, different behavior.
+The `animal_sound()` function works on any object that implements `speak()`.
+This is polymorphism—same interface, different behavior.
 
 ---
 
 ## 🔒 4. Encapsulation
 
-Encapsulation hides the internal state and allows interaction through controlled methods.
+Encapsulation hides the internal state and allows interaction through controlled
+methods.
 
 ```python
 class Zoo:
@@ -109,4 +113,5 @@ zoo.show_all_animals()
 
 **Explanation:**
 
-`__animals` is a private list. The Zoo class provides public methods to safely interact with it.
+`__animals` is a private list. The Zoo class provides public methods to safely
+interact with it.

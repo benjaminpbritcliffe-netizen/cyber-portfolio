@@ -1,13 +1,15 @@
 # ECF
 
-Created: 22 July 2025 09:54
-Is Completed: No
+Created: 22 July 2025 09:54 Is Completed: No
 
 ## 🔷 Overview: Exceptional Control Flow (ECF)
 
 **Definition:**
 
-Exceptional Control Flow refers to changes in the normal execution order of a program. These changes are triggered by **system-level events**, **errors**, or **user interactions**, and are handled through mechanisms such as interrupts, exceptions, signals, and system calls.
+Exceptional Control Flow refers to changes in the normal execution order of a
+program. These changes are triggered by **system-level events**, **errors**, or
+**user interactions**, and are handled through mechanisms such as interrupts,
+exceptions, signals, and system calls.
 
 ---
 
@@ -15,8 +17,10 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 ## 🔹 **Exceptional Control Flow (ECF)**
 
-- A fundamental mechanism in system-level programming that allows computers to react to **unpredictable events**.
-- Not "exceptions" in the high-level language sense (like try/catch) — ECF encompasses **interrupts**, **faults**, **traps**, and **aborts**.
+- A fundamental mechanism in system-level programming that allows computers to
+  react to **unpredictable events**.
+- Not "exceptions" in the high-level language sense (like try/catch) — ECF
+  encompasses **interrupts**, **faults**, **traps**, and **aborts**.
 
 ## 🔹 Types of ECF
 
@@ -38,21 +42,25 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 ### 🔹 **Categories of Exceptions:**
 
-| Type | Triggered By | Purpose | Returns to Caller? |
-| --- | --- | --- | --- |
-| **Interrupt** | External hardware (e.g., timer, keyboard) | Notify CPU of external events | Yes |
-| **Trap** | Intentional instruction (e.g., system call) | Execute OS code and return | Yes |
-| **Fault** | Potentially recoverable error (e.g., page fault) | OS fixes and retries instruction | Yes (after fix) |
-| **Abort** | Unrecoverable error (e.g., hardware failure) | Terminate program or system | No |
+| Type          | Triggered By                                     | Purpose                          | Returns to Caller? |
+| ------------- | ------------------------------------------------ | -------------------------------- | ------------------ |
+| **Interrupt** | External hardware (e.g., timer, keyboard)        | Notify CPU of external events    | Yes                |
+| **Trap**      | Intentional instruction (e.g., system call)      | Execute OS code and return       | Yes                |
+| **Fault**     | Potentially recoverable error (e.g., page fault) | OS fixes and retries instruction | Yes (after fix)    |
+| **Abort**     | Unrecoverable error (e.g., hardware failure)     | Terminate program or system      | No                 |
 
 ---
 
 ### 🔷 Key Terminology (Defined Simply)
 
-- **Exception:** A control transfer mechanism for handling unexpected or intentional events.
-- **Interrupt:** A hardware-generated signal that pauses normal execution to handle external events.
-- **Trap:** A software-triggered event (e.g., system call) that intentionally invokes kernel services.
-- **Fault:** An error the OS may be able to recover from (e.g., invalid memory access).
+- **Exception:** A control transfer mechanism for handling unexpected or
+  intentional events.
+- **Interrupt:** A hardware-generated signal that pauses normal execution to
+  handle external events.
+- **Trap:** A software-triggered event (e.g., system call) that intentionally
+  invokes kernel services.
+- **Fault:** An error the OS may be able to recover from (e.g., invalid memory
+  access).
 - **Abort:** A fatal error with no recovery option (e.g., corrupted memory).
 
 ---
@@ -61,13 +69,17 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 ### 🔹 What Are System Calls?
 
-- Controlled gateways for **user programs to request services** from the OS kernel (like reading files, creating processes, or allocating memory).
-- Typically triggered via a **trap instruction** (e.g., `int $0x80` in x86 or `syscall` in x86-64).
-- Kernel executes the request, returns the result to the user program, and resumes execution.
+- Controlled gateways for **user programs to request services** from the OS
+  kernel (like reading files, creating processes, or allocating memory).
+- Typically triggered via a **trap instruction** (e.g., `int $0x80` in x86 or
+  `syscall` in x86-64).
+- Kernel executes the request, returns the result to the user program, and
+  resumes execution.
 
 ### 🔹 Why System Calls Are Important
 
-- Ensure **security and isolation**: User programs can't directly manipulate hardware.
+- Ensure **security and isolation**: User programs can't directly manipulate
+  hardware.
 - Provide **abstraction**: User code doesn't need to know hardware details.
 - Enable **resource sharing** and **controlled access** to system devices.
 
@@ -81,9 +93,14 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 🟢 **Answer:**
 
-- System calls **isolate privilege levels**. User applications run in user mode with limited access, while the OS runs in kernel mode with full access.
-- When a program makes a system call, control transfers safely to the kernel via a **trap**, allowing the OS to perform the requested task **on behalf of the application**.
-- This controlled interaction prevents malicious or buggy programs from damaging the system, while still allowing them to use system resources like files, memory, and devices.
+- System calls **isolate privilege levels**. User applications run in user mode
+  with limited access, while the OS runs in kernel mode with full access.
+- When a program makes a system call, control transfers safely to the kernel via
+  a **trap**, allowing the OS to perform the requested task **on behalf of the
+  application**.
+- This controlled interaction prevents malicious or buggy programs from damaging
+  the system, while still allowing them to use system resources like files,
+  memory, and devices.
 
 ---
 
@@ -91,32 +108,42 @@ Exceptional Control Flow refers to changes in the normal execution order of a pr
 
 🟢 **Answer:**
 
-| Aspect | Hardware Exceptions (e.g., Interrupts) | Software Exceptions (e.g., try/catch) |
-| --- | --- | --- |
-| **Source** | CPU, hardware devices (external/internal) | Application-level code |
-| **Handled By** | OS kernel or interrupt handler | Application code or language runtime |
-| **Examples** | Timer interrupt, page fault, divide-by-zero | Null pointer exception, value error |
-| **Level** | Low-level (machine/hardware) | High-level (language/runtime) |
-| **Criticality** | System-critical, may halt or recover | Usually recoverable in application flow |
+| Aspect          | Hardware Exceptions (e.g., Interrupts)      | Software Exceptions (e.g., try/catch)   |
+| --------------- | ------------------------------------------- | --------------------------------------- |
+| **Source**      | CPU, hardware devices (external/internal)   | Application-level code                  |
+| **Handled By**  | OS kernel or interrupt handler              | Application code or language runtime    |
+| **Examples**    | Timer interrupt, page fault, divide-by-zero | Null pointer exception, value error     |
+| **Level**       | Low-level (machine/hardware)                | High-level (language/runtime)           |
+| **Criticality** | System-critical, may halt or recover        | Usually recoverable in application flow |
 
 🔑 **Why the distinction matters:**
 
-- **Hardware exceptions** affect the entire system and must be handled at the OS level for stability.
-- **Software exceptions** are part of the application's logic and don't require kernel involvement.
-- Misunderstanding this distinction can lead to writing unsafe low-level code or incorrectly assuming a system crash is just a catchable error.
+- **Hardware exceptions** affect the entire system and must be handled at the OS
+  level for stability.
+- **Software exceptions** are part of the application's logic and don't require
+  kernel involvement.
+- Misunderstanding this distinction can lead to writing unsafe low-level code or
+  incorrectly assuming a system crash is just a catchable error.
 
 ---
 
 ### 🧾 Summary
 
-- **ECF** is essential for real-world systems to handle interrupts, faults, and process control.
-- **System calls** provide secure, structured ways for applications to interact with the OS.
-- **Exceptions** from hardware differ fundamentally from high-level language exceptions in origin, impact, and handling.
-- Understanding ECF mechanisms is crucial for systems programming and building secure, responsive applications.
+- **ECF** is essential for real-world systems to handle interrupts, faults, and
+  process control.
+- **System calls** provide secure, structured ways for applications to interact
+  with the OS.
+- **Exceptions** from hardware differ fundamentally from high-level language
+  exceptions in origin, impact, and handling.
+- Understanding ECF mechanisms is crucial for systems programming and building
+  secure, responsive applications.
 
 ### 🔷 **What is ECF?**
 
-Exceptional Control Flow refers to **changes in a program's normal execution sequence**, triggered by system events such as interrupts, signals, system calls, or context switches. This fundamental mechanism enables **responsiveness, multitasking, fault tolerance, and hardware-software interaction**.
+Exceptional Control Flow refers to **changes in a program's normal execution
+sequence**, triggered by system events such as interrupts, signals, system
+calls, or context switches. This fundamental mechanism enables **responsiveness,
+multitasking, fault tolerance, and hardware-software interaction**.
 
 ---
 
@@ -124,18 +151,25 @@ Exceptional Control Flow refers to **changes in a program's normal execution seq
 
 ### 📌 How it works
 
-At the hardware level, devices like timers, keyboards, disks, and network cards generate **interrupts** or **exceptions** to alert the CPU that an event has occurred.
+At the hardware level, devices like timers, keyboards, disks, and network cards
+generate **interrupts** or **exceptions** to alert the CPU that an event has
+occurred.
 
 ### 🔹 Hardware-Level Examples
 
-- **Interrupts**: A timer generates an interrupt to pause a running process and switch to another.
-- **Faults**: Division by zero or invalid memory access triggers a **fault** for the OS to handle.
-- **Aborts**: Signal fatal hardware errors (e.g., memory corruption) that cannot be recovered from.
+- **Interrupts**: A timer generates an interrupt to pause a running process and
+  switch to another.
+- **Faults**: Division by zero or invalid memory access triggers a **fault** for
+  the OS to handle.
+- **Aborts**: Signal fatal hardware errors (e.g., memory corruption) that cannot
+  be recovered from.
 
 ### 🎯 Role in ECF
 
-- These events cause the CPU to **pause the current control flow**, save context, and transfer control to an **interrupt or exception handler**.
-- Enables **asynchronous handling** of events (e.g., responding to user input or hardware failures).
+- These events cause the CPU to **pause the current control flow**, save
+  context, and transfer control to an **interrupt or exception handler**.
+- Enables **asynchronous handling** of events (e.g., responding to user input or
+  hardware failures).
 
 ---
 
@@ -143,13 +177,17 @@ At the hardware level, devices like timers, keyboards, disks, and network cards 
 
 ## 📌 How the OS Handles ECF
 
-The OS responds to hardware exceptions and provides mechanisms to **manage processes**, **handle errors**, and **schedule resources**.
+The OS responds to hardware exceptions and provides mechanisms to **manage
+processes**, **handle errors**, and **schedule resources**.
 
 ## 🔹 OS-Level Examples
 
-- **System Calls (Traps)**: A user process requests a system function (e.g., file read) via a trap to enter kernel mode.
-- **Context Switches**: The OS saves one process's state and loads another's, switching execution.
-- **Fault Handling**: OS recovers from a page fault by loading the needed page from disk into memory.
+- **System Calls (Traps)**: A user process requests a system function (e.g.,
+  file read) via a trap to enter kernel mode.
+- **Context Switches**: The OS saves one process's state and loads another's,
+  switching execution.
+- **Fault Handling**: OS recovers from a page fault by loading the needed page
+  from disk into memory.
 
 ## 🎯 Roles in ECF
 
@@ -163,17 +201,22 @@ The OS responds to hardware exceptions and provides mechanisms to **manage proce
 
 ## 📌 How it works (Application Level)
 
-Applications handle ECF using programming constructs and OS mechanisms like **signals**, **exceptions**, and **event callbacks**.
+Applications handle ECF using programming constructs and OS mechanisms like
+**signals**, **exceptions**, and **event callbacks**.
 
 ### 🔹 Application-Level Examples
 
-- **Signals**: A process receives a `SIGINT` (e.g., Ctrl+C), triggering a signal handler function.
-- **Thread Scheduling**: Multithreaded applications rely on the OS to switch threads when needed.
-- **Exceptions in Programming Languages**: In Java, Python, or C++, `try/catch` constructs manage software-level ECF for expected errors.
+- **Signals**: A process receives a `SIGINT` (e.g., Ctrl+C), triggering a signal
+  handler function.
+- **Thread Scheduling**: Multithreaded applications rely on the OS to switch
+  threads when needed.
+- **Exceptions in Programming Languages**: In Java, Python, or C++, `try/catch`
+  constructs manage software-level ECF for expected errors.
 
 ### ECF Roles
 
-- Allows apps to respond to asynchronous events (I/O completion, user interrupt).
+- Allows apps to respond to asynchronous events (I/O completion, user
+  interrupt).
 - Promotes **fault tolerance** through recovery code.
 - Enables **inter-process communication (IPC)** and **signal-based control**.
 
@@ -185,23 +228,37 @@ Applications handle ECF using programming constructs and OS mechanisms like **si
 
 - **Multitasking**: Switching between processes and threads efficiently.
 - **Fault Recovery**: Gracefully handling runtime errors and hardware issues.
-- **Asynchronous Event Handling**: Responding in real-time to user input, network traffic, or device status.
-- **Secure Access Control**: Controlling transitions between privilege levels (user vs. kernel).
+- **Asynchronous Event Handling**: Responding in real-time to user input,
+  network traffic, or device status.
+- **Secure Access Control**: Controlling transitions between privilege levels
+  (user vs. kernel).
 - **Concurrency Support**: Supporting process/thread scheduling and parallelism.
 
 ---
 
 ## 🧩 Visual Summary
 
-| Level | Trigger/Event | Control Transfer To | Example |
-| --- | --- | --- | --- |
-| **Hardware** | Timer interrupt, page fault, I/O ready | Kernel-level exception handler | Keyboard input triggers IRQ |
+| Level                | Trigger/Event                            | Control Transfer To                 | Example                           |
+| -------------------- | ---------------------------------------- | ----------------------------------- | --------------------------------- |
+| **Hardware**         | Timer interrupt, page fault, I/O ready   | Kernel-level exception handler      | Keyboard input triggers IRQ       |
 | **Operating System** | Process ends, I/O completes, system call | Kernel scheduler or syscall handler | Context switch to another process |
-| **Application** | Signal received, exception raised | Signal handler or catch block | Division by zero raises exception |
+| **Application**      | Signal received, exception raised        | Signal handler or catch block       | Division by zero raises exception |
 
-- **OS as Interface:** The lesson explains how operating systems serve as an essential layer managing the relationship between hardware and software to enable user interaction and resource management.
-- **OS vs. Bare-metal:** It differentiates operating systems from bare-metal systems, where software runs directly on hardware without the use of abstraction layers, such as BIOS and the kernel.
-- **Kernel Role:** The kernel is highlighted as the core control component responsible for managing processes, memory, and devices, acting as the system’s taskmaster.
-- **System Calls:** The material covers how programs use system calls to interact with the OS kernel, requesting services and accessing hardware safely and efficiently.
-- **Exceptional Control Flow:** Concepts such as interrupts, faults, traps, and aborts are introduced as special events that change normal execution flow to manage hardware and OS-level events.
-- **OS Exceptions vs. Language Exceptions:** The reading clarifies the difference between OS-level exceptions and high-level language exceptions, using Linux examples to illustrate these system-level mechanisms.
+- **OS as Interface:** The lesson explains how operating systems serve as an
+  essential layer managing the relationship between hardware and software to
+  enable user interaction and resource management.
+- **OS vs. Bare-metal:** It differentiates operating systems from bare-metal
+  systems, where software runs directly on hardware without the use of
+  abstraction layers, such as BIOS and the kernel.
+- **Kernel Role:** The kernel is highlighted as the core control component
+  responsible for managing processes, memory, and devices, acting as the
+  system’s taskmaster.
+- **System Calls:** The material covers how programs use system calls to
+  interact with the OS kernel, requesting services and accessing hardware safely
+  and efficiently.
+- **Exceptional Control Flow:** Concepts such as interrupts, faults, traps, and
+  aborts are introduced as special events that change normal execution flow to
+  manage hardware and OS-level events.
+- **OS Exceptions vs. Language Exceptions:** The reading clarifies the
+  difference between OS-level exceptions and high-level language exceptions,
+  using Linux examples to illustrate these system-level mechanisms.

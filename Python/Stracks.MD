@@ -1,10 +1,9 @@
 # Stacks, Queues, DeQueues
 
-Created: 9 April 2025 11:41
-Class: Additional Research
-Is Completed: Yes
+Created: 9 April 2025 11:41 Class: Additional Research Is Completed: Yes
 
-Stacks - Data can only be placed on the top of the stack and can only retrieve data from the top of the stack.
+Stacks - Data can only be placed on the top of the stack and can only retrieve
+data from the top of the stack.
 
 Last In First Out (LIFO)
 
@@ -14,7 +13,8 @@ Let's explore these fundamental data structures in Python:
 
 ## Stacks
 
-A stack follows the Last-In-First-Out (LIFO) principle. Think of it like a stack of plates - you can only add or remove from the top.
+A stack follows the Last-In-First-Out (LIFO) principle. Think of it like a stack
+of plates - you can only add or remove from the top.
 
 ```python
 # Using a list as a stack
@@ -27,7 +27,8 @@ stack.pop()        # Pop (removes and returns 2)
 
 ## Queues
 
-A queue follows the First-In-First-Out (FIFO) principle, like a line of people waiting.
+A queue follows the First-In-First-Out (FIFO) principle, like a line of people
+waiting.
 
 ```python
 from collections import deque
@@ -58,6 +59,18 @@ Key operations and their time complexities:
 - **Queue**: enqueue/dequeue - O(1) using deque
 - **Deque**: append/pop from either end - O(1)
 
-A priority queue is a data structure that works like a regular queue but assigns priorities to elements, which determine their dequeuing order. Unlike standard queues that use first-in-first-out ordering, a priority queue always removes the highest-priority element first, regardless of its position. Priority queues typically use heap structures for efficient operation, allowing both insertion and removal in logarithmic time. They're commonly used in task scheduling, pathfinding, and simulations where order of execution matters. Their unique structure makes them valuable tools for solving complex computational problems.
+A priority queue is a data structure that works like a regular queue but assigns
+priorities to elements, which determine their dequeuing order. Unlike standard
+queues that use first-in-first-out ordering, a priority queue always removes the
+highest-priority element first, regardless of its position. Priority queues
+typically use heap structures for efficient operation, allowing both insertion
+and removal in logarithmic time. They're commonly used in task scheduling,
+pathfinding, and simulations where order of execution matters. Their unique
+structure makes them valuable tools for solving complex computational problems.
 
-There are two main ways to implement a priority queue. The first uses an unsorted array, where new elements are added to the end, but finding the highest priority requires checking every element. The second uses a sorted array, which keeps elements in priority order—making it easy to get the highest-priority element but harder to insert new ones. Each approach offers different benefits for insertion speed versus retrieval speed.
+There are two main ways to implement a priority queue. The first uses an
+unsorted array, where new elements are added to the end, but finding the highest
+priority requires checking every element. The second uses a sorted array, which
+keeps elements in priority order—making it easy to get the highest-priority
+element but harder to insert new ones. Each approach offers different benefits
+for insertion speed versus retrieval speed.

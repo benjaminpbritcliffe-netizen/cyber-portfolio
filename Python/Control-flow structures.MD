@@ -4,9 +4,11 @@
 
 ## ALGORITHMS & DATA STRUCTURES
 
-Write a program that asks the user to guess a number between 1 and 10. The program should
+Write a program that asks the user to guess a number between 1 and 10. The
+program should
 
-keep asking until the user guesses the correct number. After each attempt, the program should
+keep asking until the user guesses the correct number. After each attempt, the
+program should
 
 display a message indicating if the guess is too low or too high.
 

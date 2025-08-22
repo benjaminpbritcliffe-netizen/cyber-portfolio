@@ -1,20 +1,18 @@
 # Flow Control Structures
 
-Created: 17 March 2025 11:59
-Class: 1
-Is Completed: Yes
+Created: 17 March 2025 11:59 Class: 1 Is Completed: Yes
 
 Booleans Method:
 
 True or False
 
->, <,≥,≤=,
+> , <,≥,≤=,
 
 == Equality
 
 ! = Not Equal
 
-10 < 7  False
+10 < 7 False
 
 Make sure to use the same type when booleans.
 
@@ -50,69 +48,79 @@ Boolean expressions are evaluated from left to right.
 
 Complex Boolean Expressions.
 
-**Sequential Logic (Sequential Flow)**
+## Sequential Logic (Sequential Flow)
 
-Sequential logic as the name suggests follows a serial or sequential flow in which the flow depends on the series of instructions given to the computer. Unless new instructions are given, the modules are executed in the obvious sequence. The sequences may be given, by means of numbered steps explicitly. Also, implicitly follows the order in which modules are written. Most of the processing, even some complex problems, will generally follow this elementary flow pattern.
+Sequential logic as the name suggests follows a serial or sequential flow in
+which the flow depends on the series of instructions given to the computer.
+Unless new instructions are given, the modules are executed in the obvious
+sequence. The sequences may be given, by means of numbered steps explicitly.
+Also, implicitly follows the order in which modules are written. Most of the
+processing, even some complex problems, will generally follow this elementary
+flow pattern.
 
-<aside>
-💡
-
-**sequential flow** is the default execution method in Python. This means that Python executes code **line by line**, from **top to bottom**, unless there are control flow statements (such as loops, function calls, conditionals, or exceptions) that alter the flow.
+**sequential flow** is the default execution method in Python. This means that
+Python executes code **line by line**, from **top to bottom**, unless there are
+control flow statements (such as loops, function calls, conditionals, or
+exceptions) that alter the flow.
 
 </aside>
 
 ## **Selection Logic (Conditional Flow)**
 
-Selection Logic simply involves a number of conditions or parameters which decides one out of several written modules. The structures which use these type of logic are known as **Conditional Structures**. These structures can be of three types:
+Selection Logic simply involves a number of conditions or parameters which
+decides one out of several written modules. The structures which use these type
+of logic are known as **Conditional Structures**. These structures can be of
+three types:
 
 - **Single Alternative** This structure has the form:
 
-    ```
-    If (condition) then:
-         [Module A]
-    [End of If structure]
-    ```
+  ``` python
+  If (condition) then:
+       [Module A]
+  [End of If structure]
+  ```
 
-    **Implementation:**
+  **Implementation:**
 
 - **Double Alternative** This structure has the form:
 
-    ```
-    If (Condition), then:
-         [Module A]
-    Else:
-         [Module B]
-    [End if structure]
-    
-    ```
+  ``` python
+  If (Condition), then:
+       [Module A]
+  Else:
+       [Module B]
+  [End if structure]
 
-    **Implementation:**
+  ```
+
+  **Implementation:**
 
 - **Multiple Alternatives** This structure has the form:
 
-    ```
-    If (condition A), then:
-         [Module A]
-    Else if (condition B), then:
-         [Module B]
-            ..
-            ..
-    Else if (condition N), then:
-         [Module N]
-    [End If structure]
-    ```
+  ``` python
+  If (condition A), then:
+       [Module A]
+  Else if (condition B), then:
+       [Module B]
+          ..
+          ..
+  Else if (condition N), then:
+       [Module N]
+  [End If structure]
+  ```
 
 ## **Iteration Logic (Repetitive Flow)**
 
-The Iteration logic employs a loop which involves a repeat statement followed by a module known as the body of a loop.
+The Iteration logic employs a loop which involves a repeat statement followed by
+a module known as the body of a loop.
 
-```
+  ``` python
 Repeat for i = A to N by I:
        [Module]
 [End of loop]
 ```
 
-```
+  ``` python
 Repeat while condition:
      [Module]
 [End of Loop]

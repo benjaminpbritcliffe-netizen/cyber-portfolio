@@ -20,7 +20,8 @@ Is Completed: Yes
 
 Linear Search on an unsorted array > Each element is checked one by one.
 
-Sorted Array > Diving the search in half, to reduce the number of checks, making searching data faster.
+Sorted Array > Diving the search in half, to reduce the number of checks,
+making searching data faster.
 
 | **Scenario** | **Use Linear Search?** |
 | --- | --- |

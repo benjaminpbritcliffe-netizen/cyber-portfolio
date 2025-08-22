@@ -125,7 +125,6 @@ Running using the terminal, scrapy crawl {Name variable below},Make sure you are
 in the folder just before "spiders" Right Click > Open in termninal. Importing
 Scrapy Creating a class and inheriting the scrapy.Spider inheritance Defining a
 parse file, Self (refer to) = the url, response = the page source. Tutorial
-#11 -
 <https://www.youtube.com/watch?v=cC9aFbViT_c&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t&index=11>
 
 ```python

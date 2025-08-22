@@ -75,7 +75,8 @@ Is Completed: No
 
 ## 🎯 Choosing Storage for High-Performance Environments
 
-When selecting a data storage solution for performance-critical applications, **prioritize these factors**:
+When selecting a data storage solution for performance-critical applications,
+**prioritize these factors**:
 
 | Priority | Why it Matters |
 | --- | --- |
@@ -90,7 +91,11 @@ When selecting a data storage solution for performance-critical applications, **
 
 ## 🧠 Final Thoughts
 
-Storage technology has evolved from **slow, sequential access** models to **ultra-fast, resilient, and scalable** systems. SSDs revolutionized expectations around latency and reliability, while cloud and network storage brought new flexibility.
+Storage technology has evolved from **slow, sequential access**
+models to **ultra-fast, resilient, and scalable** systems.
+
+SSDs revolutionized expectations around latency and reliability,
+while cloud and network storage brought new flexibility.
 
 **When designing high-performance systems**, think holistically:
 
@@ -100,7 +105,9 @@ Storage technology has evolved from **slow, sequential access** models to **ultr
 
 ## 🔹 Section 6.2 — **RAID: Redundant Array of Independent Disks**
 
-RAID is a **data storage virtualization** technique that combines multiple physical disks into one logical unit to improve **performance**, **fault tolerance**, or both.
+RAID is a **data storage virtualization** technique that combines
+multiple physical disks into one logical unit,
+to improve **performance**, **fault tolerance**, or both.
 
 ### 🔑 Key RAID Terminology
 
@@ -134,7 +141,8 @@ RAID is a **data storage virtualization** technique that combines multiple physi
 
 ## 🔹 Section 6.3 — **Solid State Drives (SSDs)**
 
-SSDs use **non-volatile flash memory** instead of spinning disks, meaning no moving parts, faster speeds, and less power usage.
+SSDs use **non-volatile flash memory** instead of spinning disks,
+meaning no moving parts, faster speeds, and less power usage.
 
 ### 🔑 SSD Concepts & Terms
 
@@ -193,8 +201,10 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 ## ✅ Summary
 
 - SSDs **excel in speed**, but require smarter wear handling and garbage collection.
-- RAID provides **tailored solutions** for redundancy, speed, or both—choose based on workload and failure tolerance.
-- For modern high-performance systems, combining **SSDs with RAID 10** offers both reliability and throughput—with proper management of SSD-specific constraints
+- RAID provides **tailored solutions** for redundancy, speed,
+  or both—choose based on workload and failure tolerance.
+- For modern high-performance systems, combining **SSDs with RAID 10**
+  offers both reliability and throughput—with proper management of SSD-specific constraints
 
 ## 🔹 Section 6.4 — **Optical Memory (CDs, DVDs, Blu-ray)**
 
@@ -250,14 +260,18 @@ SSDs use **non-volatile flash memory** instead of spinning disks, meaning no mov
 ### 📊 **ACM: The Data Storage Crisis**
 
 - The **volume of data is outpacing current storage density growth**.
-- Researchers are exploring **new materials, physics, and optical tricks** to expand data storage (e.g., using phase transitions or atomic-scale bits).
-- Suggests the need for **hybrid storage strategies**—not just speed, but lifespan and cost must be balanced.
+- Researchers are exploring **new materials, physics, and optical tricks**
+  to expand data storage (e.g., using phase transitions or atomic-scale bits).
+- Suggests the need for **hybrid storage strategies**—not just speed,
+  but lifespan and cost must be balanced.
 
 ### ⚙️ **TechXplore: Wafer-Scale Accelerators**
 
 - AI workloads are driving the adoption of **wafer-scale chips** (like Cerebras WSE-3).
-- These require **massive, fast-access memory bandwidth**—highlighting limits of traditional storage when used for AI training.
-- Suggests a **clear divide between “hot” and “cold” data**: fast RAM/SSD for real-time, massive tapes for bulk retention.
+- These require **massive, fast-access memory bandwidth**—highlighting limits
+  of traditional storage when used for AI training.
+- Suggests a **clear divide between “hot” and “cold” data**: fast RAM/SSD for real-time,
+  massive tapes for bulk retention.
 
 ---
 
@@ -301,5 +315,7 @@ So you'd balance **performance, cost, redundancy, and lifespan** depending on:
 
 - Optical media is declining but still **relevant for distribution and backups**.
 - Magnetic tape is **back in demand** for its role in **cheap, high-capacity archival**.
-- Storage now involves **strategic layering**—using the right medium for the right use case.
-- New AI hardware (like wafer-scale accelerators) emphasizes the growing gap between compute speed and storage throughput.
+- Storage now involves **strategic layering**—
+  using the right medium for the right use case.
+- New AI hardware (like wafer-scale accelerators) emphasizes the growing gap -
+  between compute speed and storage throughput.

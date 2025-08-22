@@ -1,23 +1,23 @@
 # For Loop
 
-Created: 17 March 2025 14:51
-Class: 1
-Is Completed: Yes
+Created: 17 March 2025 14:51 Class: 1 Is Completed: Yes
 
 for counter in range(start, end, step);
 
-for x in range(2, 30, 3):
-print(x)
+for x in range(2, 30, 3): print(x)
 
-# Python For Loops
+## Python For Loops
 
-A for loop iterates over a sequence—which can be a list, tuple, dictionary, set, or string.
+A for loop iterates over a sequence—which can be a list, tuple, dictionary, set,
+or string.
 
-Unlike the for keyword in other programming languages, Python's for loop functions more like an iterator method found in object-oriented programming.
+Unlike the for keyword in other programming languages, Python's for loop
+functions more like an iterator method found in object-oriented programming.
 
-Using a for loop, we can execute a set of statements once for each item in a sequence like a list, tuple, or set.
+Using a for loop, we can execute a set of statements once for each item in a
+sequence like a list, tuple, or set.
 
-# Example
+## Example
 
 Print each fruit in a fruit list:
 

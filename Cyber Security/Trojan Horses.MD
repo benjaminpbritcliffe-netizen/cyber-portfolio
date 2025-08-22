@@ -1,9 +1,12 @@
 # Trojan Horses
 
-For university-level cybersecurity studies, **safe examples of Trojan horses** are typically **simulated or educational tools** that demonstrate how Trojans work without causing harm. These are either:
+For university-level cybersecurity studies, **safe examples of Trojan horses**
+are typically **simulated or educational tools** that demonstrate how Trojans
+work without causing harm. These are either:
 
 - **Code samples** designed for learning.
-- **Sandboxed virtual machines or environments** preloaded with malware for analysis.
+- **Sandboxed virtual machines or environments** preloaded with malware for
+  analysis.
 - **Simulated Trojans** created specifically for labs.
 
 Below are safe and ethical examples you can explore:
@@ -36,10 +39,12 @@ fake_trojan()
 
 ### 🖥️ 2. **FlareVM (Windows Malware Analysis VM)**
 
-FlareVM is a virtual machine environment pre-configured with tools for malware analysis.
+FlareVM is a virtual machine environment pre-configured with tools for malware
+analysis.
 
 - Use cases: Analyze real malware samples in a safe, sandboxed way.
-- Download: [https://github.com/mandiant/flare-vm](https://github.com/mandiant/flare-vm)
+- Download:
+  [https://github.com/mandiant/flare-vm](https://github.com/mandiant/flare-vm)
 
 ---
 
@@ -54,7 +59,8 @@ A reverse engineering and malware analysis Linux distro.
 
 ### 🔍 4. **Metasploit Trojan Generator**
 
-Metasploit can simulate Trojans for learning (e.g., generating a reverse shell payload):
+Metasploit can simulate Trojans for learning (e.g., generating a reverse shell
+payload):
 
 ```bash
 bash
@@ -63,17 +69,18 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f exe > 
 
 ```
 
-⚠️ *Only run in a controlled lab environment or virtual machine.*
+⚠️ _Only run in a controlled lab environment or virtual machine._
 
 ---
 
 ### 🧪 5. **TryHackMe or Hack The Box Labs**
 
-These platforms have **safe, legal environments** for interacting with Trojan-like behavior.
+These platforms have **safe, legal environments** for interacting with
+Trojan-like behavior.
 
 - Rooms to try:
-  - **TryHackMe**: *“Malware Analysis Intro”*, *“Windows Privilege Escalation”*
-  - **Hack The Box Academy**: *“Intro to Malware”*
+  - **TryHackMe**: _“Malware Analysis Intro”_, _“Windows Privilege Escalation”_
+  - **Hack The Box Academy**: _“Intro to Malware”_
 
 ---
 

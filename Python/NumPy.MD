@@ -8,23 +8,24 @@ NumPy
 
 15:49
 
-### *Goals:*
+## _Goals:_
 
-- *Understand what NumPy Is*
-- *Creating arrays with NumPy*
-- *Retrieve information from NumPy array using slicing and indexing*
-- *Learn basic NumPy operations*
-- *Test NumPy skills with exercise and questions*
+- _Understand what NumPy Is_
+- _Creating arrays with NumPy_
+- _Retrieve information from NumPy array using slicing and indexing_
+- _Learn basic NumPy operations_
+- _Test NumPy skills with exercise and questions_
 
 ###
 
-### *What is NumPy*
+### _What is NumPy_
 
-- *Numpy is a pyhton library for creating N-dimensional arrays.*
-- *Ability to broadcast functions*
-- *Built in Linear algebra, statistical distributions, trigonometric and random number capabilities.*
-- *Numpy is more efficient*
-- *Useful for quickly applying functions to our data set.*
+- _Numpy is a pyhton library for creating N-dimensional arrays._
+- _Ability to broadcast functions_
+- _Built in Linear algebra, statistical distributions, trigonometric and random
+  number capabilities._
+- _Numpy is more efficient_
+- _Useful for quickly applying functions to our data set._
 
 ## NumPy Arrays
 
@@ -40,35 +41,35 @@ myarr = np.array(mylist)
 
 type(myarr)
 
-# Non NumPy version
+Non NumPy version
 
 my_matrix = [[1,2,3],[4,5,6],[7,8,9]]
 
-# Result =
+Result =
 
-# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-# NumPy Version
+NumPy Version
 
 np.array(my_matrix)
 
-# Result =
+Result =
 
-# array([[1, 2, 3]
+array([[1, 2, 3]
 
-# [4, 5, 6]
+[4, 5, 6]
 
-# [7, 8, 9]])
+ [7, 8, 9]])
 
 ## NumPy Range Function =
 
-# Creates a range of values from 0 to 9
+Creates a range of values from 0 to 9
 
 np.arange(0,10)
 
 array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-# Include a step size, to go up in 2 instead
+Include a step size, to go up in 2 instead
 
 np.arange(0,10,2)
 
@@ -104,7 +105,7 @@ array([[0., 0., 0., 0., 0.],
 
 [0., 0., 0., 0., 0.]])
 
-# first digit is rows, second digit is columns
+## first digit is rows, second digit is columns
 
 np.ones((4,4))
 
@@ -116,29 +117,27 @@ array([[1., 1., 1., 1.],
 
 [1., 1., 1., 1.]])
 
-##
-
 ## #Linspace
 
-# Returns evenly spaced numbers over a specific interval, different syntax to arange
+Returns evenly spaced numbers over a specific interval, different syntax to arange
 
-# Start Point, Stop Point, How many numbers inbetween the start and stop evenly spaced.)
+Start Point, Stop Point, How many numbers inbetween the start and stop evenly spaced.)
 
 np.linspace(0,10,3)
 
 array([ 0., 5., 10.])
 
-# 5 figures over 6 points
+5 figures over 6 points
 
 np.linspace(0,5,6)
 
 array([0., 1., 2., 3., 4., 5.])
 
-# Includes the stopping point
+Includes the stopping point
 
 1
 
-## #Identity matrix
+Identity matrix
 
 np.eye(5)
 
@@ -152,67 +151,63 @@ array([[1., 0., 0., 0., 0.],
 
 [0., 0., 0., 0., 1.]])
 
-## #Random
+ Random
 
 np.random.rand(1)
 
-## Rows, Columns
+Rows, Columns
 
 np.random.rand(5,3)
 
 ## #Random Standard Normal Distribution
 
-# Values closer to 0 are more likely to appear than negatives and further away numbers
+Values closer to 0 are more likely to appear than negatives and further away numbers
 
 np.random.randn(3,2)
 
 ## #Random Integers
 
-# Numbers between two figures, all whole numbers, does not include the last number #
+Numbers between two figures, all whole numbers, does not include the last number
 
-# The below will give us 5 numbers between 0 and 100
-
-# From,To and then how many
+The below will give us 5 numbers between 0 and 100
+ From,To and then how many
 
 np.random.randint(0,101,5)
 
-# From and to in the first brackets, and then tuple creation in the additional brackets
+From and to in the first brackets, and then tuple creation in the additional brackets
 
-# From,To and then how many
+From,To and then how many
 
 np.random.randint(0,101,(4,5))
 
-## # Setting a seed, get a particular set
+Setting a seed, get a particular set
 
-# Seed is to select a particular set of random numbers
+Seed is to select a particular set of random numbers
 
-# Based on the seed you will always get the same "set" of numbers
+Based on the seed you will always get the same "set" of numbers
 
 np.random.seed(42)
 
 np.random.rand(4)
 
-# Eg. The above will always give you
+Eg. The above will always give you
 
 array([0.37454012, 0.95071431, 0.73199394, 0.59865848])
 
-## Reshape
+Reshape
 
 np.arange(0,25)
 
 arr.reshape(5,5)
+The reshape will take the original array and set it into a 5x5 range
 
-# The reshape will take the original array and set it into a 5x5 range
-
-##
-
-## Min and Max
+Min and Max
 
 ranarr.max()
 
 ranarr.min()
 
-## Find location of Min and Max number
+Find location of Min and Max number
 
 ranarr.argmax()
 
@@ -226,13 +221,15 @@ ranarr.dtype
 
 arr.shape
 
-## TASK: Create a numpy array of 101 evenly linearly spaced points between 0 and 10. Assign this array to a variable called myarray. Please note, in order for the exercise to evaluate correctly, you must use the variable name myarray
+TASK: Create a numpy array of 101 evenly linearly spaced points between 0 and 10.
+Assign this array to a variable called myarray.
+Please note, in order for the exercise to evaluate correctly,
+you must use the variable name myarray
 
-##
-
+```` python
 import numpy as np
 
-# From number, to figure (inclusive), how many numbers to split it over
+#From number, to figure (inclusive), how many numbers to split it over
 
 myarray = np.linspace(0,10,101)
 
@@ -412,6 +409,8 @@ array([36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50])
 
 importnumpyasnp
 
-dice_rolls=np.array([3, 1, 5, 2, 5, 1, 1, 5, 1, 4, 2, 1, 4, 5, 3, 4, 5, 2, 4, 2, 6, 6, 3, 6, 2, 3, 5, 6, 5])
+dice_rolls=np.array([3, 1, 5, 2, 5, 1, 1, 5, 1, 4, 2, 1, 4, 5, 3, 4, 5, 2, 4, 2,
+6, 6, 3, 6, 2, 3, 5, 6, 5])
 
 total_rolls_over_two=len(dice_rolls[dice_rolls>2])
+```

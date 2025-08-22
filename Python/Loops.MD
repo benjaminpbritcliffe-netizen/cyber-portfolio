@@ -1,8 +1,6 @@
 # Loops
 
-Created: 5 April 2025 15:08
-Class: Additional Research
-Is Completed: Yes
+Created: 5 April 2025 15:08 Class: Additional Research Is Completed: Yes
 
 ```python
 x = 0
@@ -71,24 +69,37 @@ print(approved)
 
 ```
 
-# For Loops and Nested Loops
+## For Loops and Nested Loops
 
 ## Transcript
 
-A for loop executes a block of code a fixed number of times. You can iterate over ranges, strings, sequences, or any iterable object.
+A for loop executes a block of code a fixed number of times. You can iterate
+over ranges, strings, sequences, or any iterable object.
 
-While both while and for loops can often be used interchangeably, for loops are better suited for fixed iterations, while while loops work better for indefinite iterations like user input.
+While both while and for loops can often be used interchangeably, for loops are
+better suited for fixed iterations, while while loops work better for indefinite
+iterations like user input.
 
-Basic syntax: Use 'for x in range(start, stop)' with a colon and indented code block. The range function's stop value is exclusive. You can count backwards using reversed() or add a step parameter for counting by intervals.
+Basic syntax: Use 'for x in range(start, stop)' with a colon and indented code
+block. The range function's stop value is exclusive. You can count backwards
+using reversed() or add a step parameter for counting by intervals.
 
-For loops can iterate over strings - each character becomes the loop variable. Two helpful keywords are continue (skips current iteration) and break (exits loop entirely).
+For loops can iterate over strings - each character becomes the loop variable.
+Two helpful keywords are continue (skips current iteration) and break (exits
+loop entirely).
 
-Nested loops are loops within other loops. The outer loop contains an inner loop in its code block. This creates a nested structure where the inner loop completes all its iterations for each iteration of the outer loop.
+Nested loops are loops within other loops. The outer loop contains an inner loop
+in its code block. This creates a nested structure where the inner loop
+completes all its iterations for each iteration of the outer loop.
 
-Example: To print a rectangle, use nested loops where the outer loop controls rows and the inner loop controls columns. Each loop iteration prints a symbol specified by user input.
+Example: To print a rectangle, use nested loops where the outer loop controls
+rows and the inner loop controls columns. Each loop iteration prints a symbol
+specified by user input.
 
-The type of loops used in nesting doesn't matter - you can nest any combination of while and for loops as needed for your specific use case.
+The type of loops used in nesting doesn't matter - you can nest any combination
+of while and for loops as needed for your specific use case.
 
 ---
 
-Made With Glean | [Open Event](https://app.glean.co/event/7720ff6f-66d1-40de-8942-012796df6d18)
+Made With Glean |
+[Open Event](https://app.glean.co/event/7720ff6f-66d1-40de-8942-012796df6d18)
