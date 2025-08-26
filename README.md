@@ -11,25 +11,6 @@ programming, and ethical hacking**.
 ✔️ Document laws, ethics, and real-world cases
 ✔️ Create a portfolio for career transition into cybersecurity
 
----
-
-## 📂 Repository Structure
-
-```plaintext
-├───Computer Fundamentals
-├───Cyber Events Archive
-├───Cyber Laws & Ethics
-├───Cyber Security
-├───House Of Vokabel
-├───Images
-├───Java
-├───Programming Fundamentals
-├───Python
-├───Scripts
-├───Tools
-└───Tryhackme
-```
-
 ## 🧭 Directory Guide
 
 📘 Computer Fundamentals → Notes on hardware, OS, and basic IT concepts.
