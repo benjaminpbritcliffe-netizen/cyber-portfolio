@@ -2,7 +2,7 @@
 
 Status: Done
 
-[CIA Triad](../../House%20of%20Vokabel%2017b3d034d9f780f28d12fa401ae23c58/CIA%20Triad%2017b3d034d9f780c782f9f781573a24dd.md)
+[CIA Triad](../House%20Of%20Vokabel/CIA%20Triad.MD)
 
 - Confidentiality
 
