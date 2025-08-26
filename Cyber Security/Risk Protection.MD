@@ -14,4 +14,4 @@ behaviours = Higher Risk
 Have a solid backup plan
 
 Follow the
-[3 Pillars of Cyber Security](../House%20of%20Vokabel%2017b3d034d9f780f28d12fa401ae23c58/3%20Pillars%20of%20Cyber%20Security%2017b3d034d9f780a1a052ce0f033884ec.md)
+[3 Pillars of Cyber Security](../Cyber%20Security/3%20Pillars%20Of%20Cyber%20Security.md)

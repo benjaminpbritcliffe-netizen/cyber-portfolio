@@ -4,9 +4,7 @@ Status: Done
 
 [Three Pillars of Cybersecurity: People, Processes, and Technology](https://modern-networks.co.uk/news/three-pillars-of-cybersecurity)
 
-![1000007744.png](Key%20elements%20of%20cybersecurity%201763d034d9f780698ed1ee3e92b464f6/1000007744.png)
-
-[Cyber Hygiene Definition](../../Quick%20Notes%201783d034d9f780129a29e8b6af19edc3/Cyber%20Hygiene%201783d034d9f7805a82cedb4f6cdbc02f.md)
+[Cyber Hygiene Definition](../Cyber%20Security/Cyber%20Hygiene.MD)
 
 PPT/EPT = People/Education, Process Technology
 
@@ -83,5 +81,3 @@ system.
 
 Organisations need to educate their users on the reasons for introducing certain
 technology to ensure it is used effectively.
-
-![image.png](Key%20elements%20of%20cybersecurity%201763d034d9f780698ed1ee3e92b464f6/image.png)

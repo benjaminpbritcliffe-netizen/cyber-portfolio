@@ -34,8 +34,6 @@ Big O notation is a way to measure how well a program will run as it handles
 more data. It's like measuring fuel efficiency in a car - we want to know how
 well it performs under different conditions.
 
-![image.png](Big%20O%20Notation%20Recap%201c83d034d9f780c99fdcfe0ba323aeb7/image.png)
-
 ## How Different Programs Perform
 
 | **Speed Rating** | **Name**     | **What It Means**                   | **Common Uses**             | **How Well It Works** |

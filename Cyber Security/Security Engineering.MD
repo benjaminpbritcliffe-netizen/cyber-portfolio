@@ -2,8 +2,6 @@
 
 Created: 9 May 2025 20:33 Is Completed: Yes
 
-![image.png](Security%20Engineering%201ee3d034d9f780dba174d7c8c67951cf/image.png)
-
 Authentication verifies that presented tokens are genuine and sufficient to
 prove legitimacy. Systems need a way to validate token authenticity before
 acceptance.
