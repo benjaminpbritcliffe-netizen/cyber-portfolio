@@ -1,4 +1,4 @@
-# Wireshark
+# Burp Suite
 
 **Category:** Sniffing & Spoofing
 

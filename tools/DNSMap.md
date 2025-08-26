@@ -1,6 +1,6 @@
-# Wireshark
+# DNSMap
 
-**Category:** Sniffing & Spoofing
+**Category:** Information Gathering
 
 ## Description
 _(Add description here)_

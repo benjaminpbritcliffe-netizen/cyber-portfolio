@@ -1,6 +1,6 @@
-# Wireshark
+# Wifite
 
-**Category:** Sniffing & Spoofing
+**Category:** Wireless Attacks
 
 ## Description
 _(Add description here)_

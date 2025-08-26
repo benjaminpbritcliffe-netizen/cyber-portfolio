@@ -1,6 +1,6 @@
-# Wireshark
+# Metagoofil
 
-**Category:** Sniffing & Spoofing
+**Category:** Reporting
 
 ## Description
 _(Add description here)_

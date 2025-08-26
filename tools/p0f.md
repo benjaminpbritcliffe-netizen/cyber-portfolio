@@ -1,6 +1,6 @@
-# Wireshark
+# p0f
 
-**Category:** Sniffing & Spoofing
+**Category:** Forensics
 
 ## Description
 _(Add description here)_

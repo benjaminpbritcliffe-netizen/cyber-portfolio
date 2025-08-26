@@ -1,6 +1,6 @@
-# Wireshark
+# Weevely
 
-**Category:** Sniffing & Spoofing
+**Category:** Maintaining Access
 
 ## Description
 _(Add description here)_

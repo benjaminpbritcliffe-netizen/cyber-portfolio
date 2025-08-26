@@ -1,25 +1,11 @@
-# 🔍 Nmap
+# Nmap
+
+**Category:** Information Gathering
 
 ## Description
+_(Add description here)_
 
-Nmap (Network Mapper) is an open-source tool for network discovery and security
-auditing.
-
-## Basic Usage
-
+## Usage
 ```bash
-nmap -sC -s -oN scan.txt 10.10.10.5
+# Example command
 ```
-
-## Common Flags
-
-- `-sS`: TCP SYN scan
-- `-sC`: Run default scripts
-- `-sV`: Version detection
-- `-oN`: Output to normal text file
-
-## Use Case
-
-- Host discovery
-- Port scanning
-- Service enumeration

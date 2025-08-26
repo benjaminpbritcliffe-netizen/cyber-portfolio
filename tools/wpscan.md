@@ -1,16 +1,11 @@
-# 🌐 WPScan
+# WPScan
+
+**Category:** Web App / Website Testing
 
 ## Description
+_(Add description here)_
 
-WPScan is a WordPress vulnerability scanner.
-
-## Basic Usage
-
+## Usage
 ```bash
-wpscan --url http://target.com --enumerate u
+# Example command
 ```
-
-## Use Case
-
-- Detect vulnerable plugins/themes
-- Enumerate users

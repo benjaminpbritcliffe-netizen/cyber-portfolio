@@ -1,16 +1,11 @@
-# 🔐 Hydra
+# Hydra
+
+**Category:** Password Cracking
 
 ## Description
+_(Add description here)_
 
-Hydra is a parallelized login cracker that supports numerous protocols.
-
-## Basic Usage
-
+## Usage
 ```bash
-hydra -l admin -P rockyou.txt ssh://10.10.10.5
+# Example command
 ```
-
-## Use Case
-
-- Brute-force password attacks
-- Protocol testing (FTP, SSH, HTTP, etc.)

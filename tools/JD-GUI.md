@@ -1,6 +1,6 @@
-# Wireshark
+# JD-GUI
 
-**Category:** Sniffing & Spoofing
+**Category:** Reverse Engineering
 
 ## Description
 _(Add description here)_

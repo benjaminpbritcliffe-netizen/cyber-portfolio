@@ -1,6 +1,6 @@
-# Wireshark
+# RainbowCrack
 
-**Category:** Sniffing & Spoofing
+**Category:** Password Cracking
 
 ## Description
 _(Add description here)_

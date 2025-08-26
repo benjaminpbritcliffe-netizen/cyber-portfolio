@@ -1,19 +1,11 @@
-# 💥 Metasploit Framework
+# Metasploit
+
+**Category:** Exploitation
 
 ## Description
+_(Add description here)_
 
-Metasploit is a powerful exploitation framework used for developing and
-executing exploits.
-
-## Basic Usage
-
+## Usage
 ```bash
-msfconsole
-use exploit/windows/smb/ms17_010_eternalblue
+# Example command
 ```
-
-## Use Case
-
-- Exploitation
-- Payload generation
-- Post-exploitation

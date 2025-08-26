@@ -1,17 +1,13 @@
-# 🧬 SQLMap
+# sqlmap
+
+**Category:** Web App / Website Testing
 
 ## Description
 
-SQLMap is an automated tool for detecting and exploiting SQL injection flaws.
+(Add description here)_
 
-## Basic Usage
+## Usage
 
 ```bash
-sqlmap -u "http://target.com/index.php?id=1" --dbs
+# Example command
 ```
-
-## Use Case
-
-- Detecting SQL injection
-- Dumping databases
-- Database enumeration

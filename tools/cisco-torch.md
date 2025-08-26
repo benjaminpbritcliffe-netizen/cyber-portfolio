@@ -1,6 +1,6 @@
-# Wireshark
+# cisco-torch
 
-**Category:** Sniffing & Spoofing
+**Category:** Vulnerability Analysis
 
 ## Description
 _(Add description here)_

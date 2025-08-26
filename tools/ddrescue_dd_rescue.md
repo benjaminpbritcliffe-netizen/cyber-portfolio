@@ -1,6 +1,6 @@
-# Wireshark
+# ddrescue (dd_rescue)
 
-**Category:** Sniffing & Spoofing
+**Category:** Forensics
 
 ## Description
 _(Add description here)_

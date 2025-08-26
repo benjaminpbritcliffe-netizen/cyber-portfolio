@@ -1,6 +1,6 @@
-# Wireshark
+# Cisco Auditing Tool
 
-**Category:** Sniffing & Spoofing
+**Category:** Vulnerability Analysis
 
 ## Description
 _(Add description here)_

@@ -1,6 +1,6 @@
-# Wireshark
+# thc-ssl-dos
 
-**Category:** Sniffing & Spoofing
+**Category:** Stressing / DoS
 
 ## Description
 _(Add description here)_

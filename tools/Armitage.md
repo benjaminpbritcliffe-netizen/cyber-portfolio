@@ -1,6 +1,6 @@
-# Wireshark
+# Armitage
 
-**Category:** Sniffing & Spoofing
+**Category:** Exploitation
 
 ## Description
 _(Add description here)_
