@@ -1,3 +1,6 @@
+# How to use CuteIt
+
+```bash
 root@kali:~# cd Cuteit
 root@kali:~/Cuteit# ls
 Cuteit.py  LICENSE  README.md  Screenshot.PNG
@@ -22,3 +25,4 @@ root@kali:~/Cuteit# python Cuteit.py
  [11] http://anywebsite@0300.0250.0000.0103
  [12] http://0300.0250.0000.0103
  [13] http://3232235587
+```
