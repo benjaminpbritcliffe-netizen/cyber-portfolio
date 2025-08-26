@@ -174,128 +174,167 @@ main root folders found on a Linux install. This folder stores data that is
 frequently accessed or written by services or applications running on the
 system.
 
-the /root folder is actually the home for the "root" system user. There isn't anything more to this folder other than just understanding that this is the home directory for the "root" user.
-
+the /root folder is actually the home for the "root" system user. There isn't
+anything more to this folder other than just understanding that this is the home
+directory for the "root" user.
 
 /tmp
 
-This is a unique root directory found on a Linux install. Short for "temporary", the /tmp directory is volatile and is used to store data that is only needed to be accessed once or twice. Similar to the memory on your computer, once the computer is restarted, the contents of this folder are cleared out.
+This is a unique root directory found on a Linux install. Short for "temporary",
+the /tmp directory is volatile and is used to store data that is only needed to
+be accessed once or twice. Similar to the memory on your computer, once the
+computer is restarted, the contents of this folder are cleared out.
 
- log files from running services and applications are written here (/var/log)
+log files from running services and applications are written here (/var/log)
 
+## Text Editors
 
- ## Text Editors
+Nano
 
- Nano
-
-It is easy to get started with Nano! To create or edit a file using nano, we simply use nano filename -- replacing "filename" with the name of the file you wish to edit.
+It is easy to get started with Nano! To create or edit a file using nano, we
+simply use nano filename -- replacing "filename" with the name of the file you
+wish to edit.
 
 ### Introducing Nano
 
 Once we press enter to execute the command, nano will launch
 
-You can use these features of nano by pressing the "Ctrl" key (which is represented as an ^ on Linux)  and a corresponding letter. For example, to exit, we would want to press "Ctrl" and "X" to exit Nano.
-
+You can use these features of nano by pressing the "Ctrl" key (which is
+represented as an ^ on Linux) and a corresponding letter. For example, to exit,
+we would want to press "Ctrl" and "X" to exit Nano.
 
 ### Introducing VIM
 
-You can use these features of nano by pressing the "Ctrl" key (which is represented as an ^ on Linux)  and a corresponding letter. For example, to exit, we would want to press "Ctrl" and "X" to exit Nano.
-
-
+You can use these features of nano by pressing the "Ctrl" key (which is
+represented as an ^ on Linux) and a corresponding letter. For example, to exit,
+we would want to press "Ctrl" and "X" to exit Nano.
 
 ## Downloading Files
 
-You can use these features of nano by pressing the "Ctrl" key (which is represented as an ^ on Linux)  and a corresponding letter. For example, to exit, we would want to press "Ctrl" and "X" to exit Nano.
-
+You can use these features of nano by pressing the "Ctrl" key (which is
+represented as an ^ on Linux) and a corresponding letter. For example, to exit,
+we would want to press "Ctrl" and "X" to exit Nano.
 
 ## SCP
 
-Secure copy, or SCP, is just that -- a means of securely copying files. Unlike the regular cp command, this command allows you to transfer files between two computers using the SSH protocol to provide both authentication and encryption.
+Secure copy, or SCP, is just that -- a means of securely copying files. Unlike
+the regular cp command, this command allows you to transfer files between two
+computers using the SSH protocol to provide both authentication and encryption.
 
 Working on a model of SOURCE and DESTINATION, SCP allows you to:
 
 - Copy files & directories from your current system to a remote system
 - Copy files & directories from a remote system to your current system
 
-scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt  
+scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt
 
-With this information, let's craft our scp command (remembering that the format of SCP is just SOURCE and DESTINATION)
+With this information, let's craft our scp command (remembering that the format
+of SCP is just SOURCE and DESTINATION)
 
-And now let's reverse this and layout the syntax for using scp to copy a file from a remote computer that we're not logged into 
+And now let's reverse this and layout the syntax for using scp to copy a file
+from a remote computer that we're not logged into
 
-ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt 
-
+ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt
 
 ## Serving Files
 
-Ubuntu machines come pre-packaged with python3. Python helpfully provides a lightweight and easy-to-use module called "HTTPServer". This module turns your computer into a quick and easy web server that you can use to serve your own files, where they can then be downloaded by another computing using commands such as curl and wget. 
+Ubuntu machines come pre-packaged with python3. Python helpfully provides a
+lightweight and easy-to-use module called "HTTPServer". This module turns your
+computer into a quick and easy web server that you can use to serve your own
+files, where they can then be downloaded by another computing using commands
+such as curl and wget.
 
-Python3's "HTTPServer" will serve the files in the directory where you run the command, but this can be changed by providing options that can be found within the manual pages. Simply, all we need to do is run python3 -m  http.server in the terminal to start the module!
-
+Python3's "HTTPServer" will serve the files in the directory where you run the
+command, but this can be changed by providing options that can be found within
+the manual pages. Simply, all we need to do is run python3 -m http.server in the
+terminal to start the module!
 
 ## WGet
 
- use wget to download the file using the 10.10.42.35 address and the name of the file. Remember, because the python3 server is running port 8000.
+use wget to download the file using the 10.10.42.35 address and the name of the
+file. Remember, because the python3 server is running port 8000.
 
- Note, you will need to open a new terminal to use wget and leave the one that you have started the Python3 web server in. This is because, once you start the Python3 web server, it will run in that terminal until you cancel it.
+Note, you will need to open a new terminal to use wget and leave the one that
+you have started the Python3 web server in. This is because, once you start the
+Python3 web server, it will run in that terminal until you cancel it.
 
- ## Processes
+## Processes
 
- Processes are the programs that are running on your machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID.
+Processes are the programs that are running on your machine. They are managed by
+the kernel, where each process will have an ID associated with it, also known as
+its PID.
 
- To see the processes run by other users and those that don't run from a session (i.e. system processes), we need to provide aux to the ps command like so: ps aux
+To see the processes run by other users and those that don't run from a session
+(i.e. system processes), we need to provide aux to the ps command like so: ps
+aux
 
- You can send signals that terminate processes; there are a variety of types of signals that correlate to exactly how "cleanly" the process is dealt with by the kernel. To kill a command, we can use the appropriately named kill command and the associated PID that we wish to kill. i.e., to kill PID 1337, we'd use kill 1337.
+You can send signals that terminate processes; there are a variety of types of
+signals that correlate to exactly how "cleanly" the process is dealt with by the
+kernel. To kill a command, we can use the appropriately named kill command and
+the associated PID that we wish to kill. i.e., to kill PID 1337, we'd use
+kill 1337.
 
- SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
-SIGKILL - Kill the process - doesn't do any cleanup after the fact
-SIGSTOP - Stop/suspend a process
+SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
+SIGKILL - Kill the process - doesn't do any cleanup after the fact SIGSTOP -
+Stop/suspend a process
 
+The Operating System (OS) uses namespaces to ultimately split up the resources
+available on the computer to (such as CPU, RAM and priority) processes.
 
-The Operating System (OS) uses namespaces to ultimately split up the resources available on the computer to (such as CPU, RAM and priority) processes. 
+We previously talked about how PID works, and this is where it comes into play.
+The process with an ID of 0 is a process that is started when the system boots.
+This process is the system's init on Ubuntu, such as systemd, which is used to
+provide a way of managing a user's processes and sits in between the operating
+system and the user.
 
-We previously talked about how PID works, and this is where it comes into play. The process with an ID of 0 is a process that is started when the system boots. This process is the system's init on Ubuntu, such as systemd, which is used to provide a way of managing a user's processes and sits in between the operating system and the user. 
-
-Enter the use of systemctl -- this command allows us to interact with the systemd process/daemon. Continuing on with our example, systemctl is an easy to use command that takes the following formatting: systemctl [option] [service]
+Enter the use of systemctl -- this command allows us to interact with the
+systemd process/daemon. Continuing on with our example, systemctl is an easy to
+use command that takes the following formatting: systemctl [option] [service]
 
 For example, to tell apache to start up, we'll use systemctl start apache2
 
 We can do four options with systemctl:
 
-Start
-Stop
-Enable
-Disable
+Start Stop Enable Disable
 
+With our process backgrounded using either Ctrl + Z or the & operator, we can
+use fg to bring this back to focus like below, where we can see the fg command
+is being used to bring the background process back into use on the terminal,
+where the output of the script is now returned to us.
 
-With our process backgrounded using either Ctrl + Z or the & operator, we can use fg to bring this back to focus like below, where we can see the fg command is being used to bring the background process back into use on the terminal, where the output of the script is now returned to us.
+## Cron
 
+Users may want to schedule a certain action or task to take place after the
+system has booted. Take, for example, running commands, backing up files, or
+launching your favourite programs on, such as Spotify or Google Chrome.
 
+We're going to be talking about the cron process, but more specifically, how we
+can interact with it via the use of crontabs . Crontab is one of the processes
+that is started during boot, which is responsible for facilitating and managing
+cron jobs.
 
-## Cron 
+Crontabs require 6 specific values:
 
-Users may want to schedule a certain action or task to take place after the system has booted. Take, for example, running commands, backing up files, or launching your favourite programs on, such as Spotify or Google Chrome.
+Value Description MIN What minute to execute at HOUR What hour to execute at DOM
+What day of the month to execute at MON What month of the year to execute at DOW
+What day of the week to execute at CMD The actual command that will be executed.
 
-We're going to be talking about the cron process, but more specifically, how we can interact with it via the use of crontabs . Crontab is one of the processes that is started during boot, which is responsible for facilitating and managing cron jobs.
+```` plaintext
+0 _/12 _ \* \* cp -R /home/cmnatic/Documents /var/backups/
+````
 
- Crontabs require 6 specific values:
+An interesting feature of crontabs is that these also support the wildcard or
+asterisk (\*). If we do not wish to provide a value for that specific field,
+i.e. we don't care what month, day, or year it is executed -- only that it is
+executed every 12 hours, we simply just place an asterisk.
 
-Value	Description
-MIN	What minute to execute at
-HOUR	What hour to execute at
-DOM	What day of the month to execute at
-MON	What month of the year to execute at
-DOW	What day of the week to execute at
-CMD	The actual command that will be executed.
-
-0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
-
-An interesting feature of crontabs is that these also support the wildcard or asterisk (*). If we do not wish to provide a value for that specific field, i.e. we don't care what month, day, or year it is executed -- only that it is executed every 12 hours, we simply just place an asterisk.
-
-
-Crontabs can be edited by using crontab -e, where you can select an editor (such as Nano) to edit your crontab.
+Crontabs can be edited by using crontab -e, where you can select an editor (such
+as Nano) to edit your crontab.
 
 ## Repositories
 
-Whilst Operating System vendors will maintain their own repositories, you can also add community repositories to your list! This allows you to extend the capabilities of your OS. Additional repositories can be added by using the add-apt-repositorycommand or by listing another provider! For example, some vendors will have a repository that is closer to their geographical location.
-
+Whilst Operating System vendors will maintain their own repositories, you can
+also add community repositories to your list! This allows you to extend the
+capabilities of your OS. Additional repositories can be added by using the
+add-apt-repositorycommand or by listing another provider! For example, some
+vendors will have a repository that is closer to their geographical location.
