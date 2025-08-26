@@ -6,9 +6,9 @@ programming, and ethical hacking**.
 
 ## 🎯 Goals
 
-✔️ Build a cybersecurity knowledge base  
-✔️ Develop hands-on skills through scripts & labs  
-✔️ Document laws, ethics, and real-world cases  
+✔️ Build a cybersecurity knowledge base
+✔️ Develop hands-on skills through scripts & labs
+✔️ Document laws, ethics, and real-world cases
 ✔️ Create a portfolio for career transition into cybersecurity
 
 ---
@@ -41,6 +41,8 @@ cybersecurity.
 
 🔐 Cyber Security → Notes, projects, and learning resources in security.
 
+📚 Ebooks And Tutorial Material - Ebooks and Tutorials.
+
 📝 House Of Vokabel → Vocabulary and key terms for quick recall.
 
 🖼️ Images → Diagrams, screenshots, and visual study aids.
@@ -50,8 +52,6 @@ cybersecurity.
 💻 Programming Fundamentals → Core programming concepts across languages.
 
 🐍 Python → Scripts, automation, and data security tools in Python.
-
-⚡ Scripts → Useful scripts for automation, security testing, and daily tasks.
 
 🛠️ Tools → Custom-built or documented security tools.
 
