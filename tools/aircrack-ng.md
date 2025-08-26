@@ -19,6 +19,8 @@ The network interfaces that are available are listed by this command.
 
 Enable Monitor Mode:
 
+- See also [Airmon-ng](airmon-ng.md) for more info.
+
 ```bash
 airmon-ng start wlan0
 ```
