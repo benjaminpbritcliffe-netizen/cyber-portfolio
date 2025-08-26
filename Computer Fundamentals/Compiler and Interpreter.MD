@@ -5,7 +5,10 @@ Is Completed: No
 
 ## 🧩 Compiler
 
-A **compiler** is a program that **translates entire source code files** (e.g. in C, C++, or Java) into machine code or an intermediate representation, **before** execution begins [britannica.com+15en.wikipedia.org+15mrs-th.medium.com+15](https://en.wikipedia.org/wiki/Compiler?utm_source=chatgpt.com)[ionos.com](https://www.ionos.com/digitalguide/websites/web-development/compilers-vs-interpreters/?utm_source=chatgpt.com).
+A **compiler** is a program that **translates entire source code files**
+(e.g. in C, C++, or Java) into machine code or an intermediate representation,
+**before** execution begins [britannica.com+15en.wikipedia.org+15mrs-th.medium.com+15](https://en.wikipedia.org/wiki/Compiler?utm_source=chatgpt.com)
+[ionos.com](https://www.ionos.com/digitalguide/websites/web-development/compilers-vs-interpreters/?utm_source=chatgpt.com).
 
 ### Key Phases
 
@@ -27,7 +30,8 @@ A **compiler** is a program that **translates entire source code files** (e.g. i
 
 ## 📜 Interpreter
 
-An **interpreter (computing)** reads and **executes source code line by line**, at runtime, without producing a standalone executable [sciencedirect.com+9en.wikipedia.org+9ionos.com+9](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com).
+An **interpreter (computing)** reads and **executes source code line by line**,
+at runtime, without producing a standalone executable [sciencedirect.com+9en.wikipedia.org+9ionos.com+9](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com).
 
 ### Operation Styles
 
@@ -38,7 +42,9 @@ An **interpreter (computing)** reads and **executes source code line by line**, 
 ## Pros & Cons Of Interpeter
 
 - ✅ **Fast to test/debug**: immediate execution without build step
-- ✅ **Platform independence**: distributes readable source or bytecode requiring only the interpreter [lifewire.com+15en.wikipedia.org+15geeksforgeeks.org+15](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)
+- ✅ **Platform independence**: distributes readable source,
+  or bytecode requiring only the interpreter
+- [lifewire.com+15en.wikipedia.org+15geeksforgeeks.org+15](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)
 - ❌ **Slower runtime**: overhead from parsing or interpretation [lifewire.com+7en.wikipedia.org+7reddit.com+7](https://en.wikipedia.org/wiki/Translator_%28computing%29?utm_source=chatgpt.com)
 - ❌ **Runtime dependencies**: interpreter must be present on target machine
 
@@ -60,6 +66,10 @@ An **interpreter (computing)** reads and **executes source code line by line**, 
 
 Many modern language implementations mix both approaches:
 
-- **Bytecode + interpreter** (Python, Java): source code → bytecode → interpreted by virtual machine [britannica.com+2builtin.com+2medium.com+2](https://builtin.com/software-engineering-perspectives/compiler-vs-interpreter?utm_source=chatgpt.com)[faisalchughtai.com](https://faisalchughtai.com/media/resources/CH%3A%202%20%7C%20Theory%20notes%20-%20Paper%201%20%7C%20IT%20%289626%29%20%7C%20A%20Level/Compiler_and_interpreter.pdf?utm_source=chatgpt.com)[en.wikipedia.org](https://en.wikipedia.org/wiki/Translator_%28computing%29?utm_source=chatgpt.com)[en.wikipedia.org](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)
-- **Just-In-Time (JIT) compilation**: interpreters compile hot code paths to native code at runtime (e.g., Java VMs, V8 JavaScript engine)
--
+- **Bytecode + interpreter** (Python, Java): source code → bytecode
+  → interpreted by virtual machine
+- [britannica.com+2builtin.com+2medium.com+2](https://builtin.com/software-engineering-perspectives/compiler-vs-interpreter?utm_source=chatgpt.com)
+- [faisalchughtai.com](https://faisalchughtai.com/media/resources/CH%3A%202%20%7C%20Theory%20notes%20-%20Paper%201%20%7C%20IT%20%289626%29%20%7C%20A%20Level/Compiler_and_interpreter.pdf?utm_source=chatgpt.com)[en.wikipedia.org](https://en.wikipedia.org/wiki/Translator_%28computing%29?utm_source=chatgpt.com)[en.wikipedia.org](https://en.wikipedia.org/wiki/Interpreter_%28computing%29?utm_source=chatgpt.com)
+- **Just-In-Time (JIT) compilation**:
+interpreters compile hot code paths to native code at runtime
+(e.g., Java VMs, V8 JavaScript engine)
