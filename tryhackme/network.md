@@ -781,7 +781,7 @@ time-to-live, and indicates how often a DNS server will refresh that record.
 ### The Lifecycle of an HTTP Network Request
 
 > **Mnemonic:** “**Find the place, knock on the door, show your ID, place your
-> order, chef cooks, meal served, you eat, then leave.**”  
+> order, chef cooks, meal served, you eat, then leave.**”
 > DNS → TCP → TLS → Request → Server → Response → Render → Close
 
 ---
@@ -842,3 +842,31 @@ flowchart TD
 ## Learning Objectives
 
 - Learn about HTML Injection more.
+
+
+## Active Directory
+
+The core of any Windows Domain is the Active Directory Domain Service (AD DS).
+This service acts as a catalogue -
+holds the information of all of the "objects" that exist on your network.
+Amongst the many objects supported by AD,
+we have users, groups, machines, printers, shares and many others.
+
+Users can be used to represent two types of entities:
+
+People: users will represent persons in your organisation that need to access the network.
+Services: you can also define users to be used by services like IIS or MSSQL.
+Every single service requires a user to run, but service users are different.
+ as they will only have the privileges needed to run their specific service.
+
+Machines
+
+Machines are another type of object within Active Directory;
+for every computer that joins the Active Directory domain,
+a machine object will be created.
+
+Security Groups
+
+If you are familiar with Windows,
+user groups to assign access rights to files or other resources to entire groups.
+
