@@ -839,11 +839,6 @@ flowchart TD
 
 [How Does Browser Work in 2019 (cabulous.medium.com)](https://cabulous.medium.com/how-does-browser-work-in-2019-part-ii-navigation-342b27e56d7b)
 
-## Learning Objectives
-
-- Learn about HTML Injection more.
-
-
 ## Active Directory
 
 The core of any Windows Domain is the Active Directory Domain Service (AD DS).
@@ -854,7 +849,8 @@ we have users, groups, machines, printers, shares and many others.
 
 Users can be used to represent two types of entities:
 
-People: users will represent persons in your organisation that need to access the network.
+People:
+users will represent persons in your organisation that need to access the network.
 Services: you can also define users to be used by services like IIS or MSSQL.
 Every single service requires a user to run, but service users are different.
  as they will only have the privileges needed to run their specific service.
@@ -870,3 +866,110 @@ Security Groups
 If you are familiar with Windows,
 user groups to assign access rights to files or other resources to entire groups.
 
+By default, OUs are protected against accidental deletion. To delete the OU,
+we need to enable the Advanced Features in the View menu.
+
+right-click the OU ,go to Properties. You will find a checkbox in the Object tab
+to disable the protection.
+
+```` Powershell
+ C:\Users\phillip> Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose
+
+New Password: *********
+
+VERBOSE: Performing the operation "Set-ADAccountPassword" on target "CN=Sophie,OU=Sales,OU=THM,DC=thm,DC=local".
+````
+
+While there is no golden rule on how to organise your machines,
+an excellent starting point is segregating devices according to their use.
+Expect to see devices divided into at least the three following categories.
+
+- Workstations
+
+Workstations are one of the most common devices within an Active Directory domain.
+Each user in the domain will likely be logging into a workstation.
+This is the device they will use to do their work or normal browsing activities.
+These devices should never have a privileged user signed into them.
+
+- Servers
+
+Servers are the second most common device within an Active Directory domain.
+Servers are generally used to provide services to users or other servers.
+
+- Domain Controllers
+
+Domain Controllers are the third most common device within an Active Directory domain.
+Domain Controllers allow you to manage the Active Directory Domain.
+These devices are often deemed the most sensitive devices within the network.
+They contain hashed passwords for all user accounts within the environment.
+
+## Group Policy Objects
+
+Group Policy Objects (GPO).
+GPOs are simply a collection of settings that can be applied to OUs.
+GPOs can contain policies aimed at either users or computers,
+allowing you to set a baseline on specific machines and identities.
+
+To configure GPOs, you can use the Group Policy Management tool
+
+GPOs are distributed to the network via a network share called SYSVOL
+
+## Domain Controllers
+
+When using Windows domains, all credentials are stored in the Domain Controllers.
+Whenever a user tries to authenticate to a service using domain credentials,
+the service will need to ask the Domain Controller to verify if they are correct.
+Two protocols can be used for network authentication in windows domains:
+
+## Kerberos
+
+Kerberos: Used by any recent version of Windows.
+This is the default protocol in any recent domain.
+NetNTLM: Legacy authentication protocol kept for compatibility purposes.
+
+When using Windows domains, all credentials are stored in the Domain Controllers.
+Whenever a user tries to authenticate to a service using domain credentials,
+the service will need to ask the Domain Controller to verify if they are correct.
+Two protocols can be used for network authentication in windows domains:
+
+Kerberos: Used by any recent version of Windows.
+This is the default protocol in any recent domain.
+NetNTLM: Legacy authentication protocol kept for compatibility purposes.
+
+When a user wants to connect to a service on the network like a share,
+website or database,
+they will use their TGT to ask the KDC for a Ticket Granting Service (TGS).
+TGS are tickets that allow connection only to the specific service.
+
+## NetNTLM
+
+The client sends an authentication request to the server they want to access.
+The server generates a random number and sends it as a challenge to the client.
+The client combines NTLM password hash with the challenge (and other known data)
+to generate a response to the challenge and sends it back to the server for verification.
+The server forwards the challenge and the response to the Domain Controller for verification.
+The domain controller uses:
+the challenge to recalculate the response.
+and compares it to the original response sent by the client.
+If they both match, the client is authenticated; otherwise, access is denied.
+The authentication result is sent back to the server.
+The server forwards the authentication result to the client.
+
+## Trees
+
+ Active Directory supports integrating multiple domains.
+You can partition your network into units that can be managed independently.
+If you have two domains that share the same namespace,
+those domains can be joined into a Tree.
+
+## Forest
+
+ The union of several trees with different namespaces into the same network.
+
+A user at THM UK might need to access a shared file in one of MHT ASIA servers.
+Domains arranged in trees and forests are joined together by trust relationships.
+
+## Learning Objectives
+
+- Learn about HTML Injection more.
+- Learn Active Directory Further.
