@@ -147,6 +147,28 @@ When data is sent between devices, it follows one of two protocols: **TCP** or
 
 ### TCP
 
+Transmission Control Protocol is a connection-oriented transport protocol.
+It uses various mechanisms to ensure reliable data delivery,
+sent by the different processes on the networked hosts.
+Like UDP, it is a layer 4 protocol.
+Being connection-oriented, it requires the establishment of a TCP connection,
+before any data can be sent.
+
+A TCP connection is established using what’s called a three-way handshake.
+
+Two flags are used: SYN (Synchronise) and ACK (Acknowledgment).
+
+The packets are sent as follows:
+
+SYN Packet: The client initiates the connection by sending a SYN packet to the server.
+This packet contains the client’s randomly chosen initial sequence number.
+
+SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet,
+which adds the initial sequence number randomly chosen by the server.
+
+ACK Packet: The three-way handshake is completed as the client sends an ACK packet,
+to acknowledge the reception of the SYN-ACK packet.
+
 **Features:**
 
 - Sequencing (numbers each segment)
@@ -178,6 +200,11 @@ When data is sent between devices, it follows one of two protocols: **TCP** or
 - Sensitive to missing data (head-of-line blocking)
 
 ### UDP
+
+User Datagram Protocol allows us to reach a specific process on this target host.
+UDP is a simple connectionless protocol that operates at the transport layer,
+layer 4. Being connectionless means that it does not need to establish a connection.
+UDP does not even provide a mechanism to know that the packet has been delivered.
 
 **Features:**
 
@@ -229,7 +256,67 @@ Defines the protocols and rules users/applications interact with.
 
 - Data interaction
 
----
+--
+
+- Layer 1 - Physical Layer
+
+The physical connection between devices;
+Such as a wire, and the definition of the binary digits 0 and 1.
+ Data transmission can be via an electrical, optical, or wireless signal.
+ Consequently, we need data cables or antennas, depending on our physical medium.
+
+- Layer 2 - Data Link Layer
+
+Represents the protocol that enables data transfer between nodes.
+The nodes are on the same network.
+
+Examples of layer 2 include Ethernet, i.e., 802.3, and WiFi, i.e., 802.11.
+Ethernet and WiFi addresses are six bytes.
+Their address is called a MAC address, where MAC stands for Media Access Control.
+
+- Layer 3 - Network Layer
+
+The network layer, is concerned with sending data between different networks.
+
+The difference between data link and network layer:
+The nodes being on a different network.
+
+Examples of the network layer:
+-- Internet Protocol (IP),
+-- Internet Control Message Protocol (ICMP),
+-- and Virtual Private Network (VPN) protocols such as IPSec and SSL/TLS VPN.
+
+- Layer 4 - Transport Layer
+
+ enables end-to-end communication between running applications on different hosts.
+ Your web browser is connected over the transport layer.
+ like flow control, segmentation, and error correction.
+
+Examples of layer 4 :
+-- Transmission Control Protocol (TCP)
+-- User Datagram Protocol (UDP).
+
+- Layer 5 - Session Layer
+
+The session layer is responsible for:
+
+-- establishing
+-- maintaining
+-- synchronising communication between applications running on different hosts.
+
+Examples of the session layer are:
+-- Network File System (NFS)
+-- Remote Procedure Call (RPC).
+
+- Layer 6 - Presentation Layer
+
+Ensures the data is delivered in a form the application layer can understand.
+
+- Layer 7 - Application Layer
+
+Provides network services directly to end-user applications.
+
+Examples of Layer 7 protocols are HTTP, FTP, DNS, POP3, SMTP, and IMAP.
 
 ## Headers and Messages
 
@@ -251,6 +338,13 @@ Defines the protocols and rules users/applications interact with.
 ---
 
 ## TCP/IP Model
+
+TCP/IP stands for Transmission Control Protocol/Internet Protocol.
+
+Application Layer: Layers 5, 6, and 7, are grouped into the application layer.
+Transport Layer: This is layer 4.
+Internet Layer: Is called the Internet layer in the TCP/IP model.
+Link Layer: This is layer 2.
 
 A summarized 4-layer model of OSI:
 
@@ -511,7 +605,68 @@ flowchart TD
     J -- Reuse --> F
 ```
 
-### References
+## IP Address
+
+You might think of an address like 192.168.0.1
+or something less common, such as 172.16.159.243.
+In both cases, you are right.
+Both of these are IP addresses; IPv4 (IP version 4) addresses to be specific.
+
+An IP address comprises four octets,
+ i.e., 32 bits. Being 8 bits,
+ an octet allows us to represent a decimal number between 0 and 255.
+
+The 0 and 255 are reserved for the network and broadcast addresses,
+Eg. 192.168.1.0 is the network address, while 192.168.1.255 is the broadcast address.
+
+RFC 1918 defines the following three ranges of private IP addresses:
+
+10.0.0.0 - 10.255.255.255 (10/8)
+172.16.0.0 - 172.31.255.255 (172.16/12)
+192.168.0.0 - 192.168.255.255 (192.168/16)
+
+## Encapsulation
+
+Encapsulation refers to the process of every layer adding a header (sometimes a trailer)
+to the received unit of data and sending the “encapsulated” unit.
+
+Application data: It all starts when the user inputs the data they want to send,
+into the application.
+
+For example, you write an email or an instant message and hit the send button.
+The application formats this data and starts sending it,
+according to the application protocol used, using the layer below it,
+the transport layer.
+
+Transport protocol segment or datagram: The transport layer, such as TCP or UDP,
+adds the proper header information and creates the TCP segment (or UDP datagram).
+This segment is sent to the layer below it, the network layer.
+
+Network packet: The network layer, i.e. the Internet layer,
+adds an IP header to the received TCP segment or UDP datagram.
+Then, this IP packet is sent to the layer below it, the data link layer.
+
+Data link frame: The Ethernet or WiFi receives the IP packet,
+ and adds the proper header and trailer, creating a frame.
+
+## Telnet
+
+TELNET client, allows you to connect to and communicate with a remote system,
+ and issue text commands.
+ Although initially it was used for remote administration,
+ we can use telnet to connect to any server listening on a TCP port number.
+
+In the terminal below,
+we use telnet to connect to the daytime server listening at port 13.
+We noticed that the connection closes once the current date and time are returned.
+
+Finally, let’s request a web page using telnet. A
+fter connecting to port 80, you need to issue the command GET / HTTP/1.1
+and identify the host where anything goes,
+such as Host: telnet.thm.
+Next, you need to press Enter twice so your last input line is a blank line.
+
+### Reference
 
 - [Web Requests Explained (Medium)](https://medium.com/@arpit_4999/web-requests-explained-what-happens-when-you-visit-a-website-ff35624bac9b)
 - [Demystifying the Journey of a Web Request (Medium)](https://medium.com/@rukhsarkhan4198/demystifying-the-journey-of-a-web-request-from-browser-to-server-and-beyond-f8a706a847c5)

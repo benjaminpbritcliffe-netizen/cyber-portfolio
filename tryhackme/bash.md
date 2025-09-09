@@ -1,17 +1,24 @@
 # Bash
 
-Most Linux distributions use Bash (Bourne Again Shell) as their default shell. However, the default shell displayed when you open the terminal depends on your Linux distribution
+- Most Linux distributions use Bash (Bourne Again Shell) as their default shell.
+- The default shell displayed when you open the terminal depends on your Linux distribution
 
-To see your current working directory, you can execute pwd, which stands for Print Working Directory.
+- To see your current working directory, you can execute pwd (Print Working Directory).
 
-However, you can change your directory as well. To do that, you can use cd (short for Change Directory).
+- You can change your directory as well. To do that, you can use cd (Change Directory).
 
-The grep command is a very popular command among Linux users. This powerful command can search for any word or pattern inside a file.
+- The 'grep' command is a very popular command among Linux users.
 
-Unlike the other commands we type in the shell, we first need to create a file using any text editor for the script. The file must be named with an extension .sh, the default extension for bash scripts.
+This powerful command can search for any word or pattern inside a file.
 
-Every script should start from shebang. Shebang is a combination of some characters that are added at the beginning of a script, starting with #! followed by the name of the interpreter to use while executing the script. As we are writing our script in bash, let’s define it as the interpreter in the shebang.
+Unlike the other commands we type in the shell,
+we first need to create a file using any text editor for the script.
+The file must be named with an extension .sh
 
+Every script should start from shebang.
+Shebang is a combination of some characters added at the beginning of a script,
+starting with #! followed by the name of the interpreter to use while executing.
+As we are writing our script in bash, let’s define it as the interpreter in the shebang.
 
 ## A full script
 
@@ -38,11 +45,10 @@ else
 fi
 ````
 
-
 ```` Bash
 
-# Defining the Interpreter 
-#!/bin/bash 
+# Defining the Interpreter
+#!/bin/bash
 
 # Defining the variables
 username=""
