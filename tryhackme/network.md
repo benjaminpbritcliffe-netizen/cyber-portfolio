@@ -422,6 +422,107 @@ A router connects networks and passes data between them using **routing**.
 
 ## DNS
 
+DNS operates at the Application Layer, i.e., Layer 7 of the ISO OSI model.
+DNS traffic uses UDP port 53 by default and TCP port 53 as a default fallback.
+
+A record: The A (Address) record maps a hostname to one or more IPv4 addresses.
+For example, you can set example.com to resolve to 172.17.2.172.
+
+AAAA Record: The AAAA record is similar to the A Record, but it is for IPv6.
+Remember that it is AAAA (quad-A).
+
+CNAME Record: The CNAME record maps a domain name to another domain name.
+
+MX Record: The MX (Mail Exchange) record specifies the mail server.
+Responsible for handling emails for a domain.
+
+## DNS Types
+
+- **A Record** → IPv4 (e.g., `104.26.10.229`)
+- **AAAA Record** → IPv6 (e.g., `2606:4700:20::681a:be5`)
+- **CNAME Record** → Alias to another domain (e.g., `store.tryhackme.com` →
+  `shops.shopify.com`)
+- **MX Record** → Mail exchangers (with priority)
+- **TXT Record** → Free-form text (SPF, ownership verification)
+- **TTL** → Cache lifetime
+
+## nslookup
+
+If you want to look up the IP address of a domain from the command line.
+you can use a tool such as nslookup.
+
+## whois
+
+You can look up the WHOIS records of any registered domain name.
+Via the command-line tool whois, available on Linux systems
+
+## HTTP/S
+
+When you fire up your browser, you mainly use HTTP and HTTPS protocols.
+HTTP stands for Hypertext Transfer Protocol; the S in HTTPS stands for Secure.
+
+GET retrieves data from a server, such as an HTML file or an image.
+
+POST allows us to submit new data to the server,
+such as submitting a form or uploading a file.
+
+PUT is used to create a new resource on the server,
+and to update and overwrite existing information.
+
+DELETE, as the name suggests, 
+is used to delete a specified file or resource on the server.
+
+## FTP
+
+GET retrieves data from a server, such as an HTML file or an image.
+POST allows us to submit new data to the server,
+such as submitting a form or uploading a file.
+
+PUT is used to create a new resource on the server,
+and to update and overwrite existing information.
+
+DELETE, as the name suggests,
+is used to delete a specified file or resource on the server.
+
+``` bash
+root@ip-10-10-136-215:~# ftp 10.10.242.148 21
+Connected to 10.10.242.148.
+220 (vsFTPd 3.0.5)
+Name (10.10.242.148:root): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0            1480 Jun 27  2024 coffee.txt
+-rw-r--r--    1 0        0              14 Jun 27  2024 flag.txt
+-rw-r--r--    1 0        0            1595 Jun 27  2024 tea.txt
+226 Directory send OK.
+ftp> type ascii
+200 Switching to ASCII mode.
+ftp> get coffee.txt
+local: coffee.txt remote: coffee.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for coffee.txt (1480 bytes).
+WARNING! 47 bare linefeeds received in ASCII mode
+File may not have transferred correctly.
+226 Transfer complete.
+1480 bytes received in 0.00 secs (3.9984 MB/s)
+ftp> get flag.txt
+local: flag.txt remote: flag.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for flag.txt (14 bytes).
+WARNING! 1 bare linefeeds received in ASCII mode
+File may not have transferred correctly.
+226 Transfer complete.
+14 bytes received in 0.00 secs (138.0997 kB/s)
+ftp> 
+
+````
+
 ## TLD (Top-Level Domain)
 
 The rightmost part (e.g., `tryhackme.com` → `.com`). Two types: **gTLD** and
@@ -436,16 +537,6 @@ hyphens (cannot start/end with hyphens or have consecutive hyphens).
 
 Left of the SLD (e.g., `admin.tryhackme.com`). Same creation rules and limits
 (63 chars each label, total FQDN ≤ 253 chars). Unlimited count.
-
-## DNS Types
-
-- **A Record** → IPv4 (e.g., `104.26.10.229`)
-- **AAAA Record** → IPv6 (e.g., `2606:4700:20::681a:be5`)
-- **CNAME Record** → Alias to another domain (e.g., `store.tryhackme.com` →
-  `shops.shopify.com`)
-- **MX Record** → Mail exchangers (with priority)
-- **TXT Record** → Free-form text (SPF, ownership verification)
-- **TTL** → Cache lifetime
 
 ## Recursive DNS Server
 
