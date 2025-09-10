@@ -556,6 +556,13 @@ reachability and error messages). ICMP packets include an ICMP header following
 the IP header; error messages include a copy of the offending packet’s IP
 header.
 
+ping: This command uses ICMP to test connectivity to a target system
+and measures the round-trip time (RTT).
+
+traceroute: This command is called traceroute on Linux and UNIX-like system,
+and tracert on MS Windows systems.
+It uses ICMP to discover the route from your host to the target.
+
 ---
 
 ## DNS Records (Zone Files)
@@ -665,6 +672,111 @@ fter connecting to port 80, you need to issue the command GET / HTTP/1.1
 and identify the host where anything goes,
 such as Host: telnet.thm.
 Next, you need to press Enter twice so your last input line is a blank line.
+
+## DHCP
+
+Whenever we want to access a network, at the very least,
+we need to configure the following:
+
+IP address along with subnet mask
+Router (or gateway)
+DNS server
+
+DHCP follows four steps: Discover, Offer, Request, and Acknowledge (DORA):
+
+DHCP Discover:
+The client broadcasts a DHCPDISCOVER message seeking the local DHCP server if exists.
+
+DHCP Offer:
+The server responds with a DHCPOFFER message,
+with an IP address available for the client to accept.
+
+DHCP Request: The client responds with a DHCPREQUEST message,
+to indicate that it has accepted the offered IP.
+
+DHCP Acknowledge: The server responds with a DHCPACK message,
+to confirm that the offered IP address is now assigned to this client.
+
+```` bash
+
+user@TryHackMe$ tshark -r DHCP-G5000.pcap -n
+    1   0.000000      0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Discover - Transaction ID 0xfb92d53f
+    2   0.013904 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP Offer    - Transaction ID 0xfb92d53f
+    3   4.115318      0.0.0.0 → 255.255.255.255 DHCP 342 DHCP Request  - Transaction ID 0xfb92d53f
+    4   4.228117 192.168.66.1 → 192.168.66.133 DHCP 376 DHCP ACK      - Transaction ID 0xfb92d53f
+
+````
+
+```` bash
+How many steps does DHCP use to provide network configuration?
+
+4
+
+
+What is the destination IP address that a client uses when it sends a DHCP Discover packet?
+
+255.255.255.255
+
+What is the source IP address a client uses when trying to get IP network configuration over DHCP?
+
+0.0.0.0
+````
+
+## ARP
+
+AARP makes it possible to find the MAC address of another device on the Ethernet.
+
+An ARP Request or ARP Reply is not encapsulated within a UDP or even IP packet;
+it is encapsulated directly within an Ethernet frame.
+
+## Routing Algorithms
+
+OSPF (Open Shortest Path First):
+
+allows routers to share information about the network topology,
+ and calculate the most efficient paths for data transmission.
+
+It does this by having routers exchange updates,
+about the state of their connected links and networks.
+
+ This way, each router has a complete map of the network,
+it can determine the best routes to reach any destination.
+
+EIGRP (Enhanced Interior Gateway Routing Protocol):
+
+A Cisco proprietary routing protocol that combines aspects of different routing algorithms.
+
+It allows routers to share information about the networks they can reach,
+ and the cost (like bandwidth or delay) associated with those routes.
+ Routers then use this information to choose the most efficientpaths for data transmission.
+
+BGP (Border Gateway Protocol):
+
+BGP is the primary routing protocol used on the Internet.
+
+Allows different networks (like those of Internet Service Providers),
+to exchange routing information,
+and establish paths for data to travel between these networks.
+
+BGP helps ensure data can be routed efficiently across the Internet,
+even when traversing multiple networks.
+
+RIP (Routing Information Protocol):
+RIP is a simple routing protocol, often used in small networks.
+
+Routers running RIP share information about the networks they can reach,
+and the number of hops (routers) required to get there.
+
+As a result, each router builds a routing table based on this information,
+choosing the routes with the fewest hops to reach each destination.
+
+## NAT
+
+Using one public IP address to provide Internet access to many private IP addresses.
+
+In other words, if you are connecting a company with twenty computers,
+you can provide Internet access to all 20 computers by using a single public IP,
+instead of twenty public IP addresses.
 
 ### Reference
 
