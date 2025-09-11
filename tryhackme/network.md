@@ -469,7 +469,7 @@ such as submitting a form or uploading a file.
 PUT is used to create a new resource on the server,
 and to update and overwrite existing information.
 
-DELETE, as the name suggests, 
+DELETE, as the name suggests,
 is used to delete a specified file or resource on the server.
 
 ## FTP
@@ -519,7 +519,7 @@ WARNING! 1 bare linefeeds received in ASCII mode
 File may not have transferred correctly.
 226 Transfer complete.
 14 bytes received in 0.00 secs (138.0997 kB/s)
-ftp> 
+ftp>
 
 ````
 
@@ -868,6 +868,106 @@ Using one public IP address to provide Internet access to many private IP addres
 In other words, if you are connecting a company with twenty computers,
 you can provide Internet access to all 20 computers by using a single public IP,
 instead of twenty public IP addresses.
+
+## SMTP
+
+Sending email needs its own protocol.
+SMTP defines how a mail client talks with a mail server,
+and how a mail server talks with another.
+
+HELO or EHLO initiates an SMTP session
+MAIL FROM specifies the sender’s email address
+RCPT TO specifies the recipient’s email address
+DATA indicates that the client will begin sending the content of the email message
+. is sent on a line by itself to indicate the end of the email message
+
+## POP3
+
+POP3 is designed to allow the client to communicate with a mail server,
+and retrieve email messages.
+
+Without going into in-depth technical details,
+an email client sends its messages by relying on SMTP and retrieves them using POP3.
+
+Some common POP3 commands are:
+
+```` bash
+USER <username> identifies the user
+PASS <password> provides the user’s password
+STAT requests the number of messages and total size
+LIST lists all messages and their sizes
+RETR <message_number> retrieves the specified message
+DELE <message_number> marks a message for deletion
+QUIT ends the POP3 session applying changes, such as deletions
+````
+
+```` bash
+root@ip-10-10-152-240:~# telnet 10.10.176.98 110
+Trying 10.10.176.98...
+Connected to 10.10.176.98.
+Escape character is '^]'.
++OK [XCLIENT] Dovecot (Ubuntu) ready.
+AUTH
++OK
+PLAIN
+.
+USER linda
++OK
+PASS Pa$$123
++OK Logged in.
+STAT
++OK 4 2216
+LIST
++OK 4 messages:
+1 690
+2 589
+3 483
+4 454
+.
+RETR 4
++OK 454 octets
+Return-path: <user@client.thm>
+Envelope-to: linda@server.thm
+Delivery-date: Thu, 12 Sep 2024 20:12:42 +0000
+Received: from [10.11.81.126] (helo=client.thm)
+by example.thm with smtp (Exim 4.95)
+(envelope-from <user@client.thm>)
+id 1soqAj-0007li-39
+for linda@server.thm;
+Thu, 12 Sep 2024 20:12:42 +0000
+From: user@client.thm
+To: linda@server.thm
+Subject: Your Flag
+
+Hello!
+Here's your flag:
+THM{TELNET_RETR_EMAIL}
+Enjoy your journey!
+.
+
+````
+
+### IMAP
+
+IMAP allows synchronizing read, moved, and deleted messages.
+IMAP is quite convenient when you check your email via multiple clients.
+
+Unlike POP3, which tends to minimize server storage,
+IMAP tends to use more storage,
+as email is kept on the server and synchronized across the email clients.
+
+The IMAP protocol commands are more complicated than the POP3 protocol commands.
+
+We list a few examples below:
+
+```` bash
+LOGIN <username> <password> authenticates the user
+SELECT <mailbox> selects the mailbox folder to work with
+FETCH <mail_number> <data_item_name> Example fetch 3 body[] to fetch message number 3, header and body.
+MOVE <sequence_set> <mailbox> moves the specified messages to another mailbox
+COPY <sequence_set> <data_item_name> copies the specified messages to another mailbox
+LOGOUT logs out
+````
 
 ### Reference
 
