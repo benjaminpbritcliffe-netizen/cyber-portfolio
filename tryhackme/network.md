@@ -521,7 +521,7 @@ File may not have transferred correctly.
 14 bytes received in 0.00 secs (138.0997 kB/s)
 ftp>
 
-````
+```
 
 ## TLD (Top-Level Domain)
 
@@ -558,6 +558,24 @@ communicating with web servers (HTML, images, video, etc.).
 
 **HTTPS** is HTTP over TLS/SSL, providing confidentiality and integrity in
 transit.
+
+HTTPS stands for Hypertext Transfer Protocol Secure.
+It is basically HTTP over TLS.
+
+Requesting a page over HTTPS will require the following three steps
+(after resolving the domain name):
+
+- Establish a TCP three-way handshake with the target server
+- Establish a TLS session
+- Communicate using the HTTP protocol; for example, issue HTTP requests.
+- such as GET / HTTP/1.1
+
+ If one tries to follow the stream of packets and combine all their contents,
+ they will only get gibberish.
+
+ Adding TLS to HTTP leads to all the packets being encrypted.
+ We can no longer see the contents of the exchanged packets,
+unless we get access to the private key.
 
 ---
 
@@ -968,6 +986,87 @@ MOVE <sequence_set> <mailbox> moves the specified messages to another mailbox
 COPY <sequence_set> <data_item_name> copies the specified messages to another mailbox
 LOGOUT logs out
 ````
+
+## Secure Versions
+
+The insecure versions use the default TCP port numbers shown in the table below:
+
+Protocol Default Port Number
+HTTP 80
+SMTP 25
+POP3 110
+IMAP 143
+TELNET 23
+FTP 21
+
+The secure versions, i.e., over TLS, use the following TCP port numbers by default:
+
+Protocol Default Port Number
+HTTPS 443
+SMTPS 465 and 587
+POP3S 995
+IMAPS 993
+SSH 22 (Telnet Alternative.)
+FTPS 990
+
+## Certificates
+
+ Every server (or client) that needs to identify itself is to get a signed TLS certificate.
+
+ Generally, the server administrator creates a Certificate Signing Request (CSR)
+ and submits it to a Certificate Authority (CA);
+ The CA verifies the CSR and issues a digital certificate.
+ Once the ertificate is received, it can be used to identify the server,
+who can confirm the validity of the signature.
+
+
+## SSH
+
+Nowadays,
+when you use an SSH client,
+it is most likely based on OpenSSH libraries and source code.
+
+OpenSSH offers several benefits. We will list a few key points:
+
+Secure authentication: Besides password-based authentication,
+SSH supports public key and two-factor authentication.
+
+Confidentiality: OpenSSH provides end-to-end encryption,
+protecting against eavesdropping.
+ Furthermore, it notifies you of new server keys,
+to protect against man-in-the-middle attacks.
+
+Integrity: In addition to protecting the confidentiality of the exchanged data,
+cryptography also protects the integrity of the traffic.
+
+Tunneling: SSH can create a secure “tunnel” to route other protocols through SSH.
+ This setup leads to a VPN-like connection.
+
+X11 Forwarding: If you connect to a Unix-like system with a graphical user interface,
+SSH allows you to use the graphical application over the network.
+
+You would issue the command ssh username@hostname to connect to an SSH server.
+If the username is the same as logged-in username, you only need ssh hostname.
+Then, you will be asked for a password;
+however, if public-key authentication is used, you will be logged in immediately.
+
+
+## SFTP
+
+SFTP stands for SSH File Transfer Protocol and allows secure file transfer.
+ It is part of the SSH protocol suite and shares the same port number, 22.
+
+
+## VPN
+
+Consider a company with offices in different geographical locations.
+Can this company connect all its offices and sites to the main branch,
+so that any device can access the shared resources.
+as if physically located in the main branch?
+The answer is yes.
+The most economical solution would be setting up a virtual private network (VPN)
+
+VPN = Virtual Private Network
 
 ### Reference
 
