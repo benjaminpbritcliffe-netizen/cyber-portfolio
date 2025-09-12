@@ -412,6 +412,15 @@ securely by creating a **tunnel** over the Internet.
 | PPTP     | Allows PPP data to travel outside the network. Easy to set up; weaker encryption.      |
 | IPsec    | Encrypts at IP layer. Strong encryption; harder to set up; widely supported.           |
 
+Consider a company with offices in different geographical locations.
+Can this company connect all its offices and sites to the main branch,
+so that any device can access the shared resources.
+as if physically located in the main branch?
+The answer is yes.
+The most economical solution would be setting up a virtual private network (VPN)
+
+VPN = Virtual Private Network
+
 ---
 
 ## Router
@@ -1019,7 +1028,6 @@ FTPS 990
  Once the ertificate is received, it can be used to identify the server,
 who can confirm the validity of the signature.
 
-
 ## SSH
 
 Nowadays,
@@ -1050,23 +1058,10 @@ If the username is the same as logged-in username, you only need ssh hostname.
 Then, you will be asked for a password;
 however, if public-key authentication is used, you will be logged in immediately.
 
-
 ## SFTP
 
 SFTP stands for SSH File Transfer Protocol and allows secure file transfer.
  It is part of the SSH protocol suite and shares the same port number, 22.
-
-
-## VPN
-
-Consider a company with offices in different geographical locations.
-Can this company connect all its offices and sites to the main branch,
-so that any device can access the shared resources.
-as if physically located in the main branch?
-The answer is yes.
-The most economical solution would be setting up a virtual private network (VPN)
-
-VPN = Virtual Private Network
 
 ### Reference
 
