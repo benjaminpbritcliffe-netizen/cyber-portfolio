@@ -21,3 +21,68 @@ A command such as ip address show (or merely ip a s) would list the available ne
 - If you want to capture all DNS traffic, you can limit the captured packets to those on port 53.
 
 - You can limit your packet capture to a specific protocol; examples include: ip, ip6, udp, tcp, and icmp.
+
+
+
+Command	Explanation
+tcpdump -i INTERFACE	Captures packets on a specific network interface
+tcpdump -w FILE	Writes captured packets to a file
+tcpdump -r FILE	Reads captured packets from a file
+tcpdump -c COUNT	Captures a specific number of packets
+tcpdump -n	Don’t resolve IP addresses
+tcpdump -nn	Don’t resolve IP addresses and don’t resolve protocol numbers
+tcpdump -v	Verbose display; verbosity can be increased with -vv and -vvv
+
+Command	Explanation
+tcpdump host IP or tcpdump host HOSTNAME	Filters packets by IP address or hostname
+tcpdump src host IP or	Filters packets by a specific source host
+tcpdump dst host IP	Filters packets by a specific destination host
+tcpdump port PORT_NUMBER	Filters packets by port number
+tcpdump src port PORT_NUMBER	Filters packets by the specified source port number
+tcpdump dst port PORT_NUMBER	Filters packets by the specified destination port number
+tcpdump PROTOCOL	Filters packets by protocol; examples include ip, ip6, and icmp
+
+sudo tcpdump -r traffic.pcap icmp | wc
+
+ sudo tcpdump -r traffic.pcap -nn arp
+reading from file traffic.pcap, link-type EN10MB (Ethernet)
+07:18:29.940761 ARP, Request who-has 192.168.124.137 tell 192.168.124.148, length 28
+07:18:29.940776 ARP, Reply 192.168.124.137 is-at 52:54:00:23:60:2b, length 28
+
+sudo tcpdump -r traffic.pcap port 53
+
+
+You can use tcp[tcpflags] to refer to the TCP flags field. The following TCP flags are available to compare with:
+
+tcp-syn TCP SYN (Synchronize)
+tcp-ack TCP ACK (Acknowledge)
+tcp-fin TCP FIN (Finish)
+tcp-rst TCP RST (Reset)
+tcp-push TCP Push
+Based on the above, we can write:
+
+tcpdump "tcp[tcpflags] == tcp-syn" to capture TCP packets with only the SYN (Synchronize) flag set, while all the other flags are unset.
+tcpdump "tcp[tcpflags] & tcp-syn != 0" to capture TCP packets with at least the SYN (Synchronize) flag set.
+tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0" to capture TCP packets with at least the SYN (Synchronize) or ACK (Acknowledge) flags set.
+
+ sudo tcpdump -r traffic.pcap "tcp[tcpflags] == tcp-rst" | wc
+
+ greater LENGTH: Filters packets that have a length greater than or equal to the specified length
+less LENGTH: Filters packets that have a length less than or equal to the specified length
+
+
+
+Command	Explanation
+tcpdump -q	Quick and quite: brief packet information
+tcpdump -e	Include MAC addresses
+tcpdump -A	Print packets as ASCII encoding
+tcpdump -xx	Display packets in hexadecimal format
+tcpdump -X	Show packets in both hexadecimal and ASCII formats
+
+sudo tcpdump -r traffic.pcap greater 15000 -n
+
+
+user@ip-10-10-35-8:~$  sudo tcpdump -r traffic.pcap -nn arp -e
+reading from file traffic.pcap, link-type EN10MB (Ethernet)
+07:18:29.940761 52:54:00:7c:d3:5b > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Request who-has 192.168.124.137 tell 192.168.124.148, length 28
+07:18:29.940776 52:54:00:23:60:2b > 52:54:00:7c:d3:5b, ethertype ARP (0x0806), length 42: Reply 192.168.124.137 is-at 52:54:00:23:60:2b, length 28
