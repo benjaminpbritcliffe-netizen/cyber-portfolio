@@ -41,7 +41,7 @@ nmap -sT 10.10.169.204
 
 -sV You discovered several open ports and want to know what services are listening.
 -sV enables version detection
- -A This option enables OS detection, version scanning, and traceroute etc.
+-A This option enables OS detection, version scanning, and traceroute etc.
 -Pn Scan hosts that appear to be down
 
 - Control the timing
