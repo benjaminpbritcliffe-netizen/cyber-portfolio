@@ -94,3 +94,12 @@ Asymmetric encryption uses a pair of keys, one to encrypt and the other to decry
 
 asymmetric encryption encrypts the data using the public key;
 hence, it is also called public key cryptography.
+
+
+## XOR Cryptography
+
+The XOR operator is extremely common as a component in more complex ciphers.
+By itself, using a constant repeating key,
+a simple XOR cipher can trivially be broken using frequency analysis.
+
+<https://www.tutorialspoint.com/cryptography/cryptography_xor_encryption.htm> Tutorial
