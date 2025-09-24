@@ -89,17 +89,18 @@ bits.
 
 ## Asymmetric Encryption
 
-Unlike symmetric encryption, which uses the same key for encryption and decryption,
-Asymmetric encryption uses a pair of keys, one to encrypt and the other to decrypt.
+Unlike symmetric encryption, which uses the same key for encryption and
+decryption, Asymmetric encryption uses a pair of keys, one to encrypt and the
+other to decrypt.
 
-asymmetric encryption encrypts the data using the public key;
-hence, it is also called public key cryptography.
+asymmetric encryption encrypts the data using the public key; hence, it is also
+called public key cryptography.
 
 ## XOR Cryptography
 
-The XOR operator is extremely common as a component in more complex ciphers.
-By itself, using a constant repeating key,
-a simple XOR cipher can trivially be broken using frequency analysis.
+The XOR operator is extremely common as a component in more complex ciphers. By
+itself, using a constant repeating key, a simple XOR cipher can trivially be
+broken using frequency analysis.
 
 XOR (exclusive OR) is a logical operation applied bit by bit.
 
@@ -121,18 +122,18 @@ Reversibility
 
 XOR is its own inverse:
 
-If C = P ⊕ K (ciphertext = plaintext XOR key),
-then P = C ⊕ K (plaintext = ciphertext XOR key).
+If C = P ⊕ K (ciphertext = plaintext XOR key), then P = C ⊕ K (plaintext =
+ciphertext XOR key).
 
 This property makes encryption/decryption with XOR extremely efficient.
 
 Randomness Mixing
 
-If you XOR data with something unpredictable (like a random key/stream),
-the result looks random.
+If you XOR data with something unpredictable (like a random key/stream), the
+result looks random.
 
-Example: One-Time Pad (OTP) encryption -
-works entirely by XORing plaintext with a truly random key.
+Example: One-Time Pad (OTP) encryption - works entirely by XORing plaintext with
+a truly random key.
 
 Lightweight & Fast
 
@@ -140,9 +141,10 @@ XOR is cheap to compute (just a single machine instruction).
 
 This makes it suitable for use in block ciphers, stream ciphers, and hashing.
 
-Suppose we want to encrypt the 8-bit message P = 10110101 using key K = 11001010:
+Suppose we want to encrypt the 8-bit message P = 10110101 using key K =
+11001010:
 
-``` text
+```text
 
 Phrase - 10110101
 Key -    11001010
@@ -170,12 +172,13 @@ Block Ciphers (e.g., AES) → Use XOR in key mixing steps.
 
 Hash functions → XOR is used in combining intermediate values.
 
-XOR alone is not secure unless the key is truly random.
-Cryptographic algorithms generate pseudo-random keystreams to XOR with the data.
+XOR alone is not secure unless the key is truly random. Cryptographic algorithms
+generate pseudo-random keystreams to XOR with the data.
 
-<https://www.tutorialspoint.com/cryptography/cryptography_xor_encryption.htm> Tutorial
+<https://www.tutorialspoint.com/cryptography/cryptography_xor_encryption.htm>
+Tutorial
 
-``` python
+```python
 
 import os
 
@@ -183,22 +186,29 @@ def xor_encrypt_decrypt(data: bytes, key: bytes) -> bytes:
     """Encrypt or decrypt data using XOR with the given key."""
     return bytes([d ^ key[i % len(key)] for i, d in enumerate(data)])
 
-# --- Example usage ---
 if __name__ == "__main__":
-    # Generate a random key (16 bytes = 128 bits)
+    # Step 1: Ask user for a message
+    message = input("Enter a message to encrypt: ").encode()
+
+    # Step 2: Generate a random 16-byte key
     key = os.urandom(16)
-    print("Key (hex):", key.hex())
+    print("\nRandom Key (hex):", key.hex())
 
-    # Message to encrypt
-    message = "Hello! XOR Crypto demo.".encode()
-    print("Plaintext:", message.decode())
-
-    # Encrypt
+    # Step 3: Encrypt the message
     ciphertext = xor_encrypt_decrypt(message, key)
     print("Ciphertext (hex):", ciphertext.hex())
 
-    # Decrypt (same function!)
+    # Step 4: Decrypt with the correct key
     decrypted = xor_encrypt_decrypt(ciphertext, key)
-    print("Decrypted:", decrypted.decode())
+    print("Decrypted with correct key:", decrypted.decode(errors="replace"))
+
+    # Step 5: Tamper with the key (flip one bit)
+    bad_key = bytearray(key)
+    bad_key[0] ^= 0x01  # flip just one bit of the key
+    bad_key = bytes(bad_key)
+
+    wrong_decrypted = xor_encrypt_decrypt(ciphertext, bad_key)
+    print("\nDecrypted with WRONG key (garbage):", wrong_decrypted.decode(errors="replace"))
+
 
 ```
