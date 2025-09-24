@@ -87,7 +87,6 @@ replaced by AES; however, it may still be found in some legacy systems.
 AES was adopted as a standard in 2001. Its key size can be 128, 192, or 256
 bits.
 
-
 ## Asymmetric Encryption
 
 Unlike symmetric encryption, which uses the same key for encryption and decryption,
@@ -95,4 +94,3 @@ Asymmetric encryption uses a pair of keys, one to encrypt and the other to decry
 
 asymmetric encryption encrypts the data using the public key;
 hence, it is also called public key cryptography.
-
