@@ -95,11 +95,110 @@ Asymmetric encryption uses a pair of keys, one to encrypt and the other to decry
 asymmetric encryption encrypts the data using the public key;
 hence, it is also called public key cryptography.
 
-
 ## XOR Cryptography
 
 The XOR operator is extremely common as a component in more complex ciphers.
 By itself, using a constant repeating key,
 a simple XOR cipher can trivially be broken using frequency analysis.
 
+XOR (exclusive OR) is a logical operation applied bit by bit.
+
+The rule is simple:
+
+0 ⊕ 0 = 0
+
+0 ⊕ 1 = 1
+
+1 ⊕ 0 = 1
+
+1 ⊕ 1 = 0
+
+So, XOR outputs 1 only when the two bits differ.
+
+### Why XOR is Important in Cryptography
+
+Reversibility
+
+XOR is its own inverse:
+
+If C = P ⊕ K (ciphertext = plaintext XOR key),
+then P = C ⊕ K (plaintext = ciphertext XOR key).
+
+This property makes encryption/decryption with XOR extremely efficient.
+
+Randomness Mixing
+
+If you XOR data with something unpredictable (like a random key/stream),
+the result looks random.
+
+Example: One-Time Pad (OTP) encryption -
+works entirely by XORing plaintext with a truly random key.
+
+Lightweight & Fast
+
+XOR is cheap to compute (just a single machine instruction).
+
+This makes it suitable for use in block ciphers, stream ciphers, and hashing.
+
+Suppose we want to encrypt the 8-bit message P = 10110101 using key K = 11001010:
+
+``` text
+
+Phrase - 10110101
+Key -    11001010
+--------------
+
+   C: 01111111   (ciphertext)
+
+To decrypt:
+
+C: 01111111
+K: 11001010
+--------------
+
+P: 10110101   (original plaintext)
+
+```
+
+### Where XOR Appears in Cryptography
+
+One-Time Pad → Perfect secrecy when key is truly random and used only once.
+
+Stream Ciphers (e.g., RC4, Salsa20) → Keystream XORed with plaintext.
+
+Block Ciphers (e.g., AES) → Use XOR in key mixing steps.
+
+Hash functions → XOR is used in combining intermediate values.
+
+XOR alone is not secure unless the key is truly random.
+Cryptographic algorithms generate pseudo-random keystreams to XOR with the data.
+
 <https://www.tutorialspoint.com/cryptography/cryptography_xor_encryption.htm> Tutorial
+
+``` python
+
+import os
+
+def xor_encrypt_decrypt(data: bytes, key: bytes) -> bytes:
+    """Encrypt or decrypt data using XOR with the given key."""
+    return bytes([d ^ key[i % len(key)] for i, d in enumerate(data)])
+
+# --- Example usage ---
+if __name__ == "__main__":
+    # Generate a random key (16 bytes = 128 bits)
+    key = os.urandom(16)
+    print("Key (hex):", key.hex())
+
+    # Message to encrypt
+    message = "Hello! XOR Crypto demo.".encode()
+    print("Plaintext:", message.decode())
+
+    # Encrypt
+    ciphertext = xor_encrypt_decrypt(message, key)
+    print("Ciphertext (hex):", ciphertext.hex())
+
+    # Decrypt (same function!)
+    decrypted = xor_encrypt_decrypt(ciphertext, key)
+    print("Decrypted:", decrypted.decode())
+
+```
