@@ -42,7 +42,7 @@ plaintext using a cipher and a key. Although the cipher would be public
 knowledge, recovering the plaintext without knowledge of the key should be
 impossible (infeasible).
 
-## Caesar Cipher
+### Caesar Cipher
 
 One of the simplest historical ciphers is the Caesar Cipher.
 
@@ -67,7 +67,7 @@ above.
 - recovering the original text would be a trivial task.
 - there are only 25 possible keys. But it could be from 1 to 25.
 
-## Symmetric Encryption
+### Symmetric Encryption
 
 Also known as symmetric cryptography, uses the same key to encrypt and decrypt
 the data.
@@ -87,7 +87,7 @@ replaced by AES; however, it may still be found in some legacy systems.
 AES was adopted as a standard in 2001. Its key size can be 128, 192, or 256
 bits.
 
-## Asymmetric Encryption
+### Asymmetric Encryption
 
 Unlike symmetric encryption, which uses the same key for encryption and
 decryption, Asymmetric encryption uses a pair of keys, one to encrypt and the
