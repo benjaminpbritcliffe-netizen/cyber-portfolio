@@ -171,6 +171,17 @@ The shared secret key is 9
 
 ## SSH
 
+The Secure Shell Protocol is a cryptographic network protocol
+for operating network services securely over an unsecured network.
+
+SSH uses public-key cryptography to authenticate the remote computer,
+and allow it to authenticate the user, if necessary.
+
+In an SSH connection:
+
+- both sides have a public/private key pair
+- Each side authenticates the other using these keys.
+
 ## SSL/TLS Certificates
 
 Allows to verify the identity & establish an encrypted connection to another system,
