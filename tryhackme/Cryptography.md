@@ -189,6 +189,18 @@ In an SSH connection:
 - allowing secure authentication without transmitting credentials over the
   network.
 
+Common SSH key types include:
+
+- RSA
+- ECDSA
+- and EdDSA
+
+All offer different levels of security and performance.
+
+Ed25519 — a version of the EdDSA signature scheme that uses an elliptic curve,
+is becoming increasingly popular because it provides strong security,
+with shorter key lengths and faster operations.
+
 ## SSL/TLS Certificates
 
 Allows to verify the identity & establish an encrypted connection to another
