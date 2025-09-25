@@ -1,5 +1,14 @@
 # Cryptography
 
+Analogy| Cryptographic System
+Secret Code |Symmetric Encryption Cipher and Key
+Lock |Public Key
+Lock’s Key |Private Key
+
+<https://www.youtube.com/watch?v=AQDCe585Lnc> Asymentric Encryption
+
+<https://www.youtube.com/watch?v=NuyzuNBFWxQ> Cryptography Explained
+
 ## Different Types Of Cryptography
 
 ### PCI DSS
