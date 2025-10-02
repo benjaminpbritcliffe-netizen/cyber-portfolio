@@ -125,10 +125,16 @@ john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
 
 ## SSH Files
 
-Who could have guessed it, another conversion tool? Well, that’s what working with John is all about. As the name suggests, ssh2john converts the id_rsa private key, which is used to log in to the SSH session, into a hash format that John can work with. Jokes aside, it’s another beautiful example of John’s versatility. The syntax is about what you’d expect. Note that if you don’t have ssh2john installed, you can use ssh2john.py, located in the /opt/john/ssh2john.py. If you’re doing this on the AttackBox, replace the ssh2john command with python3 /opt/john/ssh2john.py or on Kali, python /usr/share/john/ssh2john.py.
+ssh2john converts the id_rsa private key,
+which is used to log in to the SSH session,
+iIf you don’t have ssh2john installed, you can use ssh2john.py, located in the /opt/john/ssh2john.py.
+If you’re doing this on the AttackBox,
+replace the ssh2john command with python3 /opt/john/ssh2john.py
+or on Kali, python /usr/share/john/ssh2john.py.
 
 ssh2john [id_rsa private key file] > [output file]
 
+``` plaintext
 ssh2john: Invokes the ssh2john tool
 [id_rsa private key file]: The path to the id_rsa file you wish to get the hash of
 >: This is the output director. We’re using it to redirect the output from this command to another file.
@@ -141,3 +147,4 @@ Cracking
 For the final time, we’re feeding the file we output from ssh2john, which in our example use case is called id_rsa_hash.txt and, as we did with rar2john, we can use this seamlessly with John:
 
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa_hash.txt
+```
