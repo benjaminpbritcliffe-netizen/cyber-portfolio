@@ -56,14 +56,15 @@ Q:What flag would we use to call a custom rule called “THMRules”
 
 A: — rule=THMRules
 
-
-
 The first line:
 
-[List.Rules:THMRules] is used to define the name of your rule; this is what you will use to call your custom rule a John argument.
+[List.Rules:THMRules] is used to define the name of your rule;
+this is what you will use to call your custom rule a John argument.
 
-We then use a regex style pattern match to define where the word will be modified; again, we will only cover the primary and most common modifiers here:
+We then use a regex style pattern match to define where the word will be modified;
+again, we will only cover the primary and most common modifiers here:
 
+``` plaintext
 Az: Takes the word and appends it with the characters you define
 A0: Takes the word and prepends it with the characters you define
 c: Capitalises the character positionally
@@ -92,6 +93,7 @@ c: Capitalises the first letter
 Az: Appends to the end of the word
 [0-9]: A number in the range 0-9
 [!£$%@]: The password is followed by one of these symbols
+```
 
 ## ZIP Files Passwords
 
@@ -107,7 +109,6 @@ zip2john zipfile.zip > zip_hash.txt
 
 john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt
 ```
-
 
 ## RAR Files
 
