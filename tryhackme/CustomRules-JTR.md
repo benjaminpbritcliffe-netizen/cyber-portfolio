@@ -144,7 +144,9 @@ Example Usage
 /opt/john/ssh2john.py id_rsa > id_rsa_hash.txt
 
 Cracking
-For the final time, we’re feeding the file we output from ssh2john, which in our example use case is called id_rsa_hash.txt and, as we did with rar2john, we can use this seamlessly with John:
+
+For the final time, we’re feeding the file we output from ssh2john,
 
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa_hash.txt
+
 ```
