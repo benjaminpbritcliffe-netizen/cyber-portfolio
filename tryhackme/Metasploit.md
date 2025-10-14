@@ -3,8 +3,6 @@
 A practical, hands-on overview of the Metasploit Framework—its components,
 common workflows, and real console examples.
 
-> **Tip:** Use collapsible sections below to keep long outputs tidy on GitHub.
-
 ## Table of Contents
 
 - [Metasploit](#metasploit)
