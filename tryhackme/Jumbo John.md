@@ -53,17 +53,20 @@ john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.txt
 
 ```
 
-# Unshadow
+## Unshadow
 
-John can be very particular about the formats it needs data in to be able to work with it; for this reason, to crack /etc/shadow passwords, you must combine it with the /etc/passwd
+John can be very particular about the formats it needs data in.
+for this reason, to crack /etc/shadow passwords, you must combine it with the /etc/passwd
 
 unshadow local_passwd local_shadow > unshadowed.txt
 
 john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed.txt
 
-# Single Crack
+## Single Crack
 
-John also has another mode, called the Single Crack mode. In this mode, John uses only the information provided in the username to try and work out possible passwords heuristically by slightly changing the letters and numbers contained within the username.
+John also has another mode, called the Single Crack mode. In this mode,
+John uses only the information provided in the username to work out passwords heuristically,
+by slightly changing the letters and numbers contained within the username.
 
 ```plaintext
 nano > username:hash
@@ -71,7 +74,7 @@ nano > username:hash
  john --single --format=raw-md5 hash07.txt
  ```
 
-# Custom Rules
+## Custom Rules
 
 Custom rules are defined in the john.conf file. This file can be found in
 /opt/john/john.conf on the TryHackMe Attackbox. It is usually located in

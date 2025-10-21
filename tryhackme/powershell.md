@@ -1,53 +1,134 @@
+# PowerShell
 
-To list all available cmdlets, functions, aliases, and scripts that can be executed in the current PowerShell session, we can use Get-Command. It’s an essential tool for discovering what commands one can use.
+PowerShell is a powerful command-line shell and scripting language that combines
+task automation and configuration management. The following notes outline
+essential cmdlets and techniques useful for system administration, security
+analysis, and general discovery.
 
-Similar to the dir command in Command Prompt (or ls in Unix-like systems), Get-ChildItem lists the files and directories in a location specified with the -Path parameter. It can be used to explore directories and view their contents. If no Path is specified, the cmdlet will display the content of the current working directory.
+---
 
-Another essential cmdlet to keep in our tool belt is Get-Help: it provides detailed information about cmdlets, including usage, parameters, and examples.
+## Discovering Commands
 
-To navigate to a different directory, we can use the Set-Location cmdlet. It changes the current directory, bringing us to the specified path, akin to the cd command in Command Prompt.
+- **Get-Command** lists all available cmdlets, functions, aliases, and scripts
+  that can be executed in the current session. It is essential for discovering
+  what commands are available to you.
 
-To navigate to a different directory, we can use the Set-Location cmdlet. It changes the current directory, bringing us to the specified path, akin to the cd command in Command Prompt.
+- **Get-Help** provides detailed information about cmdlets, including usage,
+  parameters, and examples. If you are unsure about a command, start here.
 
+---
 
-We can copy or move files and directories alike, using respectively Copy-Item (equivalent to copy) and Move-Item (equivalent to move).
+## File System and Navigation
 
-Finally, to read and display the contents of a file, we can use the Get-Content cmdlet, which works similarly to the type command in Command Prompt (or cat in Unix-like systems).
+- **Get-ChildItem** (similar to `dir` or `ls`) lists files and directories for a
+  specified path. If no `-Path` is provided the current directory is used.
 
-Piping is a technique used in command-line environments that allows the output of one command to be used as the input for another. This creates a sequence of operations where the data flows from one command to the next. Represented by the | symbol, piping is widely used in the Windows CLI, as introduced earlier in this module, as well as in Unix-based shells.
+- **Set-Location** (alias `cd`) changes the current directory to the specified
+  path. Use it to navigate the file system.
 
-The Get-ComputerInfo cmdlet retrieves comprehensive system information, including operating system information, hardware specifications, BIOS details, and more. It provides a snapshot of the entire system configuration in a single command. Its traditional counterpart systeminfo retrieves only a small set of the same details.
+- **Get-Content** (similar to `type` or `cat`) reads and displays the contents
+  of a file.
 
-- Get-LocalUser lists all the local user accounts on the system
+- **Copy-Item** and **Move-Item** copy and move files or directories,
+  respectively. They are equivalent to `copy` and `move` in Command Prompt.
 
-- Get-NetIPConfiguration provides detailed information about the network interfaces on the system, including IP addresses, DNS servers, and gateway configurations.
+---
 
-- In case we need specific details about the IP addresses assigned to the network interfaces, the Get-NetIPAddress cmdlet will show details for all IP addresses configured on the system, including those that are not currently active.
+## Piping and Composition
 
+Piping (`|`) allows the output of one command to be used as the input to
+another, creating a sequence of operations where data flows from one cmdlet to
+the next. Piping is fundamental to PowerShell workflows and data processing.
 
-- In PowerShell, you need to change the directory to the “C:\Users” folder where user profiles are located. You can do this by using the Set-Location cmdlet (or its alias cd)
+Example:
 
+```powershell
+Get-Process | Where-Object { $_.CPU -gt 100 } | Sort-Object -Property CPU
+```
 
-- To gather more advanced system information, especially concerning dynamic aspects like running processes, services, and active network connections, we can leverage a set of cmdlets that go beyond static machine details.
+---
 
-- Get-Process provides a detailed view of all currently running processes, including CPU and memory usage, making it a powerful tool for monitoring and troubleshooting.
+## System and Hardware Information
 
-- Similarly, Get-Service allows the retrieval of information about the status of services on the machine, such as which services are running, stopped, or paused.
+- **Get-ComputerInfo** retrieves comprehensive system information, including OS
+  details, hardware specs, BIOS information, and more. It provides a broad
+  snapshot of the system configuration. Its traditional counterpart,
+  `systeminfo`, returns a smaller subset of similar details.
 
-- To monitor active network connections, Get-NetTCPConnection displays current TCP connections
+- **Get-LocalUser** lists local user accounts on the machine.
 
-- Additionally, we are going to mention Get-FileHash as a useful cmdlet for generating file hashes, which is particularly valuable in incident response, threat hunting, and malware analysis, as it helps verify file integrity and detect potential tampering.
+- **Get-FileHash** generates file hashes (e.g., SHA256) and is useful in
+  incident response and malware analysis to verify file integrity.
 
+---
 
-The OwningProcess property indicates the Process ID (PID) of the process that owns or created the TCP connection. Each active connection is associated with a specific process running on the machine, and this property helps you identify which process that is.
+## Networking and IP Information
 
+- **Get-NetIPConfiguration** provides detailed information about network
+  interfaces, IP addresses, DNS servers, and gateway settings.
 
-What is the syntax to execute the command Get-Service on a remote computer named "RoyalFortune"? Assume you don't need to provide credentials to establish the connection. [for the sake of this question, avoid the use of quotes (" or ') in your answer]
-Answer :
+- **Get-NetIPAddress** shows IP address details for all configured interfaces,
+  including inactive addresses.
 
-``` bash
+- **Get-NetTCPConnection** lists active TCP connections and includes the
+  **OwningProcess** property, which indicates the PID of the process that owns a
+  given connection. This helps map network connections to processes.
+
+---
+
+## Processes and Services
+
+- **Get-Process** shows currently running processes, including CPU and memory
+  usage. It is powerful for monitoring and troubleshooting resource issues.
+
+- **Get-Service** retrieves information about services and their status
+  (running, stopped, paused).
+
+---
+
+## Remote Execution
+
+**Invoke-Command** executes commands on remote computers and is fundamental for
+remote administration, automation, and incident response. It can also be used by
+penetration testers (or attackers) to execute commands remotely.
+
+**Example:** To run `Get-Service` on a remote machine named RoyalFortune (no
+credentials required in this example), use:
+
+```powershell
 Invoke-Command -ComputerName RoyalFortune -ScriptBlock { Get-Service }
 ```
 
-Invoke-Command is essential for executing commands on remote systems, making it fundamental for system administrators, security engineers and penetration testers. Invoke-Command enables efficient remote management and—combining it with scripting—automation of tasks across multiple machines. It can also be used to execute payloads or commands on target systems during an engagement by penetration testers—or attackers alike.
+> **Security note:** Remote execution should be used responsibly. When running
+> commands across multiple systems, ensure you have authorization, use secure
+> channels, and audit activity.
 
+---
+
+## Practical Tips
+
+- Use `Get-Help <cmdlet> -Full` to see detailed examples and parameter
+  descriptions.
+- Combine `Get-Command` and `Get-Help` when exploring unfamiliar environments.
+- Use piping to filter and transform results rather than exporting raw output.
+- Prefer `Get-FileHash` over manual checksum utilities when scripting integrity
+  checks across Windows systems.
+- When investigating network connections, cross-reference `Get-NetTCPConnection`
+  with `Get-Process` using the **OwningProcess** PID to find the associated
+  executable.
+
+---
+
+## Exercise Ideas
+
+1. List all active services on a remote host and save the result to a file.
+2. Capture a list of processes that have used more than 10% CPU in the last
+   minute and sort them by memory usage.
+3. Generate a SHA256 hash for a suspicious file and compare it to a known
+   indicator of compromise (IOC) list.
+
+---
+
+> ✅ **Next steps:** Try these cmdlets in a lab environment. Keep practising
+> piping and remote execution to build efficient workflows for administration
+> and security tasks.
