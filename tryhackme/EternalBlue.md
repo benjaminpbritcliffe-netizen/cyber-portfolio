@@ -59,7 +59,7 @@ Notes & checkpoints:
 Goal: validate whether SMBv1 is enabled and whether the host has MS17‑010
 patch-related updates applied.
 
-### From your admin/workstation (PowerShell):
+### From your admin/workstation (PowerShell)
 
 ```powershell
 # Check SMB server configuration
