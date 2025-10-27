@@ -1,3 +1,5 @@
+# Defining a URL
+
 Think of a URL as being made up of several parts, each playing a different role
 in helping you find the right resource. Understanding how these parts fit
 together is important for browsing the web, developing web applications, and
@@ -5,7 +7,7 @@ even troubleshooting problems.
 
 Here’s a breakdown of the key components:
 
-Scheme
+## Scheme
 
 The scheme is the protocol used to access the website. The most common are HTTP
 (HyperText Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure).
@@ -13,7 +15,7 @@ HTTPS is more secure because it encrypts the connection, which is why browsers
 and cyber security experts recommend it. Websites often enforce HTTPS for added
 protection.
 
-User
+## User
 
 Some URLs can include a user’s login details (usually a username) for sites that
 require authentication. This happens mostly in URLs that need credentials to
@@ -21,7 +23,7 @@ access certain resources. However, it’s rare nowadays because putting login
 details in the URL isn’t very safe—it can expose sensitive information, which is
 a security risk.
 
-Host/Domain
+## Host/Domain
 
 The host or domain is the most important part of the URL because it tells you
 which website you’re accessing. Every domain name has to be unique and is
@@ -30,28 +32,28 @@ domain names that appear almost like real ones but have small differences (this
 is called typosquatting). These fake domains are often used in phishing attacks
 to trick people into giving up sensitive info.
 
-Port
+## Port
 
 The port number helps direct your browser to the right service on the web
 server. It’s like telling the server which doorway to use for communication.
 Port numbers range from 1 to 65,535, but the most common are 80 for HTTP and 443
 for HTTPS.
 
-Path
+## Path
 
 The path points to the specific file or page on the server that you’re trying to
 access. It’s like a roadmap that shows the browser where to go. Websites need to
 secure these paths to make sure only authorised users can access sensitive
 resources.
 
-Query String
+## Query String
 
 The query string is the part of the URL that starts with a question mark (?).
 It’s often used for things like search terms or form inputs. Since users can
 modify these query strings, it’s important to handle them securely to prevent
 attacks like injections, where malicious code could be added.
 
-Fragment
+## Fragment
 
 The fragment starts with a hash symbol (#) and helps point to a specific section
 of a webpage—like jumping directly to a particular heading or table. Users can
@@ -63,14 +65,14 @@ up any data here to avoid issues like injection attacks.
 Each message follows a specific format that helps both the user and the server
 communicate smoothly.
 
-Start Line
+### Start Line
 
 The start line is like the introduction of the message. It tells you what kind
 of message is being sent—whether it's a request from the user or a response from
 the server. This line also gives important details about how the message should
 be handled.
 
-Headers
+### Headers
 
 Headers are made up of key-value pairs that provide extra information about the
 HTTP message. They give instructions to both the client and the server handling
@@ -78,14 +80,14 @@ the request or response. These headers cover all sorts of things, like security,
 content types, and more, making sure everything goes smoothly in the
 communication.
 
-Empty Line
+### Empty Line
 
 The empty line is a little divider that separates the header from the body. It’s
 essential because it shows where the headers stop and where the actual content
 of the message begins. Without this empty line, the message might get messed up,
 and the client or server could misinterpret it, causing errors.
 
-Body
+### Body
 
 The body is where the actual data is stored. In a request, the body might
 include data the user wants to send to the server (like form data). In a
