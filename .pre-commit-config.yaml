@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: conventional-commits
+        name: conventional commits
+        entry: cz check --commit-msg-file
+        language: system
+        stages: [commit-msg]
