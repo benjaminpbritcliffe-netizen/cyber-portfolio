@@ -26,24 +26,32 @@ URLs that have GET parameters can be vulnerable to SQL injection; let us scan th
 
 Example:
 
+``` bash
 sqlmap -u http://sqlmaptesting.thm/search/cat=1
+```
 
 To fetch the databases, we use the flag --dbs. Let's try this flag out with our vulnerable URL:
 
+``` bash
 sqlmap -u http://sqlmaptesting.thm/search/cat=1 --dbs
+```
 
 After running the above command, we got two database names.
 Select the users database and fetch the tables inside of it.
 We will define the database after the flag -D and use the --tables flag at the end to extract all the table names.
 
+``` bash
 sqlmap -u http://sqlmaptesting.thm/search/cat=1 -D users --tables
+```
 
 Now that we have all the available table names of the database,
 let's dump the records present in the [Table] (thomas as an example) table.
  To do so, we will define the database with the -D flag, the table with the -T flag,
  and for extracting the records of the table, we will use the --dump flag.
 
+``` bash
 sqlmap -u http://sqlmaptesting.thmsearch/cat=1 -D users -T thomas --dump
+```
 
  unlike the URL used for testing above, you can also use POST-based testing,
  where the application sends data in the request's body instead of the URL.
@@ -57,6 +65,6 @@ sqlmap -u http://sqlmaptesting.thmsearch/cat=1 -D users -T thomas --dump
  we need to right-click on the login page and click the inspect option (the process may vary slightly from browser to browser).
   From here, we have to select the Network tab; then we have to enter some test credentials in the username and password fields and click the login button, and we will be able to see the GET request. Click on that request, and we can see the complete GET request with the parameters. We can copy this complete URL and use it with the SQLMap tool to discover SQL injection vulnerabilities inside it and exploit it.
 
-
+``` bash
 sqlmap -u 'http://10.64.129.84/ai/includes/user_login?email=test&password=test' --dbs
-        ___
+```
