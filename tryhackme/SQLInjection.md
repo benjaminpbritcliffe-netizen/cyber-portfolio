@@ -66,8 +66,11 @@ where the application sends data in the request's body instead of the URL.
 Examples of this could be login forms, registration forms, etc. To follow this
 approach, you must intercept a POST request on the login or registration page
 and save it as a text file. You can use the following command to input that
-request saved in the text file to the SQLMap tool: sqlmap -r
-intercepted_request.txt
+request saved in the text file to the SQLMap tool:
+
+``` bash
+sqlmap -r intercepted_request.txt
+```
 
 Note:
 
