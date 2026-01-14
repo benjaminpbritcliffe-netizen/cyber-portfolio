@@ -345,8 +345,8 @@ alarm.
 --dbs
 ```
 
-The Objective: This is the action flag. It tells SQLMap: "If you find a hole,
-don't just stop—list all the database names you can find."
+The Objective: This is the action flag.
+It tells SQLMap: "If you find a hole, don't just stop—list all the database names you can find."
 
 | Flag           | Category   | Purpose                          |
 | -------------- | ---------- | -------------------------------- |
