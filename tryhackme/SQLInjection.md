@@ -123,14 +123,11 @@ sqlmap -r request.txt -D <db_name> -T <table_name> --dump --batch
 
 #### 2. Authentication & Sessions
 
-```bash
 | Goal       |                        Flag                        |
 |-------     |----------------------------------------------------|
 |Cookies     |           "--cookie=""PHPSESSID=12345"""           |
 |Headers     |        "-H ""X-Forwarded-For: 127.0.0.1"""         |
 |Login Creds |"--auth-type Basic --auth-cred ""user:pass"""       |
-
-```
 
 #### 🛡️ 3. Bypassing Firewalls (WAF)
 
@@ -165,8 +162,6 @@ equaltolike : Changes = to LIKE
 
 #### ⚡ 5. Essential Shortcuts
 
-```bash
-
 |    Flag    |              Description              |
 |------------|---------------------------------------|
 |  --batch   |  Skip all prompts (chooses default).  |
@@ -175,9 +170,6 @@ equaltolike : Changes = to LIKE
 |  --risk=3  |  Use more aggressive/risky payloads.  |
 | --os-shell |    Attempt to get a command shell.    |
 |--file-read |   "Read files (e.g. /etc/passwd)."    |
-
-
-```
 
 #### 🛠️ 6. Useful One-Liners
 
@@ -357,15 +349,14 @@ alarm.
 The Objective: This is the action flag. It tells SQLMap: "If you find a
 hole, don't just stop—list all the database names you can find."
 
-|                 Flag | Category | Purpose                        ||
-|------------------------------------------------------------------||
-|------------------------------------------------------------------||
-|             -u       |Targeting | Where to attack.               ||
-|        --batch       |Automation| Hands-free operation.          ||
-|--random-agent        |Stealth   |Bypass basic User-Agent filters.||
-|       --level=3      | Depth    | Scan Headers and Cookies.      ||
-|    --risk=2          |Intensity | Use more aggressive payloads.  ||
-|        --threads=5   | Speed    | Faster data retrieval.         ||
-|          --dbs       |Goal      |Enumerate all databases.        ||
-|                                                                  ||
-|                                                                  ||
+|                 Flag | Category | Purpose                        |
+|------------------------------------------------------------------|
+|             -u       |Targeting | Where to attack.               |
+|        --batch       |Automation| Hands-free operation.          |
+|--random-agent        |Stealth   |Bypass basic User-Agent filters.|
+|       --level=3      | Depth    | Scan Headers and Cookies.      |
+|    --risk=2          |Intensity | Use more aggressive payloads.  |
+|        --threads=5   | Speed    | Faster data retrieval.         |
+|          --dbs       |Goal      |Enumerate all databases.        |
+|                                                                  |
+|                                                                  |
