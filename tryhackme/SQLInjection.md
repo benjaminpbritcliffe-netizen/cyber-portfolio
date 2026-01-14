@@ -58,7 +58,7 @@ define the database with the -D flag, the table with the -T flag, and for
 extracting the records of the table, we will use the --dump flag.
 
 ```bash
-sqlmap -u http://sqlmaptesting.thmsearch/cat=1 -D users -T thomas --dump
+sqlmap -u http://sqlmaptesting.thm/search/cat=1 -D users -T thomas --dump
 ```
 
 unlike the URL used for testing above, you can also use POST-based testing,
