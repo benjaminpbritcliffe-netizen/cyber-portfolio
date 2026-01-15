@@ -6,34 +6,19 @@ programming, and ethical hacking**.
 
 ## 🎯 Goals
 
-✔️ Build a cybersecurity knowledge base
-✔️ Develop hands-on skills through scripts & labs
-✔️ Document laws, ethics, and real-world cases
-✔️ Create a portfolio for career transition into cybersecurity
+✔️ Build a cybersecurity knowledge base ✔️ Develop hands-on skills through
+scripts & labs ✔️ Document laws, ethics, and real-world cases ✔️ Create a
+portfolio for career transition into cybersecurity
 
 ## 🧭 Directory Guide
 
-📘 Computer Fundamentals → Notes on hardware, OS, and basic IT concepts.
-
-📜 Cyber Events Archive → Timeline & analysis of major cyber incidents.
-
-⚖️ Cyber Laws & Ethics → Research and references on legal & ethical aspects of
-cybersecurity.
-
-🔐 Cyber Security → Notes, projects, and learning resources in security.
-
-📚 Ebooks And Tutorial Material - Ebooks and Tutorials.
-
-📝 House Of Vokabel → Vocabulary and key terms for quick recall.
-
-🖼️ Images → Diagrams, screenshots, and visual study aids.
-
-☕ Java → Java fundamentals, snippets, and small projects.
-
-💻 Programming Fundamentals → Core programming concepts across languages.
-
-🐍 Python → Scripts, automation, and data security tools in Python.
-
-🛠️ Tools → Custom-built or documented security tools.
-
-🕵️ TryHackMe → Notes, write-ups, and progress from practical labs.
+├── 📁 Computer Fundamentals/ # OS, Hardware & Low-level concepts ├── 📁 Cyber
+Events Archive/ # Analysis of historical hacks ├── 📁 Cyber Laws & Ethics/ #
+Legal frameworks & privacy ├── 📁 Cyber Security/ # Core security methodologies
+& risk ├── 📁 Ebooks & Tutorials/ # External study resources (PDFs) ├── 📁 House
+Of Vokabel/ # Key terminology & definitions ├── 📁 Images/ # Documentation
+assets & diagrams ├── 📁 Malware Analysis/ # Lab notes and research ├── 📁
+Programming Fundamentals/ # Code logic and syntax │ ├── 📁 Java/ # Java-specific
+projects │ └── 📁 Python/ # Scripts and automation │ └── 📁 PCL-Repository/ #
+Python Code Library (Scripts/Games) ├── 📁 tools/ # Security tool documentation
+& usage └── 📁 tryhackme/ # Writeups for CTF platforms.
