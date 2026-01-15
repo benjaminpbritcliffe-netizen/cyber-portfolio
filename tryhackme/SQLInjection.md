@@ -47,7 +47,6 @@ If you see these in your browser, the site is likely susceptible to injection:
 | Microsoft SQL | Unclosed quotation mark after the character string...           |
 | Oracle        | ORA-00933: SQL command not properly ended                       |
 | Generic       | Internal Server Error (500) or a page that suddenly goes blank. |
-|               |
 
 ### 🤖 Step 3: Exploitation (Using SQLMap)
 
