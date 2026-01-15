@@ -4,6 +4,56 @@ SQL injection is a prevalent vulnerability and has long been a hot topic in
 cyber security. To understand this vulnerability, we must first learn what a
 database is and how websites interact with a database.
 
+## Discovery → Verification → Exploitation
+
+### 🛠️ Step 1: Discovery (Finding the URL)
+
+Before you can use SQLMap, you need to find URLs that actually talk to a
+database.
+
+Manual Crawling: Look for URLs with parameters like ?id=, ?cat=, or ?product=.
+
+Burp Suite (Free/Pro): This is the industry-standard tool. As you browse a site,
+Burp maps out every request. You can look at the "HTTP History" to see which
+pages use GET or POST parameters.
+
+Gau / Waybackurls: These command-line tools fetch all URLs ever indexed for a
+domain (from Google or the Wayback Machine), helping you find "hidden"
+parameters without even touching the live server.
+
+### 🧪 Step 2: Verification (The "Single Quote" Test)
+
+Once you find a suspicious URL like site.com/product.php?id=10, you do a quick
+manual check to see if it's "fragile."
+
+Add a single quote (') to the end of the URL: site.com/product.php?id=10'
+
+Look for a reaction:
+
+Vulnerable: The page breaks, shows a SQL error (e.g., "You have an error in your
+SQL syntax"), or content disappears.
+
+Secure: The page loads normally or gives a clean "404 Not Found" / "Invalid
+Input" message.
+
+#### 🚨 Common SQL Error Messages
+
+If you see these in your browser, the site is likely susceptible to injection:
+
+| Database Type | Error Message to Look For                                       |
+| ------------- | --------------------------------------------------------------- |
+| MySQL         | you have an error in your SQL syntax; check the manual...       |
+| PostgreSQL    | PostgreSQL query failed: ERROR: syntax error at or near...      |
+| Microsoft SQL | Unclosed quotation mark after the character string...           |
+| Oracle        | ORA-00933: SQL command not properly ended                       |
+| Generic       | Internal Server Error (500) or a page that suddenly goes blank. |
+|               |
+
+### 🤖 Step 3: Exploitation (Using SQLMap)
+
+Only after the page "breaks" with a single quote do you bring in SQLMap to do
+the heavy lifting.
+
 ## SQL Map
 
 SQLMap is an automated tool for detecting and exploiting SQL injection
@@ -68,7 +118,7 @@ approach, you must intercept a POST request on the login or registration page
 and save it as a text file. You can use the following command to input that
 request saved in the text file to the SQLMap tool:
 
-``` bash
+```bash
 sqlmap -r intercepted_request.txt
 ```
 
