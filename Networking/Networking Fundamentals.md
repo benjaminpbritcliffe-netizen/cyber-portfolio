@@ -86,6 +86,75 @@ IP Address range              | number of addresses   |classful description
 172.16.0.0 – 172.31.255.255   | 1,048,576             |16 contiguous class Bs
 192.168.0.0 – 192.168.255.255 | 65,536                |256 contiguous class Cs
 
+### The "Mega-City" (Class A)
+
+The Neighborhood: 10.0.0.0 to 10.255.255.255
+
+|Address |Description| Can I use it for my PC?|
+|10.0.0.0| Network ID: The "Street Name" for the whole city.| No.|
+|10.0.0.1| Default Gateway: The "Front Door" (Router).| Yes (for the router).|
+|10.0.0.2| Host Address: A device (Laptop, Phone, etc.).| Yes!|
+|10.255.255.255| Broadcast: The city-wide megaphone. |No.|
+
+### The "Suburb" (Class B)
+
+The Neighborhood: 172.16.0.0 to 172.31.255.255
+
+|Address |Description| Can I use it for my PC?|
+|172.16.0.0| Network ID: The start of the private slice.| No.|
+|172.16.0.1| Default Gateway: The "Front Door" (Router).| Yes (for the router).|
+|172.16.0.2| Host Address: A device in the first room.| Yes!|
+|172.31.255.255| Broadcast: The megaphone for the 172 zone.| No.|
+
+### The "House" (Class C)
+
+The Neighborhood: 192.168.0.0 to 192.168.255.255
+
+|Address|Description|Can I use it for my PC?|
+|192.168.0.0|Network ID: The name of the specific house/street.|No.|
+|192.168.0.1|Default Gateway: The "Front Door" (Router).|Yes (for the router).|
+|192.168.0.2|Host Address: A device (Your PC or Printer).|Yes!|
+|192.168.0.255|Broadcast: The megaphone for this specific room.|No.|
+
+Summary Checklist
+
+Class A: Starts with 10, default mask is 255.0.0.0
+
+Class B: Starts with 172, default mask is 255.255.0.0
+
+Class C: Starts with 192, default mask is 255.255.255.0
+
+#### The "Mask is Boss" Rule
+
+In modern networking, the mask always has the final say.
+If you use $255.255.255.0$: Your neighborhood is tiny.
+192.168.255.x is a completely different world from 192.168.1.x.
+If you use $255.255.0.0$: You have "deleted the walls."
+Now, 192.168.1.1 and 192.168.255.254 are neighbors on the same massive street.
+
+Networking pros almost never use a Class B mask ($255.255.0.0$) on a $192.168$ network
+unless they have a very specific reason.
+
+It would be incredibly loud.
+
+#### The "Stadium Shouting" Problem
+
+Imagine a room with 65,534 people in it.
+
+In a normal "Class C" room ($192.168.1.x$), you only have 254 people.
+If one person shouts "Where is the printer?", 253 people ignore it. No big deal.
+
+In your "Massive Street" ($192.168.x.x$ with a $/16$ mask),
+if one computer shouts:
+"Where is the printer?", all 65,533 other computers have to stop what they are doing,
+look at the packet, and realize it's not for them.
+
+"Broadcast Storms" When you have that many devices in one "room,"
+the background noise becomes a constant roar.
+Eventually, the network spends more time "shouting" than actually "talking."
+This is called a Broadcast Storm,
+and it can effectively paralyze your internet speed.
+
 ## Network
 
  A network is what actually does the transportation of traffic between hosts.
@@ -118,8 +187,13 @@ from that one specific address.
 The Internal Hierarchy (Subnets) Inside the factory:
 
 you use Private IP ranges (like 10.x.x.x).
-You divide these into subnets to keep things organized and secure:Accounting Subnet:
-10.0.1.xProduction Floor Subnet: 10.0.2.xGuest Wi-Fi Subnet: 10.0.3.x
+
+You divide these into subnets to keep things organized and secure:
+
+Accounting Subnet: 10.0.1.x
+Production Floor Subnet: 10.0.2.x
+Guest Wi-Fi Subnet: 10.0.3.x
+
 
 Inter-Departmental Communication:
 
