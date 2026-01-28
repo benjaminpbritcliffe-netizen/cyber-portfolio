@@ -219,10 +219,10 @@ it is not accessible from the internet.
 Private IPs can be reused across different networks,
 and are assigned by routers to devices within the same network.
 
-IP Address range              | number of addresses   |classful description
-10.0.0.0 – 10.255.255.255     | 16,777,216            |single class A
-172.16.0.0 – 172.31.255.255   | 1,048,576             |16 contiguous class Bs
-192.168.0.0 – 192.168.255.255 | 65,536                |256 contiguous class Cs
+|IP Address range              | number of addresses   |classful description    |
+|10.0.0.0 – 10.255.255.255     | 16,777,216            |single class A          |
+|172.16.0.0 – 172.31.255.255   | 1,048,576             |16 contiguous class Bs  |
+|192.168.0.0 – 192.168.255.255 | 65,536                |256 contiguous class Cs |
 
 ### The "Mega-City" (Class A)
 
