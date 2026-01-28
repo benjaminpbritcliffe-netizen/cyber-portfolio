@@ -1,7 +1,143 @@
 
 # Networking Fundamentals
 
-## Host
+## Hardware
+
+### Repeater
+
+Data can decay across long distances.
+Repeaters regenerate signals to allow communications across greater distances.
+
+### Hub
+
+Connecting hosts directly to each other doesn't scale well.
+A hub is simply a multi port repeater
+Packets would be duplicated acoross all hosts.
+Everyone receives everyones packets.
+
+ Anything that comes in on one end simply gets regenerated out the other side.
+
+### Bridge
+
+Bridges sit between hub-connected hosts.
+Bridges only have two ports.
+
+ One port facing one set of hub-connected devices,
+ and another port facing the other set of hub-connected devices.
+
+Bridges learn which hosts on each side.
+
+### Switch
+
+Switches are a combination of Hubs and Bridges
+Multiple Ports
+Learns which hosts are on each port
+
+ The main difference is that they are doing it on a per-port basis,
+  which means if these two hosts want to speak to each other,
+ the switch will know that the only ports that need to receive this traffic,
+ are the two that are connected to those green hosts,
+ and it will keep that communication contained to just those ports.
+
+ The formal definition of a switch that we want to use is:
+ A switch is a device which facilitates communication within a network.
+
+  In one way or another, since all these devices are connected with a switch,
+  they all belong to the same network.
+ The reason you might want to separate two sets of devices into their own network
+ is because they might have different connectivity requirements.
+
+### Router
+
+Router facilitates communication between networks. (internet and local subnets)
+Provide traffic control point between networks. (Security, Filtering,Redirecting)
+Routing table - all networks a router knows about.
+Each hosts way out of their local network using the Gateway.
+
+Routers create the hiercachy in networks and the entire intenet.
+
+ The internet is nothing more than a bunch of different routers itself.
+
+Routers provide traffic control points between networks.
+
+### Routing vs Switching
+
+Routing is the process of moving data BETWEEN networks.
+
+Switching is the process of moving data WITHIN networks.
+
+### Cabling
+
+## Protocols
+
+### Network
+
+ A network is what actually does the transportation of traffic between hosts.
+
+- Anytime two hosts are connected, a network is created.
+
+- A logical grouping of hosts which require similar connectivity.
+
+- A network can contain other networks (Sub-Networks or Subnets.)
+
+- Networks connect to other networks (Internet!)
+
+instead of having each of these networks connect directly to each other,
+in every possible combination,
+instead all those networks are connected to a central resource, namely the Internet.
+In fact, what we know of as the Internet is simply a bunch of interconnected networks.
+
+### Network Scenario
+
+Here is a breakdown of how your factory scenario works in practice:
+
+The Perimeter (Public IP):
+
+The factory has one (or a small handful) of Public IPs,
+assigned to its main router or firewall.
+
+To the outside world,any traffic coming from the factory looks like it originated
+from that one specific address.
+
+The Internal Hierarchy (Subnets) Inside the factory:
+
+you use Private IP ranges (like 10.x.x.x).
+
+You divide these into subnets to keep things organized and secure:
+
+Accounting Subnet: 10.0.1.x
+Production Floor Subnet: 10.0.2.x
+Guest Wi-Fi Subnet: 10.0.3.x
+
+Inter-Departmental Communication:
+
+If a computer in Accounting needs to send to a machine on the Production Floor,
+the traffic stays "local."
+It goes to the internal router, which sees both subnets and passes the data across.
+This never touches the public internet.
+
+Going External (The NAT Process):
+
+When a host needs to reach a server in the outside world
+(like Google or a vendor's portal):
+
+Outgoing: The host sends a packet with its Private IP as the "Source.
+
+The Swap: When the packet hits the factory's main router,
+the router performs NAT (Network Address Translation).
+
+It swaps the Private IP for the factory’s Public IP.The Table:
+The router makes a note in its "NAT Table":
+"Host 10.0.1.50 asked for Google on Port XYZ."
+
+The Return Trip - When the external server replies:
+
+it sends the data back to the factory's Public IP.
+The router looks at its table,
+sees that "Port XYZ" belongs to the request from Host 10.0.1.50,
+and tosses the packet back to the correct computer in the Accounting department.
+
+### Host
 
 Any device that sends or receives traffic over a network.
 (Including Cloud Services and IoT Devices.)
@@ -19,7 +155,7 @@ Note:
 You can turn any device into a server by simply installing the proper server software.
 Are merely computers with software that knows how to provide files or provide updates.
 
-## IP Address
+### IP Address
 
 IP addresses are the identity of each host.
 
@@ -35,14 +171,16 @@ Broken into 4 octets into a decimal number.  (4 octets of 0 through to 255)
 
 IP Addresses are usually Hierachically assigned using Subnetting.
 
-### Public IP Address
+#### Public IP Address
 
 Public IP Address: Assigned by an Internet Service Provider (ISP),
 it is used to identify devices on the internet.
+
 Public IPs are unique globally and allow devices to communicate over the internet.
 
 Public IP Ranges
 The number of public IP addresses is far greater than the number of private ones.
+
 Because every network on the Internet must have a unique public IP.
 
 The Router is the only device with a Public IP.
@@ -124,6 +262,51 @@ Class B: Starts with 172, default mask is 255.255.0.0
 
 Class C: Starts with 192, default mask is 255.255.255.0
 
+### Gateway
+
+In the professional networking world,
+using .1 as the Default Gateway for every subnet is the de facto industry standard.
+While the math allows you to pick any valid IP address to be the "Front Door,"
+.1 is the undisputed king of consistency.
+
+The 10s (10.0.0.1 $\rightarrow$ 10.255.255.1)
+
+The 172s (172.16.0.1 $\rightarrow$ 172.31.0.1)
+
+The 192s (192.168.0.1 $\rightarrow$ 192.168.255.1)
+
+| CIDR | Subnet        | Mask          | Network         | Example The Edge (Last Usable IP) The Megaphone (Broadcast) |
+|------|---------------|---------------|-----------------|-------------------------------------------------------------|
+| /8   | 255.0.0.0     | 10.0.0.0      | 10.255.255.254  | 10.255.255.255                                              |
+| /12  | 255.240.0.0   | 172.16.0.0    | 172.31.255.254  | 172.31.255.255                                              |
+| /16  | 255.255.0.0   | 172.16.0.0    | 172.16.255.254  | 172.16.255.255                                              |
+| /16  | 255.255.0.0   | 192.168.255.0 | 192.168.255.254 | 192.168.255.255                                             |
+| /24  | 255.255.255.0 | 192.168.1.0   | 192.168.1.254   | 192.168.1.255                                               |
+
+Houses typically use 192.168.0.1 or 1.1 (Depending on ISP)
+
+Note: for /16  172.16.x.x is often the "Pro" Choice
+
+Most network engineers prefer 172.16.x.x for business or lab environments
+for one big reason:
+
+VPNs.
+
+Imagine you are working from home.
+
+Your home router is probably 192.168.1.1. If your office also uses 192.168.1.1,
+and you connect via VPN, your computer gets "confused."
+
+It won't know if 192.168.1.50 is your printer in the kitchen
+or the file server at work.
+
+By using 172.16.x.x for your project/office:
+
+You almost never clash with a home Wi-Fi network.
+
+You have enough "vertical room" (65,000 IPs)
+to grow without ever needing to change your subnet mask.
+
 #### The "Mask is Boss" Rule
 
 In modern networking, the mask always has the final say.
@@ -135,7 +318,18 @@ Now, 192.168.1.1 and 192.168.255.254 are neighbors on the same massive street.
 Networking pros almost never use a Class B mask ($255.255.0.0$) on a $192.168$ network
 unless they have a very specific reason.
 
-It would be incredibly loud.
+Address ends in .255? Check the mask.
+
+Small Mask (/24)? It's a Megaphone (Reserved).
+
+Big Mask (/8)? It's a House (Usable).
+
+ |CIDR| Subnet Mask | What it means                          | Analogy                            |
+ |-------------------------------------------------------------------------------------------------|
+ |/8  |255.0.0.0    | Only the 1st number is the street name.| The Mega-City. (16 million houses) |
+ |/16 |255.255.0.0  | The 1st and 2nd numbers are the street name.| The Suburb. (65,534 houses)   |
+ |/24 |255.255.255.0| The 1st, 2nd, and 3rd numbers are the street.| The Single Room. (254 houses)|
+
 
 #### The "Stadium Shouting" Problem
 
@@ -155,78 +349,32 @@ Eventually, the network spends more time "shouting" than actually "talking."
 This is called a Broadcast Storm,
 and it can effectively paralyze your internet speed.
 
-## Network
+### IP Address Last ones
 
- A network is what actually does the transportation of traffic between hosts.
+The 10s: 10.0.0.2 -  10.255.255.254
 
-- Anytime two hosts are connected, a network is created.
+The 172s:  172.16.0.2 - 172.31.255.254
 
-- A logical grouping of hosts which require similar connectivity.
+The 192s: 192.168.0.2 - 192.168.255.254
 
-- A network can contain other networks (Sub-Networks or Subnets.)
+## Subnetting
 
-- Networks connect to other networks (Internet!)
+A subnet mask is used to identify the network and host portions of an IP address.
+It helps routers determine the correct subnet for routing data packets.
+For example, a subnet mask of 255.255.255.0
+indicates that the first three octets represent the network,
+and the last octet represents the host.
 
-instead of having each of these networks connect directly to each other,
-in every possible combination,
-instead all those networks are connected to a central resource, namely the Internet.
-In fact, what we know of as the Internet is simply a bunch of interconnected networks.
+## TCP/IP networking protocols
 
-### Network Scenario
+### TCP VS UDP
 
-Here is a breakdown of how your factory scenario works in practice:
+## HTTP vs HTTPS
 
-The Perimeter (Public IP):
+## Port Numbers
 
-The factory has one (or a small handful) of Public IPs,
-assigned to its main router or firewall.
+## DNS and DHCP
 
-To the outside world,any traffic coming from the factory looks like it originated
-from that one specific address.
+## Three Way Handshake (SYN - ACK - SYN ACK)
 
-The Internal Hierarchy (Subnets) Inside the factory:
-
-you use Private IP ranges (like 10.x.x.x).
-
-You divide these into subnets to keep things organized and secure:
-
-Accounting Subnet: 10.0.1.x
-Production Floor Subnet: 10.0.2.x
-Guest Wi-Fi Subnet: 10.0.3.x
-
-
-Inter-Departmental Communication:
-
-If a computer in Accounting needs to send to a machine on the Production Floor,
-the traffic stays "local."
-It goes to the internal router, which sees both subnets and passes the data across.
-This never touches the public internet.
-
-Going External (The NAT Process):
-
-When a host needs to reach a server in the outside world
-(like Google or a vendor's portal):
-
-Outgoing: The host sends a packet with its Private IP as the "Source.
-
-The Swap: When the packet hits the factory's main router,
-the router performs NAT (Network Address Translation).
-
-It swaps the Private IP for the factory’s Public IP.The Table:
-The router makes a note in its "NAT Table":
-"Host 10.0.1.50 asked for Google on Port XYZ."
-
-The Return Trip - When the external server replies:
-
-it sends the data back to the factory's Public IP.
-The router looks at its table,
-sees that "Port XYZ" belongs to the request from Host 10.0.1.50,
-and tosses the packet back to the correct computer in the Accounting department.
-
-## Repeater
-
-## Hub
-
-## Bridge
-
-## Router
+## Basic security practices
