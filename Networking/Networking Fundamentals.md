@@ -219,16 +219,18 @@ it is not accessible from the internet.
 Private IPs can be reused across different networks,
 and are assigned by routers to devices within the same network.
 
-IP Address range              | number of addresses   |classful description
-10.0.0.0 – 10.255.255.255     | 16,777,216            |single class A
-172.16.0.0 – 172.31.255.255   | 1,048,576             |16 contiguous class Bs
-192.168.0.0 – 192.168.255.255 | 65,536                |256 contiguous class Cs
+|IP Address range              | number of addresses   |classful description   |
+|------------------------------|-----------------------|-----------------------|
+|10.0.0.0 – 10.255.255.255     | 16,777,216            |single class A         |
+|172.16.0.0 – 172.31.255.255   | 1,048,576             |16 contiguous class Bs |
+|192.168.0.0 – 192.168.255.255 | 65,536                |256 contiguous class Cs|
 
 ### The "Mega-City" (Class A)
 
 The Neighborhood: 10.0.0.0 to 10.255.255.255
 
 |Address |Description| Can I use it for my PC?|
+|--------|-----------|------------------------|
 |10.0.0.0| Network ID: The "Street Name" for the whole city.| No.|
 |10.0.0.1| Default Gateway: The "Front Door" (Router).| Yes (for the router).|
 |10.0.0.2| Host Address: A device (Laptop, Phone, etc.).| Yes!|
@@ -238,7 +240,8 @@ The Neighborhood: 10.0.0.0 to 10.255.255.255
 
 The Neighborhood: 172.16.0.0 to 172.31.255.255
 
-|Address |Description| Can I use it for my PC?|
+|Address   |Description| Can I use it for my PC?                                 |
+|----------|--------------------------------------------|----------------------|
 |172.16.0.0| Network ID: The start of the private slice.| No.|
 |172.16.0.1| Default Gateway: The "Front Door" (Router).| Yes (for the router).|
 |172.16.0.2| Host Address: A device in the first room.| Yes!|
@@ -248,11 +251,12 @@ The Neighborhood: 172.16.0.0 to 172.31.255.255
 
 The Neighborhood: 192.168.0.0 to 192.168.255.255
 
-|Address|Description|Can I use it for my PC?|
-|192.168.0.0|Network ID: The name of the specific house/street.|No.|
+|Address|Description|Can I use it for my PC?                                  |
+|-------|-----------|---------------------------------------------------------|
+|192.168.0.0|Network ID: The name of the specific house/street.|No.           |
 |192.168.0.1|Default Gateway: The "Front Door" (Router).|Yes (for the router).|
-|192.168.0.2|Host Address: A device (Your PC or Printer).|Yes!|
-|192.168.0.255|Broadcast: The megaphone for this specific room.|No.|
+|192.168.0.2|Host Address: A device (Your PC or Printer).|Yes!                |
+|192.168.0.255|Broadcast: The megaphone for this specific room.|No.           |
 
 Summary Checklist
 
@@ -325,7 +329,7 @@ Small Mask (/24)? It's a Megaphone (Reserved).
 Big Mask (/8)? It's a House (Usable).
 
  |CIDR| Subnet Mask | What it means                          | Analogy                            |
- |-------------------------------------------------------------------------------------------------|
+ |----|-------------|----------------------------------------|------------------------------------|
  |/8  |255.0.0.0    | Only the 1st number is the street name.| The Mega-City. (16 million houses) |
  |/16 |255.255.0.0  | The 1st and 2nd numbers are the street name.| The Suburb. (65,534 houses)   |
  |/24 |255.255.255.0| The 1st, 2nd, and 3rd numbers are the street.| The Single Room. (254 houses)|
