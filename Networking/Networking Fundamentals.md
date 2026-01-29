@@ -334,7 +334,6 @@ Big Mask (/8)? It's a House (Usable).
  |/16 |255.255.0.0  | The 1st and 2nd numbers are the street name.| The Suburb. (65,534 houses)   |
  |/24 |255.255.255.0| The 1st, 2nd, and 3rd numbers are the street.| The Single Room. (254 houses)|
 
-
 #### The "Stadium Shouting" Problem
 
 Imagine a room with 65,534 people in it.
