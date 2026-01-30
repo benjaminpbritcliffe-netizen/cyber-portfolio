@@ -377,12 +377,98 @@ and the last octet represents the host.
 
 ## TCP/IP networking protocols
 
+### Physical Layer
+The Physical Layer is the first layer of the OSI model. This layer specifies the standards for devices, media, and technologies that are used in moving the data across the network such as:-
+
+Type of cable used in connecting the devices
+Patterns of pins used in both sides of the cable
+Type of interface-card used in the networking device
+Type of connector used to connect the cable with the network interface
+Encoding of digital signals received from the Data Link layer based on the attached media type such as electrical for copper, light for fiber, or a radio wave for wireless.
+
+The Device: Hubs, Repeaters, and Cables,Ethernet cables, Fiber optics, and old-school Hubs that just broadcast everything to everyone.
+
+
+### Data Link Layer
+The Data Link Layer is the second layer of the OSI model. This layer defines how networking components access the media and what transmission methods they use. This layer has two sub-layers: MAC and LLC.
+
+MAC (Media Access Control)
+This sub-layer defines how the data packets are placed in media. It also provides physical addressing. The physical address is known as the MAC address. Unlike logical addresses that need to be configured, physical addresses are pre-configured in NIC. The MAC address is used to uniquely identify a host in the local network.
+
+Think MAC Addresses!
+
+The Device: Switches, Network Interface Cards (NIC),Access Points (WAP) and Bridges
+
+### Network Layer
+
+The third layer of the OSI model is the Network Layer. This layer takes the data segment from the Transport layer and adds a logical address to it. A logical address has two components; network partition and host partition.
+
+The Device: Routers.
+
+### Transport Layer
+
+The Device: Firewalls (Stateful).
+
+
+The transport layer is the fourth layer of the OSI model. It provides the following functionalities: -
+
+Segmentation
+On the sending computer, it breaks the data stream into smaller pieces. Each piece is known as a segment and the process of breaking the data stream into smaller pieces is known as the segmentation. On the receiving computer, it joins all segments to recreate the original data stream.
+
+Data transportation
+This layer establishes a logical connection between the sending system and receiving system and uses that connection to provide end-to-end data transportation. This process uses two protocols: TCP and UDP.
+
+### Application Layer
+
+The Device: Computers, Smartphones, and Servers.
+
+This is the last and topmost layer of the OSI model. This layer provides an interface between the local system and the application program running on the network. If an application wants to use the resources available on the remote system, it interacts with this layer. Then, this layer provides the protocols and services that the application needs to access those resources.
+
+There are two types of application programs: Network-aware and Network-unaware. An application program is considered a Network-aware application if it can make any type of network request. If an application program cannot make any type of network request, it is considered a Network-unaware program.
+
+## OSI Model
+
+### Physical Layer
+
+### Data Link Layer
+
+### Network Layer
+
+### Transport Layer
+
+### Session Layer
+
+Session Layer in the OSI Model is responsible for the establishment of connections, management of connections, terminations of sessions between two devices. It also provides authentication and security. Protocols used in the Session Layer are NetBIOS, PPTP.
+
+This manages the "session" or connection between two devices. It starts, maintains, and ends the dialogue.
+
+### Presenation Layer
+
+This layer makes sure the data is in a format the other side can understand. It handles encryption, compression, and file types (like turning a raw image into a JPEG).
+
+The Presentation Layer is also called the Translation layer. The data from the application layer is extracted here and manipulated as per the required format to transmit over the network. Protocols used in the Presentation Layer are TLS/SSL (Transport Layer Security / Secure Sockets Layer).
+
+
+Layer #	|Name|	Mnemonics (Pick one!)	|What happens here?|
+--------|----|--------------------------|------------------|
+7	|Application|	All	|The stuff you see (Chrome, Gmail, Minecraft).|
+6	|Presentation|	People|	Encryption and formatting (making it readable).|
+5	|Session|	Seem|	Opening and closing the "conversation."|
+4	|Transport|	To	|The TCP Handshake. Reliability and ports.|
+3	|Network|	Need|	IP Addresses. The table you just built!|
+2	|Data Link|	Data|	The MAC address and the physical Switch.|
+1	|Physical|	Processing|	The cables, light, and electricity.|
+
+### Application
+
 ### TCP VS UDP
 
 ## HTTP vs HTTPS
 
 ## Port Numbers
+
 [Port Numbers Markdown](PortNumbers.md)
+
 ## DNS and DHCP
 
 ## Three Way Handshake (SYN - ACK - SYN ACK)
