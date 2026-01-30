@@ -311,6 +311,13 @@ You almost never clash with a home Wi-Fi network.
 You have enough "vertical room" (65,000 IPs)
 to grow without ever needing to change your subnet mask.
 
+Row Acceptable Range (The "Green Zone")
+/8 Anything from 10.0.0.1 to 10.255.255.254
+/12 Anything from 172.16.0.1 to 172.31.255.254
+/16 Anything from 192.168.0.1 to 192.168.255.254
+/16 anything from 172.16.0.1  to 172.16.255.254
+/24 Anything from 192.168.1.1 to 192.168.1.254
+
 #### The "Mask is Boss" Rule
 
 In modern networking, the mask always has the final say.
