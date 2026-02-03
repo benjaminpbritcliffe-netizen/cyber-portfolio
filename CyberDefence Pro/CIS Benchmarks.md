@@ -6,8 +6,6 @@ The CIS Benchmarks™ are a robust set of best practices for the secure configur
 
 They are designed to guide organizations on how to improve their security posture and help protect their IT systems and data from potential threats.
 
-They are designed to guide organizations on how to improve their security posture and help protect their IT systems and data from potential threats.
-
 The benchmark guidance includes recommendations on configuring hardware devices, operating systems, and applications to increase security, reduce vulnerabilities, and improve system performance
 
 
