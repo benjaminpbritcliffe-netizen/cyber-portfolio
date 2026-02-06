@@ -1,5 +1,7 @@
 # Risk Management And Principles
 
+[Risk Response](../Cyber%20Security/Risk%20Response.MD)
+
 After identifying risks, the next step is to handle them using different responses.
 
 Risk management principles include:
