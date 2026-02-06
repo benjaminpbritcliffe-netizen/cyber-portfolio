@@ -122,14 +122,14 @@ The amount of time a particular control can delay an attack is its control effic
 This is an important measurement when evaluating various controls. However,
 there are additional factors that many overlook, such as:
 
-|Factor | Description|
+|Factor|Description|
 |-------|------------|
-|Compatibility| Assess whether the security control works with the existing infrastructure or requires new hardware and software to make it work.|
-|Effectiveness| Will control work well in your environment? If the control is only partially effective or does not provide much benefit, it may not be worth the cost to implement.|
-|Regulations| Consider any regulatory compliance requirements impacted by the control. Make sure you are not breaking any laws.|
-|Policies| Make sure that security control does not violate any company policies.|
-|Feasibility| Consider the feasibility of security control by completing a cost-benefit analysis.|
-|Sustainability| Can the team maintain this control long-term?|
+|Compatibility|Assess whether the security control works with the existing infrastructure or requires new hardware and software to make it work.|
+|Effectiveness|Will control work well in your environment? If the control is only partially effective or does not provide much benefit, it may not be worth the cost to implement.|
+|Regulations|Consider any regulatory compliance requirements impacted by the control. Make sure you are not breaking any laws.|
+|Policies|Make sure that security control does not violate any company policies.|
+|Feasibility|Consider the feasibility of security control by completing a cost-benefit analysis.|
+|Sustainability|Can the team maintain this control long-term?|
 
 ### Resources
 
