@@ -40,61 +40,23 @@ The Comparison Breakdown
 
 ## FISMA - Federal Information Security Management Act
 
-The Federal Information Security Management Act (FISMA)
-defines a framework of guidelines and security standards,
-to protect government information and operations.
+[FISMA](../House%20Of%20Vokabel/FISMA.md)
 
-FISMA was passed as the Federal Information Security Management Act in 2002
-as part of the E-Government Act.
+## PCI DSS – Payment Card Industry Data Security Standard
 
-It requires all federal agencies to:
+[PCI-DSS](../House%20Of%20Vokabel/PCI%20DSS.md)
 
-- develop
-- document
-- and implement agency-wide information security programs.
+## HIPAA – Health Insurance Portability and Accountability Act
 
-This law has been amended as of 2014 (sometimes called FISMA Reform),
-passed in response to the increasing amount of cyber attacks on the federal government.
+[HIPAA](../House%20Of%20Vokabel/HIPAA.md)
 
-FISMA defines three security objectives for information and information systems:
+## ISO -  International Organization for Standardization
 
-Confidentiality: Preserving authorized restrictions
-on information access and disclosure,
-including means for protecting personal privacy and proprietary information.
+[ISO](../House%20Of%20Vokabel/ISO.md)
 
-Integrity: Guarding against improper information modification or destruction,
-and includes ensuring information nonrepudiation and authenticity.
+## NIST - National Institute of Standards and Technology
 
-Availability: Ensuring timely and reliable access to and use of information.
-
-### What FISMA Entails (The "Must-Haves")
-
-In a CompTIA scenario,
-if the question mentions a US Government agency,
-or a Contractor (like Boeing or Lockheed Martin),
-they are talking about FISMA.
-
-FISMA requires these 3 specific things:
-
-#### System Inventory & Categorization
-
-You must list every computer/server you own and rank them by how "dangerous"
-it would be if they were hacked (Low, Moderate, or High impact).
-
-Exam Tip: This ranking uses the "High Water Mark" rule.
-If a system's Availability is "High" risk but its Confidentiality is "Low,"
-the whole system is treated as High Risk.
-
-#### The System Security Plan (SSP)
-
-This is a massive document that explains exactly which security controls
-(from the NIST library) you are using to protect those systems.
-It’s the "Living Document" of your security.
-
-#### Continuous Monitoring
-
-FISMA is obsessed with the idea that security isn't a one-time check.
-You must monitor your systems 24/7/365 and report on their health annually.
+[NIST](../House%20Of%20Vokabel/NIST.md)
 
 ### FISMA vs. NIST: The Relationship
 
@@ -103,40 +65,6 @@ This is the most common "trick" on the exam.
 FISMA is the Requirement (The "What").
 
 NIST SP 800-53 is the Toolbox (The "How").
-
-## PCI DSS – Payment Card Industry Data Security Standard
-
-The PCI DSS is a globally recognized standard,
-designed to secure credit and debit card transactions against data theft and fraud.
-Any business handling credit card information must follow the PCI DSS checklist
-to secure financial data during processing, transmission, and storage.
-
-## HIPAA – Health Insurance Portability and Accountability Act
-
-HIPAA is a U.S. federal law,
-that mandates the protection of sensitive patient health information.
-It applies to covered entities such as hospitals, clinics, insurers,
-and their business associates, including IT vendors and cloud service providers.
-HIPAA ensures that patients' electronic health records (EHRs),
-are kept confidential and secure, both in storage and in transit.
-
-## ISO -  International Organization for Standardization
-
-ISO 27001 is an international standard,
-published by the International Organization for Standardization (ISO)
-that outlines the procedures for establishing, implementing, maintaining,
-and continually improving an Information Security Management System (ISMS).
-It’s applicable across industries and especially valued by organizations,
-looking to demonstrate a proactive approach to data protection.
-
-## NIST - National Institute of Standards and Technology
-
-The NIST Cybersecurity Framework (CSF) provides guidelines, best practices,
-and standards to help organizations effectively manage cybersecurity risks.
-Though originally designed for critical infrastructure,
-it has since been adopted widely across public and private sectors.
-Unlike other frameworks, NIST is flexible and voluntary, making it useful for tailoring
-to fit an organization's size and risk profile.
 
 ### Key Differences to Remember
 
@@ -160,7 +88,7 @@ organized into six functions: Govern, Identify, Protect, Detect, Respond, and Re
 
 ISO 27001 is more rigid.
 It requires a formal Information Security Management System (ISMS),
- and extensive documentation of processes.
+and extensive documentation of processes.
 
 Which one should you choose?
 Choose ISO 27001 if you are doing business internationally
