@@ -1,6 +1,10 @@
 
 # Key Cyber Security Standards and Frameworks
 
+ISO and NIST devote considerable time and effort to developing best practices.
+Their standards represent the collective effort of many industries,
+thought leaders, and practicing experts.
+
 NIST: The "Global Library" of ideas (mostly used by big US firms).
 
 ISO: The "Gold Standard" for UK/EU businesses.
@@ -117,6 +121,8 @@ D. CSA CCM
 
 Correct Answer: B. ISO 27001.
 Why? Because it mentions certification and ISMS, both of which are specific to ISO.
+
+
 
 ### Resources
 
