@@ -1,7 +1,5 @@
 # Risk Response
 
-Date: 15 January 2025 Tags: Definition
-
 Acceptance – The organization accepts the risk in its current form. It
 acknowledges the potential consequences of the risk and is prepared to deal with
 them if they occur. A senior person within the organization, referred to as a

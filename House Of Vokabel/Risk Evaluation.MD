@@ -1,7 +1,5 @@
 # Risk Evaluation
 
-Status: Done
-
 In cybersecurity, likelihood is hard to measure directly because of the constant
 evolution of technology and the involvement of outside attackers. Generally, the
 likelihood of an organization experiencing an attack depends partly on three

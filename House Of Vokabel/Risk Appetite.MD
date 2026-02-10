@@ -1,7 +1,5 @@
 # Risk Appetite
 
-Date: 15 January 2025 Tags: Definition, Idea
-
 A **risk appetite** is the level of risk that an organization is willing to
 accept.
 

@@ -1,7 +1,5 @@
 # Risk Protection
 
-Date: 20 January 2025 Tags: Definition, Note
-
 Robust Patching
 
 Have a robust framework and plan to look for anomalous events.
