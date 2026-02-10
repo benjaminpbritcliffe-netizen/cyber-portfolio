@@ -533,9 +533,20 @@ Defines the protocols and rules users/applications interact with.
 
 The Device: Computers, Smartphones, and Servers.
 
-This is the last and topmost layer of the OSI model. This layer provides an interface between the local system and the application program running on the network. If an application wants to use the resources available on the remote system, it interacts with this layer. Then, this layer provides the protocols and services that the application needs to access those resources.
+This is the last and topmost layer of the OSI model.
+This layer provides an interface between:
+the local system and the application program running on the network.
 
-There are two types of application programs: Network-aware and Network-unaware. An application program is considered a Network-aware application if it can make any type of network request. If an application program cannot make any type of network request, it is considered a Network-unaware program.
+If an application wants to use the resources available on the remote system,
+it interacts with this layer.
+Then, this layer provides the protocols and services,
+that the application needs to access those resources.
+
+There are two types of application programs: Network-aware and Network-unaware.
+An application program is considered a Network-aware application,
+if it can make any type of network request.
+If an application program cannot make any type of network request,
+it is considered a Network-unaware program.
 
 ### TCP VS UDP
 

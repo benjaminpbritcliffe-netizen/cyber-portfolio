@@ -32,7 +32,8 @@ Is Completed: No
 ### ⚙️ 2. **Hard Disk Drives (HDDs)**
 
 - Introduced **random access**.
-- Faster than tapes, but mechanical parts (platters, arms) make them **prone to wear**.
+- Faster than tapes,
+but mechanical parts (platters, arms) make them **prone to wear**.
 - Still good for large, low-cost storage.
 
 ### ⚡ 3. **Solid State Drives (SSDs)**
@@ -204,7 +205,8 @@ meaning no moving parts, faster speeds, and less power usage.
 - RAID provides **tailored solutions** for redundancy, speed,
   or both—choose based on workload and failure tolerance.
 - For modern high-performance systems, combining **SSDs with RAID 10**
-  offers both reliability and throughput—with proper management of SSD-specific constraints
+offers both reliability and throughput—with,
+proper management of SSD-specific constraints
 
 ## 🔹 Section 6.4 — **Optical Memory (CDs, DVDs, Blu-ray)**
 
@@ -267,7 +269,8 @@ meaning no moving parts, faster speeds, and less power usage.
 
 ### ⚙️ **TechXplore: Wafer-Scale Accelerators**
 
-- AI workloads are driving the adoption of **wafer-scale chips** (like Cerebras WSE-3).
+- AI workloads are driving the adoption of **wafer-scale chips**
+(like Cerebras WSE-3).
 - These require **massive, fast-access memory bandwidth**—highlighting limits
   of traditional storage when used for AI training.
 - Suggests a **clear divide between “hot” and “cold” data**: fast RAM/SSD for real-time,

@@ -7,11 +7,11 @@
 | 67 / 68                                                                           | UDP      | DHCP       | Look for "Rogue DHCP" servers trying to assign malicious gateways.      |
 | 123                                                                               | UDP      | NTP        | Often used in NTP Amplification DDoS attacks.                           |
 | 161 / 162                                                                         | UDP      | SNMP       | Used for monitoring; attackers use it to map out your network hardware. |
-| 22	                                                                              | TCP	     |  SSH	      | Encrypted remote login. Watch for brute-force login failures.           |
-| 23	                                                                              | TCP	     | Telnet	    | Critical Risk. Unencrypted. Seeing this is an immediate "Red Flag."     |
-| 80	                                                                              | TCP	     | HTTP	      | Cleartext web. Only acceptable for redirects to 443.                    |
-| 443	                                                                              | TCP	     | HTTPS	    | Most traffic lives here. Use SSL inspection to find hidden malware.     |
-| 3389	                                                                            | TCP	     |RDP	        | The #1 target for Ransomware. Should never be open to the internet.     |
+| 22                                                                               | TCP      |  SSH       | Encrypted remote login. Watch for brute-force login failures.           |
+| 23                                                                               | TCP      | Telnet     | Critical Risk. Unencrypted. Seeing this is an immediate "Red Flag."     |
+| 80                                                                               | TCP      | HTTP       | Cleartext web. Only acceptable for redirects to 443.                    |
+| 443                                                                               | TCP      | HTTPS     | Most traffic lives here. Use SSL inspection to find hidden malware.     |
+| 3389                                                                             | TCP      |RDP         | The #1 target for Ransomware. Should never be open to the internet.     |
 | 135                                                                               | TCP      | RPC        | Used by Windows for remote management; often used in internal pivots.   |
 | 137-139                                                                           | UDP/TCP  | NetBIOS    | Legacy Windows naming. Vulnerable to "Name Service Spoofing."           |
 | 445                                                                               | TCP      | SMB        | Used for file shares. Essential for spotting WannaCry or NotPetya.      |

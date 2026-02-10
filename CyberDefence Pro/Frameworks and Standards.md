@@ -122,8 +122,6 @@ D. CSA CCM
 Correct Answer: B. ISO 27001.
 Why? Because it mentions certification and ISMS, both of which are specific to ISO.
 
-
-
 ### Resources
 
 [Invensis]<https://www.invensis.net/blog/key-cybersecurity-standards>

@@ -29,18 +29,33 @@ Basic security practices
 
 ## Learning Outcomes
 
-Threats and vulnerabilities: use proactive threat intelligence to manage organizational security and vulnerability activities.
+Threats and vulnerabilities:
 
-Jump right into vulnerability management so that you can gain an understanding of regulations, control types and frameworks.
+use proactive threat intelligence,
+to manage organizational security and vulnerability activities.
 
-Software and systems: employ security solutions to manage infrastructure and understand software and hardware assurance best practices.
+Vulnerability ,
+so that you can gain an understanding of regulations, control types and frameworks.
 
-We'll cover different types of intelligence sources as well as researching and finding possible threats.
+Software and systems:
+employ security solutions to manage infrastructure
+and understand software and hardware assurance best practices.
 
-Compliance and assessment: apply security concepts for risk mitigation and learn the importance of frameworks, policies, procedures, and controls.
+We'll cover different types of intelligence sources,
+as well as researching and finding possible threats.
 
-Security operations and monitoring: analyze security monitoring data and apply configuration changes to existing controls as a way to improve security.
+Compliance and assessment:
+apply security concepts for risk mitigation and learn the importance of frameworks,
+policies, procedures, and controls.
 
-The next portion will be about systems and network architecture and different operating systems, trust models and virtualization.
+Security operations and monitoring:
+analyze security monitoring data
+and apply configuration changes to existing controls as a way to improve security.
 
-Incident response: use the appropriate procedures, check potential indicators of compromise, and apply basic digital forensics techniques.
+systems and network architecture and different operating systems,
+trust models and virtualization.
+
+Incident response:
+use the appropriate procedures,
+check potential indicators of compromise,
+and apply basic digital forensics techniques.

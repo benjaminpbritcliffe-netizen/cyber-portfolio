@@ -19,4 +19,4 @@ The attack surface of a software environment is the sum of the different points
 
 ### References
 
-[Attack Surfce](https://en.wikipedia.org/wiki/Attack_surface)
+[Attack Surface](https://en.wikipedia.org/wiki/Attack_surface)

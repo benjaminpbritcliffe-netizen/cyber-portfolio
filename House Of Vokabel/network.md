@@ -752,7 +752,8 @@ RFC 1918 defines the following three ranges of private IP addresses:
 
 ## Encapsulation
 
-Encapsulation refers to the process of every layer adding a header (sometimes a trailer)
+Encapsulation refers to the process of every layer adding a header
+(sometimes a trailer)
 to the received unit of data and sending the “encapsulated” unit.
 
 Application data: It all starts when the user inputs the data they want to send,
@@ -862,7 +863,8 @@ it can determine the best routes to reach any destination.
 
 EIGRP (Enhanced Interior Gateway Routing Protocol):
 
-A Cisco proprietary routing protocol that combines aspects of different routing algorithms.
+A Cisco proprietary routing protocol,
+that combines aspects of different routing algorithms.
 
 It allows routers to share information about the networks they can reach,
  and the cost (like bandwidth or delay) associated with those routes.

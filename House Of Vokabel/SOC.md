@@ -1,7 +1,8 @@
 
 # SOC
 
-A SOC (Security Operations Center) is a dedicated facility operated by a specialized security team
+A SOC (Security Operations Center)
+is a dedicated facility operated by a specialized security team
 
 ## People
 
@@ -43,18 +44,29 @@ increase or decrease depending on the size and criticality of the organizations
 
 The Alert triage is all about answering the 5 Ws. What are these 5 Ws?
 
-
-5 Ws	Answers
-What?	A malicious file was detected on one of the hosts inside the organization’s network.
-When?	The file was detected at 13:20 on June 5, 2024.
-Where?	The file was detected in the directory of the host: "GEORGE PC".
-Who?	The file was detected for the user George.
-Why?	After the investigation, it was found that the file was downloaded from a pirated software-selling website. The investigation with the user revealed that they downloaded the file as they wanted to use a software for free.
+| 5 w's  | Answers                                                                                                                                                                                                                         |
+|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| What?  | A malicious file was detected on one of the hosts inside the organization’s network.                                                                                                                                            |
+| When?  | The file was detected at 13:20 on June 5, 2024.                                                                                                                                                                                 |
+| Where? | The file was detected in the directory of the host: "GEORGE PC".                                                                                                                                                                |
+| Who?   | The file was detected for the user George.                                                                                                                                                                                      |
+| Why?   | After the investigation, it was found that the file was downloaded from a pirated software-selling website. The investigation with the   user revealed that they downloaded the file as they wanted to use a software for free. |
 
 ## Tehcnology
 
-SIEM: Security Information and Event Management (SIEM) is a popular tool used in almost every SOC environment. This tool collects logs from various network devices, referred to as log sources. The SIEM solution only provides the Detection capabilities in a SOC environment.
+SIEM: Security Information and Event Management (SIEM)
+is a popular tool used in almost every SOC environment.
+This tool collects logs from various network devices, referred to as log sources.
+The SIEM solution only provides the Detection capabilities in a SOC environment.
 
-EDR: Endpoint Detection and Response (EDR) provides the SOC team with detailed real-time and historical visibility of the devices’ activities. It operates on the endpoint level and can carry out automated responses. EDR has extensive detection capabilities for endpoints, allowing you to investigate them in detail and respond with a few clicks.
+EDR: Endpoint Detection and Response (EDR)
+provides the SOC team with:
 
-Firewall: A firewall functions purely for network security and acts as a barrier between your internal and external networks (such as the Internet). It monitors incoming and outgoing network traffic and filters any unauthorized traffic.
+- detailed real-time and historical visibility of the devices’ activities.
+- It operates on the endpoint level and can carry out automated responses.
+- EDR has extensive detection capabilities for endpoints,
+- allowing you to investigate them in detail and respond with a few clicks.
+
+Firewall: A firewall functions purely for network security,
+and acts as a barrier between your internal and external networks (such as the Internet).
+It monitors incoming and outgoing network traffic and filters any unauthorized traffic.
