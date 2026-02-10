@@ -1,6 +1,5 @@
 # Managing Attack Surfaces
 
-
 ## Attack surface
 
 The attack surface of a software environment is the sum of the different points
