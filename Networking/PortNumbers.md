@@ -1,0 +1,27 @@
+
+# Common Port Numbers
+
+| Port                                                                              | Protocol | Service    | SOC Analyst Context                                                     |
+|-----------------------------------------------------------------------------------|----------|------------|-------------------------------------------------------------------------|
+| 53                                                                                | UDP/TCP  | DNS        | Watch for unusually long queries (potential DNS Tunneling).             |
+| 67 / 68                                                                           | UDP      | DHCP       | Look for "Rogue DHCP" servers trying to assign malicious gateways.      |
+| 123                                                                               | UDP      | NTP        | Often used in NTP Amplification DDoS attacks.                           |
+| 161 / 162                                                                         | UDP      | SNMP       | Used for monitoring; attackers use it to map out your network hardware. |
+| 22                                                                               | TCP      |  SSH       | Encrypted remote login. Watch for brute-force login failures.           |
+| 23                                                                               | TCP      | Telnet     | Critical Risk. Unencrypted. Seeing this is an immediate "Red Flag."     |
+| 80                                                                               | TCP      | HTTP       | Cleartext web. Only acceptable for redirects to 443.                    |
+| 443                                                                               | TCP      | HTTPS     | Most traffic lives here. Use SSL inspection to find hidden malware.     |
+| 3389                                                                             | TCP      |RDP         | The #1 target for Ransomware. Should never be open to the internet.     |
+| 135                                                                               | TCP      | RPC        | Used by Windows for remote management; often used in internal pivots.   |
+| 137-139                                                                           | UDP/TCP  | NetBIOS    | Legacy Windows naming. Vulnerable to "Name Service Spoofing."           |
+| 445                                                                               | TCP      | SMB        | Used for file shares. Essential for spotting WannaCry or NotPetya.      |
+| 389 / 636                                                                         | TCP      | LDAP/S     | Queries to Active Directory. Watch for "LDAP Recon" from a new user.    |
+| 1433                                                                              | TCP      | MSSQL      | Microsoft SQL Server. Look for SQL Injection attempts.                  |
+| 3306                                                                              | TCP      | MySQL      | Standard database port. External access is a major security failure.    |
+| 5432                                                                              | TCP      | Postgres   | Common in modern cloud apps.                                            |
+| 9200 / 9300                                                                       | TCP      | Elastic    | If exposed, attackers can wipe or steal the entire company data.        |
+| 6443                                                                              | TCP      | K8s API    | Kubernetes API. Seeing this suggests a cloud-native environment.        |
+| 25                                                                                | TCP      | SMTP       | Outgoing mail. Watch for internal bots sending massive amounts of spam. |
+| 587                                                                               | TCP      | SMTP (SSL) | Secure mail submission.                                                 |
+| 143 / 993                                                                         | TCP      | IMAP/S     | Modern email syncing. 993 is the secure version.                        |
+| 110 / 995                                                                         | TCP      | POP3/S     | Downloading mail. 995 is the secure version.                            |
