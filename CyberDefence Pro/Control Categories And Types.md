@@ -65,26 +65,36 @@ Restore normality after the occurence of undesirable events.
 - IPS intercepts data
 - User Endpoint Protection
 
-### Detterents
+### Deterrents (Psychological)
 
-- Security Policies
-- Access Controlled Offices
-- Entry Point Access Restriction
-- Biometric Sensors
-- Man Traps
-- Security Cameras
-- Security Guards
-- Security Training
-- Signage
+These discourage an attack before it starts,
+by making the "cost" of getting caught too high.
 
-## Physical Detterents
+Signage: "Warning: Restricted Area" or "CCTV in Use."
 
-- Stops unauthorised access
-- Locked Doors
-- Procimity Cards
-- Fences, Cameras, Guards
-- Motion Detections
-- Device Management to wipe or revoke access.
+Security Training: Teaching employees that tailgating is a fireable offense.
+
+Security Policies: The written rules that define consequences.
+
+Visible Security Cameras: If a thief sees a camera, they might walk away.
+
+Security Guards: Their presence alone scares off casual intruders.
+
+### Preventive (Physical/Technical)
+
+These actually stop or "block" the unauthorized access from happening.
+
+Locked Doors: A physical barrier to entry.
+
+Biometric Sensors / Proximity Cards:
+
+They prevent the door from unlocking for unauthorized users.
+
+Man Traps: Physically traps an intruder between two doors.
+
+Fences: A physical perimeter barrier.
+
+Access Controlled Offices: The technical system that keeps the door shut.
 
 ### Compensating
 
