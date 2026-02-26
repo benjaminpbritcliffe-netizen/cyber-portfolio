@@ -76,3 +76,16 @@ and assessed by security teams before deployment into the production environment
 Additionally,
 vulnerability scans should verify that patches only resolve vulnerabilities,
 and do not introduce any new ones!
+
+
+## Patch Management Lifecycle
+
+Testing (Sandbox)
+
+Verification (Technical Check)
+
+Implementation (Production Rollout)
+
+Validation (Functional Check)
+
+Rollback (Triggered only if Step 4 fails)
