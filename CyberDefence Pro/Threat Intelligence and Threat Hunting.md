@@ -54,3 +54,49 @@ A script kiddie is a hacker lacking the technical skills to create their own pro
 or exploit vulnerabilities. Instead,
 they rely on pre-existing tools and scripts to launch attacks,
 often seeking to cause damage or disruption for personal gain or notoriety.
+
+## Threat Intelligence Sources
+
+Open-source intelligence sources
+- Widely available to the public
+
+Closed-source intelligence sources
+- Closed for confidentiality or for security purposes
+
+Indicator management
+- Key indicators such as a number for how risky it is to a business.
+- High Numbers are more a risk, low numbers could be annoying threats but not malicious.
+
+Intelligence considerations
+Timeliness	- The speed at which threat data is collected and disseminated
+to ensure it is up-to-date and relevant.
+
+Relevancy	- The usefulness of the data in the context of a specific threat
+and the actionable insights and meaningful context it provides.
+Accuracy	- The reliability and correctness of the threat data. For example,
+ensuring it is free from errors, bias, or false information.
+
+
+## Threat Intelligence Sharing
+
+ Cyber threat intelligence sharing focuses on finding indicators of compromise, tracking threat actor groups, documenting findings, discussing strategies, and distributing this knowledge.
+
+Cyber threat intelligence sharing focuses on finding indicators of compromise, tracking threat actor groups, documenting findings, discussing strategies, and distributing this knowledge.
+
+An effective threat information platform enables the analysis and distribution of IOCs, tactics, techniques, and procedures (TTPs), threat actors, courses of action, incidents, and other similar types of information.
+
+These details are shared in real-time using machine-readable formats such as the Trusted Automated eXchange of Indicator Information (TAXII) message exchange and Structured Threat Information eXpression (STIX) formats.
+
+More information about the MISP Threat Sharing platform can be obtained from https://www.misp-project.org/ .
+
+
+## CERT
+
+
+## CSIRT
+
+## ISACs
+
+ For each critical industry, Information Sharing and Analysis Centers (ISACs) have been set up. Where a generic open-source or commercial threat intelligence provider might use corporate or academic networks to gather data, ISACs produce data from their members' systems. Hence, the data is highly industry-specific and relevant.
+
+ The DHS identifies 16 critical infrastructure sectors ( cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors ), such as communications, energy, water, nuclear reactors and waste, emergency services, etc. Each sector is supported by its own ISAC. One of the primary areas of focus for cybersecurity in industries that support critical infrastructure is embedded systems and industrial control systems.
