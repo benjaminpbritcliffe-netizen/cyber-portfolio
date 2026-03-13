@@ -1,13 +1,12 @@
-# Fern Wifi Cracker
+# Fern WiFi Cracker
 
-**Category:** Wireless Attacks
+> **Category:** Wireless Attacks
 
-## Description
+## 🛠️ Overview
+Details about Fern WiFi Cracker go here.
 
-/_(Add description here)_
-
-## Usage
-
+## 🚀 Usage
 ```bash
 # Example command
+fern wifi cracker --help
 ```
