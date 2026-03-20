@@ -6,7 +6,6 @@ Right Click > CA > Properties > Policy Module > Set the certificate request to p
 
 Stop and Start Service
 
-
 Right Click > All Tasks > Issue or Deny.
 
 Right Click > All Tasks > Revoke.
