@@ -63,14 +63,24 @@ Operating System
 
 Platform as a service
 
-Platform-as-a-service (PaaS) is another step further from full, on-premise infrastructure management. It is where a provider hosts the hardware and software on its own infrastructure and delivers this platform to the user as an integrated solution, solution stack, or service through an internet connection.
+Platform-as-a-service (PaaS) is another step further from full,
+on-premise infrastructure management.
+It is where a provider hosts the hardware and software on its own infrastructure
+and delivers this platform to the user as an integrated solution, solution stack,
+or service through an internet connection.
 
-Primarily useful for developers and programmers, PaaS allows the user to develop, run, and manage their own apps without having to build and maintain the infrastructure or platform usually associated with the process.
+Primarily useful for developers and programmers, PaaS allows the user to develop,run,
+and manage their own apps without having to build and maintain the infrastructure
+or platform usually associated with the process.
 
-You write the code, build, and manage your apps, but you do it without the headaches of software updates or hardware maintenance. The environment to build and deploy is provided for you.
+You write the code, build, and manage your apps,
+but you do it without the headaches of software updates or hardware maintenance.
+The environment to build and deploy is provided for you.
 
-PaaS is a way that developers can create a framework to build and customize their web-based applications on. Developers can use built-in software components to create their applications, which cuts down on the amount of code they have to write themselves.
-
+PaaS is a way that developers can create a framework
+to build and customize their web-based applications on.
+Developers can use built-in software components to create their applications,
+ which cuts down on the amount of code they have to write themselves.
 
 PAAS the service provider manages:
 
