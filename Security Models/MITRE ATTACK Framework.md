@@ -22,4 +22,3 @@ The matrix is organized into columns representing different attack tactics
  and others.
  Within each column,
  specific techniques associated with each tactic are vertically listed.
-
