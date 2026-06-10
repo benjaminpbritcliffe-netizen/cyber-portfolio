@@ -1,5 +1,7 @@
 # SOA
 
+## Service Oriented Architecture
+
 SOA comprises multiple modules
 
 Enterprise Service Bus
@@ -56,7 +58,10 @@ The site contacts its external OpenID provider in order to verify that the login
 
 ## SOAP
 
-SOAP is an XML-based messaging protocol used for exchanging data over the internet between applications that run on different platforms and are written in different programming languages.
+SOAP is an XML-based messaging protocol used for exchanging data over the internet
+between applications that run on different platforms
+and are written in different programming languages.
+
 It is built to be extensible, protocol neutral, and independent of any programming model.
 
 SOAP can be used for:
@@ -73,7 +78,6 @@ A set of encoding rules
 A convention for representing calls/responses
 
 ## REST
-
 
 ## SSO Example
 
@@ -106,5 +110,6 @@ MFA provides an extra layer of security to an account.
 It is especially useful when using a single sign-on account to make sure it has not been compromised.
 For example, a password can be written down, guessed, or shared, or a smart card could be lost or stolen.
 When using MFA, abusing authentication becomes far more complex.
-When the requirement for a password is combined with a token-generated PIN or to be combined with a fingerprint scan, abusing authentication becomes many, many factors more complicated.
+When the requirement for a password is combined with a token-generated PIN or to be combined with a fingerprint scan,
+abusing authentication becomes many, many factors more complicated.
 With MFA in place, a username and password can be breached but are unusable without the additional factor.
