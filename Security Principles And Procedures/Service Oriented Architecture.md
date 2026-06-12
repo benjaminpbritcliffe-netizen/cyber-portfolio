@@ -77,8 +77,6 @@ An envelope that defines the structure
 A set of encoding rules
 A convention for representing calls/responses
 
-## REST
-
 ## SSO Example
 
 Sign In with Single Sign-on
