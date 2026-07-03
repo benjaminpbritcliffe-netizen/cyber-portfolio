@@ -8,6 +8,7 @@ There are several reconnaissance tools that you can use to gather information.
 The following table identifies several internet research tools:
 
 Description
+
 Google Earth:
 A satellite imagery tool that provides current and historical images of most locations.
 Images can date back several decades.
@@ -48,3 +49,5 @@ quickly revealing an organization's external footprint to an attacker,
 such as IP addresses, subdomains, software versions, and many other attributes.
 Analysts can also use it to review and monitor an organization's footprint
 to ensure it complies with policy and other security mandates.
+
+Shodan.io
