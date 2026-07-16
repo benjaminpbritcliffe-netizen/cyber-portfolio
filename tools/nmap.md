@@ -66,3 +66,7 @@ You can also specify the verbosity level directly, for example, -v2 and -v4.
 You can even increase the verbosity level by pressing “v” after the scan started.
 If all this verbosity does not satisfy your needs,
 you must consider the -d for debugging-level output.
+
+## Zenmap
+
+Zenmap is a GUI version of nmap. - More user friendly.
