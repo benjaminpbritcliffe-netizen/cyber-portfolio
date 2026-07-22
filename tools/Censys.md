@@ -5,7 +5,8 @@ At first glance, **Censys** looks similar to Shodan.
 ## Key Difference
 
 - **Shodan** → Focuses on devices and systems (servers, routers, webcams, IoT).
-- **Censys** → Focuses on Internet-connected hosts, websites, certificates, and assets.
+- **Censys** → Focuses on Internet-connected hosts, websites, certificates,
+and assets.
 
 ## Use Cases
 

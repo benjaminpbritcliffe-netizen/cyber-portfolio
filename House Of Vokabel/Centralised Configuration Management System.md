@@ -1,4 +1,4 @@
-## CCMS
+# CCMS
 
 Centralized operating system, application, and device management
 is a process that allows for the management of
@@ -26,7 +26,7 @@ and then push the settings to endpoints in an automated way.
 
 Examples of configuration management tools include the following:
 
-Chef - https://www.chef.io/
-Puppet - https://puppet.com/
-Ansible - https://www.ansible.com/
-Terraform - https://www.terraform.io/
+Chef - <https://www.chef.io/>
+Puppet - <https://puppet.com/>
+Ansible - <https://www.ansible.com/>
+Terraform - <https://www.terraform.io/>

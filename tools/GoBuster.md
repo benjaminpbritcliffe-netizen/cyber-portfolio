@@ -1,6 +1,5 @@
 # GoBuster
 
-
 ``` bash
 
 root@ip-10-82-121-118:~# gobuster dir -u "http://www.offensivetools.thm/secret" -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .js

@@ -53,14 +53,17 @@ to ensure it complies with policy and other security mandates.
 Shodan.io
 
 ## Enumeration
+
 List items individually
 Extract system information
 Helps plan attack
 
 ## Active
+
 Leaves digital footprints
 
 ## Passive
+
 Can't be traced back to the actor.
 Doesn't alert the victim
 Beginning stage.

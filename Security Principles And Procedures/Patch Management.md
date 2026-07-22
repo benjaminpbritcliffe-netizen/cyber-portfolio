@@ -77,7 +77,6 @@ Additionally,
 vulnerability scans should verify that patches only resolve vulnerabilities,
 and do not introduce any new ones!
 
-
 ## Patch Management Lifecycle
 
 Testing (Sandbox)

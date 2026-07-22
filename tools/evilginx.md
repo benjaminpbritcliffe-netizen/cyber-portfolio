@@ -15,7 +15,6 @@ Present version is fully written in GO as a standalone application,
 which implements its own HTTP and DNS server,
 making it extremely easy to set up and use.
 
-
 You receive a convincing phishing email with a link —
 often impersonating a Microsoft notification, a shared document,
 or a voicemail alert
@@ -36,6 +35,7 @@ The attacker imports your session cookie into their browser —
 they now have full Outlook access with no further MFA challenge
 
 ## 🚀 Usage
+
 ```bash
 # Example command
 evilginx --help

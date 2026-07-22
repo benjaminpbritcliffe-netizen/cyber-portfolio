@@ -28,4 +28,3 @@ Active Directory User Object > Certificates
 ---
 
 Revoked Certificates list > All Tasks > Publish > Uploads list to new CRL.
-

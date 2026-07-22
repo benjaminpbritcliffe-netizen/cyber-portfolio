@@ -6,7 +6,8 @@ Status: Done
 
 ## Service Oriented Architecture
 
-SOA comprises multiple modules that communicate over a network to provide application functionality.
+SOA comprises multiple modules that communicate over a network
+to provide application functionality.
 It is mostly used in enterprise applications.
 
 **Enterprise Service Bus** — the backbone that connects services in an SOA.

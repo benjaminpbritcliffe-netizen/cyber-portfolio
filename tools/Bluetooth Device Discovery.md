@@ -13,4 +13,3 @@ sdptool browse <mac address>
 hcitool inq
 
 ```
-

@@ -15,18 +15,24 @@ TeamSpeak (TS2), Telnet, VMware-Auth, VNC and XMPP.”
 
 WEBFORM -
 
+``` bash
 sudo hydra <username> <wordlist> <IP_ADDRESS> http-post-form
 "<path>:<login_credentials>:<invalid_response>"
+```
 
+```plaintext
 Option Description -l the username for (web form) login -P the password list to
 use http-post-form the type of the form is POST <path> the login page URL, for
 example, login.php <login_credentials> the username and password used to log in,
 for example, username=^USER^&password=^PASS^ <invalid_response> part of the
 response when the login fails -V verbose output for every attempt
+```
 
 SSH -
 
+``` bash
 hydra -l <username> -P <full path to pass> <IP_ADDRESS> -t 4 ssh
+```
 
 Option Description -l specifies the (SSH) username for login -P indicates a list
 of passwords -t sets the number of threads to spawn

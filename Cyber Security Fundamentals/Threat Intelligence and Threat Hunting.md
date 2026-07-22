@@ -100,21 +100,25 @@ message exchange and Structured Threat Information eXpression (STIX) formats.
 More information about the MISP Threat Sharing platform can be obtained from
 [MISP Project]<https://www.misp-project.org/> .
 
-
 ## Threat Hunting
 
 Misconfiguration Hunting
 
-Identifies technical oversights in IT systems, such as weak passwords, unpatched software, or open ports that could serve as entry points for attackers.
+Identifies technical oversights in IT systems, such as weak passwords,
+unpatched software, or open ports that could serve as entry points for attackers.
 
 Isolated Network Hunting
 
 Focuses on "secure" or air-gapped networks.
-It searches for vulnerabilities in physical access points or connected bridge systems that bypass traditional internet-based security.
+It searches for vulnerabilities in physical access points
+or connected bridge systems that bypass traditional internet-based security.
 
 Business-Critical Asset Hunting
 
-Protects high-value targets like databases and servers. It monitors for unusual traffic, unauthorized access, or suspicious activity within sensitive processes like money transfers or permission changes.
+Protects high-value targets like databases and servers.
+It monitors for unusual traffic, unauthorized access,
+or suspicious activity within sensitive processes
+like money transfers or permission changes.
 
 ## CERT
 

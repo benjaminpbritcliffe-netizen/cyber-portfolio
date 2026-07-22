@@ -7,9 +7,11 @@ Status: Done
 ## Simple Object Access Protocol
 
 SOAP is an XML-based messaging protocol used for exchanging data over the internet
-between applications that run on different platforms and are written in different programming languages.
+between applications that run on different platforms
+and are written in different programming languages.
 
-It is built to be extensible, protocol neutral, and independent of any programming model.
+It is built to be extensible, protocol neutral,
+and independent of any programming model.
 
 ## SOAP can be used for
 

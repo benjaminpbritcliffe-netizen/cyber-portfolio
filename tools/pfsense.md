@@ -1,12 +1,15 @@
 # pfSense Firewall — Installation & Full Walkthrough
 
-A complete guide to deploying pfSense in VMware as a test/lab environment, covering installation through full configuration.
+A complete guide to deploying pfSense in VMware as a test/lab environment,
+covering installation through full configuration.
 
 ---
 
 ## Overview
 
-pfSense is an open-source firewall/router distribution based on FreeBSD. In a lab environment it acts as the network gateway between segments, giving you full control over traffic, firewall rules, VLANs, VPN, and IDS/IPS.
+pfSense is an open-source firewall/router distribution based on FreeBSD. In a
+lab environment it acts as the network gateway between segments, giving you
+full control over traffic, firewall rules, VLANs, VPN, and IDS/IPS.
 
 **Lab topology used in this guide:**
 
@@ -58,14 +61,17 @@ Internet (NAT)
 This is the critical step — pfSense needs two NICs.
 
 **Adapter 1 (WAN):**
+
 - Network connection: **NAT**
 - This gives pfSense outbound internet access via your host machine
 
 **Adapter 2 (LAN):**
+
 - Network connection: **Host-only** (or a custom VMnet, e.g. VMnet2)
 - This is the internal lab network your other VMs will connect to
 
-> To add the second adapter: after the wizard finishes, go to **VM → Settings → Add → Network Adapter** and set it to Host-only.
+> To add the second adapter: after the wizard finishes, go to **VM →
+> Settings → Add → Network Adapter** and set it to Host-only.
 
 ### 1.3 Disk & Finish
 
@@ -79,7 +85,8 @@ This is the critical step — pfSense needs two NICs.
 
 ### 2.1 Boot from ISO
 
-Power on the VM. The pfSense installer boots automatically. At the copyright/distribution screen press **Enter** to accept.
+Power on the VM. The pfSense installer boots automatically. At the
+copyright/distribution screen press **Enter** to accept.
 
 ### 2.2 Installation Steps
 
@@ -97,13 +104,15 @@ The installer copies files. When complete:
 - Select **No** at the shell prompt (unless you need manual config)
 - Select **Reboot**
 
-**Before it reboots:** go to **VM → Settings → CD/DVD** and disconnect the ISO so it doesn't boot back into the installer.
+**Before it reboots:** go to **VM → Settings → CD/DVD** and disconnect the
+ISO so it doesn't boot back into the installer.
 
 ---
 
 ## Part 3 — Initial Console Configuration
 
-On first boot you land at the pfSense console menu. The system will ask to assign interfaces.
+On first boot you land at the pfSense console menu. The system will ask to
+assign interfaces.
 
 ### 3.1 Interface Assignment
 
@@ -184,13 +193,15 @@ Diagnostics → Ping       — connectivity testing from pfSense itself
 ### 6.1 How pfSense Rules Work
 
 - Rules are evaluated **top to bottom**, first match wins
-- Rules are applied on the **ingress** interface (traffic coming *in* to pfSense from that interface)
+- Rules are applied on the **ingress** interface (traffic coming *in* to
+  pfSense from that interface)
 - The **LAN** tab covers traffic from your lab VMs heading outward
 - The **WAN** tab covers traffic arriving from the internet
 
 ### 6.2 Default Rules
 
 Out of the box:
+
 - LAN → **Allow All** (any traffic from LAN is permitted)
 - WAN → **Block All** (no unsolicited inbound traffic)
 
@@ -198,7 +209,7 @@ This is fine for a basic lab. For a segmented lab you'll tighten the LAN rules.
 
 ### 6.3 Creating a Rule (Example: Block a VM from the internet)
 
-**Firewall → Rules → LAN → Add (↑ top)**
+#### Firewall → Rules → LAN → Add (↑ top)
 
 | Field          | Value                                             |
 |----------------|---------------------------------------------------|
@@ -216,7 +227,7 @@ Click **Save** → **Apply Changes**.
 
 Keep rules readable by using aliases.
 
-**Firewall → Aliases → Add**
+#### Firewall → Aliases → Add
 
 | Field   | Value            |
 |---------|------------------|
@@ -232,7 +243,7 @@ Reference `Lab_VMs` in rules instead of raw CIDRs.
 
 To give a lab VM a fixed IP:
 
-**Services → DHCP Server → LAN → DHCP Static Mappings → Add**
+### Services → DHCP Server → LAN → DHCP Static Mappings → Add
 
 | Field       | Value                                                                |
 |-------------|----------------------------------------------------------------------|
@@ -247,13 +258,14 @@ To give a lab VM a fixed IP:
 pfSense's built-in Unbound DNS resolver handles name resolution for your lab.
 
 **Services → DNS Resolver:**
+
 - Enable: checked
 - DNSSEC: enabled (recommended)
 - DNS Query Forwarding: optional (forwards to upstream DNS like 1.1.1.1)
 
 **Add a local override** (e.g. to resolve `pfsense.lab.local`):
 
-**Services → DNS Resolver → Host Overrides → Add**
+### Services → DNS Resolver → Host Overrides → Add
 
 | Field  | Value         |
 |--------|---------------|
@@ -304,10 +316,13 @@ Install via **System → Package Manager → Available Packages**.
 ## Part 11 — Security Hardening Checklist
 
 - [ ] Change default admin password
-- [ ] Disable HTTP access (use HTTPS only) — **System → Advanced → Admin Access → HTTPS**
+- [ ] Disable HTTP access (use HTTPS only) — **System → Advanced → Admin
+      Access → HTTPS**
 - [ ] Change WebGUI port from 443 if WAN-exposed — `System → Advanced → TCP port`
-- [ ] Restrict WebGUI to LAN only (default, verify WAN firewall rule blocks port 443 inbound)
-- [ ] Enable **Bogon Networks** blocking on WAN — **Interfaces → WAN → Block bogon networks**
+- [ ] Restrict WebGUI to LAN only (default, verify WAN firewall rule blocks
+      port 443 inbound)
+- [ ] Enable **Bogon Networks** blocking on WAN — **Interfaces → WAN → Block
+      bogon networks**
 - [ ] Enable **Scrub** (traffic normalisation) — on by default in modern pfSense
 - [ ] Disable unused services
 - [ ] Keep pfSense updated — **System → Update**

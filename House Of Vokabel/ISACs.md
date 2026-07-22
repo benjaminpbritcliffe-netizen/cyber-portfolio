@@ -11,7 +11,7 @@ Where a generic open-source or commercial threat intelligence provider might use
 Hence, the data is highly industry-specific and relevant.
 
 The DHS identifies 16 critical infrastructure sectors
-[CISA]( cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors ),
+[CISA]( cisa.gov),
 
 such as:
 

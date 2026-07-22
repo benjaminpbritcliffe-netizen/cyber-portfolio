@@ -27,17 +27,33 @@ or other supposedly randomly generated data. If the algorithm used for
 generating these values lacks secure randomness, it can expose avenues for
 devastating attacks.
 
+## Burp Proxy
 
-# Burp Proxy
+The Burp Proxy is a fundamental and crucial tool within Burp Suite.
+It enables the capture of requests and responses between the user
+and the target web server.
+This intercepted traffic can be manipulated,
+sent to other tools for further processing,
+or explicitly allowed to continue to its destination.
 
-The Burp Proxy is a fundamental and crucial tool within Burp Suite. It enables the capture of requests and responses between the user and the target web server. This intercepted traffic can be manipulated, sent to other tools for further processing, or explicitly allowed to continue to its destination.
+Intercepting Requests: When requests are made through the Burp Proxy,
+they are intercepted and held back from reaching the target server.
+The requests appear in the Proxy tab, allowing for further actions such as forwarding,
+dropping, editing, or sending them to other Burp modules.
+To disable the intercept and allow requests to pass through the proxy without interruption,
+click the Intercept is on button.
 
-Intercepting Requests: When requests are made through the Burp Proxy, they are intercepted and held back from reaching the target server. The requests appear in the Proxy tab, allowing for further actions such as forwarding, dropping, editing, or sending them to other Burp modules. To disable the intercept and allow requests to pass through the proxy without interruption, click the Intercept is on button.
+Logs and History:
+The captured requests can be viewed in the HTTP history
+and WebSockets history sub-tabs, allowing for retrospective analysis
+and sending the requests to other Burp modules as needed.
 
-Logs and History: The captured requests can be viewed in the HTTP history and WebSockets history sub-tabs, allowing for retrospective analysis and sending the requests to other Burp modules as needed.
+Response Interception:
+By default, the proxy does not intercept server responses
+unless explicitly requested on a per-request basis.
+The "Intercept responses based on the following rules" checkbox,
+along with the defined rules, allows for a more flexible response interception.
 
-Response Interception: By default, the proxy does not intercept server responses unless explicitly requested on a per-request basis. The "Intercept responses based on the following rules" checkbox, along with the defined rules, allows for a more flexible response interception.
-
-To use the Burp Suite Proxy, we need to configure our local web browser to redirect traffic through Burp Suite. In this task, we will focus on configuring the proxy using the FoxyProxy extension in Firefox.
-
-
+To use the Burp Suite Proxy,
+we need to configure our local web browser to redirect traffic through Burp Suite.
+configuring the proxy using the FoxyProxy extension in Firefox.

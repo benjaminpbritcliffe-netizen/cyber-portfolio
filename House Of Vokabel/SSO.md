@@ -17,7 +17,8 @@ This simplifies the login experience and centralises credential management.
 2. The website checks to see if the logon is SSO.
 3. If so, the website sends the credentials to an authentication server.
 4. The authentication server verifies the credentials.
-5. If the credentials match the authentication server database, the user is granted access and authentication data is passed to the web pages.
+5. If the credentials match the authentication server database,
+the user is granted access and authentication data is passed to the web pages.
 6. If the credentials do not match, the user is denied access.
 
 ## Related
