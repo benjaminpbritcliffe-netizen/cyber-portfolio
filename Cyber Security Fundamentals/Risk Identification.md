@@ -11,6 +11,8 @@ and reputation are examples of intangible assets.
 
 ## CIA Triad
 
+[CIA](../House%20Of%20Vokabel/CIA%20Triad.MD)
+
 Type
 
 Description
