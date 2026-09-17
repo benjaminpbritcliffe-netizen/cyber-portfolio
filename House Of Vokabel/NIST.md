@@ -27,6 +27,7 @@ Protect
 - Security awareness training
 
 Detect
+
 - Making sure the controls are working
 - Staying ahead of the attacks
 - Ongoing persistent visibility

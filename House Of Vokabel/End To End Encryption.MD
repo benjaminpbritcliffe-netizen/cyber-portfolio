@@ -1,8 +1,6 @@
 # E2EE
 
-Part of Speech: Acronym Meaning/Definition: 🔒 End To End Encryption
-
-🔒 End To End Encryption
+End To End Encryption
 
 End-to-End Encryption (E2EE) primarily ensures confidentiality because it
 protects the data from being accessed or read by unauthorized parties during

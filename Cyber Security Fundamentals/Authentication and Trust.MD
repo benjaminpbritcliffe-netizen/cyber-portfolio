@@ -1,7 +1,5 @@
 # Authentication and Trust
 
-Created: 12 May 2025 18:11 Is Completed: Yes
-
 Authentication is essential for verifying tokens. We need to confirm that
 presented tokens are genuine (or at least genuine enough) and that they
 sufficiently prove the presenter's legitimacy. For tokens the system hasn't

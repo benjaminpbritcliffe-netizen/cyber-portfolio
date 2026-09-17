@@ -18,19 +18,6 @@ To use this pillar, an organisation must understand its systems and identify the
 data that needs to be protected. Here the focus is on identifying vulnerable
 data and systems and determining processes to help secure the company's network.
 
-## Technology
-
-'Technology' is another pillar of Cyber Security. It is the most common aspect
-of developing and maintaining the security of digital systems and
-infrastructures. Cyber Security professionals must use the latest technologies
-to design secure systems and processes to secure the network.
-
-However, security professionals should focus on more than just implementing the
-latest technologies. Instead, they should use their knowledge to identify the
-right technology to safeguard the network and digital infrastructures. Digital
-solutions must be designed and integrated to create a strong security position
-and avoid any security gaps.
-
 ## People
 
 The 'People' is one of the three core pillars of Cyber Security. It is related
@@ -44,3 +31,17 @@ must train their employees to help them learn ways to secure their data online.
 It has been observed that employees are the most critical weak link in a
 company’s Cyber Security. Most cyberattacks occur because an employee leaves a
 digital footprint that the attackers can exploit to execute the attack.
+
+## Technology
+
+'Technology' is another pillar of Cyber Security. It is the most common aspect
+of developing and maintaining the security of digital systems and
+infrastructures. Cyber Security professionals must use the latest technologies
+to design secure systems and processes to secure the network.
+
+However, security professionals should focus on more than just implementing the
+latest technologies. Instead, they should use their knowledge to identify the
+right technology to safeguard the network and digital infrastructures. Digital
+solutions must be designed and integrated to create a strong security position
+and avoid any security gaps.
+

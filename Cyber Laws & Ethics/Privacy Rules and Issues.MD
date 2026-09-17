@@ -1,6 +1,5 @@
 # Privacy Rules & Issues
 
-Status: In progress
 
 [CIA Triad](../House%20Of%20Vokabel/CIA%20Triad.MD)
 

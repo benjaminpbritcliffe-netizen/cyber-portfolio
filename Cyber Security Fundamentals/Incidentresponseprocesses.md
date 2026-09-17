@@ -23,6 +23,8 @@ The four major phases of the incident response process are:
 
 - Security Operations Center (SOC)
 
+[SOC](../Cyber%20Security%20Fundamentals/RolesOfSecurity.md)
+
 A Security Operations Center (SOC) is a team of cyber security professionals
 that monitors the network and its systems to detect malicious cyber security
 events. Some of the main areas of interest for a SOC are:

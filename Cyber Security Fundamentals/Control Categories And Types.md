@@ -36,7 +36,6 @@ Firewalls, Anti Virus, Access Controls
 - Access Control Apps
 - ASAs
 
-
 ### Physucal
 
 Physical - Actually be seen and touched, Cameras, Lighting, Security Guards.
@@ -77,7 +76,8 @@ Detect the occurence of undesirable events
 
 ### Corrective
 
-Corrective - Actions taken to fix the damage. Restoring and recovering systems and minimising impact
+Corrective - Actions taken to fix the damage.
+Restoring and recovering systems and minimising impact
 
 Restore normality after the occurence of undesirable events.
 

@@ -30,8 +30,6 @@ to incidents.
 
 Having streamlined processes can help with cybersecurity .
 
-📢
-
 implement a process on what do when a cyber attack of any kind occurs or how to
 ensure you keep an area secure.
 
@@ -40,12 +38,8 @@ plans.
 
 When creating non-security processes, keep cybersecurity in mind.
 
-📢
-
 A lengthy process can hinder the amount of people reporting an issue or using
 the process.
-
-📢
 
 A good process with be clear and as easy as possible, what to do at every stage.
 The process stages should be obvious, avoid ambiguity.
@@ -71,8 +65,6 @@ trained personnel to manage these systems and processes to guide their use, the
 technology alone cannot provide comprehensive security.
 
 Good uses of technology will solve problems without creating new ones for users.
-
-📢
 
 Good technical security is device management software, if implemented correctly
 then the security would be passive and not hinder the user. If implemented

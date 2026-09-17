@@ -45,7 +45,7 @@ as it affected the “Integrity” of the system
 </aside>
 
 The SolarWinds cyberattack indeed had a significant impact on the "Integrity"
-component of the CIA Triad (Confidentiality, Integrity, Availability). Integrity
+component of the CIA Triad [CIATriad](../House%20Of%20Vokabel/CIA%20Triad.MD) (Confidentiality, Integrity, Availability). Integrity
 refers to ensuring that the data and systems are accurate, reliable, and
 protected from unauthorized modifications.
 

@@ -1,6 +1,5 @@
 # Misconceptions Of Cyber Security
 
-Status: To read
 
 Misconception #1 -
 
@@ -16,7 +15,7 @@ All hackers are criminals
 Hackers is often used as a bad term and also misconstrued as “illegal”. While
 there is criminals and criminal hackers, there are many other types of hackers.
 
-🕵️Black Hat
+Black Hat
 
 Grey Hat
 

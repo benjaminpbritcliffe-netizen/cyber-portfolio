@@ -5,7 +5,7 @@
 2. Cybersecurity encompasses three main components: digital, human, and physical
    security measures.
 3. Effective cybersecurity achieves the CIA triad's objectives: confidentiality,
-   integrity, and availability.
+   integrity, and availability. [CIA](../House%20Of%20Vokabel/CIA%20Triad.MD)
 4. Security controls are safeguards that detect, prevent, and minimize risks to
    physical and digital assets.
 5. Organizations protect information assets through three essential elements:

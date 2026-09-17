@@ -27,20 +27,14 @@ Ensuring the data is only available to the people who requires access.
 **Integrity** means ensuring that data is trustworthy and accurate by protecting
 it from unauthorized modification and destruction.
 
-💡
-
 Data Trustworthiness and Accuracy. Think of purchasing something for £10 but
 getting billed £100. Consider that although the cause of the error might be
 technical, it might be human, too. Maybe someone entered the wrong payment
 amount. Unauthorized modifications, deliberate or not, can lead to significant
 financial losses or legal repercussions.
 
-📢
-
 To preserve integrity, you must also prevent unauthorized people from editing
 the data. In this sense, integrity and confidentiality overlap.
-
-🗣
 
 Ensuring the data that is given is both accurate and trustworthy.
 
@@ -59,16 +53,10 @@ Ensuring the data that is given is both accurate and trustworthy.
 **Availability** means ensuring timely and reliable access to and use of the
 data.
 
-💡
-
 Think of your Bank Account, you expect the data to be available immediately.
-
-📢
 
 Availability does not mean available all the time, it means ensuring the data is
 available in a timely fashion.
-
-🗣
 
 Ensuring the data is available to the person who has requested it (or not) when
 required.

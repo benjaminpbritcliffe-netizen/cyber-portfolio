@@ -122,12 +122,12 @@ like money transfers or permission changes.
 
 ## CERT
 
-[CERT](House Of Vokabel\CERT.md)
+[CERT](../House%20Of%20Vokabel/CERT.md)
 
 ## CSIRT
 
-[CSIRT](House Of Vokabel\CSIRT.md)
+[CSIRT](../House%20Of%20Vokabel/CSIRT.md)
 
 ## ISACs
 
-[ISAC Definition](House Of Vokabel\ISACs.md)
+[ISAC Definition](../House%20Of%20Vokabel/ISACs.md)

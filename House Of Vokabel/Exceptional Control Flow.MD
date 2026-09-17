@@ -2,7 +2,7 @@
 
 Created: 22 July 2025 09:54 Is Completed: No
 
-## 🔷 Overview: Exceptional Control Flow (ECF)
+## Overview: Exceptional Control Flow (ECF)
 
 **Definition:**
 
@@ -13,16 +13,16 @@ exceptions, signals, and system calls.
 
 ---
 
-## 🔷 Section 8.0: Introduction to ECF
+## Section 8.0: Introduction to ECF
 
-## 🔹 **Exceptional Control Flow (ECF)**
+## **Exceptional Control Flow (ECF)**
 
 - A fundamental mechanism in system-level programming that allows computers to
   react to **unpredictable events**.
 - Not "exceptions" in the high-level language sense (like try/catch) — ECF
   encompasses **interrupts**, **faults**, **traps**, and **aborts**.
 
-## 🔹 Types of ECF
+## Types of ECF
 
 1. **Hardware interrupts** – e.g., keyboard input, network packet arrival.
 2. **Software exceptions** – e.g., divide by zero, invalid memory access.
@@ -32,15 +32,15 @@ exceptions, signals, and system calls.
 
 ---
 
-### 🔷 Section 8.1: Exceptions and Interrupts
+### Section 8.1: Exceptions and Interrupts
 
-### 🔹 **What is an Exception?**
+### **What is an Exception?**
 
 - A transfer of control to the OS kernel **triggered by an event**.
 - Implemented in hardware through **exception vectors**.
 - Exception types are categorized based on **source** and **intent**.
 
-### 🔹 **Categories of Exceptions:**
+### **Categories of Exceptions:**
 
 | Type          | Triggered By                                     | Purpose                          | Returns to Caller? |
 | ------------- | ------------------------------------------------ | -------------------------------- | ------------------ |
@@ -51,7 +51,7 @@ exceptions, signals, and system calls.
 
 ---
 
-### 🔷 Key Terminology (Defined Simply)
+### Key Terminology (Defined Simply)
 
 - **Exception:** A control transfer mechanism for handling unexpected or
   intentional events.
@@ -67,7 +67,7 @@ exceptions, signals, and system calls.
 
 ### 🛠️ **System Calls** – Bridging Programs and Kernel
 
-### 🔹 What Are System Calls?
+### What Are System Calls?
 
 - Controlled gateways for **user programs to request services** from the OS
   kernel (like reading files, creating processes, or allocating memory).
@@ -76,7 +76,7 @@ exceptions, signals, and system calls.
 - Kernel executes the request, returns the result to the user program, and
   resumes execution.
 
-### 🔹 Why System Calls Are Important
+### Why System Calls Are Important
 
 - Ensure **security and isolation**: User programs can't directly manipulate
   hardware.
@@ -138,7 +138,7 @@ exceptions, signals, and system calls.
 - Understanding ECF mechanisms is crucial for systems programming and building
   secure, responsive applications.
 
-### 🔷 **What is ECF?**
+### **What is ECF?**
 
 Exceptional Control Flow refers to **changes in a program's normal execution
 sequence**, triggered by system events such as interrupts, signals, system
@@ -155,7 +155,7 @@ At the hardware level, devices like timers, keyboards, disks, and network cards
 generate **interrupts** or **exceptions** to alert the CPU that an event has
 occurred.
 
-### 🔹 Hardware-Level Examples
+### Hardware-Level Examples
 
 - **Interrupts**: A timer generates an interrupt to pause a running process and
   switch to another.
@@ -180,7 +180,7 @@ occurred.
 The OS responds to hardware exceptions and provides mechanisms to **manage
 processes**, **handle errors**, and **schedule resources**.
 
-## 🔹 OS-Level Examples
+## OS-Level Examples
 
 - **System Calls (Traps)**: A user process requests a system function (e.g.,
   file read) via a trap to enter kernel mode.
@@ -204,7 +204,7 @@ processes**, **handle errors**, and **schedule resources**.
 Applications handle ECF using programming constructs and OS mechanisms like
 **signals**, **exceptions**, and **event callbacks**.
 
-### 🔹 Application-Level Examples
+### Application-Level Examples
 
 - **Signals**: A process receives a `SIGINT` (e.g., Ctrl+C), triggering a signal
   handler function.

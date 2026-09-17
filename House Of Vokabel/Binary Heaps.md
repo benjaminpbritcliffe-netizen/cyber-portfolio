@@ -1,7 +1,5 @@
 # Binary Heaps
 
-Created: 18 April 2025 08:02 Is Completed: Yes
-
 Binary heaps are a specialised binary tree used to efficiently implement
 priority queues.
 
