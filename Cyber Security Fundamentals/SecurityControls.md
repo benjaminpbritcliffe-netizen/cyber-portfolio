@@ -15,8 +15,10 @@ Training Employees, Hiring Security Personell
 ## Type
 
 Preventitive - Pro-active approach, Stopping attacks before causing damage.
-Detective -  These will let you know when an attack is happening, eg. Cameras showing the incident.
-Corrective - Actions taken to fix the damage. Restoring and recovering systems and minimising impact
+Detective -  These will let you know when an attack is happening,
+eg. Cameras showing the incident.
+Corrective - Actions taken to fix the damage.
+Restoring and recovering systems and minimising impact
 Directive - The rules on how to stay secure. SOPs and Best Practices.
 Compensating - Alternative controls, when a primary control can't be used, a workaround
 Detterent - Making the attack less appealing, discouraging users.
