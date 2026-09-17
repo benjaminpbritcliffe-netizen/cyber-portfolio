@@ -1,10 +1,10 @@
 # CIA Triad
 
-Status: Done
-
 [CIA Triad](../House%20Of%20Vokabel/CIA%20Triad.MD)
 
-- Confidentiality
+[Access Controls](../House%20Of%20Vokabel/AccessControl.md)
+
+- Confidentiality - Controlling who can do what.
 
 **Confidentiality** means keeping data secret; that is, only authorized people
 can access or disclose the data.

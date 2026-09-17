@@ -5,6 +5,9 @@
 
 ### Managerial
 
+Managerial - Policies and Procedures, Rules
+Risk assessments and chosing and applying security controls.
+
 - Administrative and Management Based Techniques
 - Policies
 - Procedures
@@ -14,11 +17,17 @@
 
 ### Operational
 
+Operational - The people and processes that make security happen
+Training Employees, Hiring Security Personell
+
 - Monitored Function Checks
 - Reviewing Network Data
 - Visitor Controls
 
 ### Technical
+
+Technical - Measures built into hardware, software, firmware.
+Firewalls, Anti Virus, Access Controls
 
 - Software and Applications
 - Network Security Appliances
@@ -27,10 +36,22 @@
 - Access Control Apps
 - ASAs
 
+
+### Physucal
+
+Physical - Actually be seen and touched, Cameras, Lighting, Security Guards.
+Deter and protect physical locations.
+
+- Cameras
+- Lighting
+- Security Guards
+
 ## Type
 
 ### Preventitive
 
+Preventitive - Pro-active approach, Stopping attacks before causing damage.
+.
 Stop undesirable events from happening
 
 - Segregation of duties
@@ -41,6 +62,8 @@ Stop undesirable events from happening
 - Office Access Controls
 
 ### Detective Controls
+
+Detective -  These will let you know when an attack is happening
 
 Detect the occurence of undesirable events
 
@@ -54,6 +77,8 @@ Detect the occurence of undesirable events
 
 ### Corrective
 
+Corrective - Actions taken to fix the damage. Restoring and recovering systems and minimising impact
+
 Restore normality after the occurence of undesirable events.
 
 - Virus isolation
@@ -66,6 +91,8 @@ Restore normality after the occurence of undesirable events.
 - User Endpoint Protection
 
 ### Deterrents (Psychological)
+
+Detterent - Making the attack less appealing, discouraging users.
 
 These discourage an attack before it starts,
 by making the "cost" of getting caught too high.
@@ -98,11 +125,14 @@ Access Controlled Offices: The technical system that keeps the door shut.
 
 ### Compensating
 
+Compensating - Alternative controls, when a primary control can't be used, a workaround
+
 Serve as substitutes for controls and afford the same or better level of protection,
 but use a different methodology or technology.
 
 ### Directive Controls
 
+Directive - The rules on how to stay secure. SOPs and Best Practices.
 Encourage desired behaviours and outcomes
 
 - Written policies and procedures
@@ -132,14 +162,14 @@ The amount of time a particular control can delay an attack is its control effic
 This is an important measurement when evaluating various controls. However,
 there are additional factors that many overlook, such as:
 
-|Factor|Description|
-|-------|------------|
-|Compatibility|Assess whether the security control works with the existing infrastructure or requires new hardware and software to make it work.|
-|Effectiveness|Will control work well in your environment? If the control is only partially effective or does not provide much benefit, it may not be worth the cost to implement.|
-|Regulations|Consider any regulatory compliance requirements impacted by the control. Make sure you are not breaking any laws.|
-|Policies|Make sure that security control does not violate any company policies.|
-|Feasibility|Consider the feasibility of security control by completing a cost-benefit analysis.|
-|Sustainability|Can the team maintain this control long-term?|
+| Factor         | Description                                                                                                                                                         |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Compatibility  | Assess whether the security control works with the existing infrastructure or requires new hardware and software to make it work.                                   |
+| Effectiveness  | Will control work well in your environment? If the control is only partially effective or does not provide much benefit, it may not be worth the cost to implement. |
+| Regulations    | Consider any regulatory compliance requirements impacted by the control. Make sure you are not breaking any laws.                                                   |
+| Policies       | Make sure that security control does not violate any company policies.                                                                                              |
+| Feasibility    | Consider the feasibility of security control by completing a cost-benefit analysis.                                                                                 |
+| Sustainability | Can the team maintain this control long-term?                                                                                                                       |
 
 ### Resources
 
